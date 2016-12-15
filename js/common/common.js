@@ -427,21 +427,32 @@
 			setLeftBarHeight();	//导航整体高度占满屏
 			setFooterFixed(); //底部置底设置
 		});
-		
-		 //列表增加底色
-			  $(document).on( "click",".listView th .checkboxWrap",function(){
-	 	 	 		if($(this).hasClass("selected")){
-	 	 	 			$(this).parents("tr").siblings("tr").css("background","#f0f8fb");
-	 	 	 		}else{
-	 	 	 			$(this).parents("tr").siblings("tr").css("background","#fff");
-	 	 	 		}
-			  });
-			  $(document).on( "click",".listView td .checkboxWrap",function(){
-	 	 	 		if($(this).hasClass("selected")){
-	 	 	 			$(this).parents("tr").css("background","#f0f8fb");
-	 	 	 		}else{
-	 	 	 			$(this).parents("tr").css("background","#fff");
-	 	 	 		}
-			  });
-		
-	
+
+		//列表增加底色
+		$(document).on( "click",".listView th .checkboxWrap",function(){
+			if($(this).hasClass("selected")){
+				$(this).parents("tr").siblings("tr").css("background","#f0f8fb");
+			}else{
+				$(this).parents("tr").siblings("tr").css("background","#fff");
+			}
+		});
+		$(document).on( "click",".listView td .checkboxWrap",function(){
+			if($(this).hasClass("selected")){
+				$(this).parents("tr").css("background","#f0f8fb");
+			}else{
+				$(this).parents("tr").css("background","#fff");
+			}
+		});
+
+		//删除列表和大图显示列表
+		$(document).on( "click",".bottomFloatBar .globalDel",function(){
+			var $checkbox = $(".courseList").filter(function () {
+				return $(this).is(":visible");
+            }).find(".checkboxWrap");
+			$checkbox.each(function () {
+                if($(this).hasClass("selected")){
+                    $(this).parents("tr").remove();
+                    $(this).parents("li").remove();
+                }
+            });
+		});

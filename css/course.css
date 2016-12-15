@@ -399,7 +399,7 @@
 		.courseWareListWrap li.addFolder .addCourseWareBtn{float:right;background-position:-79px -195px;margin-top:7px;}
 		.courseWareListWrap li .delBtn{float:right;background:url(../images/courseManage.png) no-repeat -117px -194px;margin-right: 10px; padding:9px 8px;cursor:pointer;margin-top: 10px;}
 		.courseWareListWrap li .editBtn{float:right;background:url(../images/courseManage.png) no-repeat -120px -98px;padding:9px 8px;cursor:pointer;margin-top: 10px;}
-		.courseWareListWrap li .sureBtn{position: absolute;top: 6px;right: -2px; float:right;background:url(../images/courseManage.png) no-repeat -78px -252px;padding:9px 8px;cursor:pointer;}
+		.courseWareListWrap li .sureBtn{position: absolute;top: 6px;right: -2px; float:right;background:url(../images/courseManage.png) no-repeat -79px -252px;padding:9px 8px;cursor:pointer;}
 		/* 创建课件名、文件夹名 */
 		.courseWareListWrap li.create .courseWareName{padding:9px 9px 9px 26px;}
 		.courseWareListWrap .courseWareList li.create {display:block;}
@@ -463,7 +463,7 @@
 		.selectCourseWare .pages{padding:10px;}
 		.courseWareListT td.radioTd{text-align:center;padding:8px 0;}
 		.courseWareListT td.radioTd .radio,
-		.courseWareListT td.radioTd span i{margin:0;float:none;padding:1px 10px;}
+		.courseWareListT td.radioTd span i{margin:0;float:none;padding:1px 10px;    width: 0px;}
 		.sourseList td.radioTd span i{background: url(../images/courseManage.png) no-repeat -120px -52px;}
 		.sourseList .active td.radioTd span i{background: url(../images/courseManage.png) no-repeat -94px -76px;}
 		.editorWrap{/* padding:15px; */height:323px;border-bottom:1px solid #ddd;overflow-y:auto;overflow-x:hidden;}

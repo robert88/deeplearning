@@ -11,10 +11,10 @@ $(document).ready(function(){
 		$(".add_courses_introduction").on("click",function(){
 			$("body").css( "overflow","hidden" );
 			$("#previewPagePopup").css( "display","block" );
-			$("#edit_courses_introduction").css( "display","block" );
+			$("#editDagangPop").css( "display","block" );
 		}); 
-		$("#edit_courses_introduction").find(".closePopup").on( "click",function(){
-			$("#edit_courses_introduction").hide();
+		$("#editDagangPop").find(".close").on( "click",function(){
+			$("#editDagangPop").hide();
 			$("body").css( "overflow","visible" );
 			$("#previewPagePopup").hide();
 		});
@@ -54,7 +54,7 @@ $(document).ready(function(){
 		$(".class_list .edit_icon_btn").on("click",function(){
 			$("body").css( "overflow","hidden" );
 			$("#previewPagePopup").css( "display","block" );
-			$("#edit_courses_introduction").css( "display","block" );
+			$("#editDagangPop").css( "display","block" );
 		}); 
 		
 		

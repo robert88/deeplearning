@@ -374,13 +374,25 @@
 	        	}
 	        	$("body").css( "overflow","visible" );
 	        	$(".coursePic").children("img").attr("src", uploadSrc);
+	        	$("#startUloadPic").addClass("signhover")
 	        	$("#startUloadPic").find("p").hide();
 	        	$(".coursePic").find(".coursePicInner").css({'opacity':'0.4'});
 	        	$("#uploadPic").hide();
 	        	$("#previewPagePopup").hide();
 	        } );
 
-
+		// 鼠标悬浮显示上传图片
+		  $(".coursePic").hover(function(){
+			  	if($("#startUloadPic").hasClass("signhover")){
+		       	 	$("#startUloadPic").find("p").show();
+		       	 }	
+	        },function(){
+	      	 	if($("#startUloadPic").hasClass("signhover")){
+	       	 		$("#startUloadPic").find("p").hide();
+	       		 }
+	        });
+	       
+		
 	    // 图片上传弹框 E
 
 	    // 部门选择弹出框 S

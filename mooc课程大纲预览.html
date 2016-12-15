@@ -7,7 +7,8 @@
 	<title>mooc课程大纲预览</title>
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/mooc.css" rel="stylesheet" />
-	
+	<link href="css/course.css" rel="stylesheet" />
+	<link href="css/datepicker.css" rel="stylesheet" />
 </head>
 <body>
 <!--=S 头部 -->
@@ -357,216 +358,712 @@
 <div id="previewPagePopup">
 <div id="mask"></div>	
 	<!--S 编辑课程大纲-->
-	<div class="edit_courses_introduction" id="edit_courses_introduction">
-		<div class="titleBar">
-			编辑课程大纲
-			<span class="closePopup"></span>
-		</div>
-		<div class="eci_table">
-			<table border="0" cellspacing="0" cellpadding="0">
-				<tr>
-					<td class="eci_left_td">
-						<ul>
-							<li class="eci_table_firstli">
-								<i class="aimat_icon_white"></i>
-								<p>UMTSJ精确站点规划ASP 6D基础知识</p>
-								<span>课程总学时：10 学分：100</span>
-								
-							</li>
-							<li>
-								<div class="eci_title">
-									<i class="green_point"></i>
-									WEEK1:UMTSJ精确站点规划ASP 6D
-									<span>学时：10 学分：100</span>
-								</div>
-								<div class="eci_dropdown">
-									<p class="eci_dropdown_title"><i class="dropDown_icon"></i><i class="file_icon"></i>人力资源<span>8  16</span></p>
-									<div class="eci_dropdown_list">
-										<p><i class="document_icon"></i>FLMP2015角色认知学习文档<span>2  4</span></p>
-										<p><i class="img_icon"></i>FLMP2015角色认知学习图片<span>2  4</span></p>
-										<p><i class="video_icon"></i>FLMP2015角色认知学习视频<span>2  4</span></p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="eci_title">
-									<i class="green_point"></i>
-									WEEK2:UMTSJ精确站点规划ASP 6D
-									<span>学时：10 学分：100</span>
-								</div>
-								<div class="eci_dropdown">
-									<p class="eci_dropdown_title"><i class="dropDown_icon"></i><i class="file_icon"></i>人力资源<span>8  16</span></p>
-									<div class="eci_dropdown_list">
-										<p><i class="document_icon"></i>FLMP2015角色认知学习文档<span>2  4</span></p>
-										<p><i class="img_icon"></i>FLMP2015角色认知学习图片<span>2  4</span></p>
-										<p><i class="video_icon"></i>FLMP2015角色认知学习视频<span>2  4</span></p>
-									</div>
-								</div>
-							</li>
-						
-							
-							<li>
-								<div class="add_eci_table_li">
-									<p class="ecipp"><i class="white_point"></i>WEEK3</p>
-									<span class="add_eci_liinput">
-									<input type="text" name="" id="" value="" />
-									<i class="gou_icon"></i>
+	<div id="editDagangPop" class="dn">
+		<div class="titleBar">编辑课程大纲</div>
+		<div class="dagangPopContent clearfix" id="dagangPopContent">
+			<!--=S 左侧内容 -->
+			<div class="leftCont">
+				<div class="inner">
+					<div class="courseName">
+						<span class="name">基础管理角色认知项目</span>
+						<span class="addFolderBtn" title="添加文件夹"></span>
+						<span class="addCourseWareBtn" title="添加课件"></span>
+					</div>
+					
+					<ul class="courseWareListWrap">
+						<li data-pid="1.1" class="overall">
+							<div class="folder">
+								<i class="arrow"></i>
+								<i class="filderIcon"></i>
+								<div class="contentWrap">
+									<span class="name">
+										<i>1.1</i>
+										<i class="nameText">角色认知</i>
 									</span>
-									<i class="remove_icon"></i>
-								</div>
-							</li>
-							
-							
-							
-							<li>
-								<div class="add_eci_table_li">
-									<span><i class="file_icon_white"></i>名称：</span>	
-									<div class="public">
-										<span>
-											<input type="text" name="" id="txnr" value="发布" />
-											<i class="gou_icon"></i>
-										</span>
-										学时 <input type="text" name="" id="xueshival" value="" />
-										学分 <input type="text" name="" id="xuefenval" value="" />
-									</div>
-									<i class="remove_icon"></i>
-									<i class="aimat_icon"></i>
-								</div>
-							</li>
-							<li>
-								<div class="add_eci_table_li">
-									<span><i class="video_whiteicon"></i>2016敏捷用户大会主会场</span>	
-									<i class="remove_icon"></i>
-									<span class="r marginleft10">2</span>
-									<span class="r marginleft10">4</span>
-								</div>
-							</li>
-							
-						</ul>
-					</td>
-					<td class="eci_right_td">
-						<div class="eci_inner_table">
-							<p class="eci_right_title"><span class="eci_select_focus">挑选课件</span><span class="">新增课件</span></p>
-							<div class="mooc_select_class">
-								<div class="msc_search">
-									<span class="kjlx">课件类型</span>
-									<div class="dropList">
-												<p class="selected"><span>全部</span><i></i></p>
-												<div class="options" >
-													<p>全部</p>
-													<p>未发布</p>
-													<p>已发布</p>
-													<p>发布中</p>
-												</div>
-									</div>
-									<div class="msc_search_input">
-										<input type="text" id="" value="" placeholder="请输入要找的资源">
-										<span class="st_search_icon"><i></i></span>
+									<div class="inputWrap">
+										<input type="text">
+										<span class="sureBtn butn" title="确认"></span>
 									</div>
 								</div>
-								<div class="msc_table">
-									<table border="0" cellspacing="0" cellpadding="0">
-										<tr>
-											<th class="msc_table_th01"> </th>
-											<th class="msc_table_th02">课程资源</th>
-											<th class="msc_table_th03">创建人</th>
-											<th class="msc_table_th04">创建时间</th>
-										</tr>
-										<tr>
-											<td><p class="radio selected"><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频FLMP2015角色认知学习视频FLMP2015角色认知学习视频FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="document_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="img_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-										<tr>
-											<td><p class="radio "><i></i><input type="radio" name="1" id="" value=""></p></td>
-											<td><p class="ellipsis"><i class="video_icon"></i>FLMP2015角色认知学习视频</p></td>
-											<td>asd12312331</td>
-											<td>2016-09-22</td>
-										</tr>
-									</table>
-									<!--s 分页-->
-									<div class="pages clearfix">
-										<a href="javascript:;" class="forbid prev"><i></i></a>
-										<!--<a href="#" class="prev"><i></i></a>-->
-										<a href="#" class="current">1</a>
-										<a href="#">2</a>
-										<a href="#">3</a>
-										<a href="#">4</a>
-										<a href="#">5</a>
-										<a href="javascript:;" class="shenglue">......</a>
-										<a href="#" class="next"><i></i></a>
-										<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
-										<span class="total">总：1440条</span>
-										
-										<span class="tiaozhuan">
-											<span class="">跳转到：</span>
-											<input type="text"><span class="goBtn">GO</span>
-										</span>
-									</div>
-									<!--e 分页-->
-								</div>
-								
+								<span class="delBtn" title="删除"></span>
+								<span class="addCourseWareBtn butn" title="添加课件"></span>
+								<span class="editBtn butn" title="编辑"></span>
 							</div>
-							<div class="mooc_add_class">
-								
+							<ul class="courseWareList">
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li data-pid="1.2" class="overall">
+							<div class="folder">
+								<i class="arrow"></i>
+								<i class="filderIcon"></i>
+								<div class="contentWrap">
+									<span class="name">
+										<i>1.2</i>
+										<i class="nameText">角色认知</i>
+									</span>
+									<div class="inputWrap">
+										<input type="text">
+										<span class="sureBtn butn" title="确认"></span>
+									</div>
+								</div>
+								<span class="delBtn" title="删除"></span>
+								<span class="addCourseWareBtn butn" title="添加课件"></span>
+								<span class="editBtn butn" title="编辑"></span>
 							</div>
-						</div>	
-					</td>
-				</tr>
-			</table>
-			<p class="eci_btn"><span style="" class="btn white">返回</span><span style="" class="btn blue">确定</span></p>
-		</div>
+							<ul class="courseWareList">
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li data-pid="1.3" class="overall">
+							<div class="courseWareName">
+									<i class="arrow"></i>
+									<i class="courseType"></i>
+									<div class="contentWrap">
+										<span class="name">
+											<i>1.3</i>
+											<i class="nameText">FLMP2015角色认知学习资料文档</i>
+										</span>
+										<div class="inputWrap">
+											<input type="text">
+											<span class="sureBtn butn" title="确认"></span>
+										</div>
+									</div>
+								<span class="delBtn" title="删除"></span>
+								<span class="editBtn butn" title="编辑"></span>
+							</div>
+						</li>					
+					</ul>
+				</div>
+			</div>
+			<!--=E 左侧内容 -->
 		
-	
+			<!--=S 右侧内容 -->
+			<div class="rightCont">
+				<div class="inner" id="createCourse">      
+					<ul class="createType tabMenu">
+						<li class="current">挑选课件</li>
+						<li>新增课件</li>
+					</ul>
+					<!--=S 挑选课件 -->
+					<div class="selectCourseWare tabContent sourseList" style="display:block;">
+						<div class="filterForm">
+							<span class="type">课件类型</span>
+							<div class="dropList l">
+								<p class="selected"><span>全部</span><i></i></p>
+								<div class="options" style="">
+									<p>全部</p>
+									<p>视频</p>
+									<p>网页</p>
+									<p>文档</p>
+									<p>图片</p>
+									<p>图文</p>
+									<p>测验</p>
+								</div>
+							</div>
+							<input type="text" class="text" placeholder="请输入要查找的资源"><span class="submit"></span>
+						</div>
+					
+						<div id="tableWrap">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseWareListT">
+								<tbody><tr>
+									<th></th>
+									<th width="50%">课程资源</th>
+									<th>创建人</th>
+									<th>创建时间</th>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="video" data-title="FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType video"></i>
+											<span class="name">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>						
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="web" data-title="FLMP2015角色认知学习资料网页">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType web"></i>
+											<span class="name">FLMP2015角色认知学习资料网页</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="doc" data-title="FLMP2015角色认知学习资料文档">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType doc"></i>
+											<span class="name">FLMP2015角色认知学习资料文档</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="image" data-title="FLMP2015角色认知学习资料图片，FLMP2015角色认知学习资料图片">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType image"></i>
+											<span class="name">FLMP2015角色认知学习资料图片，FLMP2015角色认知学习资料图片</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="test" data-title="FLMP2015角色认知学习资料测验">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType test"></i>
+											<span class="name">FLMP2015角色认知学习资料测验</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								
+							</tbody></table>
+						</div>
+						
+						<!--=S 分页 -->
+						<div class="pages clearfix">
+							<a href="javascript:;" class="forbid prev"><i></i></a>
+							<!--<a href="#" class="prev"><i></i></a>-->
+							<a href="#" class="current">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="javascript:;" class="shenglue">......</a>
+							<a href="#" class="next"><i></i></a>
+							<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+							<span class="total">总：1440条</span>
+							
+							<span class="tiaozhuan">
+								<span class="">跳转到：</span>
+								<input type="text"><span class="goBtn">GO</span>
+							</span>
+						</div>
+						<!--=E 分页 -->
+					</div>
+					<!--=E 挑选课件 -->
+					
+					<!--=S 新增课件 -->
+					<div class="selectCourseWare tabContent createCourseWare">
+						<!-- 挑选课件类型 S -->
+						<div class="filterForm">
+							<span class="type">课件类型</span>
+							<div class="dropList l">
+								<p class="selected"><span>图文</span><i></i></p>
+								<div class="options">
+									<p class="current imageText">图文</p>
+									<p class="video">视频</p>
+									<p class="pic">图片</p>
+									<p class="webPage">网页</p>
+									<p class="doc">文档</p>
+								</div>
+							</div>
+							<span class="btn green r videoUploadBtn"><i class="icon"></i>上传文件</span>
+							<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
+							<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+						</div>
+						<!-- 挑选课件类型 E -->
+						<!--=S 上传图文 -->
+							<div class="uploadForm" id="uploadImgText">
+								<!--=S 编辑器位置 -->
+								<div class="editorWrap">
+									<div class="imgWrap">
+										<ul class="clearfix">
+											<li class="htmlCode"></li>
+											<li class="b"></li>
+											<li class="u"></li>
+											<li class="abc"></li>
+											<li class="a"><span>A</span></li>
+											<li class="ab"></li>
+											<li class="eraser"></li>
+											<li class="order"></li>
+											<li class="norder"></li>
+											<li class="fontStyle">
+												<span>微软雅黑</span>
+											</li>
+											<li class="fontSize">
+												<span>12</span>
+												<ul class="clearfix">
+													<li>14</li>
+													<li>16</li>
+													<li>18</li>
+													<li>20</li>
+												</ul>
+											</li>
+											<li class="textLeft"></li>
+											<li class="textCenter"></li>
+											<li class="textRight"></li>
+											<li class="link"></li>
+											<li class="cc"></li>
+											<li class="insertImg"></li>
+										</ul>
+									</div>
+									<textarea></textarea>
+								</div>
+								<!--=E 编辑器位置 -->
+								<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+							</div>					
+						<!--=E 上传图文 -->
+						
+						<!--=S 上传视频 -->
+							<div class="uploadForm dn" id="uploadVideo">
+								<div class="statuArea">
+									<!-- 拖拽上传视频 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的视频 -->
+									<div class="willUploadVideo dn">
+										<img src="images/video.png">
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传中</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span></span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频转码失败 S -->
+									<div class="uploadVideoFail dn">
+										<img src="images/video.png">
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>转码失败</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span>98%</span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频转码失败 E -->
+									<div class="success dn">
+										<img src="images/video.png">
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传成功</span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频上传提示 -->
+									<ul class="videoList uploadState dn">
+										<li>
+											<span class="state uploading"><i class="icon"></i>上传中</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+										</li>
+										<li>
+											<span class="state transform"><i class="icon"></i>转码中</span>
+											<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+										<li class="error">
+											<span class="state error"><i class="icon"></i>转码失败</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+										<li>
+											<span class="state ok"><i class="icon"></i>转码完成</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+									</ul>
+								</div>					
+								<!-- 视频上传说明 -->
+								<div class="beizhu">
+									<p>*&nbsp; 建议视频高宽比：16:9，分辨率不小于887*499。</p>
+									<p>*&nbsp; 支持的视频格式：avi、mpg、vob、mp4、3gp 、asf、wmv、rm、mov、mkv 、
+										  mav、ts、flv、ogg、mod</p>
+									<p>* 支持的视频大小：每个视频小于500M</p>
+								</div>
+							</div>
+						<!--=E 上传视频 -->
+						
+						<!--=S 上传图片 -->
+							<div class="uploadForm dn" id="uploadImage">
+								<div class="statuArea">
+									<!-- 拖拽上传图片 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的图片 -->
+									<div class="willUploadVideo dn">
+										<ul class="videoList">
+										</ul>
+										<p class="alignR mb30"></p>
+									</div>
+										
+								</div>				
+								<!-- 图片上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的图片格式：jpg, png, bmp, jpeg, gif, swf文件</p>
+									<p>* 支持的图片大小：每个最大488.28MB</p>
+									<p>* 支持的图片数量：不超过10张</p>
+								</div>
+							</div>
+						<!--=E 上传图片 -->
+						
+						<!--=S 上传网页 -->
+							<div class="uploadForm dn" id="uploadWeb">
+								<div class="statuArea">
+									<!-- 拖拽上传网页 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									
+									<!-- 已选择的网页 S-->
+									<div class="willUploadVideo dn">
+										<img src="images/compress.png">
+										<p>dfa.zip</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传中</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span></span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 已选择的网页 E-->
+									<div class="success dn">
+										<img src="images/compress.png">
+										<p>dfa.zip</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传成功</span>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<!-- 网页上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的网页格式：H5网页文件</p>
+									<p>* 支持的网页大小：控制在200M以内</p>
+									<p>* 其他要求：上传时把所有文件打zip包上传，zip包里不得包含中文字符的文件</p>
+								</div>
+							</div>
+						<!--=E 上传网页 -->
+						
+						<!--=S 上传文档 -->
+							<div class="uploadForm dn" id="uploadDoc">
+								<div class="statuArea">
+									<!-- 拖拽上传网页 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的图片 -->
+									<div class="willUploadVideo dn">
+										<ul class="videoList">
+											<li>角色认知学习文档.doc<i class="delBtn" title="删除"></i></li>
+										</ul>
+										<p class="alignR mb30"><span class="btn blue comfirmUpload">确定上传</span></p>
+									</div>
+									<!-- 图片上传提示 -->
+									<ul class="videoList uploadState dn">
+										<li>
+											<span class="state uploading"><i class="icon"></i>上传中</span>
+											<span class="name">角色认知学习文档.doc</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+										</li>
+										<li>
+											<p>
+												<span class="state ok"><i class="icon"></i>上传完成</span>
+												<span class="name">角色认知学习文档.doc</span>
+												<i class="delBtn" title="删除"></i>
+												<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+											</p>
+										</li>
+									</ul>
+								</div>
+								<!-- 文档上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的文档类型：docx、pptx、pdf</p>
+									<p>* 支持的文档大小：大小控制在20M，页数为100页以内</p>
+									<p>* 其他要求：文档不能设置只读等RMS权限</p>
+								</div>	
+							</div>
+						<!--=E 上传文档 -->
+					</div>
+					<!--=E 新增课件 -->
+				</div>
+				<div class="shade"></div>
+			</div>
+			<!--=E 右侧内容 -->
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="btn sure">确<span class="opc">啊</span>定</a>
+			<a href="javascript:void(0);" class="btn return">取<span class="opc">啊</span>消</a>
+		</div>
+		<span class="close"></span>
 	</div>
 	<!--S 编辑课程大纲-->
 </div>

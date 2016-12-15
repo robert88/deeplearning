@@ -334,7 +334,7 @@ $(document).ready(function(){
 		}); 
  	 
  	  //任务 关联资源弹窗 考试 关联课程弹窗 公用
-		$(document).on( "click",".cc_course",function(){
+		$(document).on( "click",".cc_course,.add_resource",function(){
 			$("#cc_listshow").show();
 			$("body").css( "overflow","hidden" );
 			$("#previewPagePopup").show();

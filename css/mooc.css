@@ -117,7 +117,7 @@
 .admin_edit .ags_addstuent_btn{padding:5px 15px;background:#41ca7c;border-radius:3px;color:#FFF;display:inline-block;margin-left:10px;float:right;margin-top:-32px;cursor:pointer}
 .admin_edit .add_icon{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;margin-right:5px;display:inline-block;background-position:-50px -100px;vertical-align:sub}
 .courses_catalogue{padding:10px 0;font-size:16px}
-.courses_catalogue .edit_icon_btn{background:#3e83fa;padding:1px 8px;border-radius:3px;color:#FFF;font-size:12px;float:right}
+.courses_catalogue .edit_icon_btn{background:#3e83fa;padding:1px 8px;border-radius:3px;color:#FFF;font-size:12px;float:right;cursor: pointer;}
 .courses_catalogue .edit_icon_btn i{content:"";background:url(../images/courseManage.png);background-position:-120px -100px;padding:8px 8px;margin-right:5px;display:inline-block;vertical-align:middle}
 .cc_addcontent{padding:10px;background:#FFF;border:1px solid #ddd}
 .cc_addDagangBtn{width:236px;height:161px;border:2px dashed #ddd;margin:100px auto;text-align:center}

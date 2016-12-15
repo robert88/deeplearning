@@ -61,11 +61,23 @@ $(document).ready(function(){
 	//新建群组弹窗左侧导航切换
 	$(document).on("click",".st_leftside ul li",function(){
 		$(this).addClass("select_focus").siblings().removeClass("select_focus");
-		$(this).children("i").addClass("remove_icon_selected").parent().siblings().children("i").removeClass("remove_icon_selected");
+		//$(this).children("i").addClass("remove_icon_selected").parent().siblings().children("i").removeClass("remove_icon_selected");
+		//$(this).children("s").addClass("edit_icon_selected").parent().siblings().children("s").removeClass("edit_icon_selected");
 		var index = $(this).index();
 		$(".agd_right_showhide").children(".agd_right_showdiv").eq(index).removeClass("hidden").siblings(".agd_right_showdiv").addClass("hidden")
 	});
-
+	//编辑按钮
+	$(document).on("click",".edit_icon_selected",function(){
+		$(this).parents(".neirongk").hide();
+		$(this).parents(".neirongk").siblings(".editli").show();
+	})
+	//编辑后确定
+	$(document).on("click",".editli .queren_gou",function(){
+		var editlival = $(this).siblings("input").val();
+		$(this).parents(".editli").hide();
+		$(this).parents(".editli").siblings(".neirongk").show();
+		$(this).parents(".editli").siblings(".neirongk").children("p").html(editlival);
+	})
 	//编辑试卷弹窗关闭
 	$(document).on("click",".closePopup",function(){
 		$(this).parents(".select_test").addClass("hidden");
@@ -111,7 +123,7 @@ $(document).ready(function(){
 			$("#previewPagePopup").hide();
 		});
 		//考试 添加题目弹窗
-		$(".st_add_test_btn").on("click",function(){
+		$(".st_add_test_btn,.st_list .st_table_td05 i").on("click",function(){
 			$("body").css( "overflow","hidden" );
 			$("#previewPagePopup").css( "display","block" );
 			$("#select_test").css( "display","none" );
@@ -359,7 +371,7 @@ $(document).ready(function(){
 			$("#previewPagePopup").hide();
 		});
  	 
- 	 //添加题库
+ 	 //添加题库 挑选题目左边导航
 	 	 $(document).on( "click","#select_test .add_test",function(){
 	 	 	if($(".addstli").length>=1){
 	 	 		
@@ -372,7 +384,7 @@ $(document).ready(function(){
 	 	 	if( neironf=="" || neironf == undefined){
 	 	 		$(this).parents(".addstli").remove();
 	 	 	}else{
-	 	 	 $("#select_test .st_leftside ul").append('<li><p>'+neironf+'</p><i class=""></i></li>');
+	 	 	 $("#select_test .st_leftside ul").append('<li><div class="neirongk"><p>'+neironf+'</p><s class="edit_icon_selected"></s><i class="remove_icon_selected"></i></div><div class="editli hidden"><input type="text"><i class="queren_gou"></i></div></li>');
 	 	 	 $(this).parents(".addstli").remove();
 	 	 	}
 		 });
@@ -380,7 +392,7 @@ $(document).ready(function(){
 		  $(document).on( "click","#select_test .remove_icon_selected",function(){
  	 	 		$(this).parents("li").remove();
 		  });
-		   //添加题库
+		   //添加题库 编辑试卷左边导航
 	 	 $(document).on( "click","#edit_test .add_test",function(){
 	 	 	if($(".addstli").length>=1){
 	 	 		
@@ -393,7 +405,7 @@ $(document).ready(function(){
 	 	 	if( neironf=="" || neironf == undefined){
 	 	 		$(this).parents(".addstli").remove();
 	 	 	}else{
-	 	 	 $("#edit_test .st_leftside ul").append('<li><p>'+neironf+'</p><i class=""></i></li>');
+	 	 	 $("#edit_test .st_leftside ul").append('<li><div class="neirongk"><p>'+neironf+'</p><s class="edit_icon_selected"></s><i class="remove_icon_selected"></i></div><div class="editli hidden"><input type="text"><i class="queren_gou"></i></div></li>');
 	 	 	 $(this).parents(".addstli").remove();
 	 	 	}
 		 });
@@ -401,7 +413,7 @@ $(document).ready(function(){
 		  $(document).on( "click","#edit_test .remove_icon_selected",function(){
  	 	 		$(this).parents("li").remove();
 		  });
-		   //添加题库
+		   //添加条件子集 权限添加规则集弹窗
 	 	 $(document).on( "click","#agd_student_show .add_test",function(){
 	 	 	if($(".addstli").length>=1){
 	 	 		
@@ -414,7 +426,7 @@ $(document).ready(function(){
 	 	 	if( neironf=="" || neironf == undefined){
 	 	 		$(this).parents(".addstli").remove();
 	 	 	}else{
-	 	 	 $("#agd_student_show .st_leftside ul").append('<li><p>'+neironf+'</p><i class=""></i></li>');
+	 	 	 $("#agd_student_show .st_leftside ul").append('<li><div class="neirongk"><p>'+neironf+'</p><s class="edit_icon_selected"></s><i class="remove_icon_selected"></i></div><div class="editli hidden"><input type="text"><i class="queren_gou"></i></div></li>');
 	 	 	 $(this).parents(".addstli").remove();
 	 	 	}
 		 });
@@ -435,13 +447,24 @@ $(document).ready(function(){
 	 	 	if( neironf=="" || neironf == undefined){
 	 	 		$(this).parents(".addstli").remove();
 	 	 	}else{
-	 	 	 $("#permission_add_group .st_leftside ul").append('<li><p>'+neironf+'</p><i class=""></i></li>');
+	 	 	 $("#permission_add_group .st_leftside ul").append('<li><div class="neirongk"><p>'+neironf+'</p><s class="edit_icon_selected"></s><i class="remove_icon_selected"></i></div><div class="editli hidden"><input type="text"><i class="queren_gou"></i></div></li>');
 	 	 	 $(this).parents(".addstli").remove();
 	 	 	}
 		 });
 		 
 		  $(document).on( "click","#permission_add_group .remove_icon_selected",function(){
  	 	 		$(this).parents("li").remove();
+		  });
+		  
+		  //权限管理学员列表删除按钮
+		  $(document).on( "click",".ags_list_table td .remove_icon",function(){
+ 	 	 		$(this).parents("tr").remove();
+		  });
+		  
+		  $(document).on( "click",".listView td .checkboxWrap",function(){
+ 	 	 		if($(this).hasClass("selected")){
+ 	 	 			$(this).parents("tr").css("background","#f0f8fb");
+ 	 	 		}
 		  });
  	 
 })

@@ -59,11 +59,10 @@
 .st_addDagangBtn{width:236px;height:161px;border:2px dashed #ddd;margin:150px auto;text-align:center}
 .st_addDagangBtn .icon{background:url(../images/courseManage.png) no-repeat 0 -125px;display:block;width:65px;height:65px;margin:34px auto 10px;cursor:pointer}
 .bottomFloatBar{position:fixed;z-index:3;bottom:0;right:0;background-color:#fff;border:1px solid #ddd;padding:19px 0;width: 100%;}
-.select_test .titleBar:before{content:"";background:url(../images/leftarrow.png) no-repeat 50% 50%/100%;margin-right:5px;font-size:0;height:40px;width:16px;display:inline-block;float:left}
 .select_test{width:1080px;margin:0 auto}
 .select_test:after{content:"";clear:both;display:block}
 .st_leftside{color:#7a8b95;font-size:12px;font-weight:100;background:#2E354F;vertical-align:top}
-.st_leftside ul li{padding:4px 17px 4px 12px;cursor:pointer;width:180px;height:30px;line-height:30px}
+.st_leftside ul li{padding:4px 17px 4px 12px;cursor:pointer;width:200px;height:30px;line-height:30px}
 .st_leftside ul li p{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:150px;display:inline-block}
 .select_test table td{vertical-align:top}
 .select_focus{background:#161e2b;color:#3c84fa;position:relative}
@@ -164,7 +163,18 @@
 .back{float:right;margin:2px 20px 0 0}
 .back i{background:url(../images/courseManage.png) no-repeat -76px -99px;padding:0 0;margin-right:10px;height:16px;width:16px;vertical-align:sub;display:inline-block}
 .closePopup{float:right;color:#fff;z-index:2;background:url(../images/closeIcon.png) no-repeat 50% 50%/40%;font-size:0;height:40px;width:32px;cursor:pointer}
-.remove_icon_selected{background:url(../images/notice02.png) no-repeat;margin-left:9px;height:22px;width:16px;display:inline-block;background-position:-22px -23px}
+.select_focus .remove_icon_selected{background:url(../images/notice02.png) no-repeat;margin-left:9px;height:22px;width:16px;display:inline-block;background-position:-22px -23px}
+.select_focus .edit_icon_selected{background:url(../images/notice02.png) no-repeat;margin-left:3px;height:22px;width:16px;display:inline-block;background-position:-2px -23px}
+.editli{position: relative;}
+.editli .queren_gou{right: 5px;}
+.editli input {
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    outline: 0;
+    text-indent: 5px;
+    width: 100%;
+}
 .remove_icon{cursor:pointer;background:url(../images/notice02.png) no-repeat;height:20px;width:20px;display:inline-block;vertical-align:bottom;background-position:-20px 0}
 .edit_icon_btn{background:#3e83fa;padding:1px 8px;border-radius:3px;color:#FFF;font-size:12px;float:right}
 .edit_icon_btn:before{content:"";background:url(../images/courseManage.png);background-position:-120px -100px;padding:8px 8px;margin-right:5px;display:inline-block;vertical-align:middle}

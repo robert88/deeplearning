@@ -1,0 +1,3305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>专区管理--新增</title>
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/area.css" rel="stylesheet" />
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li class='current open '>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" style="display:block;">
+                <li class='current '><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li >
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" >
+                <li><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="专区管理--新增.html">专区管理 </a> > <span class="current">专区新增</span>
+				<a href="专区管理--新增.html"><span class="back"><i></i>返回</span></a>
+			</div>
+			<!-- 步骤 -->
+			<div class="step">
+				<div class="stepInner">
+					<p class="line"></p>
+					<ul class="floatList col2">
+						<li class="alignL current"><i class="icon"></i><span class="text">填写专区基本信息</span></li>
+						<li class="finished alignR"><i class="icon"></i><span class="text">编辑大纲</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- tabMenu -->
+			<div class="tabMenu previewTab">
+				<div>
+					<span class="btn pc active">PC端预览</span>
+					<span class="btn mobile">移动端预览</span>
+				</div>
+			</div>
+			
+			<!--=S PC端预览 -->
+			<div class="tabContent pcPreview current">
+				<!--=S banner -->
+				<div id="courseCatalog">
+					<span class="edit"><i class="icon"></i>编辑</span>
+					<h2>Banner</h2>
+				</div>
+				<div class="bannerImg init">
+					<ul class="clearfix">
+						<li><img src="images/previewImg4.jpg"></li>
+					</ul>
+					<div class="addDagangBtn">
+						<i class="icon"></i>点击添加内容
+					</div>
+				</div>
+				<!--=E banner -->
+				
+				<div id="moduleNav">
+					<ul class="clearfix">
+						<li class="active">
+							<div>
+								<span>首页</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+						<li>
+							<div>
+								<span>公告</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+						<li>
+							<div>
+								<span>课程</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+						
+						<li>
+							<div>
+								<span>讨论</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+						<li>
+							<div>
+								<span>同学</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+						<li>
+							<div>
+								<span>友情链接</span>
+								<span class="bg"></span>
+							</div>
+							<div class="line"></div>
+						</li>
+					</ul>
+					<div class="addBtn">
+						<span class="addIcon"></span>
+						<span>添加模块</span>
+					</div>
+				</div>
+				<div class="tabMoudle index show clearfix">
+					<div class="left l">
+						<div class="program" id="notice">
+							<div>
+								<span class="edit"><i class="icon"></i>编辑</span>
+								<h2>公告</h2>
+							</div>
+							<div class="contentWrap">
+								<div class="addDagangBtn">
+									<i class="icon"></i>点击添加内容
+								</div>
+								<ul class="floatList">
+									<li>
+										<a href="#">
+											<span class="bg"></span>
+											<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="bg"></span>
+											<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="bg"></span>
+											<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="program" id="courses">
+							<div>
+								<span class="edit"><i class="icon"></i>编辑</span>
+								<h2>推荐课程</h2>
+							</div>
+							<div class="contentWrap">
+								<div class="addDagangBtn">
+									<i class="icon"></i>点击添加内容
+								</div>
+								<ul class="floatList col4">
+									<li>
+										<div class="liBox">
+											<img src="images/card0.jpg">
+											<p class="title"> 交互与视觉设计入门0</p>
+										</div>
+									</li>
+									<li>
+										<div class="liBox">
+											<img src="images/card0.jpg">
+											<p class="title"> 交互与视觉设计入门0</p>
+										</div>
+									</li>
+									<li>
+										<div class="liBox">
+											<img src="images/card0.jpg">
+											<p class="title"> 交互与视觉设计入门0</p>
+										</div>
+									</li>
+									<li>
+										<div class="liBox">
+											<img src="images/card0.jpg">
+											<p class="title"> 交互与视觉设计入门0</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="program" id="discuss">
+							<div>
+								<span class="edit"><i class="icon"></i>编辑</span>
+								<h2>热度讨论</h2>
+							</div>
+							<div class="contentWrap">
+								<div class="addBtnWrap">
+									<div class="addDagangBtn">
+										<i class="icon"></i>点击添加内容
+									</div>
+								</div>
+								<div class="contentList clearfix">
+									<div class="l imgWrap">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div ></div>
+								</div>
+								<div class="contentList clearfix">
+									<div class="l imgWrap">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div ></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right l">
+						<div class="areaIntroduce">
+							<h2>专区介绍</h2>
+							<div class="descript">
+								摄影作为艺术来看其实还是挺后
+								期的事情,早期摄影为了膜拜绘画
+								的效果做了不少模仿的事情。直
+								到后来摄影的纪录性 ……
+							</div>
+						</div>
+						<div class="memberList">
+							<h2>成员列表</h2>
+							<ul>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+								<li class="clearfix">
+									<div class="imgWrap l">
+										<img src="images/areaEdit01.jpg" />
+									</div>
+									<div class="memberInfo l">
+										<span class="userName">范冰冰</span>
+										<span class="num">FBB10086</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tabMoudle notice" id="noticeMoudle">
+					<div class="top clearfix">
+						<span class="edit"><i class="icon"></i>编辑</span>
+					</div>
+					<div class="content">
+						<ul>
+							<li class="clearfix">
+								<span class="l bg"></span>
+								<div class="l">
+									介绍给你一系列的技术与概念，来拓展你对于当代摄影艺术的理解。你将了解到摄影，作为一种视觉艺术的实践，这能帮助你成为一名更投入活跃的摄影师。你将探索当代摄影艺术家的作品与理念，这或许会引起你拍摄的新兴趣。
+								</div>
+								<span class="r time">2016/09/01</span>
+							</li>
+							<li class="clearfix">
+								<span class="l bg"></span>
+								<div class="l">Bruce被公认为是世界上最优秀的风景和建筑摄影师之一，同时又是摄影领域最优秀的导师之一。</div>
+								<span class="r time">2016/09/01</span>
+							</li>
+							<li class="clearfix">
+								<span class="l bg"></span>
+								<div class="l">介绍给你一系列的技术与概念，来拓展你对于当代摄影艺术的理解。你将了解到摄影，作为一种视觉艺术的实践，这能帮助你成为一名更投入活跃的摄影师。你将探索当代摄影艺术家的作品与理念，这或许会引起你拍摄的新兴趣。</div>
+								<span class="r time">2016/09/01</span>
+							</li>
+							<li class="clearfix">
+								<span class="l bg"></span>
+								<div class="l">Bruce被公认为是世界上最优秀的风景和建筑摄影师之一，同时又是摄影领域最优秀的导师之一。</div>
+								<span class="r time">2016/09/01</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tabMoudle" id="courseMoudle">
+					<div class="clearfix">
+						<span class="edit"><i class="icon"></i>编辑</span>
+					</div>
+					<div class="content clearfix">
+						<div class="left">
+							<div class="top">课程分类</div>
+							
+							<ul class="menuWrap">
+								<li>
+									<div class="content clearfix"><span class="l text">全部</span></div>
+								</li>
+								<li>
+									<div class="rootMenu">
+										<div class="showBox">
+											<span>文件夹名称:</span>
+											<span class="name">概念</span>
+											<div class="btnWrap">
+												<a class="edit" href="javascript:void(0);"></a>
+												<a class="addFile" href="javascript:void(0);"></a>
+												<a class="del" href="javascript:void(0);"></a>
+											</div>
+										<span class="triangle l"></span></div>
+										<div class="warp">
+											<div class="editBox clearfix">
+												<div class="inputWrap">
+													<input type="text">
+													<a href="javascript:void(0);"></a>
+												</div>
+											</div>
+										</div>
+										<ul class="subMenu oneMenu">
+											<li>
+												<div class="contentWrap clearfix">
+													<span class="triangle l"></span>
+													<span class="file l"></span>
+													<span class="text l">人力资源</span>
+													<div class="editBox clearfix">
+														<div class="inputWrap l">
+															<input type="text">
+															<a href="javascript:void(0);"></a>
+														</div>
+														<a class="del l" href="javascript:void(0);"></a>
+													</div>
+												</div>
+												<div class="btnWrap">
+													<a class="edit" href="javascript:void(0);"></a>
+													<a class="add" href="javascript:void(0);"></a>
+													<a class="addFile" href="javascript:void(0);"></a>
+													<a class="del" href="javascript:void(0);"></a>
+												</div>
+												<ul class="subMenu">
+													<li>
+														<div class="contentWrap clearfix">
+															<span class="triangle l"></span>
+															<span class="file l"></span>
+															<span class="text l">学习资料</span>
+														
+															<div class="editBox clearfix">
+																<div class="inputWrap l">
+																	<input type="text">
+																	<a href="javascript:void(0);"></a>
+																</div>
+																<a class="del l" href="javascript:void(0);"></a>
+															</div>
+														</div>
+														<div class="btnWrap">
+															<a class="edit" href="javascript:void(0);"></a>
+															<a class="del" href="javascript:void(0);"></a>
+														</div>
+													</li>
+													<li>
+														<div class="contentWrap clearfix">
+															<span class="triangle l"></span>
+															<span class="file l"></span>
+															<span class="text l">文件夹</span>
+														
+															<div class="editBox clearfix">
+																<div class="inputWrap l">
+																	<input type="text">
+																	<a href="javascript:void(0);"></a>
+																</div>
+																<a class="del l" href="javascript:void(0);"></a>
+															</div>
+														</div>
+														<div class="btnWrap">
+															<a class="edit" href="javascript:void(0);"></a>
+															<a class="add" href="javascript:void(0);"></a>
+															<a class="addFile" href="javascript:void(0);"></a>
+															<a class="del" href="javascript:void(0);"></a>
+														</div>
+														<ul class="subMenu">
+															<li>
+																<div class="contentWrap clearfix">
+																	<span class="course l"></span>
+																	<span class="text l">aaa</span>
+																	<div class="editBox clearfix">
+																		<div class="inputWrap l">
+																			<input type="text">
+																			<a href="javascript:void(0);"></a>
+																		</div>
+																		<a class="del l" href="javascript:void(0);"></a>
+																	</div>
+																</div>
+																<div class="btnWrap">
+																	<a class="edit" href="javascript:void(0);"></a>
+																	<a class="del" href="javascript:void(0);"></a>
+																</div>
+															</li>
+															<li>
+																<div class="contentWrap clearfix">
+																	<span class="course l"></span>
+																	<span class="text l">bbb</span>
+																	<div class="editBox clearfix">
+																		<div class="inputWrap l">
+																			<input type="text">
+																			<a href="javascript:void(0);"></a>
+																		</div>
+																		<a class="del l" href="javascript:void(0);"></a>
+																	</div>
+																</div>
+																<div class="btnWrap">
+																	<a class="edit" href="javascript:void(0);"></a>
+																	<a class="del" href="javascript:void(0);"></a>
+																</div>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<div class="contentWrap clearfix">
+													<span class="triangle l"></span>
+													<span class="file l"></span>
+													<span class="text l">交互设计之路的学习之路444</span>
+													<div class="editBox clearfix">
+														<div class="inputWrap l">
+															<input type="text">
+															<a href="javascript:void(0);"></a>
+														</div>
+														<a class="del l" href="javascript:void(0);"></a>
+													</div>
+												</div>
+												<div class="btnWrap">
+													<a class="edit" href="javascript:void(0);"></a>
+													<a class="add" href="javascript:void(0);"></a>
+													<a class="addFile" href="javascript:void(0);"></a>
+													<a class="del" href="javascript:void(0);"></a>
+												</div>
+												<ul class="subMenu"></ul>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="rootMenu">
+										<div class="showBox">
+											<span>文件夹名称:</span>
+											<span class="name">发布</span>
+											<div class="btnWrap">
+												<a class="edit" href="javascript:void(0);"></a>
+												<a class="addFile" href="javascript:void(0);"></a>
+												<a class="del" href="javascript:void(0);"></a>
+											</div>
+										<span class="triangle l"></span></div>
+										<div class="warp">
+											<div class="editBox clearfix">
+												<div class="inputWrap">
+													<input type="text">
+													<a href="javascript:void(0);"></a>
+												</div>
+											</div>
+										</div>
+										<ul class="subMenu oneMenu">
+											<li>
+												<div class="contentWrap clearfix">
+													<span class="triangle l"></span>
+													<span class="file l"></span>
+													<span class="text l">交互设计之路的学习之路</span>
+													<div class="editBox clearfix">
+														<div class="inputWrap l">
+															<input type="text">
+															<a href="javascript:void(0);"></a>
+														</div>
+														<a class="del l" href="javascript:void(0);"></a>
+													</div>
+												</div>
+												<div class="btnWrap">
+													<a class="edit" href="javascript:void(0);"></a>
+													<a class="add" href="javascript:void(0);"></a>
+													<a class="addFile" href="javascript:void(0);"></a>
+													<a class="del" href="javascript:void(0);"></a>
+												</div>
+												<ul class="subMenu"></ul>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="right">
+							<ul class="floatList col4 courseList" style="display:block;">
+								<li index="0">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+								<li index="1">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+								<li index="2">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+								<li index="3">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+								<li index="4">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+								<li index="5">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态1</p>
+									</div>
+								</li>
+							</ul>
+							<ul class="floatList col4 courseList">
+								<li index="0">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+								<li index="1">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+								<li index="2">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+								<li index="3">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+								<li index="4">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+								<li index="5">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态2</p>
+									</div>
+								</li>
+							</ul>
+							<ul class="floatList col4 courseList">
+								<li index="0">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+								<li index="1">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+								<li index="2">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+								<li index="3">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+								<li index="4">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+								<li index="5">
+									<div class="liBox">
+										<img src="images/courseMoudle.jpg">
+										<p> 企业设计生态3</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="tabMoudle" id="discussMoudle">
+					<div class="clearfix">
+						<span class="edit"><i class="icon"></i>编辑</span>
+					</div>
+					<div class="content clearfix">
+						<div class="left">
+							<div class="top">课程分类</div>
+							<ul class="menuWrap">
+								<li>全部</li>
+								<li>概念</li>
+								<li>发布</li>
+							</ul>
+						</div>
+						<div class="right">
+							<div class="listWrap" style="display: block;">
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/discuss01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/discuss01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+							</div>
+							<div class="listWrap">
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/areaEdit01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/areaEdit01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+							</div>	
+							<div class="listWrap">
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/discuss01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+								<div class="contentList clearfix" style="display: block;">
+									<div class="l imgWrap">
+										<img src="images/discuss01.jpg">
+									</div>
+									<div class="discussContent">
+										<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+										<div>
+											<span class="l name">dongzhiwu</span>
+											<span class="separate">|</span>
+											<span class="date">2016-4-23</span>
+											<span class="time">22:45:12</span>
+											<div class="oprate r">
+												<div class="reply l">
+													<span class="bg"></span>
+													<span class="text">回复(55)</span>
+												</div>
+												<div class="browse l">
+													<span class="bg"></span>
+													<span class="text">浏览(3920)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabMoudle" id="classmate">
+					
+					<div class="clearfix">
+						<span class="edit"><i class="icon"></i>编辑</span>
+					</div>
+					<ul class="content clearfix">
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+						<li>
+							<div>
+								<img src="images/classMate01.png" />
+								<p>liyangzhe8271074</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tabMoudle" id="friendShip">
+					<div class="content">
+						<p>友情链接</p>
+						<input type="text" />
+					</div>
+					<div class="btnWrap clearfix">
+						<a href="javascript:void(0);" class="save btn r">发<span class="opc">啊</span>布</a>
+						<a href="javascript:void(0);" class="return btn r">保<span class="opc">存</span>存</a>
+					</div>
+				</div> 
+			</div>
+			<div class="bottomFloatBar alignR" style="width: 1073px;">
+				<span class="btn">保<span class="opc">啊</span>存</span>
+				<a href="专区管理--新增.html"><span class="btn">上一步</span></a>
+				<a href="＃"><span class="btn blue">发布</span></a>
+			</div>
+			<!--=E PC端预览 -->
+			<!--=S 移动端预览 -->
+			<div class="tabContent mobileContent">
+				<div class="contentWrap">
+					<img src="images/areaMobile.jpg" />
+				</div>
+			</div>
+			<!--=E 移动端预览 -->
+			
+			
+			
+		</div>
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<!-- 弹窗 -->
+<div id="previewPagePopup">
+	<div id="mask"></div>
+	<!-- 新增模块S -->
+	<div id="addMoudle">
+		<div class="header">
+			<span>新增模块</span>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content">
+			<div class="moudleType moulde">
+				<p>模块类型</p>
+				<div class="selected">
+					<div class="text">
+						<span>类型一</span>
+						<a href="javascript:void(0);"></a>
+					</div>
+					<ul class="options">
+						<li>类型一</li>
+						<li>类型二</li>
+						<li>类型三</li>
+						<li>类型四</li>
+					</ul>
+				</div>
+			</div>
+			<div class="moudleName  moulde">
+				<p>模块名称</p>
+				<input type="text" />
+			</div>
+			<div class="addIcon moulde">
+				<p>添加icon</p>
+				<div class="addArea">
+					<div class="btnBox">
+						<a href="javascript:void(0);"></a>
+						<p>点击添加移动端icon</p>
+					</div>
+				</div>
+			</div>
+			<div class="radioWrap clearfix">
+				<span class="radio selected"><i></i>显示<input type="radio" name="language" id="language1" value="中文"></span>
+				<span class="radio"><i></i>隐藏<input type="radio" name="language" id="language2" value="English"></span>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="return btn r">返<span class="opc">啊</span>回</a>
+		</div>
+	</div>
+	<!-- 新增模块E -->
+	<!-- 编辑banner弹框 S -->
+	<div class="setting dialog">
+		<div class="header">
+			<span>banner管理</span>
+			<span class="closePopup"></span>
+		</div>
+		<div class="bannerWrap">
+			<div class="opration">
+				<div class="select l">
+					<input type="text">
+					<div href="javascript:void(0);">
+						<a href="javascript:void(0);"></a>
+					</div>
+				</div>
+				<a href="javascript:void(0);" class="add">
+					<span class="addCourse btn green"><i></i>新增</span>
+				</a>
+			</div>
+			<ul class="floatList col2 courseList">
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner01.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner02.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner01.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner02.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner01.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaBanner02.jpg">
+						<p>交互设计高手之路图片.jpg</p>
+					</div>
+					<span class=""></span>
+				</li>
+			</ul>
+			<!-- 分页 S -->
+				<div class="pages clearfix">
+					<a href="javascript:;" class="forbid prev"><i></i></a>
+					<!--<a href="#" class="prev"><i></i></a>-->
+					<a href="#" class="current">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="javascript:;" class="shenglue">......</a>
+					<a href="#" class="next"><i></i></a>
+					<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+					<span class="total">总：1440条</span>
+					
+					<span class="tiaozhuan">
+						<span class="">跳转到：</span>
+						<input type="text"><span class="goBtn">GO</span>
+					</span>
+				</div>
+			<!-- 分页 S -->
+		</div>
+		<!-- 选中banner列表 S -->
+		<div class="selectedBanner">
+			<ul class="selectedList clearfix" id= "selectedList"></ul>
+		</div>
+		<!-- 选中banner列表 E -->
+		<!-- 底下按钮 S -->
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">确<span class="opc">啊</span>定</a>
+			<a href="javascript:void(0);" class="return btn r">取<span class="opc">啊</span>消</a>
+		</div>
+		<!-- 底下按钮 E -->
+	</div>
+	<!-- 编辑banner弹框 E -->
+	<!-- 新增banner弹框 S -->
+	<div id="addBanner" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>新增banner</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="standard l">
+				<p class="title">子门户banner规范</p>
+				<img src="images/previewImg6.jpg" />
+			</div>
+			<div class="upload big l">
+				<div class="small clearfix">
+					<div class="imgWrap" id="preview">
+						<img src="images/previewImg7.jpg" />
+						<div class="shadow"></div>
+						<img src="images/previewImg7.jpg" class="middle" />
+						<div class="top">
+							<div class="bg"></div>
+						</div>
+					</div>
+					<div class="uploadBtn clearfix">
+						<a href="javascript:void(0);" class="l"><span></span>上传图片</a>
+						<input type="file" onchange="previewImage(this)" value="图片上传按钮" /> 
+					</div>
+					<div class="descript">500K以内,jpg、gif、png格式</div>
+					<div class="proposal"><span>建议尺寸：</span><span class="num">1920x400</span></div>
+				</div>
+				<span class="hideLeft"><i></i></span>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save r">保存</a>
+			<a href="javascript:void(0);" class="return r">返回</a>
+		</div>
+	</div>
+	<!-- 新增banner弹框 E -->
+	<!-- 公告弹框 S -->
+	<div id="noticeDialog" class="dialog">
+		<div class="header">
+			<div class="l"></span><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content">
+			<div class="btnWrap">
+				<a href="javascript:void(0)">
+					<span class="addCourse btn green"><i></i>新增</span>
+				</a>
+			</div>
+			<div id="tableWrap">
+				<ul class="header clearfix">
+					<li class="name">公告名称</li>
+					<li class="creatPerson">创建人</li>
+					<li class="creatTime">创建时间</li>
+					<li class="opra">操作</li>
+				</ul>
+				<div class="wrap">
+					<table>
+						<tbody>
+							<tr>
+								<td class="name">讲师备课通知1</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top first">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知2</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知3</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知4</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知5</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知6</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知7</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知8</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知9</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知10</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="btnWrap btns">
+			<a href="javascript:void(0);" class="save fr">确定</a>
+			<a href="javascript:void(0);" class="return fr">取消</a>
+		</div>
+	</div>
+	<!-- 公告弹框 E -->
+	<!-- 公告模块弹框 S -->
+	<div id="noticeMoudleDialog"  class="dialog">
+		<div class="header">
+			<div class="l"></span><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content">
+			<div class="btnWrap">
+				<a href="javascript:void(0)">
+					<span class="addCourse btn green"><i></i>新增</span>
+				</a>
+			</div>
+			<div id="noticeMoudleTable">
+				<ul class="header clearfix">
+					<li class="name">公告名称</li>
+					<li class="creatPerson">创建人</li>
+					<li class="creatTime">创建时间</li>
+					<li class="opra">操作</li>
+				</ul>
+				<div class="wrap">
+					<table>
+						<tbody>
+							<tr>
+								<td class="name">讲师备课通知1</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top first">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知2</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知3</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知4</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知5</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知6</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知7</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知8</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知9</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+							<tr>
+								<td class="name">讲师备课通知10</td>
+								<td class="creatPerson">dongzhiwu6789</td>
+								<td class="creatTime">2016-09-21</td>
+								<td class="opration">
+									<a href="javascript:void(0);" class="l top">置顶</a>
+									<a href="javascript:void(0);" class="l edits"></a>
+									<a href="javascript:void(0);" class="l delete"></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="btnWrap btns">
+			<a href="javascript:void(0);" class="save fr">确定</a>
+			<a href="javascript:void(0);" class="return fr">取消</a>
+		</div>
+	</div>
+	<!-- 公告模块弹框 E -->
+	<!-- 新增公告弹框 S -->
+	<div id="addNotice" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="noticeName l">
+				<div class="contentWrap">
+					<p class="name">公告名称<span>*</span></p>
+					<input class="text" />
+				</div>
+			</div>
+			<div class="noticeLink l">
+				<p>公告链接</p>
+				<input class="text" />
+			</div>
+			<div class="editContent">
+				<p class="name">公告内容</p>
+				<div class="tools">
+					<ul class="floatList">
+						<li class="webTag"></li>
+						<li class="b"></li>
+						<li class="u"></li>
+						<li class="abc"></li>
+						<li class="a">
+							<span class="fl text">A</span>
+							<span class="fl down"></span>
+						</li>
+						<li class="ab"><span class="fr down"></span></li>
+						<li class="eraser"></li>
+						<li class="military"></li>
+						<li class="disorder"></li>
+						<li class="fontStyle fonts">
+							<div class="selected">
+								<span class="text">微软...</span>
+								<span class="down"></span>
+							</div>
+							<ul>
+								<li>微软...</li>
+								<li>宋体</li>
+								<li>火星</li>
+							</ul>
+						</li>
+						<li class="fontSize fonts">
+							<div class="selected">
+								<span class="text"> 12 </span>
+								<span class="down r"></span>
+							</div>
+							<ul>
+								<li>12</li>
+								<li>14</li>
+								<li>16</li>
+							</ul>
+						</li>
+						<li class="left"></li>
+						<li class="middle"></li>
+						<li class="right"></li>
+						<li class="link"></li>
+						<li class="c"></li>
+						<li class="insertPic"></li>
+					</ul>
+				</div>
+				<div class="editArea" contenteditable="true">
+				</div>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="cancel btn r">返<span class="opc">啊</span>回</a>
+		</div>
+	</div>
+	<!-- 新增公告弹框 E -->
+	<!-- 新增公告模块弹框 S -->
+	<div id="addNoticeMoudle" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="noticeName l">
+				<div class="contentWrap">
+					<p class="name">公告名称<span>*</span></p>
+					<input class="text" />
+				</div>
+			</div>
+			<div class="noticeLink l">
+				<p>公告链接</p>
+				<input class="text" />
+			</div>
+			<div class="editContent">
+				<p class="name">公告内容</p>
+				<div class="tools">
+					<ul class="floatList">
+						<li class="webTag"></li>
+						<li class="b"></li>
+						<li class="u"></li>
+						<li class="abc"></li>
+						<li class="a">
+							<span class="fl text">A</span>
+							<span class="fl down"></span>
+						</li>
+						<li class="ab"><span class="fr down"></span></li>
+						<li class="eraser"></li>
+						<li class="military"></li>
+						<li class="disorder"></li>
+						<li class="fontStyle fonts">
+							<div class="selected">
+								<span class="text">微软...</span>
+								<span class="down"></span>
+							</div>
+							<ul>
+								<li>微软...</li>
+								<li>宋体</li>
+								<li>火星</li>
+							</ul>
+						</li>
+						<li class="fontSize fonts">
+							<div class="selected">
+								<span class="text"> 12 </span>
+								<span class="down r"></span>
+							</div>
+							<ul>
+								<li>12</li>
+								<li>14</li>
+								<li>16</li>
+							</ul>
+						</li>
+						<li class="left"></li>
+						<li class="middle"></li>
+						<li class="right"></li>
+						<li class="link"></li>
+						<li class="c"></li>
+						<li class="insertPic"></li>
+					</ul>
+				</div>
+				<div class="editArea" contenteditable="true">
+				</div>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="cancel btn r">返<span class="opc">啊</span>回</a>
+		</div>
+	</div>
+	<!-- 新增公告模块弹框 E -->
+	<!-- 推荐课程S -->
+	<div id="courseRecommend" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>课程推荐</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content">
+			<ul class="floatList col5 courseList">
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd01.jpg">
+						<p>
+							<span>企业设计生态1</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd02.jpg">
+						<p>
+							<span>员工的幸福感来自这里2</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd03.jpg">
+						<p>
+							<span>企业设计生态3</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd04.jpg">
+						<p>
+							<span>理科生的逆袭之路4</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd05.jpg">
+						<p>
+							<span>文科生的生活5</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd01.jpg">
+						<p>
+							<span>企业设计生态6</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd02.jpg">
+						<p>
+							<span>员工的幸福感来自这里7</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd03.jpg">
+						<p>
+							<span>企业设计生态8</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd04.jpg">
+						<p>
+							<span>企业设计生态9</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd05.jpg">
+						<p>
+							<span>企业设计生态10</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd01.jpg">
+						<p>
+							<span>企业设计生态11</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd02.jpg">
+						<p>
+							<span>企业设计生态12</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd03.jpg">
+						<p>
+							<span>企业设计生态13</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd04.jpg">
+						<p>
+							<span>企业设计生态14</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/areaAdd05.jpg">
+						<p>
+							<span>企业设计生态15</span>
+							<a href="javascript:;"></a>
+						</p>
+					</div>
+				</li>
+			</ul>
+			<!-- 分页 S -->
+			<div class="pages clearfix">
+				<a href="javascript:;" class="forbid prev"><i></i></a>
+				<!--<a href="#" class="prev"><i></i></a>-->
+				<a href="#" class="current">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="javascript:;" class="shenglue">......</a>
+				<a href="#" class="next"><i></i></a>
+				<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+				<span class="total">总：1440条</span>
+				
+				<span class="tiaozhuan">
+					<span class="">跳转到：</span>
+					<input type="text"><span class="goBtn">GO</span>
+				</span>
+			</div>
+		<!-- 分页 S -->
+		</div>
+		<!-- 底下按钮 S -->
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="return btn r">返<span class="opc">啊</span>回</a>
+		</div>
+		<!-- 底下按钮 E -->
+	</div>
+	<!-- 推荐课程E -->
+	<!-- 讨论编辑S -->
+	<div id="discussEdit" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>讨论编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="left l">
+				<div class="top">
+					<span>讨论分类</span>
+					<a href="javascript:void(0);"></a>
+				</div>
+				<ul>
+					<li>
+						<span>全部</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+					<li>
+						<span>概念</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+					<li>
+						<span>发布</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="right l">
+				<div class="top">讨论信息</div>
+				<ul style="display: block;">
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>日本的古典风曲子，真的是让人入戏很深啊。</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>讲得很好，学习了！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>学习了很多理论知识，谢谢老师得指点，接下来我要好好得去实践了！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="return btn r">返<span class="opc">啊</span>回</a>
+		</div>
+	</div>
+	<!-- 讨论编辑E -->
+	<!-- 讨论模块编辑S -->
+	<div id="discussMoudleEdit" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>讨论编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="left l">
+				<div class="top">
+					<span>讨论分类</span>
+					<a href="javascript:void(0);"></a>
+				</div>
+				<ul>
+					<li>
+						<span>全部</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+					<li>
+						<span>概念</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+					<li>
+						<span>发布</span>
+						<div>
+							<input type="text" />
+							<a href="javascript:void(0);"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="right l">
+				<div class="top">讨论信息</div>
+				<ul>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>我是来补习理论的，学完回过头来看，嗯，这门课也就是理论课..。觉得还没我老师讲的好！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>日本的古典风曲子，真的是让人入戏很深啊。</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>讲得很好，学习了！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="clearfix">
+						<img class="l" src="images/discuss01.jpg" />
+						<div class="l contentWrap">
+							<p>学习了很多理论知识，谢谢老师得指点，接下来我要好好得去实践了！</p>
+							<div class="info clearfix">
+								<div class="l infoLeft">
+									<span class="userName">dongzhiwu</span>
+									<span>|</span>
+									<span class="date">2016-4-23</span>
+									<span class="time">22:45:12</span>
+								</div>
+								<div class="r infoRight">
+									<div class="l msg">
+										<span class="l bg"></span>
+										<span class="num">(34)</span>
+									</div>
+									<div class="l browseNum">
+										<span class="l bg"></span>
+										<span class="num">(6666)</span>
+									</div>
+									<a class="l toTop" href="javascript:void(0);">置顶</a>
+									<a class="l opra stop" href="javascript:void(0);"></a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save btn r">保<span class="opc">啊</span>存</a>
+			<a href="javascript:void(0);" class="return btn r">返<span class="opc">啊</span>回</a>
+		</div>
+	</div>
+	<!-- 讨论模块编辑E -->
+	<!-- 同学编辑弹框S -->
+	<div id="classmateEdit" class="dialog">
+		<div class="header">
+			<div class="l"><span class="add"></span><span>讨论编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="searchBox">
+				<input type="text" />
+				<a href="javascript:void(0);">
+					<span></span>
+				</a>
+			</div>
+			<div class="tabHeder">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+					<tbody>
+						<th class="selectWrap">
+							<span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span>
+						</th>
+						<th class="name">同学名称</th>
+						<th class="column">所属栏目</th>
+						<th class="department">部门</th>
+						<th>操作</th>
+					</tbody>
+				</table>
+			</div>
+			<div class="courseListWrap current">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+					<tbody>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711aa</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711bb</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711cc</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711dd</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711ee</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711ff</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711gg</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio selectWrap"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox"></span></td>
+							<td class="name">
+								<img src="images/classMate01.png" />
+								<div class="desc">
+									<p class="title">linjiayi0284711hh</p>
+								</div>
+							</td>
+							<td class="column">同学列表</td>
+							<td class="department">
+								<span class="departmentName">质量与流程IT管理部</span>
+								<span class="departmentName">信息技术工程部</span>
+								<span class="departmentName">移动办公业务部</span>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="editIcon iconBtn">
+										<span class="icon"></span>
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="btn sure">导入同学</a>
+			<a href="javascript:void(0);" class="btn return">删除同学</a>
+		</div>
+	</div>
+	<!-- 同学编辑弹框E -->
+	<!-- 课程大纲S -->
+	<div id="cardEdit" class="dialog">
+		<div class="header hov">
+			<div class="l"><span class="add"></span><span>编辑课程大纲</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="left l">
+				<div class="title">
+					<span>产品开发项目管理云书库</span>
+					<a href="javascript:void(0);" class="r add"></a>
+				</div>
+				<ul class="menu">
+					<li>
+						<div class="rootMenu">
+							<div class="showBox">
+								<span>文件夹名称:</span>
+								<span class="name">概念</span>
+								<div class="btnWrap">
+									<a class="edit" href="javascript:void(0);"></a>
+									<a class="addFile" href="javascript:void(0);"></a>
+									<a class="del" href="javascript:void(0);"></a>
+								</div>
+							</div>
+							<div class="warp">
+								<div class="editBox clearfix">
+									<div class="inputWrap">
+										<input type="text" />
+										<a href="javascript:void(0);"></a>
+									</div>
+								</div>
+							</div>
+							<ul class="subMenu oneMenu">
+								<li>
+									<div class="contentWrap clearfix">
+										<span class="triangle l"></span>
+										<span class="file l"></span>
+										<span class="text l">人力资源</span>
+										<div class="editBox clearfix">
+											<div class="inputWrap l">
+												<input type="text" />
+												<a href="javascript:void(0);"></a>
+											</div>
+											<a class="del l" href="javascript:void(0);"></a>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<a class="edit" href="javascript:void(0);"></a>
+										<a class="add" href="javascript:void(0);"></a>
+										<a class="addFile" href="javascript:void(0);"></a>
+										<a class="del" href="javascript:void(0);"></a>
+									</div>
+									<ul class="subMenu">
+										<li>
+											<div class="contentWrap clearfix">
+												<span class="triangle l"></span>
+												<span class="file l"></span>
+												<span class="text l">学习资料</span>
+											
+												<div class="editBox clearfix">
+													<div class="inputWrap l">
+														<input type="text" />
+														<a href="javascript:void(0);"></a>
+													</div>
+													<a class="del l" href="javascript:void(0);"></a>
+												</div>
+											</div>
+											<div class="btnWrap">
+												<a class="edit" href="javascript:void(0);"></a>
+												<a class="del" href="javascript:void(0);"></a>
+											</div>
+										</li>
+										<li>
+											<div class="contentWrap clearfix">
+												<span class="triangle l"></span>
+												<span class="file l"></span>
+												<span class="text l">文件夹</span>
+											
+												<div class="editBox clearfix">
+													<div class="inputWrap l">
+														<input type="text" />
+														<a href="javascript:void(0);"></a>
+													</div>
+													<a class="del l" href="javascript:void(0);"></a>
+												</div>
+											</div>
+											<div class="btnWrap">
+												<a class="edit" href="javascript:void(0);"></a>
+												<a class="add" href="javascript:void(0);"></a>
+												<a class="addFile" href="javascript:void(0);"></a>
+												<a class="del" href="javascript:void(0);"></a>
+											</div>
+											<ul class="subMenu">
+												<li>
+													<div class="contentWrap clearfix">
+														<span class="course l"></span>
+														<span class="text l">aaa</span>
+														<div class="editBox clearfix">
+															<div class="inputWrap l">
+																<input type="text" />
+																<a href="javascript:void(0);"></a>
+															</div>
+															<a class="del l" href="javascript:void(0);"></a>
+														</div>
+													</div>
+													<div class="btnWrap">
+														<a class="edit" href="javascript:void(0);"></a>
+														<a class="del" href="javascript:void(0);"></a>
+													</div>
+												</li>
+												<li>
+													<div class="contentWrap clearfix">
+														<span class="course l"></span>
+														<span class="text l">bbb</span>
+														<div class="editBox clearfix">
+															<div class="inputWrap l">
+																<input type="text" />
+																<a href="javascript:void(0);"></a>
+															</div>
+															<a class="del l" href="javascript:void(0);"></a>
+														</div>
+													</div>
+													<div class="btnWrap">
+														<a class="edit" href="javascript:void(0);"></a>
+														<a class="del" href="javascript:void(0);"></a>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="contentWrap clearfix">
+										<span class="triangle l"></span>
+										<span class="file l"></span>
+										<span class="text l">交互设计之路的学习之路444</span>
+										<div class="editBox clearfix">
+											<div class="inputWrap l">
+												<input type="text" />
+												<a href="javascript:void(0);"></a>
+											</div>
+											<a class="del l" href="javascript:void(0);"></a>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<a class="edit" href="javascript:void(0);"></a>
+										<a class="add" href="javascript:void(0);"></a>
+										<a class="addFile" href="javascript:void(0);"></a>
+										<a class="del" href="javascript:void(0);"></a>
+									</div>
+									<ul class="subMenu"></ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="rootMenu">
+							<div class="showBox">
+								<span>文件夹名称:</span>
+								<span class="name">发布</span>
+								<div class="btnWrap">
+									<a class="edit" href="javascript:void(0);"></a>
+									<a class="addFile" href="javascript:void(0);"></a>
+									<a class="del" href="javascript:void(0);"></a>
+								</div>
+							</div>
+							<div class="warp">
+								<div class="editBox clearfix">
+									<div class="inputWrap">
+										<input type="text" />
+										<a href="javascript:void(0);"></a>
+									</div>
+								</div>
+							</div>
+							<ul class="subMenu oneMenu">
+								<li>
+									<div class="contentWrap clearfix">
+										<span class="triangle l"></span>
+										<span class="file l"></span>
+										<span class="text l">交互设计之路的学习之路</span>
+										<div class="editBox clearfix">
+											<div class="inputWrap l">
+												<input type="text">
+												<a href="javascript:void(0);"></a>
+											</div>
+											<a class="del l" href="javascript:void(0);"></a>
+										</div>
+									</div>
+									<div class="btnWrap">
+										<a class="edit" href="javascript:void(0);"></a>
+										<a class="add" href="javascript:void(0);"></a>
+										<a class="addFile" href="javascript:void(0);"></a>
+										<a class="del" href="javascript:void(0);"></a>
+									</div>
+									<ul class="subMenu"></ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="right l">
+				<div class="title">挑选资源</div>
+				<div class="filter clearfix">
+					<div class="selectBox l">
+						<span class="l">课件类型</span>
+						<div class="optionWrap l">
+							<div class="selected">
+								<span class="text">全部</span>
+								<span class="bg r"></span>
+							</div>
+							<ul class="optionList">
+								<li>全部</li>
+								<li>mooc</li>
+								<li>考试</li>
+								<li>课程</li>
+								<li>面授</li>
+								<li>新风尚考试</li>
+							</ul>
+						</div>
+					</div>
+					<div class="searchBox l">
+						<input type="text" placeholder="请输入要朝赵的资源" />
+						<div class="r">
+							<a></a>
+						</div>
+					</div>
+				</div>	
+				<div class="listWrap">
+					<ul class="floatList col3" style="display:block;">
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 课程 </span>]</p>
+								<p>角色认知学习资料文档上部1</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部2</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部3</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 课程 </span>]</p>
+								<p>角色认知学习资料文档上部4</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部5</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部6</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 课程 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+					</ul>
+					<ul class="floatList col3">
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> mooc </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+					</ul>
+					<ul class="floatList col3">
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<img src="images/areaAdd06.jpg">
+								<p>[<span class="type"> 考试 </span>]</p>
+								<p>角色认知学习资料文档上部</p>
+								<span class="bg"></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--=S 分页 -->
+				<div class="pages clearfix mt20">
+					<a href="javascript:;" class="forbid prev"><i></i></a>
+					<!--<a href="#" class="prev"><i></i></a>-->
+					<a href="#" class="current">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="javascript:;" class="shenglue">......</a>
+					<a href="#" class="next"><i></i></a>
+					<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+					<span class="total">总：1440条</span>
+					
+					<span class="tiaozhuan">
+						<span class="">跳转到：</span>
+						<input type="text"><span class="goBtn">GO</span>
+					</span>
+				</div>
+				<!--=E 分页 -->
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="release btn r">确<span class="opc">啊</span>定</a>
+			<a href="javascript:void(0);" class="cancel btn r">取<span class="opc">啊</span>消</a>
+		</div>
+	</div>
+	<!-- 课程大纲E -->
+	<!-- 移动端弹窗 S -->
+		<!-- 编辑banner 弹窗 S -->
+	<div id="mobileBanner" class="dialog">
+		<div class="header">
+			<span>banner管理</span>
+			<span class="closePopup"></span>
+		</div>
+		<div class="bannerWrap">
+			<div class="opration">
+				<div class="select fl">
+					<div class="selected">
+						<span>所属栏目</span>
+						<span class="fr"><img src="images/down.jpg"></span>
+					</div>
+					<ul class="options">
+						<li>a</li>
+						<li>b</li>
+						<li>c</li>
+						<li>d</li>
+					</ul>
+				</div>	
+				<a href="javascript:void(0);" class="add">
+					<span class="addCourse btn green"><i></i>新增banner</span>
+				</a>
+			</div>
+			<ul class="floatList col4 courseList">
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner03.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner04.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner05.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+				<li>
+					<div class="liBox">
+						<img src="images/mobileBanner02.jpg">
+					</div>
+					<span class=""></span>
+				</li>
+			</ul>
+			<!-- 分页 S -->
+			<div class="pages clearfix">
+				<a href="javascript:;" class="forbid prev"><i></i></a>
+				<!--<a href="#" class="prev"><i></i></a>-->
+				<a href="#" class="current">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="javascript:;" class="shenglue">......</a>
+				<a href="#" class="next"><i></i></a>
+				<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+				<span class="total">总：1440条</span>
+				
+				<span class="tiaozhuan">
+					<span class="">跳转到：</span>
+					<input type="text"><span class="goBtn">GO</span>
+				</span>
+			</div>
+			<!-- 分页 S -->
+		</div>
+		<div class="selectedBanner">
+			<ul class="selectedList clearfix"></ul>
+		</div>
+		<div class="btnWrap">
+			<a href="javascript:void(0);" class="save fr">保存</a>
+			<a href="javascript:void(0);" class="return fr">返回</a>
+		</div>
+	</div>
+		<!-- 编辑banner 弹窗 E -->
+		<!-- 新增banner 弹窗 S -->
+	<div id="maddBanner" class="dialog">
+		<div class="header">
+			<div class="fl"><span class="add"></span><span>新增banner</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="standard fl">
+				<p class="title">子门户banner规范</p>
+				<img src="images/previewImg6.jpg">
+			</div>
+			<div class="upload big fl">
+				<div class="small clearfix">
+					<div class="imgWrap">
+						<img src="images/mobileAdd.jpg">
+					</div>
+					<div class="uploadBtn clearfix">
+						<a href="javascript:void(0);" class="fl">上传图片</a>
+					</div>
+					<div class="descript">500K以内/RGB模式,jpg、gif、png格式</div>
+					<div class="proposal"><span>建议尺寸：</span><span class="num">1080x350</span></div>
+				</div>
+				<span class="hideLeft"><i></i></span>
+			</div>
+		</div>
+		<div class="btnWrap">
+			<a href="javascript:void(0);" class="save fr">保存</a>
+			<a href="javascript:void(0);" class="return fr">返回</a>
+		</div>
+	</div>
+		<!-- 新增banner 弹窗 E -->
+		<!-- 快捷入口弹窗 S -->
+	<div id="mqueickEntry" class="dialog">
+		<div class="header">
+			<div class="fl"><span class="add"></span><span>快捷入口编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content">
+			<div class="btnWrap">
+				<a href="javascript:void(0)" class="clearfix">
+					<span class="addCourse btn green"><i></i>新增快捷入口</span>
+				</a>
+			</div>
+			<ul class="floatList col4">
+				<li>
+					<div class="liBox">
+						<div class="clearfix descript">
+							<div class="img fl">
+								<span><img src="images/mobile02.jpg" /></span>
+							</div>
+							<div class="desc fr">
+								<p>新员工1</p>
+								<p class="f12 gray">入职培训，了解终端</p>
+							</div>
+						</div>
+						<div class="btnWrap">
+							<a href="javascript:void(0);" class="delete fr"></a>
+							<a href="javascript:void(0);" class="editor fr"></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<div class="clearfix descript">
+							<div class="img fl">
+								<span><img src="images/mobile03.jpg" /></span>
+							</div>
+							<div class="desc fr">
+								<p>新员工1</p>
+								<p class="f12 gray">入职培训，了解终端</p>
+							</div>
+						</div>
+						<div class="btnWrap">
+							<a href="javascript:void(0);" class="delete fr"></a>
+							<a href="javascript:void(0);" class="editor fr"></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<div class="clearfix descript">
+							<div class="img fl">
+								<span><img src="images/mobile04.jpg" /></span>
+							</div>
+							<div class="desc fr">
+								<p>新员工1</p>
+								<p class="f12 gray">入职培训，了解终端</p>
+							</div>
+						</div>
+						<div class="btnWrap">
+							<a href="javascript:void(0);" class="delete fr"></a>
+							<a href="javascript:void(0);" class="editor fr"></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<div class="clearfix descript">
+							<div class="img fl">
+								<span><img src="images/mobile05.jpg" /></span>
+							</div>
+							<div class="desc fr">
+								<p>新员工1</p>
+								<p class="f12 gray">入职培训，了解终端</p>
+							</div>
+						</div>
+						<div class="btnWrap">
+							<a href="javascript:void(0);" class="delete fr"></a>
+							<a href="javascript:void(0);" class="editor fr"></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="liBox">
+						<div class="clearfix descript">
+							<div class="img fl">
+								<span><img src="images/queitEntry01.jpg" /></span>
+							</div>
+							<div class="desc fr">
+								<p>新员工1</p>
+								<p class="f12 gray">入职培训，了解终端</p>
+							</div>
+						</div>
+						<div class="btnWrap">
+							<a href="javascript:void(0);" class="delete fr"></a>
+							<a href="javascript:void(0);" class="editor fr"></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<div class="btnWrap">
+				<a href="javascript:void(0);" class="save fr">保存</a>
+				<a href="javascript:void(0);" class="cancel fr">返回</a>
+			</div>
+		</div>
+	</div>
+		<!-- 快捷入口弹窗 E -->
+	<div id="maddqueickEntry" class="dialog">
+		<div class="header">
+			<div class="fl"><span class="add"></span><span>快捷入口编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			<div class="upLoad fl">
+				<p>快捷入口icon </p>
+				<div class="previewBox">
+					<div class="bg"></div>
+					<a href="javascript:void( 0 );">本地上传</a>
+				</div>
+			</div>
+			<div class="editBox fl">
+				<p>类别名称</p>
+				<input type="text" class="name">
+				<p>链接</p>
+				<input type="text" class="lin">
+				<p>内容</p>
+				<input type="text" class="inputContent">
+			</div>
+		</div>
+		<div class="btnWrap">
+			<a href="javascript:void(0);" class="save fr">保存</a>
+			<a href="javascript:void(0);" class="return fr">返回</a>
+		</div>
+	</div>
+	<!-- 移动端弹窗 E -->
+</div>
+<!-- 右侧悬浮窗 S -->
+<!-- <div id="suspensionSurvey">
+	<span class="hideLeft"><i></i></span>
+</div>
+<div id="suspensionContent">
+	<div class="title">编辑模块<a href="javascript:void(0);" class="close"></a></div>
+	<ul>
+		<li class="bannerEdit">
+			<a href="#courseCatalog"><span class="bg"></span><span>banner编辑</span></a>
+		</li>
+		<li class="noticeEdit">
+			<a href="#noticeEdit"><span class="bg"></span><span>公告编辑</span></a>
+		</li>
+		<li class="entryEdit">
+			<a href="#entryEdit"><span class="bg"></span><span>快捷入口编辑</span></a>
+		</li>
+		<li class="cardEdit">
+			<a href="#cardEditBtn"><span class="bg"></span><span>卡片编辑</span></a>
+		</li>
+	</ul>
+</div> -->
+<!-- 右侧悬浮窗 E -->
+<script src="js/common/jquery-1.11.1.min.js"></script>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/area.js"></script>
+</body>
+</html>

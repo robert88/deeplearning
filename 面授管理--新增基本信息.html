@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>面授管理-新增-基本资料</title>
+	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/face.css" rel="stylesheet" />
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li >
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" >
+                <li><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li class='current open '>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" style="display:block;">
+                <li class='current '><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="面授管理--新增基本信息.html">面授管理</a> > <span class="current">面授课程</span>
+				<a href="面授管理--新增基本信息.html"><span class="back"><i></i>返回</span></a>
+			</div>
+			<!-- 步骤 -->
+			<div class="step">
+				<div class="stepInner">
+					<p class="line"></p>
+					<ul class="floatList col2">
+						<li class="current alignL">
+							<i class="icon"></i>
+							<a href="面授管理--新增基本信息.html" class="text">填写面授基本信息</a>
+						</li>
+						<li class="alignR">
+							<i class="icon"></i>
+							<a href="面授管理--面授新增--编辑课程表.html" class="text">编辑面授课程表</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--=S 前台展示 -->
+			<h2>前台展示</h2>
+			<div class="form show">
+				<div class="showBox">
+					<ul class="controlList clearfix">
+						<li>
+							<label>课程名称<span class="red">*</span></label>
+							<input type="text" class="text" placeholder="" value="风景摄影入门" />
+						</li>
+						<li>
+							<label>课程编码</label>
+							<input type="text" class="text" placeholder="" value="201909233779745279" />
+						</li>
+						<li>
+							<label>课程语言<span class="red">*</span></label>
+							<div class="radioWrap clearfix">
+								<span class="radio selected"><i></i>中文<input type="radio" name="language" id="language1" value="中文" /></span>
+								<span class="radio"><i></i>English<input type="radio" name="language" id="language2" value="English" /></span>
+							</div>
+						</li>
+						<li class="coursePicLi">
+							<label>课程图片</label>
+							
+							<div class="coursePic">
+								<img src="images/previewImg01.png" />
+								<div class="coursePicInner"></div>
+								<div id="startUloadPic">
+									<div class="alignC">
+										<span class="bg"></span>
+										<span class="btn addPic">上传图片</span>
+									</div>
+									<p>
+										500K以内<br>
+										jpg、gif、png格式，建议尺寸：<span class="red">480x270</span>
+									</p>
+								</div>
+							</div>
+						</li>
+						<li class="courseJianjie">
+							<label>课程简介</label>
+							<textarea>无论对于新手或老手，无可否认风光摄影是其中一个最受欢迎的题材。尤其对于新手而言，风景照可能占了相片库中的大部分，若果多数静态的风景照也拍不好，会大大影响学摄影的信心和动力，那么在拍摄风景时有什么技巧可以学习的呢？让我们看看这9个提升风景摄影的技巧吧！
+							</textarea>
+						</li>
+					</ul>
+					<div class="targsWrap">
+						<label>域标签</label>
+						<div class="targSelect clearfix">
+							<div class="addTagsWrap">
+								<span class="btn blue addTag open">添加标签</span>
+								<div class="addTags">
+									<i class="arrow"></i>
+									<div class="tagsList">
+										<span class="btnMin red" data-pid="5">交互设计师<i></i></span>
+										<span class="btnMin green" data-pid="6">大师之路<i></i></span>
+										<span class="btnMin yellow" data-pid="7">学习<i></i></span>
+										
+										<span class="btnMin red" data-pid="8">交互设计师2<i></i></span>
+										<span class="btnMin green" data-pid="9">大师之路2<i></i></span>
+										<span class="btnMin yellow" data-pid="10">学习2<i></i></span>
+										
+										<span class="btnMin red" data-pid="11">交互设计师3<i></i></span>
+										<span class="btnMin green" data-pid="12">大师之路3<i></i></span>
+										<span class="btnMin yellow" data-pid="13">学习3<i></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="selectedtags">
+								<div class="tagsListInner">
+									<span class="btnMin red" data-pid="1">公司流程<i></i></span>
+									<span class="btnMin green" data-pid="2">公司知识<i></i></span>
+									<span class="btnMin blue" data-pid="3">公司流程<i></i></span>
+									<span class="btnMin yellow" data-pid="4">公司知识<i></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--=E 前台展示 -->
+		</div>
+			
+		<!--=S 底部浮动栏-->
+		<div class="bottomFloatBar alignR">
+			<span class="btn">保<span class="opc">啊</span>存</span>
+			<a href="面授管理--面授新增--编辑课程表.html"><span class="btn blue">下一步</span></a>
+		</div>
+		<!--=E 底部浮动栏-->
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<!-- 弹窗 S -->
+<div id="previewPagePopup">
+	<div id="mask"></div>
+	<!--=S 上传课程图片 弹出框内容 -->
+	<div id="uploadPic">
+		<div class="header hov">
+			<div class="l"><span>课程图片上传</span></div>
+			<span class="closePopup"></span>
+		</div>
+		<div class="content clearfix">
+			
+			<div class="uploadExplain l">
+				<h2>课程图片</h2>
+				<img src="images/coursePic.jpg" />
+			</div>
+			<div class="uploadWrap l">
+				<div class="uploadInner">
+					<div id="previewImg">
+						<img src="images/coursePic3.jpg" />
+					</div>
+					<div class="uploadBtn">
+						<div class="btn green uploadImage">
+							<span class="bg"></span>上传图片
+						</div>
+						<input type="file" onchange="previewImage(this)" value="图片上传按钮">
+					</div>
+					<p>500K以内/RGB模式,jpg、gif、png格式</p>
+					<p>建议尺寸：<span class="red">480x270</span></p>
+					
+				</div>
+				<span class="hideLeft"><i></i></span>
+			</div>
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="save r">保存</a>
+			<a href="javascript:void(0);" class="return r">取消</a>
+		</div>
+	</div>
+	<!--=E 上传课程图片 弹出框内容 -->
+</div>
+<!-- 弹窗 E -->
+<script src="js/common/jquery-1.11.1.min.js"></script>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/face.js"></script>
+</body>
+</html>

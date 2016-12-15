@@ -1,0 +1,1176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>课程管理-新增-大纲</title>
+	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/course.css" rel="stylesheet" />
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li >
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" >
+                <li><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="课程管理--大图显示.html">课程管理</a> > <span class="current">新增课程</span>
+				<a href="课程管理--大图显示.html"><span class="back"><i></i>返回</span></a>
+			</div>
+			<!-- 步骤 -->
+			<div class="step">
+				<div class="stepInner">
+					<p class="line"></p>
+					<ul class="floatList col3">
+						<li class="finished alignL">
+							<i class="icon"></i>
+							<a href="课程管理--新增.html" class="text">填写课程基本信息</a>
+						</li>
+						<li class="current alignC">
+							<i class="icon"></i>
+							<a href="课程管理--课程大纲.html" class="text">编辑课程大纲</a>
+						</li>
+						<li class="alignR">
+							<i class="icon"></i>
+							<a href="课程管理--权限设置.html" class="text">相关配置</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--=S 课程目录 -->
+			<div>
+				<span class="edit editDagang" id="editDagang"><i class="icon"></i>编辑</span>
+				<h2>课程目录</h2>
+			</div>
+			<div class="dagangContent">
+				<!-- 添加大纲按纽 -->
+				<div class="addDagangBtn">
+					<i class="icon"></i>点击添加内容
+				</div>
+				
+				<!-- 大纲预览 -->
+				<div id="previewContent" class="previewContent clearfix dn">
+					<div class="imgWrap">
+						<img src="images/previewImg.jpg" class="previewImg" />
+					</div>	
+					<div class="previewRight">
+						<div class="courseName">
+							<span class="name">基础管理角色认知项目</span>
+						</div>
+						
+						<ul class="courseWareListWrap">
+							<li data-pid="1.1">
+								<div class="folder">
+									<i class="arrow"></i>
+									<i class="filderIcon"></i>
+									<span class="xuhao">1.1</span>
+									<span class="filderName">FLMP2015角色认知，FLMP2015角色认知，FLMP2015角色认知</span>
+								</div>
+								<ul class="courseWareList">
+									<li>
+										<div class="courseWareName">
+											<i class="courseType"></i>
+											<span class="name">FLMP2015角色认知学习资料文档，FLMP2015角色认知学习资料文档</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图片</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType video"></i>
+											<span class="name">FLMP2015角色认知学习资料视频</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li data-pid="1.2">
+								<div class="folder">
+									<i class="arrow"></i>
+									<i class="filderIcon"></i>
+									<span class="xuhao">1.2</span>
+									<span class="filderName">FLMP2015角色认知</span>
+								</div>
+								<ul class="courseWareList">
+									<li>
+										<div class="courseWareName">
+											<i class="courseType doc"></i>
+											<span class="name">FLMP2015角色认知学习资料文档</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType web"></i>
+											<span class="name">FLMP2015角色认知学习资料图片</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType test"></i>
+											<span class="name">FLMP2015角色认知学习资料视频</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li data-pid="1.3">
+								<div class="courseWareName">
+									<i class="arrow"></i>
+									<i class="courseType imgText"></i>
+									<span class="xuhao">1.3</span>
+									<span class="name">FLMP2015角色认知</span>
+								</div>
+							</li>
+							<li data-pid="1.4">
+								<div class="folder">
+									<i class="arrow"></i>
+									<i class="filderIcon"></i>
+									<span class="xuhao">1.4</span>
+									<span class="filderName">FLMP2015角色认知，FLMP2015角色认知，FLMP2015角色认知</span>
+								</div>
+								<ul class="courseWareList">
+									<li>
+										<div class="courseWareName">
+											<i class="courseType"></i>
+											<span class="name">FLMP2015角色认知学习资料文档，FLMP2015角色认知学习资料文档</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图片</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType video"></i>
+											<span class="name">FLMP2015角色认知学习资料视频</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li data-pid="1.5">
+								<div class="folder">
+									<i class="arrow"></i>
+									<i class="filderIcon"></i>
+									<span class="xuhao">1.5</span>
+									<span class="filderName">FLMP2015角色认知</span>
+								</div>
+								<ul class="courseWareList">
+									<li>
+										<div class="courseWareName">
+											<i class="courseType doc"></i>
+											<span class="name">FLMP2015角色认知学习资料文档</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType web"></i>
+											<span class="name">FLMP2015角色认知学习资料图片</span>
+										</div>
+									</li>
+									<li>
+										<div class="courseWareName">
+											<i class="courseType test"></i>
+											<span class="name">FLMP2015角色认知学习资料视频</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li data-pid="1.6">
+								<div class="courseWareName">
+									<i class="courseType video"></i>
+									<span class="xuhao">1.6</span>
+									<span class="name">2016敏捷用户大会</span>
+								</div>
+							</li>
+							<li data-pid="1.7">
+								<div class="courseWareName">
+									<i class="courseType imgText"></i>
+									<span class="xuhao">1.7</span>
+									<span class="name">FLMP2015角色认知</span>
+								</div>
+							</li>
+							<li data-pid="1.8">
+								<div class="courseWareName">
+									<i class="courseType video"></i>
+									<span class="xuhao">1.8</span>
+									<span class="name">2016敏捷用户大会</span>
+								</div>
+							</li>
+							<li data-pid="1.9">
+								<div class="courseWareName">
+									<i class="courseType imgText"></i>
+									<span class="xuhao">1.9</span>
+									<span class="name">FLMP2015角色认知</span>
+								</div>
+							</li>
+							<li data-pid="2.0">
+								<div class="courseWareName">
+									<i class="courseType video"></i>
+									<span class="xuhao">2.0</span>
+									<span class="name">2016敏捷用户大会</span>
+								</div>
+							</li>			
+						</ul>
+					</div>
+				</div>			
+	
+			</div>
+			<!--=E 课程目录 -->
+		</div>
+			
+		<!--=S 底部浮动栏-->
+		<div class="bottomFloatBar alignR">
+			<a href="课程管理--新增.html"><span class="btn">保<span class="opc">啊</span>存</span></a>
+			<a href="课程管理--新增.html"><span class="btn">上一步</span></a>
+			<a href="课程管理--权限设置.html"><span class="btn blue">下一步</span></a>
+		</div>
+		<!--=E 底部浮动栏-->
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<!--=S 添加大纲 弹出框内容 -->
+<div id="popup" class="dn">
+	<div id="mask"></div>
+	<div id="editDagangPop" class="dn">
+		<div class="titleBar">编辑课程大纲</div>
+		<div class="dagangPopContent clearfix" id="dagangPopContent">
+			<!--=S 左侧内容 -->
+			<div class="leftCont">
+				<div class="inner">
+					<div class="courseName">
+						<span class="name">基础管理角色认知项目</span>
+						<span class="addFolderBtn" title="添加文件夹"></span>
+						<span class="addCourseWareBtn" title="添加课件"></span>
+					</div>
+					
+					<ul class="courseWareListWrap">
+						<li data-pid="1.1" class="overall">
+							<div class="folder">
+								<i class="arrow"></i>
+								<i class="filderIcon"></i>
+								<div class="contentWrap">
+									<span class="name">
+										<i>1.1</i>
+										<i class="nameText">角色认知</i>
+									</span>
+									<div class="inputWrap">
+										<input type="text" />
+										<span class="sureBtn butn" title="确认"></span>
+									</div>
+								</div>
+								<span class="delBtn" title="删除"></span>
+								<span class="addCourseWareBtn butn" title="添加课件"></span>
+								<span class="editBtn butn" title="编辑"></span>
+							</div>
+							<ul class="courseWareList">
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li data-pid="1.2" class="overall">
+							<div class="folder">
+								<i class="arrow"></i>
+								<i class="filderIcon"></i>
+								<div class="contentWrap">
+									<span class="name">
+										<i>1.2</i>
+										<i class="nameText">角色认知</i>
+									</span>
+									<div class="inputWrap">
+										<input type="text" />
+										<span class="sureBtn butn" title="确认"></span>
+									</div>
+								</div>
+								<span class="delBtn" title="删除"></span>
+								<span class="addCourseWareBtn butn" title="添加课件"></span>
+								<span class="editBtn butn" title="编辑"></span>
+							</div>
+							<ul class="courseWareList">
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+								<li>
+									<div class="courseWareName">
+										<i class="courseType"></i>
+										<div class="contentWrap">
+											<span class="name">
+												<i></i>
+												<i class="nameText">1.3FLMP2015角色认知</i>
+											</span>
+											<div class="inputWrap">
+												<input type="text">
+												<span class="sureBtn butn" title="确认"></span>
+											</div>
+										</div>
+										<span class="delBtn" title="删除"></span>
+										<span class="editBtn butn" title="编辑"></span>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li data-pid="1.3" class="overall">
+							<div class="courseWareName">
+									<i class="arrow"></i>
+									<i class="courseType"></i>
+									<div class="contentWrap">
+										<span class="name">
+											<i>1.3</i>
+											<i class="nameText">FLMP2015角色认知学习资料文档</i>
+										</span>
+										<div class="inputWrap">
+											<input type="text" />
+											<span class="sureBtn butn" title="确认"></span>
+										</div>
+									</div>
+								<span class="delBtn" title="删除"></span>
+								<span class="editBtn butn" title="编辑"></span>
+							</div>
+						</li>					
+					</ul>
+				</div>
+			</div>
+			<!--=E 左侧内容 -->
+		
+			<!--=S 右侧内容 -->
+			<div class="rightCont init">
+				<div class="inner" id="createCourse">      
+					<ul class="createType tabMenu">
+						<li class="current">挑选课件</li>
+						<li>新增课件</li>
+					</ul>
+					<!--=S 挑选课件 -->
+					<div class="selectCourseWare tabContent sourseList" style="display:block;">
+						<div class="filterForm">
+							<span class="type">课件类型</span>
+							<div class="dropList l">
+								<p class="selected"><span>全部</span><i></i></p>
+								<div class="options" style="">
+									<p>全部</p>
+									<p>视频</p>
+									<p>网页</p>
+									<p>文档</p>
+									<p>图片</p>
+									<p>图文</p>
+									<p>测验</p>
+								</div>
+							</div>
+							<input type="text" class="text" placeholder="请输入要查找的资源"/><span class="submit"></span>
+						</div>
+					
+						<div id="tableWrap">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseWareListT">
+								<tr>
+									<th></th>
+									<th width="50%">课程资源</th>
+									<th>创建人</th>
+									<th>创建时间</th>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="video" data-title="FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType video"></i>
+											<span class="name">FLMP2015角色认知学习资料视频，FLMP2015角色认知学习资料视频</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>						
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="web" data-title="FLMP2015角色认知学习资料网页">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType web"></i>
+											<span class="name">FLMP2015角色认知学习资料网页</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="doc" data-title="FLMP2015角色认知学习资料文档">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType doc"></i>
+											<span class="name">FLMP2015角色认知学习资料文档</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="image" data-title="FLMP2015角色认知学习资料图片，FLMP2015角色认知学习资料图片">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType image"></i>
+											<span class="name">FLMP2015角色认知学习资料图片，FLMP2015角色认知学习资料图片</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="test" data-title="FLMP2015角色认知学习资料测验">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType test"></i>
+											<span class="name">FLMP2015角色认知学习资料测验</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								<tr>
+									<td class="radioTd">
+										<span class="radio" data-type="imgText" data-title="FLMP2015角色认知学习资料图文">
+											<i></i>
+										</span>
+									</td>
+									<td>
+										<p class="courseWareName">
+											<i class="courseType imgText"></i>
+											<span class="name">FLMP2015角色认知学习资料图文</span>
+										</p>
+									</td>
+									<td>linjiayi lwx327814</td>
+									<td>2016-08-23</td>
+								</tr>
+								
+							</table>
+						</div>
+						
+						<!--=S 分页 -->
+						<div class="pages clearfix">
+							<a href="javascript:;" class="forbid prev"><i></i></a>
+							<!--<a href="#" class="prev"><i></i></a>-->
+							<a href="#" class="current">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="javascript:;" class="shenglue">......</a>
+							<a href="#" class="next"><i></i></a>
+							<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+							<span class="total">总：1440条</span>
+							
+							<span class="tiaozhuan">
+								<span class="">跳转到：</span>
+								<input type="text"><span class="goBtn">GO</span>
+							</span>
+						</div>
+						<!--=E 分页 -->
+					</div>
+					<!--=E 挑选课件 -->
+					
+					<!--=S 新增课件 -->
+					<div class="selectCourseWare tabContent createCourseWare">
+						<!-- 挑选课件类型 S -->
+						<div class="filterForm">
+							<span class="type">课件类型</span>
+							<div class="dropList l">
+								<p class="selected"><span>图文</span><i></i></p>
+								<div class="options">
+									<p class="current imageText">图文</p>
+									<p class="video">视频</p>
+									<p class="pic">图片</p>
+									<p class="webPage">网页</p>
+									<p class="doc">文档</p>
+								</div>
+							</div>
+							<span class="btn green r videoUploadBtn"><i class="icon"></i>上传文件</span>
+							<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple name="files[]" />
+							<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+						</div>
+						<!-- 挑选课件类型 E -->
+						<!--=S 上传图文 -->
+							<div class="uploadForm" id="uploadImgText">
+								<!--=S 编辑器位置 -->
+								<div class="editorWrap">
+									<div class="imgWrap">
+										<ul class="clearfix">
+											<li class="htmlCode"></li>
+											<li class="b"></li>
+											<li class="u"></li>
+											<li class="abc"></li>
+											<li class="a"><span>A</span></li>
+											<li class="ab"></li>
+											<li class="eraser"></li>
+											<li class="order"></li>
+											<li class="norder"></li>
+											<li class="fontStyle">
+												<span>微软雅黑</span>
+											</li>
+											<li class="fontSize">
+												<span>12</span>
+												<ul class = "clearfix">
+													<li>14</li>
+													<li>16</li>
+													<li>18</li>
+													<li>20</li>
+												</ul>
+											</li>
+											<li class="textLeft"></li>
+											<li class="textCenter"></li>
+											<li class="textRight"></li>
+											<li class="link"></li>
+											<li class="cc"></li>
+											<li class="insertImg"></li>
+										</ul>
+									</div>
+									<textarea></textarea>
+								</div>
+								<!--=E 编辑器位置 -->
+								<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+							</div>					
+						<!--=E 上传图文 -->
+						
+						<!--=S 上传视频 -->
+							<div class="uploadForm dn" id="uploadVideo">
+								<div class="statuArea">
+									<!-- 拖拽上传视频 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的视频 -->
+									<div class="willUploadVideo dn">
+										<img src="images/video.png" />
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传中</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span></span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频转码失败 S -->
+									<div class="uploadVideoFail dn">
+										<img src="images/video.png" />
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>转码失败</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span>98%</span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频转码失败 E -->
+									<div class="success dn">
+										<img src="images/video.png" />
+										<p>dfa.mp4</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传成功</span>
+											</div>
+										</div>
+									</div>
+									<!-- 视频上传提示 -->
+									<ul class="videoList uploadState dn">
+										<li>
+											<span class="state uploading"><i class="icon"></i>上传中</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+										</li>
+										<li>
+											<span class="state transform"><i class="icon"></i>转码中</span>
+											<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+										<li class="error">
+											<span class="state error"><i class="icon"></i>转码失败</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+										<li>
+											<span class="state ok"><i class="icon"></i>转码完成</span>
+											<span class="name">角色认知.mp4</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+										</li>
+									</ul>
+								</div>					
+								<!-- 视频上传说明 -->
+								<div class="beizhu">
+									<p>*  建议视频高宽比：16:9，分辨率不小于887*499。</p>
+									<p>*  支持的视频格式：avi、mpg、vob、mp4、3gp 、asf、wmv、rm、mov、mkv 、
+										  mav、ts、flv、ogg、mod</p>
+									<p>* 支持的视频大小：每个视频小于500M</p>
+								</div>
+							</div>
+						<!--=E 上传视频 -->
+						
+						<!--=S 上传图片 -->
+							<div class="uploadForm dn" id="uploadImage">
+								<div class="statuArea">
+									<!-- 拖拽上传图片 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的图片 -->
+									<div class="willUploadVideo dn">
+										<ul class="videoList">
+										</ul>
+										<p class="alignR mb30"></p>
+									</div>
+										
+								</div>				
+								<!-- 图片上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的图片格式：jpg, png, bmp, jpeg, gif, swf文件</p>
+									<p>* 支持的图片大小：每个最大488.28MB</p>
+									<p>* 支持的图片数量：不超过10张</p>
+								</div>
+							</div>
+						<!--=E 上传图片 -->
+						
+						<!--=S 上传网页 -->
+							<div class="uploadForm dn" id="uploadWeb">
+								<div class="statuArea">
+									<!-- 拖拽上传网页 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									
+									<!-- 已选择的网页 S-->
+									<div class="willUploadVideo dn">
+										<img src="images/compress.png" />
+										<p>dfa.zip</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传中</span>
+											</div>
+											<div class="bar fl">
+												<div class="uploaded"></div>
+											</div>
+											<div class="num fl">
+												<span></span>
+												<span class="cancel"></span>
+											</div>
+										</div>
+									</div>
+									<!-- 已选择的网页 E-->
+									<div class="success dn">
+										<img src="images/compress.png" />
+										<p>dfa.zip</p>
+										<div class="statu clearfix">
+											<div class="text fl">
+												<span class="bg"></span>
+												<span>上传成功</span>
+											</div>
+										</div>
+									</div>
+								</div>	
+								<!-- 网页上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的网页格式：H5网页文件</p>
+									<p>* 支持的网页大小：控制在200M以内</p>
+									<p>* 其他要求：上传时把所有文件打zip包上传，zip包里不得包含中文字符的文件</p>
+								</div>
+							</div>
+						<!--=E 上传网页 -->
+						
+						<!--=S 上传文档 -->
+							<div class="uploadForm dn" id="uploadDoc">
+								<div class="statuArea">
+									<!-- 拖拽上传网页 -->
+									<div class="addVideoForm">
+										<div class="addDagangBtn">
+											<i class="icon"></i>将文件拖拽至此区域
+										</div>
+									</div>
+									<!-- 已选择的图片 -->
+									<div class="willUploadVideo dn">
+										<ul class="videoList">
+											<li>角色认知学习文档.doc<i class="delBtn" title="删除"></i></li>
+										</ul>
+										<p class="alignR mb30"><span class="btn blue comfirmUpload">确定上传</span></p>
+									</div>
+									<!-- 图片上传提示 -->
+									<ul class="videoList uploadState dn">
+										<li>
+											<span class="state uploading"><i class="icon"></i>上传中</span>
+											<span class="name">角色认知学习文档.doc</span>
+											<i class="delBtn" title="删除"></i>
+											<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+										</li>
+										<li>
+											<p>
+												<span class="state ok"><i class="icon"></i>上传完成</span>
+												<span class="name">角色认知学习文档.doc</span>
+												<i class="delBtn" title="删除"></i>
+												<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+											</p>
+										</li>
+									</ul>
+								</div>
+								<!-- 文档上传说明 -->
+								<div class="beizhu">
+									<p>* 支持的文档类型：docx、pptx、pdf</p>
+									<p>* 支持的文档大小：大小控制在20M，页数为100页以内</p>
+									<p>* 其他要求：文档不能设置只读等RMS权限</p>
+								</div>	
+							</div>
+						<!--=E 上传文档 -->
+					</div>
+					<!--=E 新增课件 -->
+				</div>
+				<div class="shade"></div>
+			</div>
+			<!--=E 右侧内容 -->
+		</div>
+		<div class="btnWrap clearfix">
+			<a href="javascript:void(0);" class="btn sure">确<span class="opc">啊</span>定</a>
+			<a href="javascript:void(0);" class="btn return">取<span class="opc">啊</span>消</a>
+		</div>
+		<span class="close"></span>
+	</div>
+</div>
+<!--=E 添加大纲 弹出框内容 -->
+<script src="js/common/jquery-1.11.1.min.js"></script>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/course.js"></script>
+<script type="text/javascript">
+	// // 静止滚动
+	// var tableWrap = $("#tableWrap");
+	// tableWrap.scroll(function  () {
+	// 	common.stopScroll(tableWrap);
+	// });
+</script>
+</body>
+</html>

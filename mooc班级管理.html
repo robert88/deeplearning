@@ -1,0 +1,1824 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>mooc班级管理</title>
+	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/course.css" rel="stylesheet" />
+	<link href="css/mooc.css" rel="stylesheet" />
+	<script src="js/common/jquery-1.11.1.min.js"></script>
+	
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li >
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" >
+                <li><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li class='current open '>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" style="display:block;">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li class='current '><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="#">MOOC管理</a> > <a href="#">MOOC维护</a> > <span class="current">MOOC新增</span>
+				<a href="mooc班级管理显示.html"><span class="back"><i></i>返回</span></a>
+			</div>
+			
+			<div class="kbsz_head">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+							<td>班级名称：产品开发项目管理云书库</td>
+							<td>开班时间：2015-12-12 - 2016.11.01</td>
+							<td>助教：lcw1232133</td>
+							<td>班级人数：44</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="kbsz">
+				<div class="kbaz_nav">
+					<ul>
+						<li class="kn_select">开班设置</li>
+						<li>公告</li>
+						<li>学员</li>
+						<li>讨论</li>
+						<li>作业</li>
+					</ul>
+				</div>
+				<!--=S 开班设置 -->
+				<div class="kbsz_main kbaz_nav_div">
+					<div class="kbsz_jbxx clearfix">
+						<h5>基本信息</h5>
+						<ul>
+							<li>
+								<label>班级名称</label>
+								<input type="text" class="text" placeholder="" value="产品开发项目管理班级1">
+							</li>
+							<li class="baoming_time">
+								<label>报名时间</label>
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>--
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+							</li>
+							<li class="baoming_time">
+								<label>报名时间</label>
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>--
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+							</li>
+							<li>
+								<label>报名人数</label>
+								<div class="bmrs">
+									<input type="text" class="text" placeholder="" value="20">
+									--
+									<input type="text" class="text" placeholder="" value="40">
+								</div>
+							</li>
+							<li>
+								<label>报名审核</label>
+								<div class="bmsh">
+									<span class="radio selected">
+										<i></i>
+										<input type="radio" class="text" placeholder="">全体公开
+									</span>
+									<span class="radio ">
+										<i></i>
+										<input type="radio" class="text" placeholder="">报名需审核
+									</span>
+									<span class="radio ">
+										<i></i>
+										<input type="radio" class="text" placeholder="">启用群组报名单
+									</span>
+								</div>
+									
+							</li>
+							<li>
+								<label>状态设置</label>
+									<div class="bmsh">
+										<span class="radio selected">
+										<i></i>
+										<input type="radio" class="text" placeholder="">显示
+										</span>
+										<span class="radio ">
+											<i></i>
+											<input type="radio" class="text" placeholder="">隐藏
+										</span>
+									</div>
+							</li>
+						</ul>
+					</div>
+					<div class="weekset">
+						<h5>WEEK设置</h5>
+						<div class="weekset_main">
+							<span class="weekset_name">WEEK1产品开发项目</span>
+							<div class="weekset_time">
+								<label>课程时间：</label>
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>--
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+							</div>
+						</div>		
+					</div>
+					<!--=S  角色设置-->
+			<div class="jssz">
+				<h5>角色设置</h5>
+				<span class="ags_addstuent_btn">
+									<i class="add_icon"></i>
+									新增角色
+									</span>
+				<div class="admin_people clearfix">
+						<ul>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+						<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="admin_people_td">
+									<div class="ad_headimg">
+										<img src="images/areaAdd01.jpg">
+									</div>
+									<div class="ad_msg">
+										<p class="position">讲师<i></i></p>
+										<p class="name">liasdiqwe123123</p>
+										<p class="edit_icon">
+											<i class="edit_icon01"></i>
+											<i class="edit_icon02 "></i>
+											<i class="edit_icon03 "></i>
+										</p>
+										<i class="hover_delete_icon"></i>
+									</div>
+								</div>
+							</li>
+					</ul>
+					
+				</div>
+			</div>
+			<!--=E  管理设置-->
+					
+				</div>
+				<!--=E 开班设置-->
+				<!--=S 公告 -->
+				<div class="ggxq kbaz_nav_div hidden">
+					<h5>公告详情</h5>
+					<span class="ags_gonggao_btn"><i class="add_icon"></i>新增公告</span>
+					
+					<div class="ggxq_table">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<th class="ggxq_firsrth">公告名称</th>
+								<th>创建人</th>
+								<th>创建时间</th>
+								<th>操作</th>
+								
+							</tr>
+							<tr>
+								<td class="ggxq_firsrtd">减少备课通知</td>
+								<td>qweqe123123</td>
+								<td>2016-09-21</td>
+								<td>
+									<span class="zhiding_btn yizhiding_btn">置顶</span>
+									<span class="editIcon icon">
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="removeIcon icon">
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="ggxq_firsrtd">减少备课通知</td>
+								<td>qweqe123123</td>
+								<td>2016-09-21</td>
+								<td>
+									<span class="zhiding_btn yizhiding_btn">置顶</span>
+									<span class="editIcon icon">
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="removeIcon icon">
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="ggxq_firsrtd">减少备课通知</td>
+								<td>qweqe123123</td>
+								<td>2016-09-21</td>
+								<td>
+									<span class="zhiding_btn">置顶</span>
+									<span class="editIcon icon">
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="removeIcon icon">
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="ggxq_firsrtd">减少备课通知</td>
+								<td>qweqe123123</td>
+								<td>2016-09-21</td>
+								<td>
+									<span class="zhiding_btn">置顶</span>
+									<span class="editIcon icon">
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="removeIcon icon">
+										<span class="tips"><i></i>删除</span>
+									</span>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--=S 公告 -->
+				<!--=S 学员 -->
+				<div class="student kbaz_nav_div hidden">
+					<div class="student_nav clearfix">
+						<span class="addGroup"><i></i>新增小组</span>
+						<ul>
+							<li class="xygl selected">学员管理</li>
+							<li class="xzgl ">小组管理</li>
+						</ul>
+					</div>
+					<!--=S 学员管理 -->
+						<div class="xyguanli">
+							<div class="sigeyuan">
+								<ul class="clearfix">
+									<li>
+										<div class="circle">
+										    <div class="pie_left"><div class="left"></div></div>
+										    <div class="pie_right"><div class="right"></div></div>
+										    <div class="mask"><span>25%</span><p>学习完成率</p></div>
+										</div>	
+									</li>
+									<li><div class="circle">
+								    <div class="pie_left"><div class="left"></div></div>
+								    <div class="pie_right"><div class="right"></div></div>
+								    <div class="mask"><span>62%</span><p>学习通过率</p></div>
+								</div>
+									</li>
+									<li>
+										<div class="circle">
+								    <div class="pie_left"><div class="left"></div></div>
+								    <div class="pie_right"><div class="right"></div></div>
+								    <div class="mask"><span>90/100</span><p>学员平均学时</p></div>
+								</div>
+									</li>
+									<li>
+										<div class="circle">
+								    <div class="pie_left"><div class="left"></div></div>
+								    <div class="pie_right"><div class="right"></div></div>
+								    <div class="mask"><span>90/100</span><p>学员平均学分</p></div>
+								</div>
+									</li>
+								</ul>
+							</div>
+							<!--=S 搜索条件 -->
+							<div class="search_padding">
+								<div class="search homework_search">
+									<div class="form searchForm">
+										<ul class="controlList course">
+											<li>
+												<label>作业名称</label>
+												<input type="text" class="text">
+											</li>
+											<li>
+												<label>交作业学员</label>
+												<input type="text" class="text">
+											</li>
+											<li>
+												<label>交作业状态</label>
+												<div class="dropList">
+													<p class="selected"><span></span><i></i></p>
+													<div class="options">
+														<p>全部</p>
+														<p>等待审核</p>
+														<p>学习中</p>
+														<p>学习已完成</p>
+														<p>学习已通过</p>
+													</div>
+												</div>
+											</li>
+										</ul>					
+										<div class="btnList">
+											<input type="reset" value="重置" class="btn">
+											<input type="button" value="搜索" class="btn blue">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--=E 搜索条件 -->
+							<div class="courseListNav tabMenu">
+								<div class="navType">
+									<span class="l mt1">视图显示</span>
+									<span class="bigImg current"></span>
+									<span class="listImg"></span>
+								</div>
+							</div>
+							
+							<!--=S 大图显示 -->
+							<div class="xygl_view_bigImg">
+								<div class="courseListWrap current">
+									<div class="selectAll selectAllCourse">
+										<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+									</div>
+									<ul class="floatList col5 courseList">
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													<div class="l">
+														<p><span>12</span>/25</p>
+														<span>已完成学时</span>	
+													</div>
+													<div class="r">
+														<p><span>80</span>/100</p>
+														<span>已完成学分</span>	
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="liBox ddsh">
+												<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+												<img src="images/courseImg.jpg">
+												<p class="xyheadname"> asd12333231</p>
+												<div class="btnList">
+													等待审核
+												</div>
+											</div>
+										</li>
+									</ul>
+									<!--=S 分页 -->
+								<div class="pages clearfix">
+									<a href="javascript:;" class="forbid prev"><i></i></a>
+									<!--<a href="#" class="prev"><i></i></a>-->
+									<a href="#" class="current">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="javascript:;" class="shenglue">......</a>
+									<a href="#" class="next"><i></i></a>
+									<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+									<span class="total">总：1440条</span>
+									
+									<span class="tiaozhuan">
+										<span class="">跳转到：</span>
+										<input type="text"><span class="goBtn">GO</span>
+									</span>
+								</div>
+								<!--=E 分页 -->
+								</div>
+							</div>
+							<!--=E 大图显示 -->
+							<!--=S 列表显示 -->
+							<div class="xygl_view_list hidden">
+								<table border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+									<tr>
+										<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" checked="checked"></span></th>
+										<th><p class="xueyuan_th">学员</p></th>
+										<th>章节<i class="zuosanjiao"></i></th>
+										<th>已完成学时<i class="zuosanjiao"></i></th>
+										<th>已完成学分<i class="zuosanjiao"></i></th>
+										<th>学员进度</th>
+									</tr>
+									
+									<tr>
+										<td><span class="checkboxWrap "><input type="checkbox" class="checkbox" checked="checked"></span></td>
+										<td>
+											<div class="xygl_name">
+												<img src="images/areaAdd01.jpg"/>
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>所有章节</td>
+										<td>
+											<div class="process-bar">
+											     <div class="pb-wrapper">
+												     <div class="pb-container">
+												    		 <div class="pb-value" style="width: 30%;"></div>
+												     </div>
+										     	 </div>
+										    </div>
+										     <span class="turetime">23</span><span>/59</span>
+										</td>
+										<td><div class="process-bar">
+											     <div class="pb-wrapper">
+												     <div class="pb-container">
+												    		 <div class="pb-value" style="width: 50%;"></div>
+												     </div>
+										     	 </div>
+										    </div>
+										      <span class="turetime">50</span><span>/100</span>
+										</td>
+										<td><a href="#" class="xugl_ckxq">查看详情</a></td>
+									</tr>
+									<tr>
+										<td><span class="checkboxWrap"><input type="checkbox" class="checkbox" checked="checked"></span></td>
+										<td>
+											<div class="xygl_name">
+												<img src="images/areaAdd01.jpg"/>
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>所有章节</td>
+										<td>
+											<div class="process-bar">
+											     <div class="pb-wrapper">
+												     <div class="pb-container">
+												    		 <div class="pb-value" style="width: 30%;"></div>
+												     </div>
+										     	 </div>
+										    </div>
+										     <span class="turetime">23</span><span>/59</span>
+										</td>
+										<td>
+											<div class="process-bar_cont  skin-yellow">
+												<div class="process-bar">
+												     <div class="pb-wrapper">
+													     <div class="pb-container">
+													    		 <div class="pb-value" style="width: 50%;"></div>
+													     </div>
+											     	 </div>
+											    </div>
+											     <span class="turetime">50</span><span>/100</span>
+										    </div>
+										</td>
+										<td><a href="#" class="xugl_ckxq">查看详情</a></td>
+									</tr>
+									<tr>
+										<td><span class="checkboxWrap"><input type="checkbox" class="checkbox" checked="checked"></span></td>
+										<td>
+											<div class="xygl_name">
+												<img src="images/areaAdd01.jpg"/>
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>所有章节</td>
+										<td>
+											<div class="process-bar">
+											     <div class="pb-wrapper">
+												     <div class="pb-container">
+												    		 <div class="pb-value" style="width: 30%;"></div>
+												     </div>
+										     	 </div>
+										    </div>
+										     <span class="turetime">23</span><span>/59</span>
+										</td>
+										<td>
+											<div class="process-bar_cont  skin-yellow">
+												<div class="process-bar">
+												     <div class="pb-wrapper">
+													     <div class="pb-container">
+													    		 <div class="pb-value" style="width: 50%;"></div>
+													     </div>
+											     	 </div>
+											    </div>
+											     <span class="turetime">50</span><span>/100</span>
+										    </div>
+										</td>
+										<td><a href="#" class="xugl_ckxq">查看详情</a></td>
+									</tr>
+									<tr>
+										<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span></td>
+										<td>
+											<div class="xygl_name">
+												<img src="images/areaAdd01.jpg"/>
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>所有章节</td>
+										<td>
+											<div class="process-bar">
+											     <div class="pb-wrapper">
+												     <div class="pb-container">
+												    		 <div class="pb-value" style="width: 30%;"></div>
+												     </div>
+										     	 </div>
+										    </div>
+										     <span class="turetime">23</span><span>/59</span>
+										</td>
+										<td>
+											<div class="process-bar_cont  skin-yellow">
+												<div class="process-bar">
+												     <div class="pb-wrapper">
+													     <div class="pb-container">
+													    		 <div class="pb-value" style="width: 50%;"></div>
+													     </div>
+											     	 </div>
+											    </div>
+											     <span class="turetime">50</span><span>/100</span>
+										    </div>
+										</td>
+										<td><a href="#" class="xugl_ckxq">查看详情</a></td>
+									</tr>
+								</table>
+								<!--=S 分页 -->
+								<div class="pages clearfix">
+									<a href="javascript:;" class="forbid prev"><i></i></a>
+									<!--<a href="#" class="prev"><i></i></a>-->
+									<a href="#" class="current">1</a>
+									<a href="#">2</a>
+									<a href="#">3</a>
+									<a href="#">4</a>
+									<a href="#">5</a>
+									<a href="javascript:;" class="shenglue">......</a>
+									<a href="#" class="next"><i></i></a>
+									<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+									<span class="total">总：1440条</span>
+									
+									<span class="tiaozhuan">
+										<span class="">跳转到：</span>
+										<input type="text"><span class="goBtn">GO</span>
+									</span>
+								</div>
+								<!--=E 分页 -->
+							</div>
+							
+							<!--=E 列表显示 -->
+						</div>
+						
+					<!--=E 学员管理 -->
+					
+						<!--=S 学员管理详情 -->
+					<div class="student_management hidden">
+						<ul class="xyxxhead clearfix">
+							<li>
+								<div class="xyxx">
+									<img src="images/areaAdd01.jpg"/>
+									<div class="xymsg">
+										<h4>名字</h4>
+										<p>报名时间：2016-09-10</p>
+										<p>审批人：奥神队</p>
+										<p>部门：质量与流程IT管理部|信息技术工程部|移动办公业务部门</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="circle">
+								    <div class="pie_left"><div class="left"></div></div>
+								    <div class="pie_right"><div class="right"></div></div>
+								    <div class="mask"><span>11/20</span><p>已完成学时</p></div>
+								</div>
+								
+								<div class="circle">
+								    <div class="pie_left"><div class="left"></div></div>
+								    <div class="pie_right"><div class="right"></div></div>
+								    <div class="mask"><span>90/100</span><p>已完成学分</p></div>
+								</div>
+							</li>
+						</ul>
+						
+						<div class="xxxq">
+							<h4>学习详情</h4>
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<th class="xxxq_th01">章节</th>
+									<th class="xxxq_th02">学时</th>
+									<th class="xxxq_th03">学分</th>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<div class="xxxq_dropdown">
+											<ul>
+												<li class="xxxq_dropdown_title clearfix">
+													<div class="xxxq_dropdown_click">
+														<p class="kechen"><i class="dropDown_icon"></i><i class="file_icon"></i>第一周</p>
+														<p class="xueshi">60/90</p>
+														<p class="xuefen">90/100</p>
+													</div>
+													<div class="xxxq_dropdown_response hidden">
+														<div class="xxxq_dropdown_list clearfix">
+															<div class="xxxq_zjtitle"><i class="green_point"></i>章节1：交互设计的进阶之路</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.1什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.2什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.3什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+														</div>
+														<div class="xxxq_dropdown_list clearfix">
+															<div class="xxxq_zjtitle"><i class="green_point"></i>章节2：交互设计的进阶之路</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.1什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.2什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.3什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+														</div>
+													</div>
+												</li>
+												<li class="xxxq_dropdown_title clearfix">
+													<div class="xxxq_dropdown_click">
+														<p class="kechen"><i class="dropDown_icon"></i><i class="file_icon"></i>第二周</p>
+														<p class="xueshi">60/90</p>
+														<p class="xuefen">90/100</p>
+													</div>
+													<div class="xxxq_dropdown_response">
+														<div class="xxxq_dropdown_list clearfix">
+															<div class="xxxq_zjtitle"><i class="green_point"></i>章节1：交互设计的进阶之路</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.1什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.2什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.3什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+														</div>
+														<div class="xxxq_dropdown_list clearfix">
+															<div class="xxxq_zjtitle"><i class="green_point"></i>章节2：交互设计的进阶之路</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.1什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.2什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+															<div class="xxxq_zj">
+																<p class="kechen"><span>1.3什么是交互设计</span></p>
+																<p class="xueshi"><span>60</span>/90</p>
+																<p class="xuefen"><span>60</span>/100</p>
+															</div>
+														</div>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</td>
+									
+								</tr>
+							</table>
+						</div>
+					</div>
+						<!--=E 学员管理详情 -->
+							
+						<!--=S 小组管理 -->
+					<div class="group_management_table hidden" >
+						<table border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+							<tr>
+								<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" checked="checked"></span></th>
+								<th>小组</th>
+								<th>成员人数</th>
+								<th>组长</th>
+								<th>操作</th>
+							</tr>
+							<tr>
+								<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span></td>
+								<td>华为1小组</td>
+								<td>123</td>
+								<td>大声大声道</td>
+								<td>
+									<div class="btnList">
+										<span class="editIcon iconBtn">
+											<span class="edit_icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="iconBtn">
+											<span class="remove_icon"></span>
+											<span class="tips"><i></i>删除</span>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span class="checkboxWrap "><input type="checkbox" class="checkbox" checked="checked"></span></td>
+								<td>华为1小组</td>
+								<td>123</td>
+								<td>大声大声道</td>
+								<td>
+									<div class="btnList">
+										<span class="editIcon iconBtn">
+											<span class="edit_icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="iconBtn">
+											<span class="remove_icon"></span>
+											<span class="tips"><i></i>删除</span>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span class="checkboxWrap "><input type="checkbox" class="checkbox" checked="checked"></span></td>
+								<td>华为1小组</td>
+								<td>123</td>
+								<td>大声大声道</td>
+								<td>
+									<div class="btnList">
+										<span class="editIcon iconBtn">
+											<span class="edit_icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="iconBtn">
+											<span class="remove_icon"></span>
+											<span class="tips"><i></i>删除</span>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td><span class="checkboxWrap "><input type="checkbox" class="checkbox" checked="checked"></span></td>
+								<td>华为1小组</td>
+								<td>123</td>
+								<td>大声大声道</td>
+								<td>
+									<div class="btnList">
+										<span class="editIcon iconBtn">
+											<span class="edit_icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="iconBtn">
+											<span class="remove_icon"></span>
+											<span class="tips"><i></i>删除</span>
+										</span>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<!--=S 分页 -->
+						<div class="pages clearfix">
+							<a href="javascript:;" class="forbid prev"><i></i></a>
+							<!--<a href="#" class="prev"><i></i></a>-->
+							<a href="#" class="current">1</a>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="javascript:;" class="shenglue">......</a>
+							<a href="#" class="next"><i></i></a>
+							<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+							<span class="total">总：1440条</span>
+							
+							<span class="tiaozhuan">
+								<span class="">跳转到：</span>
+								<input type="text"><span class="goBtn">GO</span>
+							</span>
+						</div>
+						<!--=E 分页 -->
+					</div>
+						<!--=E 小组管理 -->
+				</div>
+				<!--=E 学员 -->
+				<!--=S 讨论 -->
+				<div class="taolun kbaz_nav_div hidden">
+				<!--=S 搜索条件 -->
+				<div class="search">
+				<div class="form searchForm">
+					<ul class="controlList course">
+						<li>
+							<label>主贴名称</label>
+							<input type="text" class="text">
+						</li>
+						
+						<li>
+							<label>主贴类型</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options" style="">
+									<p>全部</p>
+									<p>全部12</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label>发帖人</label>
+							<input type="text" class="text">
+						</li>
+						<li>
+							<div id="posttime">
+								<label>发帖时间</label>
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div> --
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+							</div>
+						</li>
+					</ul>					
+					<div class="btnList">
+						<span class="packUp hide"><i class="icon"></i></span>
+						<input type="reset" value="重置" class="btn">
+						<input type="button" value="搜索" class="btn blue">
+					</div>
+				</div>
+			</div>
+				<!--=E 搜索条件 -->
+				<div class="discuss_table">
+					<table border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+						<tr>
+							<th class="discuss_table_th01"><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span></th>
+							<th class="discuss_table_th02">类别</th>
+							<th class="discuss_table_th03" colspan="2">讨论信息</th>
+							<th class="discuss_table_th04">操作</th>
+						</tr>
+						
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn yizhiding_btn">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn yizhiding_btn">置顶</span>
+								<i class="jinzhi_icon redjinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn yizhiding_btn">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn ">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn ">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn ">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="checkboxWrap selected"><input type="checkbox" class="checkbox" checked="checked"></span>
+								
+							</td>
+							<td><span class="leibie">[课程内容]</span></td>
+							<td>
+								<div class="taolun_msg">
+									<img src="images/areaAdd01.jpg"/>
+									<p>我是来补习理论的，学完回头来看，恩，这门课也是理论课。觉得还没我老是讲的好！</p>
+									<span>dwl1233 | 2016-2-1 22：30：34</span>
+								</div>
+							</td>
+							<td>
+								<div class="tlla">
+									<i class="taolun_icon"></i>(36)
+									<i class="liulan_icon"></i>(12344)
+								</div>
+							</td>
+							<td>
+								<span class="zhiding_btn">置顶</span>
+								<i class="jinzhi_icon"></i>
+							</td>
+						</tr>
+						
+					</table>
+					
+				</div>
+				
+				</div>
+				<!--=S 讨论 -->
+				
+				<!--=S 作业 -->
+				<div class="homework kbaz_nav_div hidden">
+				<!--=S 搜索条件 -->
+				<div class="search homework_search">
+				<div class="form searchForm">
+					<ul class="controlList course">
+						<li>
+							<label>作业名称</label>
+							<input type="text" class="text">
+						</li>
+						<li>
+							<label>交作业学员</label>
+							<input type="text" class="text">
+						</li>
+						<li>
+							<label>交作业状态</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options" style="">
+									<p>未开始报名</p>
+									<p>已开始报名</p>
+								</div>
+							</div>
+						</li>
+					</ul>					
+					<div class="btnList">
+						<input type="reset" value="重置" class="btn">
+						<input type="button" value="搜索" class="btn blue">
+					</div>
+				</div>
+			</div>
+				<!--=E 搜索条件 -->
+				<div class="hw_table">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th>学员名称</th>
+							<th>作业名称</th>
+							<th>交作业状态</th>
+							<th>改作业状态</th>
+							<th>作业详情</th>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="mooc班级管理作业详情.html" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="hw_xyname">
+									<img src="images/areaAdd01.jpg"/>
+									<span>asd12312asdasd</span>
+								</div>
+							</td>
+							<td>华大boss系统后台管理界面设计理念</td>
+							<td><span class="yiwanc_btn">已完成</span></td>
+							<td><span class="weiwanc_btn">未完成</span></td>
+							<td><a href="javascript:void(0)" class="hw_ckxq">查看详情</a></td>
+						</tr>
+					</table>
+					<!--=S 分页 -->
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+					<!--=E 分页 -->
+				</div>
+				</div>
+				<!--=S 作业 -->
+				<!--S 作业详情-->
+				<div class="hw_zyxq  kbaz_nav_div hidden">
+					<h5>作业详情<span class="zygl fr back"><i></i>作业管理</span></h5>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<p>作业名称</p>
+								<p>leasdasdasd</p>
+							</td>
+							<td>
+								<p>作业总分</p>
+								<p>100</p>
+							</td>
+							<td>
+								<p>作业总分</p>
+								<p>100</p>
+							</td>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<p>作业题目</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>作业内容</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>评分标准</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>学员</p>
+							<span>lwj1234422</span>
+						</li>
+						<li>
+							<p>学员解答</p>
+							<span>lwj1234422</span>
+						</li>
+						<li>
+							<p>老师评分</p>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>已发布</p>
+									<p>未发布</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<p>老师评语</p>
+							<textarea name="" rows="" cols="" class="lspytextarea">Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah</textarea>
+						</li>
+						<li>
+							<p>附件</p>
+							<div class="fujian">
+								<input type="text" class="" placeholder="">
+								<div class="liulan">
+									<span class=" btn blue">浏览</span>
+									<input type="file" class="" placeholder="">
+								</div>
+							</div>
+						</li>
+						<li>
+							<p>同学评分</p>
+							<div class="txpf_table">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--E 作业详情-->
+			</div>
+				
+			
+			
+			<div class="bottomFloatBar alignR">
+				<span class="btn blue">删除小组</span>
+			</div>
+		</div>
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<div id="previewPagePopup">
+<div id="mask"></div>	
+	<div class="gonggaopop">
+		<div class="header hov">
+			<div class="fl"><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		
+		<div class="ggbj">
+			<ul>
+				<li>
+					<div class="ggbj_li">
+						<p>公告名称<span class="red">*</span></p>
+						<input type="text" name="" id="" value="" />
+					</div>
+				</li>
+				<li>
+					<div class="ggbj_li">
+						<p>公告链接<span class="red">*</span></p>
+						<input type="text" name="" id="" value="" />
+					</div>
+				</li>
+			</ul>
+			<div class="ggnr">
+				<h5>公告内容</h5>
+				<img src="images/notice01.jpg"/>
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="btnWrap clearfix">
+				<a href="javascript:void(0);" class="save fr blue">保存</a>
+				<a href="javascript:void(0);" class="return fr">返回</a>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/course.js"></script>
+<script src="js/mooc.js"></script>
+</body>
+</html>

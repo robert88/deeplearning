@@ -1,0 +1,477 @@
+.hidden{display:none}
+.crumbs .back{float:right;margin:2px 20px 0 0}
+.back i{background:url(../images/courseManage.png) no-repeat -76px -99px;padding:0 0;margin-right:10px;height:16px;width:16px;vertical-align:sub;display:inline-block}
+.mooc .step{background:#fff;border:1px solid #ddd;border-radius:5px;margin:20px 0;height:58px;line-height:58px;font-size:18px}
+.mooc .step .stepInner{margin:0 13px;position:relative}
+.mooc .step .line{position:absolute;top:50%;left:0;width:100%;height:1px;border-top:1px solid #aaa}
+.mooc .step ul{position:relative;z-index:2}
+.mooc .step ul li.current,.step ul li.finished{color:#3e83f9}
+.mooc .step ul li .icon{background:#fff url(../images/courseManage.png) no-repeat -90px -50px;padding:0 13px}
+.mooc .step ul li.current .icon{background-position:-90px -75px}
+.mooc .step ul li.finished .icon{background-position:-118px -75px}
+.mooc .step ul li .text{display:inline-block;background:#fff;padding:0 5px}
+.mooc .deskshow{clear:both;overflow:hidden;border:1px solid #ddd;border-radius:3px;background-color:#fff;padding:0 20px 0}
+.mooc .manageSet{clear:both;border:1px solid #ddd;border-radius:3px;background-color:#fff;padding:20px 20px 0}
+.mooc .controlList li{float:left;width:33.33%;margin-top:20px}
+.mooc .controlList label{display:inline-block;margin:0 5px 4px 0}
+.mooc .controlList input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:93%;font-size:14px}
+.mooc .coursePic{width:93%;border:1px solid #ddd;background-color:#fff}
+.mooc #finishedUploadPic{position:relative;display:none;margin-top:-53px;margin-bottom:-3px;text-align:center}
+.form .coursePic{position:relative;margin-right:20px;border:1px solid #ddd;background-color:#fff;height:194px;border-radius:3px;overflow:hidden}
+.form .coursePic img{width:100%;height:100%}
+.form .coursePicInner{text-align:center;background:#e3e3e5;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.8}
+#startUloadPic{width:270px;height:76px;text-align:center;position:absolute;top:50%;left:50%;margin-left:-135px}
+#startUloadPic .alignC{margin:0 auto;line-height:32px;width:120px;height:32px;border-radius:5px;border:1px solid #22ac38;background:#41c97b}
+#startUloadPic .alignC .bg{position:relative;display:inline-block;left:8px;top:2px;width:18px;height:16px;background:url(../images/upload.png)}
+#startUloadPic .alignC .addPic{padding:0;background:0 0;border:0;color:#fff}
+.form .coursePic .btn{display:inline-block;margin-bottom:18px}
+#uploadPic .content{background:#fff}
+#uploadPic .content .uploadExplain{padding-top:26px;height:546px;overflow-y:auto}
+#uploadPic .content h2{margin:0 0 6px 10px;font-size:24px}
+#uploadPic .content .uploadWrap{position:relative;height:546px}
+#uploadPic .content .uploadWrap .uploadInner{margin-left:36px;padding-top:20px}
+#previewImg{margin-right:20px;height:270px;margin-bottom:10px}
+#uploadPic .uploadBtn{position:relative}
+#uploadPic .btn{margin:0;padding-left:40px}
+#uploadPic .uploadBtn input{position:absolute;width:100px;height:32px;border:1px solid red;left:0;top:0;font-size:40px;opacity:0;filter:Alpha(opacity=0)}
+#uploadPic{display:none;margin-top:-333px;top:50%;overflow:hidden;position:absolute;width:1080px;left:50%;margin-left:-540px;border-radius:5px}
+#previewPagePopup .header{height:40px;line-height:40px;color:#fff;position:relative}
+#uploadPic .content .uploadExplain,#uploadPic .content .uploadWrap{width:50%}
+#previewImg img{width:100%;height:100%}
+#uploadPic .btnWrap{background:#e0e4ef;padding:10px 0}
+#uploadPic .btnWrap a{font-size:14px;float:right;margin-right:20px;border-radius:3px}
+#uploadPic .btnWrap .save{background:#3e83f9;color:#fff;border:1px solid #1967ba}
+.btnWrap a{font-size:14px;width:98px;text-align:center;height:30px;line-height:30px;border:1px solid #bfbfbf;border-radius:3px;margin-left:20px}
+#uploadPic .hideLeft i{display:inline-block;margin:8px 0 0 6px;border-right:9px solid #fff;border-top:6px solid transparent;border-bottom:6px solid transparent}
+#uploadPic .hideLeft{position:absolute;z-index:3;left:-2px;top:50%;margin-top:-11px;background-color:#aaa;height:30px;width:22px;cursor:pointer}
+#uploadPic .big .uploadInner{padding-top:0!important;width:750px;margin:44px auto 0!important}
+#uploadPic .uploadBtn .bg{left:16px;top:10px;position:absolute;width:18px;height:16px;background:url(../images/upload.png)}
+#uploadPic .btnWrap .return{background:#fff;border:1px solid #bfbfbf}
+#uploadPic .big #previewImg{height:420px}
+#uploadPic .big{width:100%!important}
+.mooc .coursePic .btn{display:inline-block;margin-bottom:18px}
+.mooc .controlList li.courseJianjie{width:66.66%}
+.mooc .deskshow .courseJianjie textarea{width:97%;height:93px;overflow:auto;border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;font-size:14px;line-height:170%;padding:10px}
+.mooc .ts_menu .radioWrap{padding-top:4px;margin-top:0}
+.mooc .radioWrap .radio.selected{color:#3e83f9}
+.mooc .radioWrap .radio{float:left;margin-right:20px;cursor:pointer}
+.bottomFloatBar{position:fixed;z-index:3;bottom:0;right:0;background-color:#fff;border:1px solid #ddd;padding:19px 0;width: 100%;}
+.mooc .add_admin_people_td .dropList .selected{cursor:pointer;border:1px solid #ddd;border-top-left-radius:4px;border-bottom-left-radius:4px;outline:0;background-color:#f9fafc;height:25px;line-height:25px;text-indent:12px;width:100%;font-size:14px}
+.mooc .dropList .selected i{float:right;margin:12px 10px 0 0;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent}
+.mooc .dropList .options{display:none;position:absolute;z-index:2;left:0;top:32px;width:93%;border:1px solid #ddd;border-bottom:none;border-radius:3px;background-color:#fff}
+.mooc .dropList .options p{border-bottom:1px solid #ddd;text-indent:10px;height:30px;line-height:30px;cursor:pointer}
+.mooc .dropList{position:relative;width:93%}
+.mooc .radio i{margin-right:10px}
+.mooc .radio.selected i{background-position:-97px -76px}
+.mooc .checkbox input,.radio input{display:none}
+.mooc .radioWrap .radio.selected{color:#3e83f9}
+.mooc .deskshow h4{margin:20px 0 5px 0}
+.mooc .deskshow h4 span{margin:0 5px 0 4px}
+.mooc .admin_edit h4 span{margin:0 5px 0 4px}
+.mooc .edit_box_bar{background:#f9fafc;border-bottom:1px solid #ddd}
+.mooc .deskshow textarea{width:100%;height:100px;background:#f9fafc;resize:none;border:none;outline:0;vertical-align:bottom}
+.faq,.how_get,.mooc .lesson_overview{border:1px solid #ddd}
+.mooc #administrator{width:66.66%}
+.mooc #administrator input{width:100%}
+.mooc .certificate ul li{float:left}
+.certificate_type{width:33.33%;float:left}
+.certificate_type input{width:93%}
+.certificate_style input{width:100%}
+.certificate_style{width:66.66%;position:relative}
+.certificate input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;font-size:14px}
+.mooc .select{float:right;margin:-32px -11px 0 0;position:relative}
+.mooc .select input{position:absolute;top:0;right:0;opacity:0}
+.certificateinput{height:30px;line-height:30px;background:#f9fafc;width:93%;border:1px solid #ddd;border-radius:3px}
+.dcwj{height:30px;line-height:30px;background:#f9fafc;width:100%;border:1px solid #ddd;border-radius:3px;position:relative;margin-bottom:20px}
+.dcwj .selectfile{position:absolute;right:0;top:0;margin:0}
+.dcwj input{position:absolute;right:0;top:0;margin:0;border:1px solid #bfbfbf;outline:0;border-radius:5px;width:98px;height:30px;opacity:0;cursor:pointer}
+.admin_edit{background:#FFF;padding:15px;border:1px solid #DDD}
+.admin_people_td{margin:10px;background:#f9fafc;border:1px solid #DDD;padding:10px}
+.ad_headimg{float:left}
+.ad_headimg img{border-radius:50%;width:50px;height:50px;margin-top:10px}
+.ad_msg{margin-left:60px}
+.ad_msg p{font-size:12px}
+.ad_msg .position{position:relative;cursor:pointer}
+.ad_msg .position i{margin:8px 10px 0 6px;position:absolute;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent;cursor:pointer}
+.ad_msg .edit_icon .edit_icon01{background:url(../images/juese_icon.png) no-repeat -2px -1px;padding:8px 8px;cursor:pointer;display:inline-block}
+.ad_msg .edit_icon .edit_icon01:hover{background:url(../images/juese_hovericon.png) no-repeat -2px -1px}
+.ad_msg .edit_icon .edit_icon02{background:url(../images/courseManage.png) no-repeat -70px -49px;padding:9px 9px;cursor:pointer;display:inline-block}
+.ad_msg .edit_icon .edit_icon02:hover{background-position:-70px -73px}
+.ad_msg .edit_icon .edit_icon03{background:url(../images/courseManage.png) no-repeat -22px -51px;padding:8px 8px;cursor:pointer;display:inline-block}
+.ad_msg .edit_icon .edit_icon03:hover{background-position:-22px -75px}
+.ad_msg .edit_icon i{margin-left:5px}
+.ad_msg .name{width:100%;overflow:hidden;height:25px;white-space:nowrap;text-overflow:ellipsis}
+.admin_people td{width:25%;margin:15px}
+.admin_people table{width:100%}
+.role_span{float:left;margin:0 11px 0 12px;height:27px;line-height:22px}
+.role .dropList{float:left;width:76%}
+.admin_input_span{float:left;margin-right:10px;height:27px;line-height:27px}
+.role.selected{width:76%}
+.admin_input input{float:left;width:76%;height:25px;line-height:25px;border:1px solid #ddd;border-radius:3px;outline:0;text-indent:8px}
+.role{margin-bottom:5px}
+.add_admin_people_td{margin:10px;background:#f9fafc;border:1px solid #ddd;padding:5px}
+.add_admin_people_td:hover{border:1px solid #3d82f7}
+.add_role_icon i{float:right;margin:5px 7px 0 0}
+.ari_add{background:url(../images/courseManage.png) no-repeat -60px -255px;padding:8px 8px;cursor:pointer;display:inline-block}
+.ari_delete{background:url(../images/delete_icon.png) no-repeat 50% 50%/100%;padding:8px 8px;cursor:pointer;display:inline-block}
+.admin_edit .ags_addstuent_btn{padding:5px 15px;background:#41ca7c;border-radius:3px;color:#FFF;display:inline-block;margin-left:10px;float:right;margin-top:-32px;cursor:pointer}
+.admin_edit .add_icon{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;margin-right:5px;display:inline-block;background-position:-50px -100px;vertical-align:sub}
+.courses_catalogue{padding:10px 0;font-size:16px}
+.courses_catalogue .edit_icon_btn{background:#3e83fa;padding:1px 8px;border-radius:3px;color:#FFF;font-size:12px;float:right}
+.courses_catalogue .edit_icon_btn i{content:"";background:url(../images/courseManage.png);background-position:-120px -100px;padding:8px 8px;margin-right:5px;display:inline-block;vertical-align:middle}
+.cc_addcontent{padding:10px;background:#FFF;border:1px solid #ddd}
+.cc_addDagangBtn{width:236px;height:161px;border:2px dashed #ddd;margin:100px auto;text-align:center}
+.cc_addDagangBtn .icon{background:url(../images/courseManage.png) no-repeat 0 -125px;display:block;width:65px;height:65px;margin:34px auto 10px;cursor:pointer}
+.edit_courses_introduction{width:1000px;margin:0 auto}
+.titleBar{height:40px;line-height:40px;padding-left:10px;font-size:14px;background:#3e83f9;color:#fff}
+.closePopup{float:right;color:#fff;z-index:2;background:url(../images/closeIcon.png) no-repeat 50% 50%/40%;font-size:0;height:40px;width:32px;cursor:pointer}
+.eci_table table{background:#f4f5f7}
+.eci_table td{padding:10px;vertical-align:top}
+.eci_left_td{width:435px}
+.eci_right_td{width:545px}
+.eci_left_td .eci_table_firstli{padding:10px;background:#fafafa;text-align:center}
+.eci_table_firstli p{font-size:14px}
+.eci_table_firstli span{color:#9a9a9a}
+.eci_title span{color:#9a9a9a}
+.eci_dropdown span{color:#9a9a9a}
+.eci_left_td ul{border:1px solid #ddd;height:490px;background:#FFF;overflow-y:scroll}
+.eci_left_td li{font-size:12px;background:#fff;border-bottom:1px solid #ddd}
+.eci_title{padding:5px}
+.eci_title span{float:right;font-size:12px}
+.green_point{height:7px;width:7px;background:#42c97c;display:inline-block;border-radius:50%;margin-right:5px;float:left;margin-top:7px}
+.eci_dropdown_title{padding:5px;cursor:pointer}
+.eci_dropdown_title .dropDown_icon{margin:8px 0 0 0;float:left;-webkit-transition:all .5s;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent}
+.eci_dropdown_title span{float:right}
+.file_icon{background:url(../images/courseManage.png) no-repeat -93px -215px;height:15px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.document_icon{background:url(../images/courseManage.png) no-repeat 0 -215px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.document_icon:hover{background:url(../images/courseManage.png) no-repeat 0 -235px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.img_icon{background:url(../images/courseManage.png) no-repeat -18px -215px;height:15px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.img_icon:hover{background:url(../images/courseManage.png) no-repeat -18px -235px;height:15px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.video_icon{background:url(../images/courseManage.png) no-repeat -37px -215px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.video_icon:hover{background:url(../images/courseManage.png) no-repeat -37px -235px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.gou_icon{background:url(../images/courseManage.png) no-repeat #FFF -79px -247px;height:28px;width:16px;display:inline-block;vertical-align:sub;cursor:pointer}
+.aid_icon{background:url(../images/courseManage.png) no-repeat -111px -233px;height:17px;width:16px;display:inline-block;vertical-align:sub;float:right;margin-top:7px;cursor:pointer}
+.aimat_icon{background:url(../images/courseManage.png) no-repeat -79px -195px;height:17px;width:16px;display:inline-block;vertical-align:sub;float:right;margin-top:7px;cursor:pointer}
+.eci_dropdown_list p span{float:right}
+.eci_dropdown_list p{cursor:pointer;padding:5px 10px 5px 0;margin-left:37px}
+.eci_dropdown_list p:hover{background:#3e83f9;color:#FFF}
+.eci_dropdown_list p:hover span{color:#FFF}
+.rotate90{-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}
+.add_eci_table_li .remove_icon{background:url(../images/courseManage.png) no-repeat;float:right;height:18px;width:16px;display:inline-block;background-position:-117px -195px}
+.video_whiteicon{background:url(../images/courseManage.png) no-repeat -37px -235px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.marginleft10{margin-left:10px}
+.add_eci_table_li{padding:5px 10px;background:#3E83FA;height:30px;line-height:30px;margin:10px 0}
+.add_eci_table_li p{display:inline-block;text-align:center;color:#FFF}
+.add_eci_liinput input{height:26px;line-height:26px;width:280px;outline:0;text-indent:5px}
+.add_eci_table_li .remove_icon{margin-top:7px}
+.add_eci_liinput{position:relative}
+.add_eci_liinput .gou_icon{position:absolute;right:9px;top:-6px;cursor:pointer}
+.eci_btn{background:#e0e4ef;text-align:right;padding:8px 0;border-top:1px solid #ddd}
+.white_point{height:7px;width:7px;background:#FFF;display:inline-block;border-radius:50%;margin-right:5px;float:left;margin-top:12px}
+.add_eci_table_li span{color:#FFF}
+.add_eci_table_li i{margin-left:10px}
+.public{position:relative;width:260px;display:inline-block;color:#FFF}
+#txnr{width:100%;height:26px;outline:0;margin:0 6px 0 6px;text-align:left}
+.file_icon_white{background:url(../images/courseManage.png) no-repeat -93px -234px;height:15px;width:16px;display:inline-block;vertical-align:sub;margin:0 10px}
+.public input{width:26px;height:26px;outline:0;margin:0 6px 0 6px;text-align:center}
+.public span{width:70px;display:inline-block;padding:0 10px;margin-right:15px;color:#000;position:relative}
+.public .gou_icon{position:absolute;right:2px;top:1px;cursor:pointer}
+.aimat_icon_white{background:url(../images/courseManage.png) no-repeat 0 -195px;cursor:pointer;height:17px;width:16px;display:inline-block;vertical-align:sub;float:right;margin-top:7px}
+.eci_right_title{height:35px;line-height:35px;background:#f9fafc;border-bottom:1px solid #DDD}
+.eci_inner_table{border:1px solid #DDD;height:490px;background:#FFF}
+.eci_right_title span{padding:0 20px;display:inline-block;cursor:pointer}
+.msc_search .kjlx{display:inline-block}
+.eci_select_focus{border-bottom:2px solid #3e83fa;color:#3e83fa}
+.dropList{position:relative}
+.dropList .selected{cursor:pointer;border:1px solid #ddd;outline:0;border-radius:3px;height:30px;line-height:30px;text-indent:12px;width:93%;font-size:14px}
+.dropList .selected i{float:right;margin:12px 10px 0 0;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent}
+.dropList .options{display:none;position:absolute;z-index:2;left:0;top:32px;width:93%;border:1px solid #ddd;border-bottom:none;border-radius:3px;background-color:#fff}
+.dropList .options p{border-bottom:1px solid #ddd;text-indent:10px;height:30px;line-height:30px;cursor:pointer}
+.msc_search{background:#FFF;padding:10px}
+.msc_search .dropList{display:inline-block}
+.msc_search .dropList .options{width:99%}
+.msc_search .dropList .selected{width:100px}
+.msc_search_input{position:relative;display:inline-block;margin-left:20px}
+.msc_search_input input{border-radius:3px;height:30px;width:260px;outline:0;border:1px solid #ddd;text-indent:5px}
+.st_search_icon{background:#3e83fa;height:32px;width:45px;position:absolute;right:0;top:0;border-bottom-right-radius:4px;border-top-right-radius:4px;cursor:pointer}
+.st_search_icon i{background:url(../images/courseManage.png) no-repeat;height:25px;width:25px;margin-left:12px;display:inline-block;background-position:-134px -188px}
+.msc_table table td,.msc_table table th{text-align:left}
+.msc_table table tr:hover{background:#f0f8fb}
+.radio i{cursor:pointer;background:url(../images/courseManage.png) no-repeat -123px -52px;height:16px;width:16px;margin-left:10px;margin-top:3px;vertical-align:sub;display:inline-block}
+.radio.selected i{background-position:-97px -76px}
+.msc_table table th{background:#f2f6ff;border-top:1px solid #DDD;border-bottom:1px solid #DDD;padding:6px 0}
+.msc_table table{background:#FFF;font-size:12px;width:100%}
+.msc_table_th01{width:10%}
+.msc_table_th02{width:50%}
+.msc_table_th03{width:20%}
+.msc_table_th04{width:20%}
+.msc_table td{padding:6px 0;border-bottom:1px solid #DDD}
+.msc_table .video_icon{margin:0 10px 0 0}
+.msc_table .img_icon{margin:0 10px 0 0}
+.msc_table .document_icon{margin:0 10px 0 0}
+.men_icon{background:url(../images/courseManage.png) no-repeat -55px -215px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin-right:10px}
+.bianji_icon{background:url(../images/courseManage.png) no-repeat -74px -215px;height:16px;width:16px;display:inline-block;vertical-align:sub;margin-right:10px}
+.msc_table .pages{padding:10px 5px}
+.mooc_select_class{height:454px;overflow-y:scroll;overflow-x:hidden}
+.ellipsis{width:250px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#edit_courses_introduction{position:absolute;width:1000px;height:600px;margin-left:-500px;margin-top:-300px;left:50%;top:50%;border-radius:5px;overflow:hidden;display:none;z-index:999}
+#mask{position:absolute;width:100%;height:100%;background:#616262;opacity:.6;filter:Alpha(opacity=60)}
+#previewPagePopup{display:none;position:fixed;width:100%;height:100%;z-index:6;top:0;left:0}
+.mooc_search .form .controlList{overflow:inherit}
+.class_table{padding:20px;background:#FFF}
+.class_list table{width:100%}
+.ct_left_td{width:50%;border:1px solid #DDD}
+.ct_left_td .name{padding:6px 10px;background:#fafafa}
+.ct_left_td .name span{float:right}
+.class_list .class_img img{width:100%;max-height:460px}
+.class_table td{vertical-align:top}
+.ct_right_td{padding:0 10px}
+.ct_right_td ul{border:1px solid #ddd;height:500px;background:#FFF;overflow-y:scroll}
+.ct_right_td .eci_table_firstli{padding:10px;background:#fafafa;text-align:center}
+.ct_right_td li{font-size:12px;background:#fff;border-bottom:1px solid #ddd;padding:10px 0}
+.class_list .edit_icon_btn{background:#3e83fa;padding:1px 8px;border-radius:3px;color:#FFF;font-size:12px;float:right;cursor:pointer}
+.addGroupBtn .add_icon{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;margin-right:5px;display:inline-block;background-position:-50px -100px;vertical-align:sub}
+.class_list .edit_icon_btn i{content:"";background:url(../images/courseManage.png);background-position:-120px -100px;padding:8px 8px;margin-right:5px;display:inline-block;vertical-align:middle}
+#yincang .icon{background:url(../images/yincang_icon.png) no-repeat;cursor:pointer;padding:1px 8px}
+#yincang .icon:hover{background:url(../images/yincang_hovericon.png) no-repeat;cursor:pointer;padding:1px 8px}
+#qunzu .icon{background:url(../images/qunzu_icon.png) no-repeat;cursor:pointer;padding:4px 10px}
+#qunzu .icon:hover{background:url(../images/qunzu_hovericon.png) no-repeat;cursor:pointer;padding:3px 10px}
+#yulan .icon{background:url(../images/yulan_icon.png) no-repeat;cursor:pointer;padding:1px 8px}
+#yulan .icon:hover{background:url(../images/yulan_hovericon.png) no-repeat;cursor:pointer;padding:1px 8px}
+.class_search .dropList{margin:0}
+.bjgl_table{margin-bottom:20px}
+.bjgl_table table{width:100%;border:1px solid #DDD;text-align:left}
+.bjgl_table th{background:#f9fafc;padding:6px 0;text-indent:5px}
+.bjgl_table td{border-top:1px solid #ddd;padding:6px 0;background:#FFF;text-indent:5px;font-size:12px;position:relative}
+.cn_last_td .xianshijiao_icon{position:absolute;right:0;bottom:0;background:url(../images/xians_icon.png) no-repeat 50% 50%/100%;cursor:pointer;padding:22px 22px}
+.cn_last_td .yincjiao_icon{position:absolute;right:0;bottom:0;background:url(../images/yinc_icon.png) no-repeat 50% 50%/100%;cursor:pointer;padding:22px 22px}
+.bjgl_table .class_name_td{text-index:5px;font-size:14px}
+.bjgl_table .class_name_th{text-indent:5px}
+.bjgl_table .courseList .btnList .iconBtn{display:initial}
+.bjgl_table .courseList .btnList{height:auto;border:none}
+#registration_time .dateTime{width:43%;display:inline-block}
+.class_green_btn{color:#FFF;background:#4caf50;border-radius:3px;height:25px;width:80px;display:inline-block;text-align:center;line-height:25px}
+.class_hui_btn{color:#FFF;background:#b5b5b5;border-radius:3px;height:25px;width:80px;display:inline-block;text-align:center;line-height:25px}
+.zzkb{padding:5px 20px;background:#4baf4f;color:#FFF;border-radius:3px}
+.bjgl_table .btnList .iconBtn .tips{z-index:999;display:none;position:absolute;left:50%;top:26px;margin-left:-24px;background-color:#161e2b;color:#fff;padding:4px 10px;border-radius:3px;white-space:nowrap}
+.bjgl_table .btnList .iconBtn .tips i{position:absolute;left:50%;top:-5px;margin-left:-5px;border-bottom:5px solid #161e2b;border-left:5px solid transparent;border-right:5px solid transparent}
+.bjgl_table .btnList .iconBtn{position:relative;margin-top:16px;line-height:100%}
+.bjgl_table .btnList .iconBtn .icon{background:url(../images/hebingicon.png) no-repeat;width:16px;height:16px;display:inline-block;cursor:pointer;margin:0 5px}
+.bjgl_table .btnList .iconBtn .icon:hover{background:url(../images/hebinghovericon.png) no-repeat;width:16px;height:16px;display:inline-block;cursor:pointer;margin:0 5px}
+.bjgl_table .btnList .btnListIcon01 .icon{background-position:-8px -5px}
+.bjgl_table .btnList .btnListIcon02 .icon{background-position:-32px -5px}
+.bjgl_table .btnList .btnListIcon03 .icon{background-position:-58px -5px}
+.bjgl_table .btnList .btnListIcon04 .icon{background-position:-84px -5px}
+.bjgl_table .btnList .btnListIcon05 .icon{background-position:-110px -5px}
+.bjgl_table .btnList .btnListIcon06 .icon{background-position:-136px -5px}
+.bjgl_table .btnList .btnListIcon07 .icon{background-position:-162px -5px}
+.bjgl_table .btnList .btnListIcon01 .icon:hover{background-position:-5px -7px}
+.bjgl_table .btnList .btnListIcon02 .icon:hover{background-position:-29px -7px}
+.bjgl_table .btnList .btnListIcon03 .icon:hover{background-position:-55px -7px}
+.bjgl_table .btnList .btnListIcon04 .icon:hover{background-position:-81px -7px}
+.bjgl_table .btnList .btnListIcon05 .icon:hover{background-position:-107px -7px}
+.bjgl_table .btnList .btnListIcon06 .icon:hover{background-position:-133px -7px}
+.bjgl_table .btnList .btnListIcon07 .icon:hover{background-position:-159px -7px}
+.mooc .add_admin_people_td .dropList .options{width:100%}
+.kbsz_head table{width:100%;background:#FFF;border:1px solid #DDD}
+.kbsz_head td{padding:10px}
+.kbaz_nav{background:#3e83fa;height:35px;line-height:35px;color:#FFF}
+.kbaz_nav ul li{float:left;width:100px;text-align:center;border-right:1px solid #2669dc;font-size:13px;cursor:pointer}
+.kn_select{background:#2669dc;position:relative}
+.kn_select:after{content:"";margin-left:-3px;position:absolute;bottom:0;left:50%;border-bottom:6px solid #FFF;border-left:6px solid transparent;border-right:6px solid transparent}
+.kbsz_jbxx ul li{width:33.33%;float:left;margin-bottom:20px}
+.kbsz_jbxx label{display:block;margin-bottom:4px;font-weight:700}
+.kbsz_jbxx input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:93%;font-size:14px}
+.kbsz_jbxx h5{font-size:16px;border-bottom:1px solid #DDD;margin-bottom:10px;padding:7px 0}
+.kbsz_main{background:#FFF;padding:10px 20px}
+.kbsz{border:1px solid #DDD;background:#FFF}
+.kbsz_head{margin-bottom:30px}
+.baoming_time .dateTime{position:relative;width:46%;display:inline-block}
+.bmrs input{display:inline-block;width:43%}
+.bnsh input{display:inline-block;width:43%}
+.kbsz .dateTime .dateSelect{position:absolute;right:15px;top:7px;background:url(../images/courseManage.png) no-repeat 0 0;padding:8px 8px;height:0}
+.bmsh{height:30px;line-height:30px;background:#f9fafc;border-radius:3px;border:1px solid #ddd;outline:0;width:93%}
+.bmsh .selected{color:#3e83fa}
+.bmsh input{width:20px;vertical-align:middle}
+.bmsh span{cursor:pointer}
+.weekset h5{font-size:16px;border-bottom:1px solid #DDD;margin-bottom:10px;padding:7px 0}
+.weekset input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:93%;font-size:14px}
+.weekset_name{width:30%;display:inline-block}
+.weekset_time{display:inline-block}
+.weekset_main .dateTime{display:inline-block;position:relative}
+.jssz h5{font-size:16px;border-bottom:1px solid #DDD;margin-bottom:10px;padding:7px 0}
+.jssz{margin-top:10px}
+.jssz .add_icon{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;margin-right:5px;display:inline-block;background-position:-50px -100px;vertical-align:sub}
+.jssz .ags_addstuent_btn{padding:5px 15px;background:#41ca7c;border-radius:3px;color:#FFF;display:inline-block;margin-left:10px;float:right;margin-top:-50px;cursor:pointer}
+.jssz .add_admin_people_td .dropList .selected{width:100%;height:25px;line-height:25px}
+.add_admin_people_td .dropList .options{top:26px;width:100%}
+.add_admin_people_td .dropList .options p:hover{background:#ddd}
+.admin_people ul li{width:25%;float:left}
+.jssz .admin_people{background:#FFF}
+.jssz .admin_people_td{position:relative}
+.jssz .admin_people_td:hover{border:1px solid #3d82f7}
+.jssz .admin_people_td:hover .hover_delete_icon{background:url(../images/areaEdit.png) no-repeat -38px -18px;height:16px;width:16px;display:inline-block;position:absolute;top:-6px;right:-6px;cursor:pointer}
+.kbsz_jbxx ul li span{height:32px;line-height:32px;display:inline-block;font-size:12px}
+.ggxq{background:#FFF;padding:10px 20px}
+.ggxq .ags_gonggao_btn{padding:5px 15px;background:#41ca7c;border-radius:3px;color:#FFF;display:inline-block;margin-left:10px;float:right;margin-top:-50px;cursor:pointer}
+.ggxq .add_icon{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;margin-right:5px;display:inline-block;background-position:-50px -100px;vertical-align:sub}
+.ggxq h5{font-size:16px;margin-bottom:10px;padding:7px 0}
+.ggxq_table table{width:100%;text-align:left;border:1px solid #DDD}
+.ggxq_table table th{background:#F2F6FF;padding:10px 0}
+.ggxq_firsrth{text-indent:10px}
+.ggxq_table table td{border-top:1px solid #DDD;padding:10px 0;font-size:13px}
+.ggxq_table tr:hover{background:#f0f7fd}
+.ggxq_table .tips{display:none;position:absolute;left:50%;top:26px;margin-left:-24px;background-color:#161e2b;color:#fff;padding:4px 10px;border-radius:3px;white-space:nowrap;z-index:999}
+.ggxq_table .tips i{position:absolute;left:50%;top:-5px;margin-left:-5px;border-bottom:5px solid #161e2b;border-left:5px solid transparent;border-right:5px solid transparent}
+.ggxq_table .editIcon{background:url(../images/notice02.png) no-repeat;background-position:-3px -2px;position:relative;height:16px;width:16px;display:inline-block;vertical-align:sub;cursor:pointer;margin:0 7px}
+.ggxq_table .editIcon:hover{background-position:-2px -24px}
+.ggxq_table .removeIcon:hover{background-position:-23px -23px}
+.ggxq_table .removeIcon{background:url(../images/notice02.png) no-repeat;background-position:-23px -3px;position:relative;height:16px;width:16px;display:inline-block;vertical-align:sub;cursor:pointer;margin:0 7px}
+.zhiding_btn.yizhiding_btn{padding:5px 10px;color:#fff;border-radius:3px;background:#41ca7c}
+.zhiding_btn{padding:5px 10px;color:#fff;border-radius:3px;background:#ddd}
+.ggxq_firsrtd{text-indent:10px}
+.gonggaopop{position:absolute;width:1000px;height:448px;margin:-224px 0 0 -500px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
+.gonggaopop .header{height:40px;line-height:40px;color:#fff;position:relative}
+.fl{float:left}
+.gonggaopop .header .fl span{margin-left:20px}
+.ggbj_li{padding:10px 20px}
+.ggbj ul li{width:50%;float:left}
+.ggbj ul li input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:100%;font-size:14px}
+.ggnr{padding:10px}
+.ggnr h5{padding:10px 0}
+.ggnr img{vertical-align:middle;border:1px solid #DDD;width:100%}
+.ggnr textarea{width:100%;height:200px;outline:0;border:none;resize:none;border:1px solid #DDD}
+.ggbj .btnWrap{background:#e0e4ef;padding:10px 0}
+.ggbj .btnWrap a{font-size:14px;width:80px;text-align:center;height:30px;line-height:30px;border:1px solid #bfbfbf;border-radius:3px;margin-left:0;margin-right:20px;display:inline-block}
+.fr{float:right}
+.ggbj .btnWrap .save{background:#3e83f9;color:#fff;border:1px solid #1967ba}
+.homework{padding:10px}
+.homework_search .form .controlList{overflow:inherit}
+.hw_table table{width:100%;border:1px solid #DDD;text-align:left}
+.hw_table table th{background:#f9fafc;padding:5px;text-indent:5px}
+.hw_table table td{padding:10px;border-top:1px solid #DDD;font-size:12px}
+.hw_table table tr:hover{background:#f0f8fb}
+.hw_xyname img{width:50px;height:50px;border-radius:50%;float:left}
+.hw_xyname span{float:left;margin-left:10px;line-height:49px}
+.yiwanc_btn{background:#01A167;padding:5px 15px;border-radius:3px;color:#FFF}
+.weiwanc_btn{background:#ddd;padding:5px 15px;border-radius:3px;color:#FFF}
+.hw_ckxq{color:#3e83f9}
+.hw_table .pages{padding:10px 0}
+.zygl .back_icon{background:url(../images/courseManage.png) no-repeat -76px -96px;padding:1px 8px;margin-right:10px}
+.hw_zyxq{padding:10px}
+.zygl{font-size:12px}
+.hw_zyxq h5{font-size:16px;margin-bottom:10px;padding:7px 0;border-bottom:1px solid #DDD}
+.hw_zyxq table{width:100%}
+.hw_zyxq ul li{padding:10px 0}
+.hw_zyxq .dropList{margin-top:10px}
+.hw_zyxq .dropList .selected{width:300px}
+.hw_zyxq .dropList .options{width:300px}
+.hw_zyxq .dropList .options p{margin:0}
+.lspytextarea{resize:none;width:100%;height:200px;background:#f9fafc;border:1px solid #DDD}
+.certificate input{cursor:pointer;border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;font-size:14px}
+.hw_zyxq .fujian{position:relative;width:300px}
+.hw_zyxq .fujian input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;width:300px;height:30px;line-height:30px;text-indent:12px;font-size:14px}
+.hw_zyxq .fujian .liulan span{float:right;margin-top:-30px;position:absolute;right:-1px;top:0;margin:0}
+.hw_zyxq .fujian .liulan input{opacity:0;width:100px;position:absolute;right:0;top:0}
+.hw_zyxq .txpf_name img{width:35px;height:35px;border-radius:50%;float:left}
+.hw_zyxq .txpf_name span{float:left;margin-left:10px;line-height:35px}
+.hw_zyxq .txpf_table table{border-top:1px solid #DDD;border-left:1px solid #DDD;border-right:1px solid #DDD}
+.hw_zyxq .txpf_table table td{border-bottom:1px solid #DDD;padding:15px 5px}
+.hw_zyxq ul li p{margin-bottom:10px}
+#posttime .dateTime{width:43.43%;display:inline-block}
+.discuss_table table{width:100%;text-align:left}
+.discuss_table_th01{width:5%;text-indent:5px}
+.discuss_table_th02{width:10%;text-align:center}
+.discuss_table_th03{width:75%}
+.discuss_table_th04{width:15%}
+.discuss_table table td{padding:10px 0;text-indent:5px}
+.discuss_table .listView td img{width:50px}
+.discuss_table .checkboxspan{background:url(../images/courseManage.png) no-repeat;height:16px;width:16px;display:inline-block;cursor:pointer;background-position:0 -100px;vertical-align:sub}
+.discuss_table .checkboxspan.selected{background-position:-26px -100px}
+.discuss_table .checkboxspan input{display:none}
+.listView td .checkboxWrap{display:block;margin:0 auto;width:0;height:12px}
+.discuss_table .leibie{text-align:center;display:block}
+.taolun_msg img{width:50px;height:50px;border-radius:50%}
+.tlla{margin-top:18px}
+.tlla .taolun_icon{background:url(../images/msg_icon.png) no-repeat 0 0;height:16px;width:16px;display:inline-block;margin:0 10px;vertical-align:sub;cursor:pointer}
+.tlla .liulan_icon{background:url(../images/courseManage.png) no-repeat -70px -50px;height:16px;width:17px;display:inline-block;vertical-align:sub;margin:0 10px;cursor:pointer}
+.tlla .liulan_icon:hover{background-position:-70px -74px}
+.taolun_msg span{margin-left:60px;display:block}
+.taolun_msg p{margin-left:60px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;width:450px}
+.jinzhi_icon{background:url(../images/iconfont_jinzhi.png) no-repeat 0 0/100%;height:20px;width:20px;display:inline-block;vertical-align:sub;margin:0 10px;cursor:pointer}
+.jinzhi_icon.redjinzhi_icon{background:url(../images/iconfont_redjinzhi.png) no-repeat 0 0/100%;height:20px;width:20px;display:inline-block;vertical-align:sub;margin:0 10px;cursor:pointer}
+.taolun{padding:10px}
+.discuss_table .listView{margin-top:0}
+.student_nav{padding:10px 0;background:#f9fafc}
+.student_nav ul li{padding:3px 15px;border:1px solid #ddd;float:left;margin-left:20px;border-radius:3px;cursor:pointer}
+.student_nav ul li.selected{border:1px solid #3e83fa;color:#3e83fa}
+.addGroup{margin-right:10px;padding:3px 10px;border-radius:3px;float:right;cursor:pointer;background:#41c97b;color:#fff}
+.addGroup i{float:left;background:url(../images/courseManage.png) no-repeat -52px -101px;padding:7px 7px;margin:4px 7px 0 0}
+.group_management_table table{width:100%;text-align:left}
+.group_management_table .edit_icon{cursor:pointer;background:url(../images/notice02.png) no-repeat;height:19px;width:19px;display:inline-block;vertical-align:bottom;background-position:0 0}
+.remove_icon{cursor:pointer;background:url(../images/notice02.png) no-repeat;height:20px;width:20px;display:inline-block;vertical-align:bottom;background-position:-20px 0}
+.group_management_table .listView td{padding:0}
+.group_management_table .listView .tips{z-index:999}
+.group_management_table{padding:10px}
+.xyxxhead li{width:50%;padding:20px 0;float:left}
+.student_management .xyxx img{float:left;height:100px;width:100px;border-radius:50%;padding:5px;border:1px solid #DDD;margin-left:20px}
+.student_management .xyxx .xymsg{float:left;margin:10px 0 0 144px}
+.student_management .xyxx .xymsg h4{margin-bottom:10px;font-size:16px}
+.student_management .xyxx .xymsg p{font-size:12px;color:#707070}
+.student_management .xyxxhead{border-bottom:1px solid #ddd;border-top:1px solid #ddd}
+.student_management .xxxq{font-size:14px;margin:10px}
+.student_management .xxxq table{width:100%;border:1px solid #ddd;text-align:left}
+.student_management .xxxq th{background:#F9FAFC;font-weight:700;padding:8px 0}
+.xxxq_th01{text-indent:5px;width:50%}
+.xuefen,.xueshi,.xxxq_th02,.xxxq_th03{width:25%}
+.xxxq_dropdown_title p{float:left}
+.xxxq_dropdown_title{padding:10px 5px;cursor:pointer;border-top:1px solid #DDD}
+.xxxq_zj p{float:left}
+.xxxq_dropdown_title .dropDown_icon{margin:8px 0 0 0;float:left;-webkit-transition:all .5s;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent}
+.xxxq_dropdown_list p{font-size:12px;padding:5px 0;cursor:pointer}
+.xxxq_zjtitle{margin-left:28px}
+.xxxq_zjtitle .green_point{margin-right:17px}
+.kechen{width:50%}
+.xxxq_dropdown_list{font-size:12px}
+.kechen span{margin-left:94px}
+.xuefen span,.xueshi span{color:#59d59f}
+.xxxq h4{margin:10px 0}
+.sigeyuan{border-top:1px solid #DDD;border-bottom:1px solid #DDD}
+.sigeyuan ul li{width:25%;float:left;padding:20px 0}
+.sigeyuan ul li .circle{float:none;margin:auto}
+.search_padding{padding:10px}
+.zuosanjiao{border-left:6px solid #666;display:inline-block;margin-left:5px;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.xygl_view_list table{width:100%;text-align:center}
+.xyguanli .courseListNav{border-bottom:none;height:16px;padding-right:10px}
+.xygl_view_list{padding:0 10px 10px 10px}
+.xygl_view_list .xygl_name img{height:40px;width:40px;border-radius:50%}
+.xueyuan_th{text-align:left;margin-left:12px}
+.xugl_ckxq{color:#3e83f9}
+.xygl_view_list .listView td{padding:10px 5px}
+.skin-yellow .turetime{color:#ff9f00}
+.turetime{color:#21c77f}
+.xygl_name span{float:left;margin-left:10px;line-height:39px}
+.circle{width:120px;height:120px;position:relative;border-radius:50%;background:#0cc;float:left;margin-right:50px}
+.pie_left,.pie_right{width:120px;height:120px;position:absolute;top:0;left:0}
+.left,.right{display:block;width:120px;height:120px;background:#ddd;border-radius:50%;position:absolute;top:0;left:0;transform:rotate(30deg)}
+.pie_right,.right{clip:rect(0,auto,auto,100px)}
+.left,.pie_left{clip:rect(0,60px,auto,0)}
+.mask{width:110px;height:110px;border-radius:50%;left:5px;top:5px;background:#FFF;position:absolute;text-align:center}
+.mask span{display:block;margin-top:36px;font-size:20px}
+.mask p{font-size:12px}
+.process-bar{width:100px;display:inline-block;margin-right:5px;overflow:hidden}
+.pb-wrapper{border-radius:10px;background:#e0e4ef}
+.pb-container{height:7px}
+.skin-yellow .pb-value{background:#ff9f00}
+.skin-red .pb-text{color:#470200}
+.pb-text{width:100%;position:absolute;left:0;top:0;text-align:center;font:10px/12px arial}
+.pb-value{height:100%;width:50%;background:#21c77f;border-radius:10px}
+.xygl_view_bigImg{padding:0 10px 10px 10px}
+.xygl_view_bigImg .courseList li .liBox img{width:70px;height:70px;border-radius:50%;margin:auto;margin-top:20px}
+.xyheadname{text-align:center;font-size:12px;margin:5px 0 20px 0}
+.xygl_view_bigImg .courseList li .liBox{background:#f9fafc;font-size:12px}
+.xygl_view_bigImg .courseList li .liBox .btnList{background:#FFF;text-align:center;padding:5px 10px}
+.btnList p span{color:#40c979}
+.ddsh{opacity:.5}
+.ddsh img{-webkit-filter:grayscale(100%)}
+.xygl_view_bigImg .courseList li .ddsh .btnList{background:#f9fafc;text-align:center;padding:5px 10px;border-top:none;line-height:43px;font-size:14px}

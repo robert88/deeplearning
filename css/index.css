@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+/* 首页 */
+		.indexModule{clear:both;overflow:hidden;margin-bottom:28px;}
+		.indexModule dd{float:left;width:220px;height:110px;line-height:110px;font-size:16px;color:#fff;}
+		.indexModule dd .icon{float:left;background:url(../images/indexImg.png) no-repeat;padding:24px 23px;margin-right:24px;border:31px solid #53c79f;}
+		.indexModule dt{float:right;position:relative;background-color:#fff;height:110px;line-height:110px;}
+		.indexModule dt i.arrow{position:absolute;left:-17px;top:50%;margin-top:-10px;border-right:17px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;}
+		.indexModule dt a{display:block;}
+		.indexModule dt a:hover{color:#fff;}
+		.indexModule.fabu dd{background-color:#6ecfad;}
+		.indexModule.fabu dd .icon{background-position:0 -349px;}
+		.indexModule.fabu dt a:hover{background-color:#6ecfad;}
+		.indexModule dt .floatList li{text-align:center;}
+		.indexModule.gengxin dd{background-color:#65c5e8;}
+		.indexModule.gengxin dd .icon{border-color:#4ebbe3;background-position:0px -407px;background-color:#4ebbe3;}
+		.indexModule.gengxin dt a:hover{background-color:#4ebbe3;}
+		.indexModule.daochu dd{background-color:#f0957a;}
+		.indexModule.daochu dd .icon{border-color:#ef8465;background-position:0px -465px;background-color:#ef8465;}
+		.indexModule.daochu dt a:hover{background-color:#ef8465;}
+		.indexModule.quanxian dd{background-color:#e989b3;}
+		.indexModule.quanxian dd .icon{border-color:#d66c9a;background-position:0px -523px;background-color:#d66c9a;}
+		.indexModule.quanxian dt a:hover{background-color:#d66c9a;}

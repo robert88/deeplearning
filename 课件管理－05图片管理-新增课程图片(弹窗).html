@@ -1,0 +1,87 @@
+<style type="text/css">
+			/*#addclasspicPagePopup{display: none; margin-top: -333px; top:50%;overflow: hidden; position: absolute;width: 1080px;left: 50%;margin-left: -540px;border-radius: 5px;}*/
+		#addclasspicPagePopup .content{background: #fff;}
+		#addclasspicPagePopup .content .uploadExplain,
+		#addclasspicPagePopup .content .uploadWrap{width: 50%;}
+		#addclasspicPagePopup .content .uploadExplain{padding-top: 26px;height: 331px;overflow-y: auto;}
+		#addclasspicPagePopup .content .uploadWrap{position: relative;height:300px;}
+		#addclasspicPagePopup .content .uploadWrap .uploadInner{margin-left: 36px;padding-top: 20px;}
+		#addclasspicPagePopup .uploadBtn{position: relative;}
+		#addclasspicPagePopup .uploadBtn .bg{left: 16px; top: 10px; position: absolute;width: 18px;height: 16px; background: url(../images/upload.png);}
+		#addclasspicPagePopup .uploadBtn input{position: absolute;width: 100px;height: 32px;border: 1px solid red;left: 0px;top: 0;font-size: 40px;opacity: 0;filter: Alpha(opacity=0);}
+		#addclasspicPagePopup .btn{margin: 0px; padding-left: 40px;}
+		#addclasspicPagePopup .content h2{margin: 0px 0px 6px 10px;font-size: 24px;}
+		#addclasspicPagePopup .btnWrap{background: #e0e4ef;padding: 10px 0px;}
+		#addclasspicPagePopup .btnWrap a{font-size: 14px;float: right;margin-right: 20px;border-radius: 3px;}
+		#addclasspicPagePopup .btnWrap .return{background: #fff;border: 1px solid #bfbfbf;}
+		#addclasspicPagePopup .btnWrap .save{background: #3e83f9;color: #fff;border: 1px solid #1967ba;}
+		#addclasspicPagePopup .hideLeft{position: absolute;z-index: 3;left: -2px;top: 50%;margin-top: -11px;background-color: #aaa;height: 30px;width: 22px;cursor: pointer;}
+		#addclasspicPagePopup .hideLeft i{display: inline-block;margin: 8px 0 0 6px;border-right: 9px solid #fff;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addclasspicPagePopup .showLeft i{display: inline-block;margin: 8px 0 0 6px;border-left: 9px solid #fff;border-right: 0px !important;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addclasspicPagePopup .big{width: 100% !important;}
+		#addclasspicPagePopup .big .uploadInner{padding-top: 0px !important;width: 750px; }
+		#addclasspicPagePopup .big #previewImg{    height: 240px;
+    width: 450px;}
+		#addclasspicPagePopup .big .uploadInner p{float: left;margin-right: 22px;height: 32px;line-height: 32px; }
+		#addclasspicPagePopup .big .uploadInner .uploadBtn{margin-right: 22px;}
+	#addclasspicPagePopup .changField{
+	width: 1100px;
+	margin-left: -550px;
+
+	/*background-color: #f9fafc;*/
+	}
+
+#addclasspicPagePopup .popupWrap {
+    max-height: 360px;
+}
+</style>
+<div id="addclasspicPagePopup"  class="pagePopup" >
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>课程图片上传</span>
+				<span class="closePopup J-close"></span>
+			</div>
+				
+			<div class="content clearfix popupWrap">
+				
+				<div class="uploadExplain fl">
+					<h2>课程图片</h2>
+					<img src="images/coursePic.jpg">
+				</div>
+				<div class="uploadWrap fl">
+					<div class="uploadInner">
+						<div id="previewImg">
+							<img src="images/coursePic3.jpg">
+						</div>
+						<div class="uploadBtn">
+							<div class="btn green uploadImage">
+								<span class="bg"></span>上传图片
+							</div>
+							<input type="file" onchange="previewImage(this)" value="图片上传按钮">
+						</div>
+						<p>500K以内/RGB模式,jpg、gif、png格式</p>
+						<p>建议尺寸：<span class="red">480x270</span></p>
+						
+					</div>
+					<span class="hideLeft"><i></i></span>
+				</div>
+			</div>
+
+			<div class="btnWrap clearfix">
+				<a href="javascript:void(0);" class="save fr">保存</a>
+				<a href="javascript:void(0);" class="return fr">取消</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+					// 小三角按钮
+
+			$("#addclasspicPagePopup").find(".hideLeft").on( "click",function(){
+				$(this).toggleClass("showLeft");
+				$(this).parent().toggleClass("big");
+				$("#addclasspicPagePopup").find(".uploadExplain").toggle();
+			} );
+	</script>

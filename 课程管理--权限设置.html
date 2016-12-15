@@ -1,0 +1,1728 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>课程管理--权限设置</title>
+	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/course.css" rel="stylesheet" />
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li  class='current open '>
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList"  style="display:block;">
+                <li class='current '><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->	
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="课程管理--大图显示.html">课程管理</a> > <span class="current">新增课程</span>
+				<a href="课程管理--大图显示.html"><span class="back"><i></i>返回</span></a>
+			</div>
+			<!-- 步骤 -->
+			<div class="step">
+				<div class="stepInner">
+					<p class="line"></p>
+					<ul class="floatList col3">
+						<li class="current alignL">
+							<i class="icon"></i>
+							<a href="课程管理--新增.html" class="text">填写课程基本信息</a>
+						</li>
+						<li class="current alignC">
+							<i class="icon"></i>
+							<a href="课程管理--课程大纲.html" class="text">编辑课程大纲</a>
+						</li>
+						<li class="current alignR">
+							<i class="icon"></i>
+							<a href="课程管理--权限设置.html" class="text">相关配置</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 关联资源S -->
+			<div id="relation" class="relation">
+				<div class="search">
+					<h2>关联资源</h2>
+					<div class="form">
+						<ul class="controlList course">
+							<li>
+								<label>课程名称</label>
+								<input type="text" class="text" placeholder="">
+							</li>
+							<li>
+								<label>创建人</label>
+								<div>
+									<input type="text" class="text" placeholder="" value="">
+									<span class="creater"></span>
+								</div>
+							</li>
+							<li>
+								<label>资源类型</label>
+								<div class="dropList">
+									<p class="selected"><span>全部</span><i></i></p>
+									<div class="options">
+										<p>全部</p>
+										<p>课程</p>
+										<p>mooc</p>
+										<p>面授</p>
+										<p>考试</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="btnWrap">
+							<a href="javascript:void(0)" class="fr searchBtn">搜索</a>
+							<a href="javascript:void(0)" class="fr resetBtn">重置</a>
+						</div>
+						<div class="resource">
+							<div class="groupList active">
+								<table class="tableWrap active" width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr>
+											<td>所有资源列表</td>
+											<td rowspan="2" class="middle"><span class="addToRight"></span></td>
+											<td>已选资源列表</td>
+										</tr>
+										<tr>
+											<td style="width:50%;">
+												<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="1">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>mooc1</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="2">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授2</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="3">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试3</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="4">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试4</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="5">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授5</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="6">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授6</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="7" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="8" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="9">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授9</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="10">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授10</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													</tbody>
+												</table>
+												
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+											<td style="width:50%;">
+												<table class="innerTable selectedGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+														<th></th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="7">
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													<tr data-id="8">
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													</tbody>
+												</table>
+												<table class="innerTable selectedEmptyGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tbody><tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													</tbody>
+												</table>
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="groupList">
+								<table class="tableWrap active" width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr>
+											<td>所有课程列表</td>
+											<td rowspan="2" class="middle"><span class="addToRight"></span></td>
+											<td>已选课程列表</td>
+										</tr>
+										<tr>
+											<td style="width:50%;">
+												<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="1">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>mooc1</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="2">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授2</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="3">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试3</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="4">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试4</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="5">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授5</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="6">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授6</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="7" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="8" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="9">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授9</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="10">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授10</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													</tbody>
+												</table>
+												
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+											<td style="width:50%;">
+												<table class="innerTable selectedGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+														<th></th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="7">
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													<tr data-id="8">
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													</tbody>
+												</table>
+												<table class="innerTable selectedEmptyGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tbody><tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													</tbody>
+												</table>
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="groupList">
+								<table class="tableWrap active" width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tbody>
+										<tr>
+											<td>所有mooc列表</td>
+											<td rowspan="2" class="middle"><span class="addToRight"></span></td>
+											<td>已选mooc列表</td>
+										</tr>
+										<tr>
+											<td style="width:50%;">
+												<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="1">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>mooc1</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="2">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授2</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="3">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试3</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="4">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>考试4</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="5">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授5</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="6">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授6</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="7" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="8" class="gray">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="9">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授9</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													<tr data-id="10">
+														<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+														<td>面授10</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+													</tr>
+													</tbody>
+												</table>
+												
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+											<td style="width:50%;">
+												<table class="innerTable selectedGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<thead>
+													<tr>
+														<th>资源类型</th>
+														<th>资源名称</th>
+														<th>创建人</th>
+														<th></th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-id="7">
+														<td>面授7</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													<tr data-id="8">
+														<td>面授8</td>
+														<td>如何成为一名高级的交互设计师</td>
+														<td>linjiayi</td>
+														<td><span class="delGrayIcon"></span></td>
+													</tr>
+													</tbody>
+												</table>
+												<table class="innerTable selectedEmptyGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+													<tbody><tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+														<td></td>
+														<td></td>
+													</tr>
+													</tbody>
+												</table>
+												<div class="pages clearfix">
+													<a href="javascript:;" class="forbid prev"><i></i></a>
+													<!--<a href="#" class="prev"><i></i></a>-->
+													<a href="#" class="current">1</a>
+													<a href="#">2</a>
+													<a href="#">3</a>
+													<a href="#">4</a>
+													<a href="#">5</a>
+													<a href="javascript:;" class="shenglue">......</a>
+													<a href="#" class="next"><i></i></a>
+													<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+													<!-- <span class="total">总：1440条</span> -->
+													
+													<span class="tiaozhuan">
+														<span class="">跳转到：</span>
+														<input type="text"><span class="goBtn">GO</span>
+													</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="btnList">
+							<span class="packUp hide"><i class="icon"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 关联资源 E -->
+			
+			<h2>权限设置</h2>
+			<div class="relation">
+				<div class="form">
+					<div class="quanxian">
+						<div class="tab clearfix">
+							<div class="radioWrap clearfix">
+								<span class="radio"><i></i>全体开放<input type="radio" name="language" id="language1" value="本体开放"></span>
+								<span class="radio selected"><i></i>部分开放<input type="radio" name="language" id="language2" value="部分开放"></span>
+							</div>
+							<span class="addGroupBtn btn green"><i></i>新增群组</span>
+						</div>
+						
+						<div class="groupList resource">
+							<div class="searchKeyWords">
+								<input type="text" class="text" placeholder="请输入关键词" />
+								<span class="searchBtn"></span>
+							</div>
+							<table class="tableWrap" width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td>所有群组数据列表</td>
+									<td rowspan="2" class="middle"><span class="addToRight"></span></td>
+									<td>已选群组数据列表</td>
+								</tr>
+								<tr>
+									<td>
+										<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+											<thead>
+											<tr>
+												<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+												<th>群组资源</th>
+												<th>群组人数</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr data-id="1">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群1</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="2">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群2</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="3">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群3</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="4">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群4</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="5">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群5</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="6">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群6</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="7" class="gray">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群7</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="8" class="gray">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群8</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="9">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群9</td>
+												<td>200</td>
+											</tr>
+											<tr data-id="10">
+												<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+												<td>消费者bg-荣耀群10</td>
+												<td>200</td>
+											</tr>
+											</tbody>
+										</table>
+										
+										<div class="pages clearfix">
+											<a href="javascript:;" class="forbid prev"><i></i></a>
+											<!--<a href="#" class="prev"><i></i></a>-->
+											<a href="#" class="current">1</a>
+											<a href="#">2</a>
+											<a href="#">3</a>
+											<a href="#">4</a>
+											<a href="#">5</a>
+											<a href="javascript:;" class="shenglue">......</a>
+											<a href="#" class="next"><i></i></a>
+											<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+											<!-- <span class="total">总：1440条</span> -->
+											
+											<span class="tiaozhuan">
+												<span class="">跳转到：</span>
+												<input type="text"><span class="goBtn">GO</span>
+											</span>
+										</div>
+									</td>
+									<td>
+										<table class="innerTable selectedGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+											<thead>
+											<tr>
+												<th>群组资源</th>
+												<th>群组人数</th>
+												<th>删除</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr data-id="7">
+												<td>消费者bg-荣耀群7</td>
+												<td>200</td>
+												<td><span class="delGrayIcon"></span></td>
+											</tr>
+											<tr data-id="8">
+												<td>消费者bg-荣耀群8</td>
+												<td>200</td>
+												<td><span class="delGrayIcon"></span></td>
+											</tr>
+											</tbody>
+										</table>
+										<table class="innerTable selectedEmptyGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>&nbsp;</td>
+												<td></td>
+												<td></td>
+											</tr>
+											</tbody>
+										</table>
+										<div class="pages clearfix">
+											<a href="javascript:;" class="forbid prev"><i></i></a>
+											<!--<a href="#" class="prev"><i></i></a>-->
+											<a href="#" class="current">1</a>
+											<a href="#">2</a>
+											<a href="#">3</a>
+											<a href="#">4</a>
+											<a href="#">5</a>
+											<a href="javascript:;" class="shenglue">......</a>
+											<a href="#" class="next"><i></i></a>
+											<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+											<!-- <span class="total">总：1440条</span> -->
+											
+											<span class="tiaozhuan">
+												<span class="">跳转到：</span>
+												<input type="text"><span class="goBtn">GO</span>
+											</span>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="btnList">
+							<span class="packUp"><i class="icon"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--=S 底部浮动栏-->
+		<div class="bottomFloatBar alignR">
+			<span class="btn">保<span class="opc">啊</span>存</span>
+			<a href="课程管理--课程大纲.html"><span class="btn">上一步</span></a>
+			<span class="btn blue">发<span class="opc">啊</span>布</span>
+		</div>
+		<!--=E 底部浮动栏-->
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<!--=S 新建群姐 弹出框 -->
+<div class="myPopWrap dn" id="createGroupPop">
+	<p class="myPopBg"></p>
+	<div class="myPopup">
+		<div class="myPopTitle">
+			<span class="closeMyPop"></span>
+			<h4>新增群组</h4>			
+		</div>
+		<div class="myPopMain createGroup">			
+			<div class="">
+				<div class="form">
+					<ul class="controlList">
+						<li class="li1">
+							<label>群组名称<span class="red">*</span></label>
+							<input type="text" class="text" placeholder="" value="设计联盟" />
+						</li>
+						<li class="li2">
+							<label>组说明<span class="red">*</span></label>
+							<input type="text" class="text" placeholder="" value="简约设计风格、它也以其独特的表现......" />
+						</li>
+						<li class="li3">
+							<label>群组条件</label>
+							<p><span class="btn green">添加规则集</span></p>
+						</li>
+						<li class="selected">
+							<label>已选条件一</label>
+							<div class="result">
+								<p class="cont text">入职时间：2016-06-12 + 部门：设计部 + 任职：交互设计师 + 用户类型：wx</p>
+								<p class="btnBar">
+									<span class="editBtn"></span>
+									<span class="delBtn"></span>
+								</p>
+							</div>
+						</li>
+						<li class="selected">
+							<label>已选条件二</label>
+							<div class="result">
+								<p class="cont text">入职时间：2016-06-12 + 部门：设计部 + 任职：交互设计师 + 用户类型：wx</p>
+								<p class="btnBar">
+									<span class="editBtn"></span>
+									<span class="delBtn"></span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!--!=S 学员列表 -->
+			<div class="studentList">
+				<p class="title">学员列表</p>
+				<div class="content">
+					<div class="filter">
+						<div class="searchKeyWords">
+							<input type="text" class="text" placeholder="请输入要查找的资源" />
+							<span class="searchBtn"></span>
+						</div>
+						<p class="btnList">
+							<span class="addBtn btn green" id="addStudentBtn"><i></i>添加学员</span>
+							<span class="import btn green"><i></i>批量导入</span>
+						</p>
+					</div>
+					
+					<table class="table" width="100%" border="0" cellspacing="0" cellpadding="0">
+						<thead>
+						<tr>
+							<th>学员姓名</th>
+							<th>入职时间</th>
+							<th>部门</th>
+							<th>任职</th>
+							<th>用户类型</th>
+							<th>删除</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						<tr>
+							<td>YGG875448 yigaoguo</td>
+							<td>2006-09-23</td>
+							<td>华为技术</td>
+							<td>交互设计</td>
+							<td>wx</td>
+							<td><span class="delGrayIcon"></span></td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+					
+					
+					
+				</div>
+			</div>
+			<!--!=E 学员列表 -->
+		</div>
+		<div class="myPopBtnList" id="myPopBtnList">
+			<span class="btn back">取消</span>
+			<span class="btn blue confirm">确定</span>
+		</div>
+	</div>
+</div>
+<!--=E 新建群姐 弹出框 -->
+<!--=S 新建群组 弹出框 -->
+<div class="myPopWrap dn" id="addStudentPop">
+	<p class="myPopBg"></p>
+	<div class="myPopup">
+		<div class="myPopTitle">
+			<span class="closeMyPop"></span>
+			<h4>新建群组</h4>
+			<span class="bg fl"></span>			
+		</div>
+		<div class="myPopMain addStudent">
+			<div class="clearfix">
+				<div class="leftTab">
+					<ul>
+						<li class="current">
+							<span>部门</span>
+							<span class="del"></span>
+							<i class="arrow"></i>
+						</li>
+						<li>
+							<span>入职时间</span>
+							<span class="del"></span>
+							<i class="arrow"></i>
+						</li>
+						<li>
+							<span>任职</span>
+							<span class="del"></span>
+							<i class="arrow"></i>
+						</li>
+						<li>
+							<span>用户类型</span>
+							<span class="del"></span>
+							<i class="arrow"></i>
+						</li>
+					</ul>
+					<div>
+						<div class="btn green" id="addChild">
+							<span class="bg"></span>
+							<span>添加条件子集</span>
+						</div>
+					</div>
+				</div>
+				<div class="rightContent tabContent current">
+					<div class="inner">
+						<div class="searchKeyWords">
+							<input type="text" class="text" placeholder="请输入关键词">
+							<span class="searchBtn"></span>
+						</div>
+						<ul class="deptList">
+							<li>
+								<span class="label fl">公司</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>中文</p>
+										<p>English</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">一级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">二级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">三级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">三级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">五级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">六级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">七级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<span class="label fl">八级部门</span>
+								<div class="dropList">
+									<p class="selected"><span></span><i></i></p>
+									<div class="options" style="">
+										<p>部门1</p>
+										<p>部门2</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						
+						<!--<div class="deptList radioWrap">
+								<span class="radio selected"><i></i>中文<input type="radio" name="language" id="language1" value="中文"></span>
+								<span class="radio"><i></i>English<input type="radio" name="language" id="language2" value="English"></span>
+						</div>-->
+					</div>
+				</div>
+				<div class="rightContent tabContent">
+					<div class="juniorTimer clearfix">
+						<span class="fl">入职时间</span>
+						<div class="dateTime fl">
+							<span class="dateSelect"></span>
+							<input type="text" class="text" placeholder="">
+						</div>
+					</div>
+				</div>
+				<div class="rightContent tabContent">
+					<div class="jobs">
+						<div class="tree">
+							<ul class="menuWrap">
+								<li class = "mainMenu">
+									<div class="desc">
+										<span class="triangle"></span>
+										<span class="radio"></span>
+										<span class="text">销售类</span>
+									</div>
+									<ul class="subMenu" id="wuqiaojie">
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">行政&商务服务类</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li >
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+											<ul class="subMenu">
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class = "mainMenu">
+									<div class="desc">
+										<span class="triangle"></span>
+										<span class="radio"></span>
+										<span class="text">行政&商务服务类</span>
+									</div>
+									<ul class="subMenu">
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+											<ul class="subMenu">
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+												<li>
+													<div class="desc">
+														<span class="triangle"></span>
+														<span class="radio"></span>
+														<span class="text">华为大学</span>
+													</div>
+													<span class="bg fl"></span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class = "mainMenu">
+									<div class="desc">
+										<span class="triangle"></span>
+										<span class="radio"></span>
+										<span class="text">制造类</span>
+									</div>
+									<ul class="subMenu">
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+										<li>
+											<div class="desc">
+												<span class="triangle"></span>
+												<span class="radio"></span>
+												<span class="text">华为大学</span>
+											</div>
+											<span class="bg fl"></span>
+										</li>
+									</ul>
+								</li>
+								<li class = "mainMenu">
+									<div class="desc">
+										<span class="triangle"></span>
+										<span class="radio"></span>
+										<span class="text">行政&商务服务类</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="rightContent tabContent">
+					<div class="userType">
+						<ul>
+							<li class="active"><span class="bg"></span><span>LeasedWorkforce</span></li>
+							<li><span class="bg"></span><span>wx</span></li>
+							<li><span class="bg"></span><span>Employee</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="prompt">
+			<span class="selected">已选条件</span>
+			<span>入职时间：2016-06-22 ＋ 部门：设计部 ＋ 任职：交互设计师 ＋ 用户类型：wx</span>
+		</div>
+		<div class="myPopBtnList" id="myPopBtnList">
+			<span class="btn back">返回</span>
+			<span class="btn blue confirm">确定</span>
+		</div>
+	</div>
+</div>
+<!--=E 添加学员 弹出框 -->
+<script src="js/common/jquery-1.11.1.min.js"></script>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/course.js"></script>
+<script>
+	//打开弹出框
+	function openMyPopUp(clickElem, popElem, callBack){		
+		//弹出框主体区高度设置
+		var popMainHeight = function(){
+			var popMain = $(popElem).find(".myPopMain");
+			var popTitleH = popMain.siblings(".myPopTitle").outerHeight(),
+				btnListH = popMain.siblings(".myPopBtnList").outerHeight(),
+				popH = popMain.parent(".myPopup").height();
+			var mainH = popH-popTitleH-btnListH;
+			popMain.height(mainH);	
+		}
+		//显示弹出框
+		$(clickElem).click(function(){
+			$(".myPopWrap").fadeOut(); //其它弹出框隐藏			
+			$(popElem).fadeIn();
+			$("body").css("overflow","hidden");
+			//弹出框主体区高度设置
+			popMainHeight();
+			$(window).bind("resize", popMainHeight);
+			
+			//回调
+			if( typeof(callBack)=="function" ){
+				callBack();	
+			}
+		});
+		//关闭弹出框
+		$(popElem).find(".closeMyPop, .myPopBg").click(function(){
+			$(this).parents(popElem).fadeOut();
+			$("body").css("overflow","visible");
+		});
+	}
+	//隐藏弹出框
+	function hideMyPopUp(popElem){
+		$(popElem).hide();
+	}
+	//显示弹出框
+	function showMyPopUp(popElem){
+		$(popElem).fadeIn();
+	}
+	
+	//打开新增群组 弹出框
+	openMyPopUp(".quanxian .tab .addGroupBtn", "#createGroupPop");
+	//删除学员
+	$(".studentList table .delGrayIcon").click(function(){
+		$(this).parent().parent().remove();
+	});
+	
+	
+	//打开添加学员 弹出框
+	// openMyPopUp("#addStudentBtn", "#addStudentPop", function(){
+	// 		studentPopMainHeight();
+	// 		$(window).bind("resize", studentPopMainHeight);												 
+	// });
+	//右侧高度设置
+	var studentPopMainHeight = function(){
+		var mainH = $("#addStudentPop .myPopMain.addStudent").height();
+		console.log(mainH);
+		$(".addStudent .rightContent").height(mainH-42); //42为边和margin值
+	}
+	// 添加学员按钮
+	$("#createGroupPop").find(".studentList").find(".addBtn").on("click",function(){
+		alert( 0 );
+	});
+	
+	
+</script>
+</body>
+</html>

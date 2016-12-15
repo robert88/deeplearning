@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>mooc班级管理作业详情</title>
+	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
+	<link href="css/course.css" rel="stylesheet" />
+	<link href="css/mooc.css" rel="stylesheet" />
+	
+</head>
+<body>
+<!--=S 头部 -->
+<div class="header">
+	<div class="logo">
+		<a href="index.html"><img src="images/logo.png" /></a>
+	</div>
+	<!--=S 头部右侧内容 -->
+	<div class="topRight">
+		<img src="images/userImg.png" class="userImg" />
+		<!-- 用户专区 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>YI GAOGUO</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<p class="listTitle selected"><a href="javascript:;"><i class="arrow"></i>中文</a></p>
+						<ul class="subList">
+							<li class="selected"><a href="#">中文</a></li>
+							<li class="last"><a href="#">English</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;"><i class="arrow"></i>注销</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 产品与解决方案 -->
+		<div class="dropDown">
+			<p class="dropTitle"><i></i>产品与解决方案</p>
+			<div class="dropMenu">
+				<i class="icon"></i>
+				<ul class="menuList">
+					<li>
+						<a href="#"><i class="arrow"></i>菜单一</a>
+					</li>
+					<li>
+						<a href="#"><i class="arrow"></i>菜单二</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--=E 头部右侧内容 -->
+</div>
+<!--=E 头部 -->
+<!--=S 主体内容区 -->
+<div class="wrapper">
+	
+<!--=S 左侧导航 -->
+<div class="leftBar">
+    <ul class="navList">
+        <li>
+            <p class="listTitle">
+                <a href="index.html">
+                    <i class="homeIcon"></i>
+                    <span>首页</span>
+                </a>
+            </p>
+            <!--<a href="index.html"><i class="homeIcon"></i>首页</a>-->
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zimenhu"></i>
+                <span>子门户管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="子门户管理--新增.html">子门户新增</a></li>
+                <li><a href="子门户管理--大图显示.html">子门户维护</a></li>
+                <!--<li><a href="子门户管理--列表显示.html" data-map="子门户管理--大图显示.html">子门户列表显示</a></li>
+                <li><a href="子门户管理--新增预览.html" data-map="子门户管理--新增.html">子门户新增预览</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon zhuanqu"></i>
+                <span>专区管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="专区管理--新增.html">专区新增</a></li>
+                <li><a href="专区管理--列表显示.html">专区维护</a></li>
+                <!--<li><a href="专区管理--新增预览.html" data-map="专区管理--新增.html">新增预览</a></li>-->
+            </ul>
+        </li>
+        <li >
+            <p class="listTitle">
+                <i class="icon kecheng"></i>
+                <span>课程管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" >
+                <li><a href="课程管理--新增.html">课程新增</a></li>
+                <li ><a href="课程管理--大图显示.html">课程维护</a></li>
+                <!--<li><a href="课程管理--列表显示.html" data-map="课程管理--大图显示.html">列表显示</a></li>
+                <li><a href="课程管理--权限设置.html" data-map="课程管理--新增.html">权限设置</a></li>
+                <li><a href="课程管理--新增.html" data-map="课程管理--新增.html">课程新增</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kejian"></i>
+                <span>课件管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li ><a href="课件管理－01视频管理.html">视频</a></li>
+                <li><a href="课件管理－06文档管理.html">文档</a></li>
+                <li><a href="课件管理－05图片管理.html">图片</a></li>
+                <li><a href="课件管理－04试卷管理.html">测验</a></li>
+                <li><a href="课件管理－03题目管理.html">题目</a></li>
+                <li><a href="课件管理－02网页管理.html">网页</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon renwu"></i>
+                <span>任务管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
+                <li><a href="任务--任务维护.html">任务维护</a></li>
+                <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon kaoshi"></i>
+                <span>考试管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="考试--编辑试卷.html">考试新增</a></li>
+                <li><a href="考试--维护.html">考试维护</a></li>
+                <!--<li><a href="考试--关联课程--已关联.html"  data-map="考试--编辑试卷.html">关联课程--已关联</a></li>
+                <li><a href="考试--关联课程.html"  data-map="考试--编辑试卷.html">关联课程</a></li>
+                <li><a href="考试--关联课程列表显示.html"  data-map="考试--编辑试卷.html">关联课程列表显示</a></li>
+                <li><a href="考试--权限新增群组.html"  data-map="考试--编辑试卷.html">权限新增群组</a></li>
+                <li><a href="考试--权限新建群组弹窗.html"  data-map="考试--编辑试卷.html">权限新建群组弹窗</a></li>
+                <li><a href="考试--权限设置.html"  data-map="考试--编辑试卷.html">权限设置</a></li>
+                <li><a href="考试--维护列表显示.html"  data-map="考试--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="考试--编辑试卷01.html"  data-map="考试--编辑试卷.html">编辑试卷01</a></li>-->
+            </ul>
+        </li>
+        <li class='current open '>
+            <p class="listTitle">
+                <i class="icon mooc"></i>
+                <span>MOOC管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList" style="display:block;">
+                <li><a href="mooc基本信息填写.html">mooc新增</a></li>
+                <li><a href="mooc--维护.html">mooc维护</a></li>
+                <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
+                <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
+                <li class='current '><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
+                <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
+                <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
+                <li><a href="mooc班级管理显示.html" data-map="mooc--维护大图显示.html">mooc班级管理显示</a></li>
+                <li><a href="mooc课程大纲.html" data-map="mooc基本信息填写.html">mooc课程大纲</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon mainshou"></i>
+                <span>面授管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
+                <li><a href="面授管理--维护.html">面授维护</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon baobiao"></i>
+                <span>报表管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="">二级菜单一</a></li>
+                <li><a href="#">二级菜单二</a></li>
+            </ul>
+        </li>
+        <li>
+            <p class="listTitle">
+                <i class="icon quanxian"></i>
+                <span>权限管理</span>
+                <i class="arrow"><i></i></i>
+            </p>
+            <ul class="subList">
+                <li><a href="权限管理--新增群组.html">权限新增</a></li>
+                <li><a href="权限管理--权限维护.html">权限维护</a></li>
+                <!--<li><a href="权限管理--新建群组弹窗.html" data-map="权限管理--新增群组.html">新建群组弹窗</a></li>-->
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--=E 左侧导航 -->
+	<!--=S 主体内容 -->
+	<div class="main">
+		<div class="mainInner">
+			<!-- 面包屑 -->
+			<div class="crumbs">
+				<a href="index.html">首页</a> > <a href="#">MOOC管理</a> > <a href="#">MOOC维护</a> > <span class="current">班级新增</span>
+				<a href="#"><span class="back"><i></i>返回</span></a>
+			</div>
+			
+			<div class="kbsz_head">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+							<td>班级名称：产品开发项目管理云书库</td>
+							<td>开班时间：2015-12-12 - 2016.11.01</td>
+							<td>助教：lcw1232133</td>
+							<td>班级人数：44</td>
+					</tr>
+				</table>
+			</div>
+			<!--=S 开班设置 -->
+			<div class="kbsz">
+				<div class="kbaz_nav">
+					<ul>
+						<li>开班设置</li>
+						<li>公告</li>
+						<li>学员</li>
+						<li>讨论</li>
+						<li class="kn_select">作业</li>
+					</ul>
+				</div>
+			
+				<div class="hw_zyxq">
+					<h5>作业详情<span class="zygl fr"><i class="back_icon"></i>作业管理</span></h5>
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td>
+								<p>作业名称</p>
+								<p>leasdasdasd</p>
+							</td>
+							<td>
+								<p>作业总分</p>
+								<p>100</p>
+							</td>
+							<td>
+								<p>作业总分</p>
+								<p>100</p>
+							</td>
+						</tr>
+					</table>
+					<ul>
+						<li>
+							<p>作业题目</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>作业内容</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>评分标准</p>
+							<span>Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah </span>
+						</li>
+						<li>
+							<p>学员</p>
+							<span>lwj1234422</span>
+						</li>
+						<li>
+							<p>学员解答</p>
+							<span>lwj1234422</span>
+						</li>
+						<li>
+							<p>老师评分</p>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>已发布</p>
+									<p>未发布</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<p>老师评语</p>
+							<textarea name="" rows="" cols="" class="lspytextarea">Ah the Aoshen team Aoshen team with third special doctor Wolf and alchemist tongue local housing authority agreed to resume with current Asda or even France's personal planning to ask to ask the gas to the full-text and ah</textarea>
+						</li>
+						<li>
+							<p>附件</p>
+							<div class="fujian">
+								<input type="text" class="" placeholder="">
+								<div class="liulan">
+									<span class=" btn blue">浏览</span>
+									<input type="file" class="" placeholder="">
+								</div>
+							</div>
+						</li>
+						<li>
+							<p>同学评分</p>
+							<div class="txpf_table">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="txpf_name">
+												<img src="images/areaAdd01.jpg">
+												<span>asd12312asdasd</span>
+											</div>
+										</td>
+										<td>
+											评分：99
+										</td>	
+										<td>
+											评语：Ah the Aoshen team Aoshen team with third special 
+										</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</div>
+			
+			
+		</div>
+			<!--=E 开班设置-->	
+			<div class="bottomFloatBar alignR">
+				<span class="btn">导出</span>
+				<span class="btn blue">保存</span>
+			</div>
+		</div>
+	</div>
+	<!--=E 主体内容 -->
+</div>
+<!--=E 主体内容区 -->
+<!-- footer -->
+<div class="footer">
+	<p class="l">版权所有 © 华为技术有限公司 2016. 保留一切权利</p>
+	<div class="r footerNav">
+		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
+	</div>
+</div>
+<div id="previewPagePopup">
+<div id="mask"></div>	
+	<div class="gonggaopop">
+		<div class="header hov">
+			<div class="fl"><span>公告编辑</span></div>
+			<span class="closePopup"></span>
+		</div>
+		
+		<div class="ggbj">
+			<ul>
+				<li>
+					<div class="ggbj_li">
+						<p>公告名称<span class="red">*</span></p>
+						<input type="text" name="" id="" value="" />
+					</div>
+				</li>
+				<li>
+					<div class="ggbj_li">
+						<p>公告链接<span class="red">*</span></p>
+						<input type="text" name="" id="" value="" />
+					</div>
+				</li>
+			</ul>
+			<div class="ggnr">
+				<h5>公告内容</h5>
+				<img src="images/notice01.jpg"/>
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="btnWrap clearfix">
+				<a href="javascript:void(0);" class="save fr blue">保存</a>
+				<a href="javascript:void(0);" class="return fr">返回</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/common/jquery-1.11.1.min.js"></script>
+<script src="js/common/common.js"></script>
+<script src="js/common/datepicker.js"></script>
+<script src="js/course.js"></script>
+<script src="js/mooc.js"></script>
+</body>
+</html>

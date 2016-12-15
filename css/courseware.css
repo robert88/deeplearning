@@ -1,0 +1,191 @@
+
+.courseListWrap .courseList .btnList .type {
+    width: auto;
+    max-width: 180px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.closePopup {
+    float: right;
+    color: #fff;
+    z-index: 2;
+    background: url(../images/closeIcon.png) no-repeat 50% 50%/40%;
+    font-size: 0;
+    height: 40px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.iconBtn.link .icon {
+    background-position: 0px -334px;
+}
+
+.iconBtn.link:hover .icon {
+    background-position: 0px -353px;
+}
+
+.iconBtn.link:hover .icon {
+    background-position: 0px -372px;
+}
+
+.iconBtn.down .icon {
+    background-position: -19px -334px;
+}
+
+.iconBtn.down:hover .icon {
+    background-position: -19px -353px;
+}
+
+.iconBtn.down:hover .icon {
+    background-position: -19px -372px;
+}
+.iconBtn.importLeft .icon {
+    background-position: -40px -334px;
+}
+
+.iconBtn.importLeft:hover .icon {
+    background-position: -40px -353px;
+}
+
+.iconBtn.importLeft:hover .icon {
+    background-position: -40px -372px;
+}
+
+.iconBtn.del .icon {
+    background-position: -24px -280px;
+}
+.iconBtn .icon {
+    background-image: url(../images/courseManage.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 2px 9px;
+    margin: 0px 5px;
+}
+.crumbs .btn{
+    float: right;
+    padding: 6px 20px 3px;
+    line-height: 150%;
+    margin: -5px 20px 0 0;
+}
+
+
+.pages input {
+    padding: 9px 0px 6px;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #616262;
+    opacity: 0.6;
+    filter: Alpha(opacity=60);
+}
+
+.changField {
+    display: block;
+    width: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.changField .btnWrap {
+    border-top: 1px solid #cbcedd;
+    padding: 10px 20px;
+    background: #e0e4ef;
+}
+
+.pagePopup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    top: 0px;
+    left: 0px;
+}
+
+.pagePopup .header {
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    position: relative;
+}
+
+.pagePopup .header > span {
+    margin-left: 20px;
+}
+
+.pagePopup .popupWrap {
+    padding: 20px;
+    background: #fff;
+    max-height:400px;
+    overflow: auto;
+}
+
+.pagePopup .popupBtnWrap {
+    border-top: 1px solid #cbcedd;
+    padding: 10px 20px;
+    background: #e0e4ef;
+}
+
+.pagePopup .popupBtnWrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.pagePopup .popupBtn {
+
+    background: #e8e8e8;
+    font-size: 14px;
+    width: 98px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    margin-left: 20px;
+}
+
+.pagePopup .popupBtn:hover {
+    background: #d8d8d8;
+}
+
+.pagePopup .popupBtn.blue {
+    background: #3e83f9;
+    border-color: #1967ba;
+    color: #fff;
+}
+
+.pagePopup .popupBtn.blue:hover {
+    background: #2d74ed;
+}
+
+input.text {
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 3px;
+    background-color: #f9fafc;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 12px;
+    font-size: 14px;
+}
+
+.playBtn {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    margin-left: -24px;
+    margin-top: -60px;
+    left: 50%;
+    top: 50%;
+}
+

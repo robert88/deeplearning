@@ -186,14 +186,10 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-                <!--
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
-                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
-                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
-                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
-                -->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
             </ul>
         </li>
         <li>
@@ -751,5 +747,748 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
+
+	<!--  -->
+	<style type="text/css">
+
+		#copyUrlPagePopup .url{
+			border: 1px solid #ddd;
+			background-color: #f9fafc;
+			padding: 5px;
+			color:#666;
+		}
+		#copyUrlPagePopup textarea{
+			width: 100%;
+			background-color: #f9fafc;
+			height:100px;
+			color:#666;
+			border:0;
+			outline-offset: 0;
+			outline:none;
+		}
+	</style>
+	<div id="copyUrlPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>复制url</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<div class="url">
+					<textarea>http://app.huawei.com/</textarea>
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">复制</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!--  -->
+	<style type="text/css">
+		#addVideoPagePopup .changField{
+			width: 600px;
+		}
+		#addVideoPagePopup .filterForm input {
+			overflow: hidden;
+			float: right;
+			width: 120px;
+			height: 32px;
+			line-height: 32px;
+			font-size: 100px;
+			opacity: 0;
+			filter: Alpha(opacity=0);
+			position: absolute;
+			right: 35px;
+		}
+		#addVideoPagePopup  .addVideoForm{
+			padding-left:4px;
+		}
+		#addVideoPagePopup  .addDagangBtn{
+			width: 100%;
+			color:#666;
+			margin-left: -4px;
+			height: 210px;
+			margin-top: 0;
+		}
+		#addVideoPagePopup .filterForm {
+
+			border-bottom: 0px solid #ddd;
+		}
+		#addVideoPagePopup .uploadForm .statuArea{
+			height: auto
+		}
+		#addVideoPagePopup .addBtn,
+		#addVideoPagePopup .addCourse,
+		#addVideoPagePopup .videoUploadBtn{
+			margin:0px;
+		}
+		#addVideoPagePopup .filterForm {
+			padding: 0 0 10px 0 ;
+		}
+		#addVideoPagePopup .filterForm .type {
+			float: left;
+			margin: 13px 10px 0 0;
+		}
+		#addVideoPagePopup .videoFileTitle{
+			padding-top:10px;
+			line-height: 2rem;
+		}
+		#addVideoPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+		#addVideoPagePopup .gray{
+			display: none;
+		}
+		#addVideoPagePopup .uploadForm{
+			height: auto;
+		}
+	</style>
+	<div id="addVideoPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>新增视频</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class=" popupWrap" id="createCourse">
+				<div class="selectCourseWare tabContent createCourseWare " style="display: block;">
+
+					<!-- 挑选课件类型 S -->
+					<div class="filterForm">
+						<span class="type">视频文件</span>
+						<div class="dropList l " style="display: none;">
+							<p class="selected"><span>视频</span><i></i></p>
+							<div class="options" style="display: none;">
+								<p class="imageText">图文</p>
+								<p class="video current">视频</p>
+								<p class="pic">图片</p>
+								<p class="webPage">网页</p>
+								<p class="doc">文档</p>
+							</div>
+						</div>
+						<span class="btn green r videoUploadBtn" style="display: inline-block;"><i class="icon"></i>上传文件</span>
+						<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
+
+						<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+					</div>
+					<!-- 挑选课件类型 E -->
+
+					<!--=S 上传图文 -->
+					<div class="uploadForm dn" id="uploadImgText">
+
+						<!--=S 编辑器位置 -->
+						<div class="editorWrap">
+							<div class="imgWrap">
+								<ul class="clearfix">
+									<li class="htmlCode"></li>
+									<li class="b"></li>
+									<li class="u"></li>
+									<li class="abc"></li>
+									<li class="a"><span>A</span></li>
+									<li class="ab"></li>
+									<li class="eraser"></li>
+									<li class="order"></li>
+									<li class="norder"></li>
+									<li class="fontStyle">
+										<span>微软雅黑</span>
+									</li>
+									<li class="fontSize">
+										<span>12</span>
+										<ul class="clearfix">
+											<li>14</li>
+											<li>16</li>
+											<li>18</li>
+											<li>20</li>
+										</ul>
+									</li>
+									<li class="textLeft"></li>
+									<li class="textCenter"></li>
+									<li class="textRight"></li>
+									<li class="link"></li>
+									<li class="cc"></li>
+									<li class="insertImg"></li>
+								</ul>
+							</div>
+							<textarea></textarea>
+						</div>
+						<!--=E 编辑器位置 -->
+						<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+					</div>
+					<!--=E 上传图文 -->
+
+					<!--=S 上传视频 -->
+					<div class="uploadForm" id="uploadVideo">
+						<div class="statuArea">
+							<!-- 拖拽上传视频 -->
+							<div class="addVideoForm">
+								<div class="addDagangBtn">
+									<i class="icon"></i>将文件拖拽至此区域
+								</div>
+							</div>
+							<!-- 已选择的视频 -->
+							<div class="willUploadVideo dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传中</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span></span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 S -->
+
+							<div class="uploadVideoFail dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>转码失败</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span>98%</span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 E -->
+
+							<div class="success dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传成功</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频上传提示 -->
+							<ul class="videoList uploadState dn">
+								<li>
+									<span class="state uploading"><i class="icon"></i>上传中</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+								</li>
+								<li>
+									<span class="state transform"><i class="icon"></i>转码中</span>
+									<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li class="error">
+									<span class="state error"><i class="icon"></i>转码失败</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li>
+									<span class="state ok"><i class="icon"></i>转码完成</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<!--=E 上传视频 -->
+				</div>
+
+				<div class="videoFileTitle">
+					视频名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" value="交互与视觉设计入门.mp4">
+				</div>
+
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="popupBtn blue fr J-close">确定</a>
+				<a href="javascript:void(0);" class="popupBtn fr J-close">返回</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--  -->
+	<div id="previewPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>更改域设置</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="tree popupWrap">
+				<ul class="menuWrap">
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">华为大学</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学eee</span>
+								</div>
+								<span class="bg fl"></span>
+
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学eee</span>
+										</div>
+										<span class="bg fl"></span>
+
+
+										<ul class="subMenu">
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle" style="display: none;"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl" style="background-position: -62px -54px;"></span>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">产品与解决方案</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">消费者bg</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">项目管理资源池</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btnWrap">
+				<a href="javascript:void(0);" class="save fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return fr J-close">取消</a>
+			</div>
+		</div>
+	</div>
+	<script>
+        // 树形结构 S
+
+        (function(){
+            var $tree = $("#previewPagePopup").find(".tree")
+            var liDom =$tree.find("li");
+            if( liDom.find("ul").hasClass("subMenu") ){
+                var bgDom =$tree.find( ".bg" );
+                for( var i = 0;i < bgDom.length; i++ ){
+                    var last = bgDom.eq(i).parent().parent().children().length-1;
+                    // 改变样式
+                    if( bgDom.eq(i).parent().parent().hasClass("subMenu") && ( bgDom.eq(i).parent().index() == last ) ){
+                        bgDom.eq(i).css( { "backgroundPosition":"-62px -54px"  } );
+                        bgDom.eq(i).parent().css( "backgroundImage","none" );
+                    }
+                }
+            }
+
+            // 没有子菜单的隐藏三角图标
+
+            for( var i = 0; i<liDom.length;i++ ){
+                if( !( liDom.eq(i).find("ul").hasClass("subMenu")) ){
+                    liDom.eq(i).find(".triangle").css( "display","none" );
+                }
+            }
+
+            // 点击三角图标收缩展开子菜单
+
+            $tree.find(".triangle").on( "click",function(){
+
+                $(this).toggleClass( "active" );
+                if( $(this).hasClass("active") ){
+                    $(this).parent().siblings("ul").slideDown();
+                }else{
+                    $(this).parent().siblings("ul").slideUp();
+                }
+            } );
+
+            // 单选操作
+
+            $tree.find(".radio").on( "click",function(){
+                $tree.find(".radio").removeClass("active");
+                $(this).toggleClass( "active" );
+
+                // 有子菜单的情况下
+                if( $(this).parent().siblings().find("span").hasClass("radio") ){
+                    $(this).removeClass("active");
+                    if( $(this).hasClass("active") ){
+                        $(this).parent().siblings().find(".radio").addClass("active");
+                    }else{
+                        $(this).parent().siblings().find(".radio").removeClass("active");
+                    }
+                }
+            } );
+
+        })();
+
+        // 树形结构 E
+	</script>
+
+
+
+	<!--  -->
+	<style type="text/css">
+
+		#editPagePopup .videoFile{
+			border: 1px solid #ddd;
+			background-color: #f9fafc;
+			padding: 50px 0;
+		}
+		#editPagePopup .videoFile>div{
+			margin:0 auto;
+			text-align: center;
+			width: 90%;
+			color:#666;
+		}
+		#editPagePopup .videoFileTitle{
+			line-height: 2rem;
+		}
+		#editPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+	</style>
+	<div id="editPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>编辑</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<div class="videoFile">
+					<div >
+						<p><img src="./images/video.png"></p>
+						<p>交互与视觉设计入门.mp4</p>
+					</div>
+				</div>
+				<div class="videoFileTitle">
+					视频名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" value="交互与视觉设计入门.mp4">
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+				<a href="download.mp4" download="mp3" class="download popupBtn fr J-close">下载</a>
+			</div>
+		</div>
+	</div>
+
 </body>
 </html>

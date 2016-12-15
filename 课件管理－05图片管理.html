@@ -188,14 +188,10 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-                <!--
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
-                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
-                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
-                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
-                -->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
             </ul>
         </li>
         <li>
@@ -1258,5 +1254,835 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
+
+
+	<style type="text/css">
+		/*#addbannarPagePopup{display: none; margin-top: -333px; top:50%;overflow: hidden; position: absolute;width: 1080px;left: 50%;margin-left: -540px;border-radius: 5px;}*/
+		#addbannarPagePopup .content{background: #fff;}
+		#addbannarPagePopup .content .uploadExplain,
+		#addbannarPagePopup .content .uploadWrap{width: 50%;}
+		#addbannarPagePopup .content .uploadExplain{padding-top: 26px;height: 331px;overflow-y: auto;}
+		#addbannarPagePopup .content .uploadWrap{position: relative;height:300px;}
+		#addbannarPagePopup .content .uploadWrap .uploadInner{margin-left: 36px;padding-top: 20px;}
+		#addbannarPagePopup .uploadBtn{position: relative;}
+		#addbannarPagePopup .uploadBtn .bg{left: 16px; top: 10px; position: absolute;width: 18px;height: 16px; background: url(../images/upload.png);}
+		#addbannarPagePopup .uploadBtn input{position: absolute;width: 100px;height: 32px;border: 1px solid red;left: 0px;top: 0;font-size: 40px;opacity: 0;filter: Alpha(opacity=0);}
+		#addbannarPagePopup .btn{margin: 0px; padding-left: 40px;}
+		#addbannarPagePopup .content h2{margin: 0px 0px 6px 10px;font-size: 24px;}
+		#addbannarPagePopup .btnWrap{background: #e0e4ef;padding: 10px 0px;}
+		#addbannarPagePopup .btnWrap a{font-size: 14px;float: right;margin-right: 20px;border-radius: 3px;}
+		#addbannarPagePopup .btnWrap .return{background: #fff;border: 1px solid #bfbfbf;}
+		#addbannarPagePopup .btnWrap .save{background: #3e83f9;color: #fff;border: 1px solid #1967ba;}
+		#addbannarPagePopup .hideLeft{position: absolute;z-index: 3;left: -2px;top: 50%;margin-top: -11px;background-color: #aaa;height: 30px;width: 22px;cursor: pointer;}
+		#addbannarPagePopup .hideLeft i{display: inline-block;margin: 8px 0 0 6px;border-right: 9px solid #fff;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addbannarPagePopup .showLeft i{display: inline-block;margin: 8px 0 0 6px;border-left: 9px solid #fff;border-right: 0px !important;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addbannarPagePopup .big{width: 100% !important;}
+		#addbannarPagePopup .big .uploadInner{padding-top: 0px !important;width: 750px; }
+		#addbannarPagePopup .big #previewImg{    height: 240px;
+			width: 450px;}
+		#addbannarPagePopup .big .uploadInner p{float: left;margin-right: 22px;height: 32px;line-height: 32px; }
+		#addbannarPagePopup .big .uploadInner .uploadBtn{margin-right: 22px;}
+		#addbannarPagePopup .changField{
+			width: 1100px;
+			margin-left: -550px;
+
+			/*background-color: #f9fafc;*/
+		}
+
+		#addbannarPagePopup .popupWrap {
+			max-height: 360px;
+		}
+		#addbannarPagePopup .previewImg img {
+			width: 100%;
+			height: 100%;
+		}
+		#addbannarPagePopup .previewImg {
+			margin-right: 20px;
+			height: 119px;
+			margin-bottom: 10px;
+		}
+	</style>
+	<div id="addbannarPagePopup"  class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>课程图片上传</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="content clearfix popupWrap">
+
+				<div class="uploadExplain fl">
+					<h2>课程图片</h2>
+					<img src="images/previewImg6.jpg">
+				</div>
+				<div class="uploadWrap fl">
+					<div class="uploadInner">
+						<div class="previewImg">
+							<img src="images/coursePic3.jpg">
+						</div>
+						<div class="uploadBtn">
+							<div class="btn green uploadImage">
+								<span class="bg"></span>上传图片
+							</div>
+							<input type="file" onchange="previewImage(this)" value="图片上传按钮">
+						</div>
+						<p>500K以内/RGB模式,jpg、gif、png格式</p>
+						<p>建议尺寸：<span class="red">480x270</span></p>
+
+					</div>
+					<span class="hideLeft"><i></i></span>
+				</div>
+			</div>
+
+			<div class="btnWrap clearfix">
+				<a href="javascript:void(0);" class="save fr">保存</a>
+				<a href="javascript:void(0);" class="return fr">取消</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+        // 小三角按钮
+
+        $("#addbannarPagePopup").find(".hideLeft").on( "click",function(){
+            $(this).toggleClass("showLeft");
+            $(this).parent().toggleClass("big");
+            $("#addbannarPagePopup").find(".uploadExplain").toggle();
+        } );
+	</script>
+
+
+	<!--  -->
+	<style type="text/css">
+		#addlogoPagePopup .changField{
+			width: 600px;
+		}
+		#addlogoPagePopup .filterForm input {
+			overflow: hidden;
+			float: right;
+			width: 120px;
+			height: 32px;
+			line-height: 32px;
+			font-size: 100px;
+			opacity: 0;
+			filter: Alpha(opacity=0);
+			position: absolute;
+			right: 35px;
+		}
+		#addlogoPagePopup  .addVideoForm{
+			padding-left:4px;
+		}
+		#addlogoPagePopup  .addDagangBtn{
+			width: 100%;
+			color:#666;
+			margin-left: -4px;
+			height: 210px;
+			margin-top: 0;
+		}
+		#addlogoPagePopup .filterForm {
+
+			border-bottom: 0px solid #ddd;
+		}
+		#addlogoPagePopup .uploadForm .statuArea{
+			height: auto
+		}
+		#addlogoPagePopup .addBtn,
+		#addlogoPagePopup .addCourse,
+		#addlogoPagePopup .videoUploadBtn{
+			margin:0px;
+		}
+		#addlogoPagePopup .filterForm {
+			padding: 0 0 10px 0 ;
+		}
+		#addlogoPagePopup .filterForm .type {
+			float: left;
+			margin: 13px 10px 0 0;
+		}
+		#addlogoPagePopup .videoFileTitle{
+			padding-top:10px;
+			line-height: 2rem;
+		}
+		#addlogoPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+		#addlogoPagePopup .gray{
+			display: none;
+		}
+		#addlogoPagePopup .uploadForm{
+			height: auto;
+		}
+	</style>
+	<div id="addlogoPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>新增LOGO</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class=" popupWrap" id="createCourse">
+				<div class="selectCourseWare tabContent createCourseWare " style="display: block;">
+
+					<!-- 挑选课件类型 S -->
+					<div class="filterForm">
+						<div class="dropList l " style="display: none;">
+							<p class="selected"><span>文档</span><i></i></p>
+							<div class="options" style="display: none;">
+								<p class="imageText">图文</p>
+								<p class="video ">视频</p>
+								<p class="pic">图片</p>
+								<p class="webPage">网页</p>
+								<p class="doc current">文档</p>
+							</div>
+						</div>
+						<span class="btn green r videoUploadBtn" style="display: inline-block;"><i class="icon"></i>上传文件</span>
+						<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
+
+						<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+					</div>
+					<!-- 挑选课件类型 E -->
+
+					<!--=S 上传图文 -->
+					<div class="uploadForm dn" id="uploadImgText">
+
+						<!--=S 编辑器位置 -->
+						<div class="editorWrap">
+							<div class="imgWrap">
+								<ul class="clearfix">
+									<li class="htmlCode"></li>
+									<li class="b"></li>
+									<li class="u"></li>
+									<li class="abc"></li>
+									<li class="a"><span>A</span></li>
+									<li class="ab"></li>
+									<li class="eraser"></li>
+									<li class="order"></li>
+									<li class="norder"></li>
+									<li class="fontStyle">
+										<span>微软雅黑</span>
+									</li>
+									<li class="fontSize">
+										<span>12</span>
+										<ul class="clearfix">
+											<li>14</li>
+											<li>16</li>
+											<li>18</li>
+											<li>20</li>
+										</ul>
+									</li>
+									<li class="textLeft"></li>
+									<li class="textCenter"></li>
+									<li class="textRight"></li>
+									<li class="link"></li>
+									<li class="cc"></li>
+									<li class="insertImg"></li>
+								</ul>
+							</div>
+							<textarea></textarea>
+						</div>
+						<!--=E 编辑器位置 -->
+						<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+					</div>
+					<!--=E 上传图文 -->
+
+					<!--=S 上传视频 -->
+					<div class="uploadForm" id="uploadVideo">
+						<div class="statuArea">
+							<!-- 拖拽上传视频 -->
+							<div class="addVideoForm">
+								<div class="addDagangBtn">
+									<i class="icon"></i>将文件拖拽至此区域
+								</div>
+							</div>
+							<!-- 已选择的视频 -->
+							<div class="willUploadVideo dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传中</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span></span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 S -->
+
+							<div class="uploadVideoFail dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>转码失败</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span>98%</span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 E -->
+
+							<div class="success dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传成功</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频上传提示 -->
+							<ul class="videoList uploadState dn">
+								<li>
+									<span class="state uploading"><i class="icon"></i>上传中</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+								</li>
+								<li>
+									<span class="state transform"><i class="icon"></i>转码中</span>
+									<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li class="error">
+									<span class="state error"><i class="icon"></i>转码失败</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li>
+									<span class="state ok"><i class="icon"></i>转码完成</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<!--=E 上传视频 -->
+				</div>
+
+
+				<div class="videoFileTitle">
+					LOGO名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" placeholder="请输入LOGO名称">
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="popupBtn blue fr J-close">确定</a>
+				<a href="javascript:void(0);" class="popupBtn fr J-close">返回</a>
+			</div>
+		</div>
+	</div>
+
+	<!--  -->
+	<style type="text/css">
+		#addhtmlPagePopup .changField{
+			width: 600px;
+		}
+		#addhtmlPagePopup .filterForm input {
+			overflow: hidden;
+			float: right;
+			width: 120px;
+			height: 32px;
+			line-height: 32px;
+			font-size: 100px;
+			opacity: 0;
+			filter: Alpha(opacity=0);
+			position: absolute;
+			right: 35px;
+		}
+		#addhtmlPagePopup  .addVideoForm{
+			padding-left:4px;
+		}
+		#addhtmlPagePopup  .addDagangBtn{
+			width: 100%;
+			color:#666;
+			margin-left: -4px;
+			height: 210px;
+			margin-top: 0;
+		}
+		#addhtmlPagePopup .filterForm {
+
+			border-bottom: 0px solid #ddd;
+		}
+		#addhtmlPagePopup .uploadForm .statuArea{
+			height: auto
+		}
+		#addhtmlPagePopup .addBtn,
+		#addhtmlPagePopup .addCourse,
+		#addhtmlPagePopup .videoUploadBtn{
+			margin:0px;
+		}
+		#addhtmlPagePopup .filterForm {
+			padding: 0 0 10px 0 ;
+		}
+		#addhtmlPagePopup .filterForm .type {
+			float: left;
+			margin: 13px 10px 0 0;
+		}
+		#addhtmlPagePopup .videoFileTitle{
+			padding-top:10px;
+			line-height: 2rem;
+		}
+		#addhtmlPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+		#addhtmlPagePopup .gray{
+			display: none;
+		}
+		#addhtmlPagePopup .uploadForm{
+			height: auto;
+		}
+	</style>
+	<div id="addhtmlPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>本地导入</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class=" popupWrap" id="createCourse">
+				<div class="selectCourseWare tabContent createCourseWare " style="display: block;">
+
+					<!-- 挑选课件类型 S -->
+					<div class="filterForm">
+						<div class="dropList l " style="display: none;">
+							<p class="selected"><span>文档</span><i></i></p>
+							<div class="options" style="display: none;">
+								<p class="imageText">图文</p>
+								<p class="video ">视频</p>
+								<p class="pic">图片</p>
+								<p class="webPage">网页</p>
+								<p class="doc current">文档</p>
+							</div>
+						</div>
+						<span class="btn green r videoUploadBtn" style="display: inline-block;"><i class="icon"></i>上传文件</span>
+						<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
+
+						<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+					</div>
+					<!-- 挑选课件类型 E -->
+
+					<!--=S 上传图文 -->
+					<div class="uploadForm dn" id="uploadImgText">
+
+						<!--=S 编辑器位置 -->
+						<div class="editorWrap">
+							<div class="imgWrap">
+								<ul class="clearfix">
+									<li class="htmlCode"></li>
+									<li class="b"></li>
+									<li class="u"></li>
+									<li class="abc"></li>
+									<li class="a"><span>A</span></li>
+									<li class="ab"></li>
+									<li class="eraser"></li>
+									<li class="order"></li>
+									<li class="norder"></li>
+									<li class="fontStyle">
+										<span>微软雅黑</span>
+									</li>
+									<li class="fontSize">
+										<span>12</span>
+										<ul class="clearfix">
+											<li>14</li>
+											<li>16</li>
+											<li>18</li>
+											<li>20</li>
+										</ul>
+									</li>
+									<li class="textLeft"></li>
+									<li class="textCenter"></li>
+									<li class="textRight"></li>
+									<li class="link"></li>
+									<li class="cc"></li>
+									<li class="insertImg"></li>
+								</ul>
+							</div>
+							<textarea></textarea>
+						</div>
+						<!--=E 编辑器位置 -->
+						<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+					</div>
+					<!--=E 上传图文 -->
+
+					<!--=S 上传视频 -->
+					<div class="uploadForm" id="uploadVideo">
+						<div class="statuArea">
+							<!-- 拖拽上传视频 -->
+							<div class="addVideoForm">
+								<div class="addDagangBtn">
+									<i class="icon"></i>将文件拖拽至此区域
+								</div>
+							</div>
+							<!-- 已选择的视频 -->
+							<div class="willUploadVideo dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传中</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span></span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 S -->
+
+							<div class="uploadVideoFail dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>转码失败</span>
+									</div>
+									<div class="bar fl">
+										<div class="uploaded"></div>
+									</div>
+									<div class="num fl">
+										<span>98%</span>
+										<span class="cancel"></span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频转码失败 E -->
+
+							<div class="success dn">
+								<img src="images/video.png">
+								<p>dfa.mp4</p>
+								<div class="statu clearfix">
+									<div class="text fl">
+										<span class="bg"></span>
+										<span>上传成功</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- 视频上传提示 -->
+							<ul class="videoList uploadState dn">
+								<li>
+									<span class="state uploading"><i class="icon"></i>上传中</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+								</li>
+								<li>
+									<span class="state transform"><i class="icon"></i>转码中</span>
+									<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li class="error">
+									<span class="state error"><i class="icon"></i>转码失败</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+								<li>
+									<span class="state ok"><i class="icon"></i>转码完成</span>
+									<span class="name">角色认知.mp4</span>
+									<i class="delBtn" title="删除"></i>
+									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<!--=E 上传视频 -->
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="popupBtn blue fr J-close">确定</a>
+				<a href="javascript:void(0);" class="popupBtn fr J-close">返回</a>
+			</div>
+		</div>
+	</div>
+
+
+	<style type="text/css">
+		/*#addclasspicPagePopup{display: none; margin-top: -333px; top:50%;overflow: hidden; position: absolute;width: 1080px;left: 50%;margin-left: -540px;border-radius: 5px;}*/
+		#addclasspicPagePopup .content{background: #fff;}
+		#addclasspicPagePopup .content .uploadExplain,
+		#addclasspicPagePopup .content .uploadWrap{width: 50%;}
+		#addclasspicPagePopup .content .uploadExplain{padding-top: 26px;height: 331px;overflow-y: auto;}
+		#addclasspicPagePopup .content .uploadWrap{position: relative;height:300px;}
+		#addclasspicPagePopup .content .uploadWrap .uploadInner{margin-left: 36px;padding-top: 20px;}
+		#addclasspicPagePopup .uploadBtn{position: relative;}
+		#addclasspicPagePopup .uploadBtn .bg{left: 16px; top: 10px; position: absolute;width: 18px;height: 16px; background: url(../images/upload.png);}
+		#addclasspicPagePopup .uploadBtn input{position: absolute;width: 100px;height: 32px;border: 1px solid red;left: 0px;top: 0;font-size: 40px;opacity: 0;filter: Alpha(opacity=0);}
+		#addclasspicPagePopup .btn{margin: 0px; padding-left: 40px;}
+		#addclasspicPagePopup .content h2{margin: 0px 0px 6px 10px;font-size: 24px;}
+		#addclasspicPagePopup .btnWrap{background: #e0e4ef;padding: 10px 0px;}
+		#addclasspicPagePopup .btnWrap a{font-size: 14px;float: right;margin-right: 20px;border-radius: 3px;}
+		#addclasspicPagePopup .btnWrap .return{background: #fff;border: 1px solid #bfbfbf;}
+		#addclasspicPagePopup .btnWrap .save{background: #3e83f9;color: #fff;border: 1px solid #1967ba;}
+		#addclasspicPagePopup .hideLeft{position: absolute;z-index: 3;left: -2px;top: 50%;margin-top: -11px;background-color: #aaa;height: 30px;width: 22px;cursor: pointer;}
+		#addclasspicPagePopup .hideLeft i{display: inline-block;margin: 8px 0 0 6px;border-right: 9px solid #fff;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addclasspicPagePopup .showLeft i{display: inline-block;margin: 8px 0 0 6px;border-left: 9px solid #fff;border-right: 0px !important;border-top: 6px solid transparent;border-bottom: 6px solid transparent;}
+		#addclasspicPagePopup .big{width: 100% !important;}
+		#addclasspicPagePopup .big .uploadInner{padding-top: 0px !important;width: 750px; }
+		#addclasspicPagePopup .big #previewImg{    height: 240px;
+			width: 450px;}
+		#addclasspicPagePopup .big .uploadInner p{float: left;margin-right: 22px;height: 32px;line-height: 32px; }
+		#addclasspicPagePopup .big .uploadInner .uploadBtn{margin-right: 22px;}
+		#addclasspicPagePopup .changField{
+			width: 1100px;
+			margin-left: -550px;
+
+			/*background-color: #f9fafc;*/
+		}
+
+		#addclasspicPagePopup .popupWrap {
+			max-height: 360px;
+		}
+	</style>
+	<div id="addclasspicPagePopup"  class="pagePopup" >
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>课程图片上传</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="content clearfix popupWrap">
+
+				<div class="uploadExplain fl">
+					<h2>课程图片</h2>
+					<img src="images/coursePic.jpg">
+				</div>
+				<div class="uploadWrap fl">
+					<div class="uploadInner">
+						<div id="previewImg">
+							<img src="images/coursePic3.jpg">
+						</div>
+						<div class="uploadBtn">
+							<div class="btn green uploadImage">
+								<span class="bg"></span>上传图片
+							</div>
+							<input type="file" onchange="previewImage(this)" value="图片上传按钮">
+						</div>
+						<p>500K以内/RGB模式,jpg、gif、png格式</p>
+						<p>建议尺寸：<span class="red">480x270</span></p>
+
+					</div>
+					<span class="hideLeft"><i></i></span>
+				</div>
+			</div>
+
+			<div class="btnWrap clearfix">
+				<a href="javascript:void(0);" class="save fr">保存</a>
+				<a href="javascript:void(0);" class="return fr">取消</a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+        // 小三角按钮
+
+        $("#addclasspicPagePopup").find(".hideLeft").on( "click",function(){
+            $(this).toggleClass("showLeft");
+            $(this).parent().toggleClass("big");
+            $("#addclasspicPagePopup").find(".uploadExplain").toggle();
+        } );
+	</script>
+
+
+
+
+	<!--  -->
+	<style type="text/css">
+
+		#editbannarPagePopup .videoFile>div{
+			margin:0 auto;
+			text-align: center;
+			color:#666;
+		}
+		#editbannarPagePopup .videoFileTitle{
+			line-height: 2rem;
+		}
+		#editbannarPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+		#editbannarPagePopup .changField{
+			width: 600px;
+			margin-left: -300px;
+			/*background-color: #f9fafc;*/
+		}
+	</style>
+	<div id="editbannarPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>编辑</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<div class="videoFile">
+					<div >
+						<p><img src="./images/defaultBanner.jpg"></p>
+					</div>
+				</div>
+				<div class="videoFileTitle">
+					图片名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" value="风景摄影案例欣赏.jpg">
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+				<a href="download.mp4" download="mp3" class="download popupBtn fr J-close">下载图片</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--  -->
+	<style type="text/css">
+
+		#editPicPagePopup .videoFile{
+			border: 1px solid #ddd;
+			background-color: #f9fafc;
+			padding: 50px 0;
+		}
+		#editPicPagePopup .videoFile>div{
+			margin:0 auto;
+			text-align: center;
+			width: 90%;
+			color:#666;
+		}
+		#editPicPagePopup .videoFileTitle{
+			line-height: 2rem;
+		}
+
+		#editPicPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+	</style>
+	<div id="editPicPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>编辑</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<div class="videoFile">
+					<div >
+						<p><img src="./images/zimenhuLogo1.png"></p>
+						<p>zimenhuLogo1.png</p>
+					</div>
+				</div>
+				<div class="videoFileTitle">
+					logo名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" value="zimenhuLogo1.png">
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+				<a href="download.mp4" download="mp3" class="download popupBtn fr J-close">下载logo</a>
+			</div>
+		</div>
+	</div>
+
+
+	<!--  -->
+	<style type="text/css">
+
+		#editclasspicPagePopup .videoFile>div{
+			margin:0 auto;
+			text-align: center;
+			color:#666;
+		}
+		#editclasspicPagePopup .videoFileTitle{
+			line-height: 2rem;
+		}
+		#editclasspicPagePopup .text{
+			width: 100%;
+			color:#666;
+		}
+		#editclasspicPagePopup .videoFile img{
+			width: 100%;
+		}
+	</style>
+	<div id="editclasspicPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>编辑</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<div class="videoFile">
+					<div >
+						<p><img src="./images/courseImg.jpg"></p>
+					</div>
+				</div>
+				<div class="videoFileTitle">
+					图片名称
+				</div>
+				<div class="videoFileName">
+					<input type="text" class="text" name="" value="风景摄影案例欣赏.jpg">
+				</div>
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+				<a href="download.mp4" download="mp3" class="download popupBtn fr J-close">下载图片</a>
+			</div>
+		</div>
+	</div>
+
+
 </body>
 </html>

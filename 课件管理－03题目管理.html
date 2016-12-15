@@ -187,14 +187,10 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-                <!--
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
-                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
-                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
-                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
-                -->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
             </ul>
         </li>
         <li>
@@ -914,5 +910,394 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
+
+<link href="css/test.css" rel="stylesheet" />
+<style type="text/css">
+	#addObjectPagePopup .edit_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
+	#addObjectPagePopup .header{height:40px;line-height:40px;color:#fff;position:relative}
+	#addObjectPagePopup .clearfix:after{content:"";display:block;clear:both}
+	#addObjectPagePopup{display:none;position:fixed;width:100%;height:100%;z-index:6;top:0;left:0}
+	#addObjectPagePopup .header .fl span{margin-left:20px}
+	#addObjectPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(../images/closeIcon.png) no-repeat center center;cursor:pointer}
+</style>
+<div id="addObjectPagePopup" class="pagePopup">
+	<div class="mask"></div>
+
+	<!--=E 新增题目 弹窗-->
+	<div class="edit_test select_test" style="display: block;">
+		<div class="titleBar">编辑试卷
+			<span class="closePopup J-close"></span>
+		</div>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td class="st_leftside">
+					<div>
+						<ul>
+							<li class="select_focus"><p>华大入职礼仪八级考试</p><i class="remove_icon_selected"></i></li>
+							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
+							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
+							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
+						</ul>
+						<div class="add_test">
+							添加题库
+						</div>
+					</div>
+				</td>
+				<td class="st_rightside">
+					<div class="st_content">
+
+						<div class="st_list ">
+							<div class="st_titleline ">
+								<div class="radioWrap clearfix">
+									<label>题目类型：</label>
+									<span class="multiple_choice_span radio selected"><i></i>多选题<input type="radio" name="select" id="multiple_choice_radio" value="多选题" checked="checked"></span>
+									<span class="single_choice_span radio "><i></i>单选题<input type="radio" name="select" id="single_choice_radio" value="单选题"></span>
+									<span class="tfng_choice_span radio "><i></i>判断题<input type="radio" name="select" id="tfng_choice_radio" value="判断题"></span>
+								</div>
+								<div class="st_back_btn">
+									<i></i>返回
+								</div>
+							</div>
+							<div class="st_padding">
+								题干
+								<div class="edit_box">
+									<div class="edit_box_bar">
+										<img src="images/notice01.jpg">
+									</div>
+									<div class="edit_box_area">
+										<textarea></textarea>
+									</div>
+								</div>
+
+								<div class="st_answer">
+									<div class="st_answer_title">
+										正确选项&nbsp;&nbsp;&nbsp; 答案
+										<span>操作</span>
+									</div>
+									<!--多选-->
+									<ul class="multiple_choice">
+										<li>
+											<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<div class="st_answer_addli multiple_choice_addli"><i></i>新增选项</div>
+									</ul>
+									<!--单选-->
+									<ul class="single_choice hidden">
+										<li>
+											<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<div class="st_answer_addli single_choice_addli"><i></i>新增选项</div>
+									</ul>
+									<!--判断-->
+									<ul class="tfng_choice hidden">
+										<li>
+											<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<li>
+											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+											<input type="text" name="" id="" value="">
+											<s class="remove_choice"></s>
+										</li>
+										<div class="st_answer_addli tfng_choice_addli"><i></i>新增选项</div>
+									</ul>
+
+								</div>
+								<div class="st_answer_explain">
+									答案解释
+									<input type="text" name="" id="" value="">
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<p class="st_list_btn">
+						<span id="popupCancle" style="" class="btn white J-close">返回</span>
+						<span id="popupComfirm" style="" class="btn blue J-close">确定</span>
+					</p>
+				</td>
+			</tr>
+			</tbody></table>
+
+
+	</div>
+	<!--=E 新增题目 弹窗-->
+
+</div>
+<script src="js/test.js"></script>
+<!--  -->
+<style type="text/css">
+	#importPagePopup .changField{
+		width: 600px;
+	}
+	#importPagePopup .filterForm input {
+		overflow: hidden;
+		float: right;
+		width: 120px;
+		height: 32px;
+		line-height: 32px;
+		font-size: 100px;
+		opacity: 0;
+		filter: Alpha(opacity=0);
+		position: absolute;
+		right: 35px;
+	}
+	#importPagePopup  .addVideoForm{
+		padding-left:4px;
+	}
+	#importPagePopup  .addDagangBtn{
+		width: 100%;
+		color:#666;
+		margin-left: -4px;
+		height: 210px;
+		margin-top: 0;
+	}
+	#importPagePopup .filterForm {
+
+		border-bottom: 0px solid #ddd;
+	}
+	#importPagePopup .uploadForm .statuArea{
+		height: auto
+	}
+	#importPagePopup .addBtn,
+	#importPagePopup .addCourse,
+	#importPagePopup .videoUploadBtn{
+		margin:0px;
+	}
+	#importPagePopup .filterForm {
+		padding: 0 0 10px 0 ;
+	}
+	#importPagePopup .filterForm .type {
+		float: left;
+		margin: 13px 10px 0 0;
+	}
+	#importPagePopup .videoFileTitle{
+		padding-top:10px;
+		line-height: 2rem;
+	}
+	#importPagePopup .text{
+		width: 100%;
+		color:#666;
+	}
+	#importPagePopup .gray{
+		display: none;
+	}
+	#importPagePopup .uploadForm{
+		height: auto;
+	}
+</style>
+<div id="importPagePopup" class="pagePopup">
+	<div class="mask"></div>
+	<div class="changField">
+		<div class="header">
+			<span>本地导入</span>
+			<span class="closePopup J-close"></span>
+		</div>
+
+		<div class=" popupWrap" id="createCourse">
+			<div class="selectCourseWare tabContent createCourseWare " style="display: block;">
+
+				<!-- 挑选课件类型 S -->
+				<div class="filterForm">
+					<div class="dropList l " style="display: none;">
+						<p class="selected"><span>文档</span><i></i></p>
+						<div class="options" style="display: none;">
+							<p class="imageText">图文</p>
+							<p class="video ">视频</p>
+							<p class="pic">图片</p>
+							<p class="webPage">网页</p>
+							<p class="doc current">文档</p>
+						</div>
+					</div>
+					<span class="btn green r videoUploadBtn" style="display: inline-block;"><i class="icon"></i>上传文件</span>
+					<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
+
+					<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
+				</div>
+				<!-- 挑选课件类型 E -->
+
+				<!--=S 上传图文 -->
+				<div class="uploadForm dn" id="uploadImgText">
+
+					<!--=S 编辑器位置 -->
+					<div class="editorWrap">
+						<div class="imgWrap">
+							<ul class="clearfix">
+								<li class="htmlCode"></li>
+								<li class="b"></li>
+								<li class="u"></li>
+								<li class="abc"></li>
+								<li class="a"><span>A</span></li>
+								<li class="ab"></li>
+								<li class="eraser"></li>
+								<li class="order"></li>
+								<li class="norder"></li>
+								<li class="fontStyle">
+									<span>微软雅黑</span>
+								</li>
+								<li class="fontSize">
+									<span>12</span>
+									<ul class="clearfix">
+										<li>14</li>
+										<li>16</li>
+										<li>18</li>
+										<li>20</li>
+									</ul>
+								</li>
+								<li class="textLeft"></li>
+								<li class="textCenter"></li>
+								<li class="textRight"></li>
+								<li class="link"></li>
+								<li class="cc"></li>
+								<li class="insertImg"></li>
+							</ul>
+						</div>
+						<textarea></textarea>
+					</div>
+					<!--=E 编辑器位置 -->
+					<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
+				</div>
+				<!--=E 上传图文 -->
+
+				<!--=S 上传视频 -->
+				<div class="uploadForm" id="uploadVideo">
+					<div class="statuArea">
+						<!-- 拖拽上传视频 -->
+						<div class="addVideoForm">
+							<div class="addDagangBtn">
+								<i class="icon"></i>将文件拖拽至此区域
+							</div>
+						</div>
+						<!-- 已选择的视频 -->
+						<div class="willUploadVideo dn">
+							<img src="images/video.png">
+							<p>dfa.mp4</p>
+							<div class="statu clearfix">
+								<div class="text fl">
+									<span class="bg"></span>
+									<span>上传中</span>
+								</div>
+								<div class="bar fl">
+									<div class="uploaded"></div>
+								</div>
+								<div class="num fl">
+									<span></span>
+									<span class="cancel"></span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 视频转码失败 S -->
+
+						<div class="uploadVideoFail dn">
+							<img src="images/video.png">
+							<p>dfa.mp4</p>
+							<div class="statu clearfix">
+								<div class="text fl">
+									<span class="bg"></span>
+									<span>转码失败</span>
+								</div>
+								<div class="bar fl">
+									<div class="uploaded"></div>
+								</div>
+								<div class="num fl">
+									<span>98%</span>
+									<span class="cancel"></span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 视频转码失败 E -->
+
+						<div class="success dn">
+							<img src="images/video.png">
+							<p>dfa.mp4</p>
+							<div class="statu clearfix">
+								<div class="text fl">
+									<span class="bg"></span>
+									<span>上传成功</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 视频上传提示 -->
+						<ul class="videoList uploadState dn">
+							<li>
+								<span class="state uploading"><i class="icon"></i>上传中</span>
+								<span class="name">角色认知.mp4</span>
+								<i class="delBtn" title="删除"></i>
+								<span class="progressWrap"><span class="progress"><i class="num" style="width:56%;"></i></span>56%</span>
+							</li>
+							<li>
+								<span class="state transform"><i class="icon"></i>转码中</span>
+								<span class="name">角色认知角色认知角色认知角色认知角色认知.mp4</span>
+								<i class="delBtn" title="删除"></i>
+								<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+							</li>
+							<li class="error">
+								<span class="state error"><i class="icon"></i>转码失败</span>
+								<span class="name">角色认知.mp4</span>
+								<i class="delBtn" title="删除"></i>
+								<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+							</li>
+							<li>
+								<span class="state ok"><i class="icon"></i>转码完成</span>
+								<span class="name">角色认知.mp4</span>
+								<i class="delBtn" title="删除"></i>
+								<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<!--=E 上传视频 -->
+			</div>
+		</div>
+
+		<div class="popupBtnWrap">
+			<a href="javascript:void(0);" class="popupBtn blue fr J-close">默认</a>
+			<a href="javascript:void(0);" class="popupBtn fr J-close">取消</a>
+			<a href="javascript:void(0);" class="popupBtn fr J-close">下载模版</a>
+		</div>
+	</div>
+
+</div>
+
 </body>
 </html>

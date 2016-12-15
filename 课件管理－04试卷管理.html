@@ -187,14 +187,10 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-                <!--
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
-                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
-                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
-                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
-                -->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
             </ul>
         </li>
         <li>
@@ -680,5 +676,532 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
+
+	<!--  -->
+	<style type="text/css">
+
+		#editExamPagePopup .videoFile{
+			border: 1px solid #ddd;
+			background-color: #f9fafc;
+			padding: 50px 0;
+		}
+		#editExamPagePopup .videoFile>div{
+			margin:0 auto;
+			text-align: center;
+			width: 90%;
+			color:#666;
+		}
+		#editExamPagePopup .videoFileTitle{
+			line-height: 2rem;
+			overflow: hidden;
+		}
+		#editExamPagePopup .text{
+			width: 90%;
+			color:#666;
+		}
+		#editExamPagePopup .groupList {
+			overflow-y: hidden;
+			border: 0px solid #ddd;
+			padding: 0px;
+		}
+		#editExamPagePopup .changField{
+			width: 800px;
+			margin-left: -400px;
+			background-color: #f9fafc;
+
+		}
+
+		#editExamPagePopup .floatList{
+			height: 60px;
+			border: 1px solid #ddd;
+			margin: 0 0 20px 0;
+			padding: 10px;
+			background: #fff;
+		}
+		#editExamPagePopup .groupList{
+			margin-top:5px;
+			padding: 5px;
+		}
+		#editExamPagePopup .groupList .innerTable{
+			margin:0;
+		}
+		#editExamPagePopup  .iconBtn .tips {
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 26px;
+			margin-left: -24px;
+			background-color: #161e2b;
+			color: #fff;
+			padding: 4px 10px;
+			border-radius: 3px;
+			white-space: nowrap;
+		}
+		#editExamPagePopup .editIcon .icon {
+			background-position: 0 -51px;
+		}
+		#editExamPagePopup .iconBtn:hover .tips {
+			display: block;
+		}
+		#editExamPagePopup .iconBtn{
+			position:relative;
+		}
+		#editExamPagePopup .iconBtn .icon {
+			background-image: url(../images/courseManage.png);
+			background-repeat: no-repeat;
+			padding: 1px 9px;
+			cursor: pointer;
+			margin: 0 5px;
+		}
+		.iconBtn .tips i {
+			position: absolute;
+			left: 50%;
+			top: -5px;
+			margin-left: -5px;
+			border-bottom: 5px solid #161e2b;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+		}
+	</style>
+	<div id="editExamPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>编辑试卷</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="popupWrap">
+				<ul class="col3 floatList">
+					<li>
+						<label>试卷名称</label><br/>
+						<input type="text" class="text" placeholder="请填写试卷名称" />
+					</li>
+					<li>
+						<label>试卷分数</label><br/>
+						<input type="text" class="text" placeholder="请填写试卷分数" />
+					</li>
+					<li>
+						<label>&nbsp;</label><br/>
+						<label style="line-height: 32px">已选题目总分数：40分</label>
+					</li>
+				</ul>
+				<div class="videoFileTitle">
+					网页名字
+					<div class="fr"><span class="btn green J-popup J-close" data-popup-id="#selectObjPagePopup" data-popup-page="./课件管理－04试卷管理-选择题目(弹窗).html"">选择题目</span></div>
+				</div>
+				<div class="groupList">
+					<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+						<thead>
+						<tr>
+							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+							<th>题目名称</th>
+							<th>题目类型</th>
+							<th>题目分数</th>
+							<th>是否必填</th>
+							<th>操作</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+						<tr data-id="1">
+							<td><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>如何组织讨论</td>
+							<td>单选</td>
+							<td><span class="label" style="background:#fff;border:1px solid #ddd;border-radius:2px;padding:2px 6px;">5</span>分</td>
+							<td>
+								<div class="dropList" style="width: 53px;">
+									<p class="selected"><span>是</span><i></i></p>
+									<div class="options">
+										<p>是</p>
+										<p>否</p>
+									</div>
+								</div>
+							</td>
+							<td>
+							<span class="editIcon iconBtn">
+								<span class="icon"></span>
+								<span class="tips"><i></i>编辑</span>
+							</span>
+								<span class="iconBtn del">
+								<span class="icon"></span>
+								<span class="tips"><i></i>删除</span>
+							</span>
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+					<!--=S 分页 -->
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+
+						<span class="tiaozhuan">
+						<span class="">跳转到：</span>
+						<input type="text"><span class="goBtn">GO</span>
+					</span>
+					</div>
+					<!--=E 分页 -->
+				</div>
+
+			</div>
+
+			<div class="popupBtnWrap">
+				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
+				<a href="download.mp4" download="mp3" class="download popupBtn fr J-close">下载</a>
+			</div>
+		</div>
+	</div>
+
+
+	<link href="css/test.css" rel="stylesheet" />
+	<style type="text/css">
+		#selectObjPagePopup .header{height:40px;line-height:40px;color:#fff;position:relative}
+		#selectObjPagePopup .clearfix:after{content:"";display:block;clear:both}
+		#selectObjPagePopup{display:none;position:fixed;width:100%;height:100%;z-index:6;top:0;left:0}
+		#selectObjPagePopup .header .fl span{margin-left:20px}
+		#selectObjPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(../images/closeIcon.png) no-repeat center center;cursor:pointer}
+		#selectObjPagePopup .select_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
+
+	</style>
+	<div id="selectObjPagePopup" class="pagePopup">
+		<div class="mask"></div>
+
+		<!--=S 选择题目 弹窗-->
+		<div class="select_test" style="display: block;">
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td colspan="2">
+						<div class="titleBar">挑选题目
+							<span class="closePopup J-close"></span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="st_leftside">
+						<div>
+							<ul>
+								<li class="select_focus"><p>华大入职礼仪八级考试华大入职礼仪八级考试</p><i class="remove_icon_selected"></i></li>
+								<li><p>华大入职礼仪六级考试</p><i class=""></i></li>
+								<li><p>华大入职礼仪六级考试</p><i class=""></i></li>
+								<li><p>华大入职礼仪六级考试</p><i class=""></i></li>
+							</ul>
+							<div class="add_test">
+								添加题库
+							</div>
+						</div>
+					</td>
+					<td class="st_rightside">
+						<div class="st_content">
+							<div class="st_titleline">
+								<div class="dropList">
+									<p class="selected"><span>全部题型</span><i></i></p>
+									<div class="options" style="display: none;">
+										<p>单选题</p>
+										<p>多选题</p>
+										<p>判断题</p>
+									</div>
+								</div>
+								<div class="st_search">
+									<input type="text" id="" value="" placeholder="请输入要找的资源">
+									<span class="st_search_icon"><i></i></span>
+								</div>
+								<div class="st_add_test_btn J-popup J-close" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html">
+									<i></i>新增题目
+								</div>
+							</div>
+
+							<div class="st_list">
+								<table border="0" cellspacing="0" cellpadding="0">
+									<tbody><tr>
+										<td class="st_table_td01"><span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span></td>
+										<td class="st_table_td02">【单选题】</td>
+										<td class="st_table_td03">01.</td>
+										<td class="st_table_td04">
+											<h6 class="st_test_title"> A o aston aston assad ashton sofa to evil fun entertainment simmering mosquito dispeller for available from the full working of herbal tea vad charge masters have more </h6>
+											<p class="radio selected"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+										</td>
+										<td class="st_table_td05"><i></i></td>
+									</tr>
+									<tr>
+										<td class="st_table_td01"><span class="checkbox"><i></i><input type="checkbox" name="" id="" value=""></span></td>
+										<td class="st_table_td02">【单选题】</td>
+										<td class="st_table_td03">02.</td>
+										<td class="st_table_td04">
+											<h6 class="st_test_title"> A o aston aston assad ashton sofa to evil fun entertainment simmering mosquito dispeller for available from the full working of herbal tea vad charge masters have more </h6>
+											<p class="radio selected"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+										</td>
+										<td class="st_table_td05"><i></i></td>
+									</tr>
+									<tr>
+										<td class="st_table_td01"><span class="checkbox"><i></i><input type="checkbox" name="" id="" value=""></span></td>
+										<td class="st_table_td02">【多选题】</td>
+										<td class="st_table_td03">03.</td>
+										<td class="st_table_td04">
+											<h6 class="st_test_title"> A o aston aston assad ashton sofa to evil fun entertainment simmering mosquito dispeller for available from the full working of herbal tea vad charge masters have more </h6>
+											<p class="radio selected"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+											<p class="radio"><i></i><input type="radio" name="1" id="" value=""><span>aston aston assad ashton sofa </span></p>
+										</td>
+										<td class="st_table_td05"><i></i></td>
+									</tr>
+
+									</tbody></table>
+							</div>
+						</div>
+						<p class="st_list_btn"><span id="popupCancle" style="" class="btn white">返回</span><span id="popupComfirm" style="" class="btn blue">确定</span></p>
+
+					</td>
+				</tr>
+				</tbody></table>
+		</div>
+		<!--=E 选择题目 弹窗-->
+
+	</div>
+	<script src="js/test.js"></script>
+
+
 </body>
 </html>

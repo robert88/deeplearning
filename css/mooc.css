@@ -5,7 +5,7 @@
 .mooc .step .stepInner{margin:0 13px;position:relative}
 .mooc .step .line{position:absolute;top:50%;left:0;width:100%;height:1px;border-top:1px solid #aaa}
 .mooc .step ul{position:relative;z-index:2}
-.mooc .step ul li.current,.step ul li.finished{color:#3e83f9}
+.mooc .step ul li.current .text,.step ul li.finished .text{color:#3e83f9}
 .mooc .step ul li .icon{background:#fff url(../images/courseManage.png) no-repeat -90px -50px;padding:0 13px}
 .mooc .step ul li.current .icon{background-position:-90px -75px}
 .mooc .step ul li.finished .icon{background-position:-118px -75px}

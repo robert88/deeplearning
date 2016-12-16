@@ -114,7 +114,7 @@
 		
 //新增课程 权限设置
 		//全选 群组数据列表
-		$(".quanxian table th .checkboxWrap").click(function(){
+		$(".quanxian table th .checkboxWrap,.groupList table th .checkboxWrap").click(function(){
 			var parents =$(this).parents(".innerTable");
 			if( $(this).hasClass("selected") ){
 				parents.find(".checkboxWrap").addClass("selected").parent().parent().addClass("selected");			
@@ -382,7 +382,7 @@
 	        } );
 
 		// 鼠标悬浮显示上传图片
-		  $(".coursePic").hover(function(){
+		  $(".coursePicLi").hover(function(){
 			  	if($("#startUloadPic").hasClass("signhover")){
 		       	 	$("#startUloadPic").find("p").show();
 		       	 }	
@@ -1435,9 +1435,51 @@
 	// 添加规则集按钮
 
 	$("#createGroupPop").find(".form").find(".green").on( "click",function(){
+		$("#createGroupPop").hide();
 		$("#addStudentPop").css( "display","block" );
+		$("#previewPagePopup").show()
+		$("#agd_student_show").show()
 	} );
-
+	
+	//左侧导航切换
+	$(document).on("click",".st_leftside ul li",function(){
+		$(this).addClass("select_focus").siblings().removeClass("select_focus");
+		var index = $(this).index();
+		$(".agd_right_showhide").children(".agd_right_showdiv").eq(index).removeClass("hidden").siblings(".agd_right_showdiv").addClass("hidden")
+	});
+	 //添加条件子集 
+	 	 $(document).on( "click","#agd_student_show .add_test",function(){
+	 	 	if($(".addstli").length>=1){
+	 	 		
+	 	 	}else{
+	 	 	 $("#agd_student_show .st_leftside ul").append('<p class="addstli"><input type="text"><i class="queren_gou"></i></p>')	
+	 	 	}
+		 });
+		  $(document).on( "click","#agd_student_show .queren_gou",function(){
+	 	 	var neironf = $("#agd_student_show .addstli input").val();
+	 	 	if( neironf=="" || neironf == undefined){
+	 	 		$(this).parents(".addstli").remove();
+	 	 	}else{
+	 	 	 $("#agd_student_show .st_leftside ul").append('<li><div class="neirongk"><p>'+neironf+'</p><s class="edit_icon_selected"></s><i class="remove_icon_selected"></i></div><div class="editli hidden"><input type="text"><i class="queren_gou"></i></div></li>');
+	 	 	 $(this).parents(".addstli").remove();
+	 	 	}
+		 });
+		 
+		  $(document).on( "click","#agd_student_show .remove_icon_selected",function(){
+ 	 	 		$(this).parents("li").remove();
+		  });
+	//编辑按钮
+	$(document).on("click",".edit_icon_selected",function(){
+		$(this).parents(".neirongk").hide();
+		$(this).parents(".neirongk").siblings(".editli").show();
+	})
+	//编辑后确定
+	$(document).on("click",".editli .queren_gou",function(){
+		var editlival = $(this).siblings("input").val();
+		$(this).parents(".editli").hide();
+		$(this).parents(".editli").siblings(".neirongk").show();
+		$(this).parents(".editli").siblings(".neirongk").children("p").html(editlival);
+	})
 	// 确定按钮
 
 	$("#createGroupPop").find(".confirm").on( "click",function(){
@@ -1480,10 +1522,18 @@
 
 	// 关闭按钮
 
-	$("#addStudentPop").find(".closeMyPop").on( "click",function(){
-		$("#createGroupPop").hide();
-		$("#addStudentPop").hide();
-	} );
+	$("#agd_student_show").find(".closePopup").on( "click",function(){
+		$("body").css( "overflow","visible");
+		$("#previewPagePopup").hide();
+		$("#agd_student_show").hide();
+	
+	});
+	//点击弹窗遮罩层关闭
+		$("#mask").on( "click",function(){
+			$(this).siblings("div").hide();
+			$("body").css( "overflow","visible");
+			$("#previewPagePopup").hide();
+		});
 
 	// 确定按钮
 

@@ -41,7 +41,7 @@
 		.form .controlList .tags .tagSelect{float:right;margin:-1px -1px 0 0;padding:10px 20px 6px;text-indent:0;}
 		.form .controlList .tags .text{width:60%;}
 		.form .btnList{position:relative;text-align:right;border:1px solid #ddd;border-radius:3px;background-color:#f9fafc;padding:9px 10px;}
-		.form .btnList .packUp{position:absolute;left:50%;top:-1px;margin-left:-30px;padding:4px 29px;border:1px solid #ddd;border-top:none;background:#fff;cursor:pointer;}
+		.form .btnList .packUp{position:absolute;left:50%;top:-1px;margin-left:-46px;padding:4px 29px;border:1px solid #ddd;border-top:none;background:#fff;cursor:pointer;}
 		.form .btnList .packUp i.icon{background:#fff url(../images/courseManage.png) no-repeat -77px 0px;padding:0px 8px;}
 		.form .btnList .packUp:hover i.icon{background-position:-77px -26px;}
 		.form .btnList .packUp.hide i.icon{background-position:-102px 1px;}
@@ -294,6 +294,7 @@
 		.dagangPopContent .rightCont .inner{position:relative;margin-right:0;}
 		.dagangPopContent .rightCont .inner .notAllowed{position:absolute;z-index:3;left:0;top:0;width:100%;height:100%;background-color:#ccc;opacity:0.2;cursor:not-allowed;}
 		.dagangPopContent .rightCont .filterForm .videoUploadBtn{display: none;}
+		.dagangPopContent .rightCont .filterForm .searchinput input{width: 120px;height: 30px;opacity: 1;float: left;font-size: 12px;position: relative;right: inherit;}
 		.dagangPopContent .rightCont .filterForm input{ overflow: hidden; float: right;width: 120px;height: 32px;line-height: 32px;font-size: 100px;opacity: 0;filter: Alpha(opacity=0);position: absolute;right: 35px;}
 		.dagangPopContent .rightCont .filterForm .gray{color: #fff;display: none;}
 		.courseName{border-bottom:1px solid #ddd;background-color:#f9fafc;height:38px;line-height:38px;text-align:center;}
@@ -530,7 +531,7 @@
 		#relation .btnWrap{background: #fff; padding-right: 64px; height: 50px;border: 1px solid #cbcedd;line-height: 50px;}
 		#relation .resource{background: #fff;display: none;}
 		#relation .resource .groupList{display: none;}
-		#relation .resource .active{display: block;}
+		#relation .resource .active{display: inline-block;}
 		#relation .btnWrap a{float: right;border-radius: 3px; margin: 10px 0px 10px 20px; width: 98px;height: 30px;text-align: center;line-height: 30px;}
 		#relation .btnWrap .resetBtn{background: #e8e8e8;border: 1px solid #bfbfbf;}
 		#relation .btnWrap .searchBtn{background: #3e83f9;border: 1px solid #1967ba;color: #fff;}
@@ -661,12 +662,21 @@
 }
 .addStudent .leftTab ul li{
     color: #95a5a6;
-    padding-left: 30px;
-    height: 40px;
-    line-height: 40px;
+    padding: 4px 17px 4px 12px;
+    height: 30px;
+    line-height: 30px;
     cursor: pointer;
+    width: 200px;
     position: relative;
 }
+.leftTab ul li p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 150px;
+    display: inline-block;
+}
+
 .addStudent .leftTab ul li.current{
     background-color: #161e2b;
     color: #3e83f9;
@@ -907,7 +917,7 @@
 	padding-right: 14px;
 }
 #addStudentPop{display: none;}
-#addStudentPop .dropList .selected{
+#addStudentPop .deptList .dropList .selected{
 	width: 98%;
 }
 .deptList .dropList{margin-left: 90px;}
@@ -998,3 +1008,42 @@
 }
 
 	/*更改域弹框E*/
+	
+.addStudent .edit_icon_selected {
+    background: url(../images/notice02.png) no-repeat;
+    margin-left: 3px;
+    height: 22px;
+    width: 16px;
+    display: inline-block;
+    background-position: -2px -23px;
+}
+.addStudent .remove_icon_selected {
+    background: url(../images/notice02.png) no-repeat;
+    margin-left: 9px;
+    height: 22px;
+    width: 16px;
+    display: inline-block;
+    background-position: -22px -23px;
+}
+.editli {
+    position: relative;
+}
+.editli input {
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    outline: 0;
+    text-indent: 5px;
+    width: 100%;
+}
+.queren_gou {
+    background: url(../images/areaEdit.png) no-repeat -37px -52px;
+    height: 16px;
+    width: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 21px;
+    top: 9px;
+    vertical-align: sub;
+    cursor: pointer;
+}

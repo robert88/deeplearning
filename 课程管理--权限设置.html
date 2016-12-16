@@ -6,8 +6,72 @@
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	<title>课程管理--权限设置</title>
 	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/zTreeStyle.css" rel="stylesheet">
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/course.css" rel="stylesheet" />
+	<link href="css/test.css" rel="stylesheet" />
+	<script src="js/common/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/common/jquery.ztree.core.min.js"></script>
+	<script type="text/javascript" src="js/common/jquery.ztree.excheck.min.js"></script>
+	<script type="text/javascript">
+			var setting = {
+			view: {
+				showIcon: showIconForTree
+			},
+			check: {
+				enable: true,
+				chkStyle: "radio",
+				radioType: "level"
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+		var zNodes =[
+			{ id:1, pId:0, name:"华为大学", open:true},
+			{ id:11, pId:1, name:"华为大学服务类", checked:true},
+			{ id:12, pId:1, name:"华为大学制造类"},
+			{ id:221, pId:12, name:"华为大学制造类子目录01"},
+			{ id:222, pId:12, name:"华为大学制造类子目录02"},
+			{ id:13, pId:1, name:"华为大学行政"},
+			
+			{ id:2, pId:0, name:"产品与解决方案"},
+			{ id:21, pId:2, name:"产品与解决方案01"},
+			{ id:22, pId:2, name:"产品与解决方案02"},
+			
+			{ id:3, pId:0, name:"消费者bg"},
+			{ id:31, pId:3, name:"消费者bg01"},
+			{ id:32, pId:3, name:"消费者bg02"},
+			
+			{ id:4, pId:0, name:"项目管理资源池"},
+			{ id:41, pId:4, name:"项目管理资源池01"},
+			{ id:42, pId:4, name:"项目管理资源池02"},
+		];
+		
+		var code;		
+		function setCheck() {
+			var type = $("#level").attr("checked")? "level":"all";
+			setting.check.radioType = type;
+			showCode('setting.check.radioType = "' + type + '";');
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		}
+		function showCode(str) {
+			if (!code) code = $("#code");
+			code.empty();
+			code.append("<li>"+str+"</li>");
+		}
+		
+		$(document).ready(function(){
+			setCheck();			
+			$("#level").bind("change", setCheck);
+			$("#all").bind("change", setCheck);
+		});
+		function showIconForTree(treeId, treeNode) {
+			return !treeNode.isParent;
+		};
+	</script>
 </head>
 <body>
 <!--=S 头部 -->
@@ -1282,382 +1346,240 @@
 	</div>
 </div>
 <!--=E 新建群姐 弹出框 -->
-<!--=S 新建群组 弹出框 -->
-<div class="myPopWrap dn" id="addStudentPop">
-	<p class="myPopBg"></p>
-	<div class="myPopup">
-		<div class="myPopTitle">
-			<span class="closeMyPop"></span>
-			<h4>新建群组</h4>
-			<span class="bg fl"></span>			
-		</div>
-		<div class="myPopMain addStudent">
-			<div class="clearfix">
-				<div class="leftTab">
-					<ul>
-						<li class="current">
-							<span>部门</span>
-							<span class="del"></span>
-							<i class="arrow"></i>
-						</li>
-						<li>
-							<span>入职时间</span>
-							<span class="del"></span>
-							<i class="arrow"></i>
-						</li>
-						<li>
-							<span>任职</span>
-							<span class="del"></span>
-							<i class="arrow"></i>
-						</li>
-						<li>
-							<span>用户类型</span>
-							<span class="del"></span>
-							<i class="arrow"></i>
-						</li>
-					</ul>
-					<div>
-						<div class="btn green" id="addChild">
-							<span class="bg"></span>
-							<span>添加条件子集</span>
+<!--=S 添加学员 弹出框 -->
+
+<div id="previewPagePopup">
+<div id="mask"></div>	
+	<!--=S 添加学员 弹窗 -->
+<div class="select_test" id="agd_student_show">
+	<div class="add_group_department">
+				<div class="titleBar">新建群组
+				<span class="closePopup"></span>
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="st_leftside">
+							<div >
+								<ul>
+									<li class="agd_department_li select_focus">
+										<div class="neirongk">
+											<p>部门</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+									</li>
+									<li class="agd_employed_li">
+										<div class="neirongk">
+											<p>入职时间</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+									</li>
+									<li class="agd_officeholding_li">
+										<div class="neirongk">
+											<p>任职</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+									</li>
+									<li class="agd_user_type_li">
+										<div class="neirongk">
+											<p>用户类型</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+									</li>
+								</ul>
+								<div class="add_test">
+									添加条件子集
+								</div>
+							</div>
+						</td>
+						<td class="st_rightside agd_right_showhide">
+							<!--S 部门-->
+							<div class="agd_right_showdiv agd_department">
+							<div class="st_titleline">
+								<div class="st_search">
+									<input type="text" id="" value="" placeholder="请输入" />
+									<span class="st_search_icon"><i></i></span>
+								</div>
+							</div>
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="agd_name">公司</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">一级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">二级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">三级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">四级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">五级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">六级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">七级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="agd_name">八级部门</td>
+									<td class="agd_dropList">
+										<div class="dropList">
+										<p class="selected"><span></span><i></i></p>
+										<div class="options" style="display: none;">
+											<p>华为</p>
+											<p>deep</p>
+											<p>deep</p>
+										</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+								
 						</div>
-					</div>
-				</div>
-				<div class="rightContent tabContent current">
-					<div class="inner">
-						<div class="searchKeyWords">
-							<input type="text" class="text" placeholder="请输入关键词">
-							<span class="searchBtn"></span>
-						</div>
-						<ul class="deptList">
-							<li>
-								<span class="label fl">公司</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>中文</p>
-										<p>English</p>
+							<!--E 部门-->
+							<!--S 入职时间-->
+							<div class="agd_right_showdiv agd_employed hidden">
+								<span class="agd_time_span">
+									入职时间
+								</span>
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+								-
+								<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+								</div>
+							</div>
+							<!--E 入职时间-->
+							<!--S 任职-->
+							<div class="agd_right_showdiv agd_officeholding hidden">
+								<div class="pop_select">
+								<div class="zTreeDemoBackground">
+									<ul id="treeDemo" class="ztree"></ul>
+								</div>
+							</div>
+							</div>
+							<!--E 任职-->
+							<!--S 用户类型-->
+							<div class="agd_right_showdiv agd_user_type hidden">
+									<div class="agd_ut_chil">
+										<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value="" /></span>
+										LeasedWorkforce
+									</div>
+									<div class="agd_ut_chil">
+										<span class="checkbox "><i></i><input type="checkbox" name="" id="" value="" /></span>
+										LeasedWorkforce
+									</div>
+									<div class="agd_ut_chil">
+										<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value="" /></span>
+										LeasedWorkforce
 									</div>
 								</div>
-							</li>
-							<li>
-								<span class="label fl">一级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">二级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">三级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">三级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">五级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">六级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">七级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<span class="label fl">八级部门</span>
-								<div class="dropList">
-									<p class="selected"><span></span><i></i></p>
-									<div class="options" style="">
-										<p>部门1</p>
-										<p>部门2</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-						
-						<!--<div class="deptList radioWrap">
-								<span class="radio selected"><i></i>中文<input type="radio" name="language" id="language1" value="中文"></span>
-								<span class="radio"><i></i>English<input type="radio" name="language" id="language2" value="English"></span>
-						</div>-->
-					</div>
-				</div>
-				<div class="rightContent tabContent">
-					<div class="juniorTimer clearfix">
-						<span class="fl">入职时间</span>
-						<div class="dateTime fl">
-							<span class="dateSelect"></span>
-							<input type="text" class="text" placeholder="">
-						</div>
-					</div>
-				</div>
-				<div class="rightContent tabContent">
-					<div class="jobs">
-						<div class="tree">
-							<ul class="menuWrap">
-								<li class = "mainMenu">
-									<div class="desc">
-										<span class="triangle"></span>
-										<span class="radio"></span>
-										<span class="text">销售类</span>
-									</div>
-									<ul class="subMenu" id="wuqiaojie">
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">行政&商务服务类</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li >
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-											<ul class="subMenu">
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class = "mainMenu">
-									<div class="desc">
-										<span class="triangle"></span>
-										<span class="radio"></span>
-										<span class="text">行政&商务服务类</span>
-									</div>
-									<ul class="subMenu">
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-											<ul class="subMenu">
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-												<li>
-													<div class="desc">
-														<span class="triangle"></span>
-														<span class="radio"></span>
-														<span class="text">华为大学</span>
-													</div>
-													<span class="bg fl"></span>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class = "mainMenu">
-									<div class="desc">
-										<span class="triangle"></span>
-										<span class="radio"></span>
-										<span class="text">制造类</span>
-									</div>
-									<ul class="subMenu">
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-										<li>
-											<div class="desc">
-												<span class="triangle"></span>
-												<span class="radio"></span>
-												<span class="text">华为大学</span>
-											</div>
-											<span class="bg fl"></span>
-										</li>
-									</ul>
-								</li>
-								<li class = "mainMenu">
-									<div class="desc">
-										<span class="triangle"></span>
-										<span class="radio"></span>
-										<span class="text">行政&商务服务类</span>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="rightContent tabContent">
-					<div class="userType">
-						<ul>
-							<li class="active"><span class="bg"></span><span>LeasedWorkforce</span></li>
-							<li><span class="bg"></span><span>wx</span></li>
-							<li><span class="bg"></span><span>Employee</span></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="prompt">
-			<span class="selected">已选条件</span>
-			<span>入职时间：2016-06-22 ＋ 部门：设计部 ＋ 任职：交互设计师 ＋ 用户类型：wx</span>
-		</div>
-		<div class="myPopBtnList" id="myPopBtnList">
-			<span class="btn back">返回</span>
-			<span class="btn blue confirm">确定</span>
-		</div>
-	</div>
+							<!--E 用户类型-->
+						</td>
+					</tr>
+				</table>
+				<p class="agd_msg"><span>已选时间</span> 入职时间：2016-09-22 + 部门：设计部 + 文职：交互设计师 + 用户类型：wx</p>
+				<p class="st_list_btn"><span id="popupCancle" style="" class="btn white">返回</span><span id="popupComfirm" style="" class="btn blue">确定</span></p>
+					
+	</div>			
 </div>
+<!--=E 添加学员 弹窗-->
+</div>
+
+
 <!--=E 添加学员 弹出框 -->
-<script src="js/common/jquery-1.11.1.min.js"></script>
 <script src="js/common/common.js"></script>
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>

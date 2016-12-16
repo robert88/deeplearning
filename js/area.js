@@ -125,7 +125,7 @@ $(".searchArea").find(".targsWrap").find("span").click(function(){
 		});
 		//删除已选中的标签
 		function delSelectedTag(){
-			$(".tagsWrap .selectedtags .tagsListInner .btnMin").click(function(){
+			$(".tagsWrap .tagsListInner .btnMin").click(function(){
 				$(this).remove();
 			});
 		}

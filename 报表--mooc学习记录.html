@@ -4,11 +4,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-	<title>任务--新增</title>
-	<link href="css/common.css" rel="stylesheet" />
+	<title>报表--mooc学习记录</title>
 	<link href="css/datepicker.css" rel="stylesheet" />
+	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/course.css" rel="stylesheet" />
 	<link href="css/test.css" rel="stylesheet" />
+	
 </head>
 <body>
 <!--=S 头部 -->
@@ -127,14 +128,14 @@
                 <li><a href="课件管理－02网页管理.html">网页</a></li>
             </ul>
         </li>
-        <li class='current open '>
+        <li>
             <p class="listTitle">
                 <i class="icon renwu"></i>
                 <span>任务管理</span>
                 <i class="arrow"><i></i></i>
             </p>
-            <ul class="subList" style="display:block;">
-                <li class='current '><a href="任务--新增.html">任务新增</a></li>
+            <ul class="subList">
+                <li><a href="任务--新增.html">任务新增</a></li>
                 <li><a href="任务--任务维护.html">任务维护</a></li>
                 <!--<li><a href="任务--新增任务完成.html" data-map="任务--新增.html">新增任务完成</a></li>-->
             </ul>
@@ -169,7 +170,7 @@
                 <li><a href="mooc--维护.html">mooc维护</a></li>
                 <!--<li><a href="mooc--权限设置.html" data-map="mooc基本信息填写.html">权限设置</a></li>
                 <li><a href="mooc--权限设置新增群组.html" data-map="mooc基本信息填写.html">权限设置新增群组</a></li>
-                <li><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
+                <li class='current '><a href="mooc--维护列表显示.html" data-map="mooc--维护大图显示.html">维护列表显示</a></li>
                 <li><a href="mooc班级管理.html" data-map="mooc--维护大图显示.html">mooc班级管理</a></li>
                 <li><a href="mooc班级管理作业详情.html" data-map="mooc--维护大图显示.html">mooc班级管理作业详情</a></li>
                 <li><a href="mooc班级管理开班设置查看详情.html" data-map="mooc--维护大图显示.html">mooc班级管理开班设置查看详情</a></li>
@@ -196,15 +197,20 @@
                 -->
             </ul>
         </li>
-        <li>
+        <li class='current open'>
             <p class="listTitle">
                 <i class="icon baobiao"></i>
                 <span>报表管理</span>
                 <i class="arrow"><i></i></i>
             </p>
-            <ul class="subList">
-                <li><a href="">二级菜单一</a></li>
-                <li><a href="#">二级菜单二</a></li>
+            <ul class="subList"  style="display:block;">
+                <li><a href="报表--学习记录.html">学习记录</a></li>
+                <li><a href="报表--课件学习.html">课件学习</a></li>
+                <li><a href="报表--考试结果.html">考试结果</a></li>
+                <li class="current"><a href="报表--mooc学习记录.html">mooc学习记录</a></li>
+            		<li><a href="报表--积分管理.html">积分管理</a></li>
+                <li><a href="报表--学习印象.html">学习印象</a></li>
+                <li><a href="报表--学习评论.html">学习评论</a></li>
             </ul>
         </li>
         <li>
@@ -227,68 +233,200 @@
 		<div class="mainInner">
 			<!-- 面包屑 -->
 			<div class="crumbs">
-				<a href="index.html">首页</a> > <a href="">任务管理</a> > <span class="current">任务新增</span>
-				<a href="任务--任务维护.html"><span class="back"><i></i>返回</span></a>
+				<a href="index.html">首页</a> > <a href="#">报表管理</a> > <span class="current">mooc学习记录</span>
 			</div>
-			
-			<!--=S 前台展示 -->
-				<h2>前台展示</h2>
-				<div class="qtzs">
-						<ul class="clearfix">
-							<li>
-								<div class="qtzs_margin">
-									<h4>任务名称 <span class="red">*</span></h4>
-									<input type="text" name="" id="" value="" />
+			<!--S 搜索-->
+			<div class="search">
+				<h2>搜索条件</h2>
+				<div class="form searchForm">
+					<ul class="controlList course">
+						<li>
+							<label>课程</label>
+							<input type="text" name="" id="" value="" class="text"/>
+						</li>
+						<li>
+							<label>班级</label>
+							<div class="tags">
+								<span class="bb_select bb_kcxz">选择</span>
+								<input type="text" name="" id="" value="" class="text"/>
+							</div>
+						</li>
+						<li>
+							<label>学员</label>
+							<div class="tags">
+								<span class="bb_select bb_xyxz">选择</span>
+								<input type="text" name="" id="" value="" class="text"/>
+							</div>
+						</li>
+						<li>
+							<label>单元类型</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>全部</p>
+									<p>图片</p>
+									<p>测验</p>
+									<p>文档</p>
+									<p>作业</p>
+									<p>考试</p>
+									<p>考试(新版)</p>
+									<p>小组作业</p>
+									<p>直播</p>
+									<p>网页</p>
+									<p>讨论</p>
+									<p>视频</p>
 								</div>
-							</li>
-							<li>
-								<h4>有效期 <span class="red">*</span></h4>
-								<div class="dateTime">
-									<span class="dateSelect"></span>
-									<input type="text" class="text" placeholder="">
-								</div>
-							</li>
-						</ul>
-						<div class="task_textarea">
-							<h4>任务描述 <span class="red">*</span></h4>
-							<textarea name="" rows="" cols=""></textarea>
-						</div>
+							</div>
+						</li>
+						
+						<li>
+							<label>学习时间</label>
+							<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+							</div>
+						</li>
+						
+					</ul>					
+					<div class="btnList">
+						<span class="packUp hide"><i class="icon"></i></span>
+						<input type="reset" value="重置" class="btn">
+						<input type="button" value="搜索" class="btn blue">
+					</div>
 				</div>
-				
-			<!--=E 前台展示-->
-			
-			<div class="correlated_curriculum">
-				<div class="cc_title"><h2>关联资源<span class="red">*</span></h2>
+			</div>
+			<!--E 搜索-->
+			<!--S mooc学习记录-->
+			<div class="bb_xxjl">
+				<div class="courseListNav tabMenu">
+					<div class="navType">
+						<span class="l mt1">视图显示</span>
+						<a href="javascript:void(0)"><span class="bigImg current"></span></a>
+						<a href="javascript:void(0)"><span class="listImg"></span></a>
+					</div>
+				</div>
+				<h2>考试结果</h2>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<th class="bb_xxjl_th01">学员</th>
+						<th>部门</th>
+						<th>课程名称</th>
+						<th>班级</th>
+						<th>章节名称</th>
+						<th>资源名称</th>
+						<th>资源类型</th>
+						<th>学时</th>
+						<th>学分</th>
+						<th>是否完成</th>
+						<th>学习时间</th>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
+					<tr>
+						<td class="bb_xxjl_td01">周星驰</td>
+						<td>质量与流程IT管理部门|信息技术工程部</td>
+						<td>零基础项目实战</td>
+						<td>考试A班</td>
+						<td>小节与预告</td>
+						<td>看图学习</td>
+						<td>图文</td>
+						<td>3</td>
+						<td>1</td>
+						<td>是</td>
+						<td>2016-11-12</td>
+					</tr>
 					
-					<span class="add_resource btn green"><i class="add_icon"></i>添加资源</span>
+					
+				</table>
+				<!--S 翻页-->
+				<div class="pages clearfix">
+					<a href="javascript:;" class="forbid prev"><i></i></a>
+					<!--<a href="#" class="prev"><i></i></a>-->
+					<a href="#" class="current">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="javascript:;" class="shenglue">......</a>
+					<a href="#" class="next"><i></i></a>
+					<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+					<span class="total">总：1440条</span>
+					
+					<span class="tiaozhuan">
+						<span class="">跳转到：</span>
+						<input type="text"><span class="goBtn">GO</span>
+					</span>
 				</div>
-				
-				<div class="cc_addcontent">
-					<div class="cc_addDagangBtn cc_course">
-						<i class="icon"></i>点击添加资源
-					</div>
-				</div>
+				<!--S 翻页-->
 			</div>
-			<div class="model_test">
-				<div class="cc_title">
-					<h2>关联学员<span class="red">*</span></h2>
-					<span class="add_student btn green"><i class="add_icon"></i>添加学员</span>
-				</div>
-				
-				<div class="cc_addcontent">
-					<div class="cc_addDagangBtn add_student_btn ">
-						<i class="icon"></i>点击添加学员
-					</div>
-				</div>
-			</div>
-			
-			
+			<!--E mooc学习记录-->
 			
 			<div class="bottomFloatBar alignR">
-				<span class="btn">保存</span>
-				<a href="任务--新增任务完成.html"><span class="btn blue">发布</span></a>
+				<span class="btn blue">导出报表</span>
 			</div>
-			
 		</div>
 	</div>
 	<!--=E 主体内容 -->
@@ -301,1181 +439,9 @@
 		<a href="#">意见反馈</a>  |  <a href="#">网站地图</a>  |  <a href="#">W3 论坛</a>  |  <a href="#">帮助中心</a>
 	</div>
 </div>
-	
 <div id="previewPagePopup">
 <div id="mask"></div>	
-<!--=S 关联资源  弹窗-->
-	<div class="content dialog" id="cc_listshow">
-		<div class="header hov">
-			<div class="fl"><span>关联课程</span></div>
-			<span class="closePopup"></span>
-		</div>
-		
-		<div class="content_margin">
-			<!--=S 搜索条件 -->
-			<div class="search">
-				<div class="form searchForm">
-					<ul class="controlList course">
-						<li>
-							<label>课程名称</label>
-							<input type="text" class="text" placeholder="请填写课程名称" />
-						</li>
-						<li>
-							<label>课程编码</label>
-							<input type="text" class="text" placeholder="请填写课程编码" />
-						</li>
-						<li>
-							<label>课程语言</label>
-							<div class="dropList">
-								<p class="selected"><span></span><i></i></p>
-								<div class="options">
-									<p>中文</p>
-									<p>English</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<label>课程状态</label>
-							<div class="dropList">
-								<p class="selected"><span></span><i></i></p>
-								<div class="options">
-									<p>全部</p>
-									<p>未发布</p>
-									<p>已发布</p>
-									<p>发布中</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<label>课程owner</label>
-							<input type="text" class="text" placeholder="" />
-						</li>
-						<li>
-							<label>创建人</label>
-							<input type="text" class="text" placeholder="" />
-						</li>
-						<li>
-							<label>审批状态</label>
-							<div class="dropList">
-								<p class="selected"><span></span><i></i></p>
-								<div class="options">
-									<p>全部</p>
-									<p>未完成</p>
-									<p>已完成</p>
-									<p>审批中</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<label>有效期</label>
-							<div class="dateTime">
-								<span class="dateSelect"></span>
-								<input type="text" class="text" placeholder="" />
-							</div>
-						</li>
-						<li>
-							<label>创建日期</label>
-							<div class="dateTime">
-								<span class="dateSelect"></span>
-								<input type="text" class="text" placeholder="" />
-							</div>
-						</li>
-						<li>
-							<label>客户端</label>
-							<!-- 此处用select是防止后台程序只能用select控件 -->
-							<select>
-								<option value=""></option>
-								<option value="移动端">移动端</option>
-								<option value="PC端">PC端</option>
-							</select>
-						</li>
-						<li>
-							<label>标签</label>
-							<div class="tags">
-								<span class="tagSelect btn blue">选择</span>
-								<input type="text" class="text" placeholder="" />
-							</div>
-						</li>
-					</ul>					
-					<div class="btnList">
-						<span class="packUp hide"><i class="icon"></i></span>
-						<input type="reset" value="重置" class="btn" />
-						<input type="button" value="搜索" class="btn blue" />
-					</div>
-				</div>
-			</div>
-			<!--=E 搜索条件 -->
-			
-			
-		<div class="listImg_show hidden">	
-			<!--=S 课程列表 -->	
-			<a id="courseListTag"></a>			
-			<div class="courseListNav tabMenu">
-				<ul class="navMenu floatList col4">
-					<li class="current">全部<span class="num">(1400)</span></li>
-					<li>已发布<span class="num">(200)</span></li>
-					<li>未发布<span class="num">(600)</span></li>
-				</ul>
-				<div class="navType">
-					<span class="l mt1">视图显示</span>
-					<a href="javascrip:void(0)"><span class="bigImg"></span></a>
-					<a href="javascrip:void(0)"><span class="listImg current"></span></a>
-				</div>
-			</div>			
-			
-			
-				<!--=S 全部课程列表 -->
-				<div class="courseListWrap current">
-					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
-						<tr>
-							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
-							<th>课程名称</th>
-							<th>基础信息</th>
-							<th>课程状态</th>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br />
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-							
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br />
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yituijian">已推荐</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论才能更高效</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端<br/>
-										语言：中文
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-					</table>
-					
-				</div>
-				<!--=E 全部课程列表 -->
-				
-				<!--=S 已发布课程列表 -->
-				<div class="courseListWrap">
-					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
-						<tr>
-							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
-							<th>课程名称</th>
-							<th>基础信息</th>
-							<th>课程状态</th>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yituijian">已推荐</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<!--=E 已发布课程列表 -->
-				
-				<!--=S 未发布课程列表 -->
-				<div class="courseListWrap">
-					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
-						<tr>
-							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
-							<th>课程名称</th>
-							<th>基础信息</th>
-							<th>课程状态</th>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-							<td>
-								<img src="images/courseImg2.jpg" />
-								<div class="desc">
-									<p class="title">如何组织小组讨论</p>
-									<p class="code">201604858994822</p>
-									<p class="language">中文</p>
-								</div>
-							</td>
-							<td>
-								<ul class="floatList col3">
-									<li>
-										创建人：lwx327814<br />
-										更新人：lwx327814
-									</li>
-									<li>
-										创建时间：2015.04.12<br />
-										更新时间：2015.04.12
-									</li>
-									<li>
-										客户端：PC端，移动端
-									</li>
-								</ul>
-							</td>
-							<td>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<!--=E 未发布课程列表 -->
-				<!--=S 分页 -->
-				<div class="pages clearfix">
-						<a href="javascript:;" class="forbid prev"><i></i></a>
-						<!--<a href="#" class="prev"><i></i></a>-->
-						<a href="#" class="current">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="javascript:;" class="shenglue">......</a>
-						<a href="#" class="next"><i></i></a>
-						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
-						<span class="total">总：1440条</span>
-						
-						<span class="tiaozhuan">
-							<span class="">跳转到：</span>
-							<input type="text"><span class="goBtn">GO</span>
-						</span>
-					</div>
-				<!--=E 分页 -->	
-			</div>	
-			<div class="bigimg_show">
-				<!--=S 课程列表 -->	
-				<a id="courseListTag"></a>			
-				<div class="courseListNav tabMenu">
-					<ul class="navMenu floatList col4">
-						<li class="current">全部<span class="num">(1400)</span></li>
-						<li>已发布<span class="num">(200)</span></li>
-						<li>未发布<span class="num">(600)</span></li>
-					</ul>
-					<div class="navType">
-						<span class="l mt1">视图显示</span>
-						<a href="javascrip:void(0)"><span class="bigImg current"></span></a>
-						<a href="javascrip:void(0)"><span class="listImg"></span></a>
-					</div>
-				</div>
-				<!--=S 全部课程列表 -->
-				<div class="courseListWrap current">
-					<div class="selectAll selectAllCourse">
-						<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-					</div>
-					<ul class="floatList col4 courseList">
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yituijian">已推荐</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						
-						
-					</ul>
-					<!--=E 课程列表 -->
-				</div>
-				<!--=E 全部课程列表 -->
-				
-				<!--=S 已发布课程列表 -->
-				<div class="courseListWrap">
-					<div class="selectAll selectAllCourse">
-						<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-					</div>
-					<ul class="floatList col4 courseList">
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yituijian">已推荐</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type yifabu">已发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!--=E 课程列表 -->
-					
-				</div>
-				<!--=E 已发布课程列表 -->
-				
-				<!--=S 未发布课程列表 -->
-				<div class="courseListWrap">
-					<div class="selectAll selectAllCourse">
-						<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-					</div>
-					<ul class="floatList col4 courseList">
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="liBox">
-								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
-								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门</p>
-								<div class="btnList">
-									<span class="type weifabu">未发布</span>
-									<div class="r">
-										<span class="editIcon iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>编辑</span>
-										</span>
-										<span class="dagang iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>大纲</span>
-										</span>
-										<span class="quanxian iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>权限</span>
-										</span>
-										<span class="yulan iconBtn">
-											<span class="icon"></span>
-											<span class="tips"><i></i>预览</span>
-										</span>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-					<!--=E 课程列表 -->
-				</div>
-				<!--=E 未发布课程列表 -->
-				<!--=S 分页 -->
-				<div class="pages clearfix">
-						<a href="javascript:;" class="forbid prev"><i></i></a>
-						<!--<a href="#" class="prev"><i></i></a>-->
-						<a href="#" class="current">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="javascript:;" class="shenglue">......</a>
-						<a href="#" class="next"><i></i></a>
-						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
-						<span class="total">总：1440条</span>
-						
-						<span class="tiaozhuan">
-							<span class="">跳转到：</span>
-							<input type="text"><span class="goBtn">GO</span>
-						</span>
-					</div>
-				<!--=E 分页 -->	
-			</div>
-			
-		</div>	
-		<p class="st_list_btn"><span class="btn white">返回</span>
-			<a href="任务--新增任务完成.html"><span class="btn blue">确定</span></a>
-		</p>
-	</div>
-<!--=E 关联资源 弹窗-->	
-<!--=S 关联学员  弹窗-->
+	<!--S 选择学员-->
 <div class="quanxian" id="select_group">
 				<div class="titleBar">
 					关联学员
@@ -1674,22 +640,1192 @@
 							</td>
 						</tr>
 					</table>
-					
-					
-					
 				</div>
-				
-				<p class="st_list_btn"><span class="btn white">取消</span>
-					<a href="任务--新增任务完成.html"><span class="btn blue">确定</span></a>
+				<p class="st_list_btn">
+					<span class="btn white">取消</span>
+					<span class="btn blue bb_xytcBtn">确定</span>
 				</p>
 						
 </div>
-<!--=E 关联学员  弹窗-->
+	<!--E 选择学员-->
+	<!--S 关联课程-->
+	<div class="content dialog" id="cc_listshow">
+		<div class="header hov">
+			<div class="fl"><span>关联课程</span></div>
+			<span class="closePopup"></span>
+		</div>
+		
+		<div class="content_margin">
+			<!--=S 搜索条件 -->
+			<div class="search">
+				<div class="form searchForm">
+					<ul class="controlList course">
+						<li>
+							<label>课程名称</label>
+							<input type="text" class="text" placeholder="请填写课程名称">
+						</li>
+						<li>
+							<label>课程编码</label>
+							<input type="text" class="text" placeholder="请填写课程编码">
+						</li>
+						<li>
+							<label>课程语言</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>中文</p>
+									<p>English</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label>课程状态</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>全部</p>
+									<p>未发布</p>
+									<p>已发布</p>
+									<p>发布中</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label>课程owner</label>
+							<input type="text" class="text" placeholder="">
+						</li>
+						<li>
+							<label>创建人</label>
+							<input type="text" class="text" placeholder="">
+						</li>
+						<li>
+							<label>审批状态</label>
+							<div class="dropList">
+								<p class="selected"><span></span><i></i></p>
+								<div class="options">
+									<p>全部</p>
+									<p>未完成</p>
+									<p>已完成</p>
+									<p>审批中</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<label>有效期</label>
+							<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+							</div>
+						</li>
+						<li>
+							<label>创建日期</label>
+							<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+							</div>
+						</li>
+						<li>
+							<label>客户端</label>
+							<!-- 此处用select是防止后台程序只能用select控件 -->
+							<select>
+								<option value=""></option>
+								<option value="移动端">移动端</option>
+								<option value="PC端">PC端</option>
+							</select>
+						</li>
+						<li>
+							<label>标签</label>
+							<div class="tags">
+								<span class="tagSelect btn blue">选择</span>
+								<input type="text" class="text" placeholder="">
+							</div>
+						</li>
+					</ul>					
+					<div class="btnList">
+						<span class="packUp hide"><i class="icon"></i></span>
+						<input type="reset" value="重置" class="btn">
+						<input type="button" value="搜索" class="btn blue">
+					</div>
+				</div>
+			</div>
+			<!--=E 搜索条件 -->
+			
+			
+		<div class="listImg_show hidden">	
+			<!--=S 课程列表 -->	
+			<a id="courseListTag"></a>			
+			<div class="courseListNav tabMenu">
+				<ul class="navMenu floatList col4">
+					<li class="current">全部<span class="num">(1400)</span></li>
+					<li>已发布<span class="num">(200)</span></li>
+					<li>未发布<span class="num">(600)</span></li>
+				</ul>
+				<div class="navType">
+					<span class="l mt1">视图显示</span>
+					<a href="javascrip:void(0)"><span class="bigImg"></span></a>
+					<a href="javascrip:void(0)"><span class="listImg current"></span></a>
+				</div>
+			</div>			
+			
+			
+				<!--=S 全部课程列表 -->
+				<div class="courseListWrap current">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+						<tbody><tr>
+							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+							<th>课程名称</th>
+							<th>基础信息</th>
+							<th>课程状态</th>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+							
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yituijian">已推荐</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论才能更高效</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端<br>
+										语言：中文
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+					</tbody></table>
+					
+				</div>
+				<!--=E 全部课程列表 -->
+				
+				<!--=S 已发布课程列表 -->
+				<div class="courseListWrap">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+						<tbody><tr>
+							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+							<th>课程名称</th>
+							<th>基础信息</th>
+							<th>课程状态</th>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yituijian">已推荐</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+								</div>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<!--=E 已发布课程列表 -->
+				
+				<!--=S 未发布课程列表 -->
+				<div class="courseListWrap">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
+						<tbody><tr>
+							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
+							<th>课程名称</th>
+							<th>基础信息</th>
+							<th>课程状态</th>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></td>
+							<td>
+								<img src="images/courseImg2.jpg">
+								<div class="desc">
+									<p class="title">如何组织小组讨论</p>
+									<p class="code">201604858994822</p>
+									<p class="language">中文</p>
+								</div>
+							</td>
+							<td>
+								<ul class="floatList col3">
+									<li>
+										创建人：lwx327814<br>
+										更新人：lwx327814
+									</li>
+									<li>
+										创建时间：2015.04.12<br>
+										更新时间：2015.04.12
+									</li>
+									<li>
+										客户端：PC端，移动端
+									</li>
+								</ul>
+							</td>
+							<td>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+								</div>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+				<!--=E 未发布课程列表 -->
+				<!--=S 分页 -->
+				<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+				<!--=E 分页 -->	
+			</div>	
+			<div class="bigimg_show">
+				<!--=S 课程列表 -->	
+				<a id="courseListTag"></a>			
+				<div class="courseListNav tabMenu">
+					<ul class="navMenu floatList col4">
+						<li class="current">全部<span class="num">(1400)</span></li>
+						<li>已发布<span class="num">(200)</span></li>
+						<li>未发布<span class="num">(600)</span></li>
+					</ul>
+					<div class="navType">
+						<span class="l mt1">视图显示</span>
+						<a href="javascrip:void(0)"><span class="bigImg current"></span></a>
+						<a href="javascrip:void(0)"><span class="listImg"></span></a>
+					</div>
+				</div>
+				<!--=S 全部课程列表 -->
+				<div class="courseListWrap current">
+					<div class="selectAll selectAllCourse">
+						<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+					</div>
+					<ul class="floatList col4 courseList">
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yituijian">已推荐</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+						
+					</ul>
+					<!--=E 课程列表 -->
+				</div>
+				<!--=E 全部课程列表 -->
+				
+				<!--=S 已发布课程列表 -->
+				<div class="courseListWrap">
+					<div class="selectAll selectAllCourse">
+						<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+					</div>
+					<ul class="floatList col4 courseList">
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yituijian">已推荐</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type yifabu">已发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!--=E 课程列表 -->
+					
+				</div>
+				<!--=E 已发布课程列表 -->
+				
+				<!--=S 未发布课程列表 -->
+				<div class="courseListWrap">
+					<div class="selectAll selectAllCourse">
+						<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+					</div>
+					<ul class="floatList col4 courseList">
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="liBox">
+								<span class="checkboxWrap"><input type="checkbox" class="checkbox"></span>
+								<img src="images/courseImg.jpg">
+								<p class="title"> 交互与视觉设计入门</p>
+								<div class="btnList">
+									<span class="type weifabu">未发布</span>
+									<div class="r">
+										<span class="editIcon iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>编辑</span>
+										</span>
+										<span class="dagang iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>大纲</span>
+										</span>
+										<span class="quanxian iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>权限</span>
+										</span>
+										<span class="yulan iconBtn">
+											<span class="icon"></span>
+											<span class="tips"><i></i>预览</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<!--=E 课程列表 -->
+				</div>
+				<!--=E 未发布课程列表 -->
+				<!--=S 分页 -->
+				<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+				<!--=E 分页 -->	
+			</div>
+			
+		</div>	
+		<p class="st_list_btn">
+			<span class="btn white">返回</span>
+			<a href="#"><span class="btn blue yiguanlian_btn ture_btn">确定</span></a>
+		</p>
+	</div>
+	<!--E 关联课程-->
 </div>
 <script src="js/common/jquery-1.11.1.min.js"></script>
 <script src="js/common/common.js"></script>
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/test.js"></script>
+
 </body>
 </html>

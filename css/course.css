@@ -112,12 +112,12 @@
 		.courseListNav{clear:both;border-bottom:2px solid #ddd;height:28px;}
 		.courseListNav .navType{float:right;white-space:noWrap;}
 		.courseListNav .navType .bigImg,
-		.courseListNav .navType .listImg{padding:0px 8px;background:url(../images/courseManage.png) no-repeat -27px 0;cursor:pointer;margin:0 5px;}
-		.courseListNav .navType .listImg{background-position:-52px 0;}
+		.courseListNav .navType .listImg{padding:0px 8px;background:url(../images/courseManage.png) no-repeat -27px 0;cursor:pointer;margin:0 5px;vertical-align: sub;}
+		.courseListNav .navType .listImg{background-position:-52px 1px;}
 		.courseListNav .navType .bigImg.current,
 		.courseListNav .navType .bigImg:hover{background-position:-27px -26px;}
 		.courseListNav .navType .listImg.current,
-		.courseListNav .navType .listImg:hover{background-position:-52px -26px;}
+		.courseListNav .navType .listImg:hover{background-position:-52px -25px;}
 		.courseListNav .navMenu{float:left;width:360px;margin-bottom:-2px;}
 		.courseListNav .navMenu li{text-align:center;line-height:200%;cursor:pointer;}
 		.courseListNav .navMenu li:hover,
@@ -1061,3 +1061,74 @@
     vertical-align: sub;
     cursor: pointer;
 }
+
+/*报表*/
+
+.bb_select{text-indent:0;float: right;padding: 0 25px; border-left: 1px solid #ddd;cursor: pointer;}
+.bb_xxjl .courseListNav{border:none;float: right;}
+.bb_xxjl table{border: 1px solid #DDD;text-align: left;background: #FFF;font-size: 13px;margin-bottom: 15px;}
+.bb_xxjl table th{background: #F9FAFC; padding: 8px 0;}
+.bb_xxjl table td{padding: 10px 0;border-top: 1px solid #DDD;max-width: 340px;}
+.bb_xxjl .bb_xxjl_th01,.bb_xxjl .bb_xxjl_td01{padding-left: 10px;}
+.yiwancheng .bg{display: inline-block;width: 12px;height: 12px;background: url(../images/courseManage.png) no-repeat -137px -282px;margin-right: 5px;}
+.weiwancheng .bg{display: inline-block;width: 12px;height: 12px;background: url(../images/courseManage.png) no-repeat -101px -282px;margin-right: 5px;}
+#registration_time .dateTime { width: 45%;display: inline-block;}
+.bb_jifen{width: 46%;display: inline-block;}
+.jifengl .listView td .checkboxWrap {display: block; margin: 0 auto;width: 0px;height: 12px;}
+#huizhangIcon .icon{background: url(../images/huizhang.png) no-repeat;padding: 4px 9px;cursor: pointer;margin: 0 5px;}
+.bb_fbr{position: relative;}
+.bb_xxyx .listView td .checkboxWrap {display: block; margin: 0 auto;width: 0px;height: 12px;}
+.bb_xxyx table th,.jifengl table th{padding:0}
+.bb_jifenth07{width: 150px;}
+.bb_jifenth08{width: 70px;}
+.redzuan{background: url(../images/redzuan.png) no-repeat 50% 50% / 100%;width:30px;height:30px;margin: 0 5px;display: inline-block;}
+.jifenbgpop {
+    position: absolute;
+    height: 600px;
+    background: #f4f5f7;
+    width: 1180px;
+    margin-left: -590px;
+    margin-top: -300px;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+}
+#integral_change .content_margin {
+    height: 472px;
+}
+#medal {
+    position: absolute;
+    height: 400px;
+    background: #f4f5f7;
+    width: 1180px;
+    margin-left: -590px;
+    margin-top: -200px;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    background: #FFF;
+}
+.medal_ul{ height: 312px;}
+.medal_ul li{float: left;width: 13.26%;padding: 20px;text-align: center;}
+.xunzhang{background: #F9FAFC;border: 1px solid #DDD;border-radius:3px; padding: 10px;display: inline-block;}
+.bb_jfbg{position: absolute;
+    height: 230px;
+    background: #f4f5f7;
+    width: 350px;
+    margin-left: -175px;
+    margin-top: -115px;
+    left: 50%;
+    top: 50%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    background: #FFF;}
+    .jfbg_content h4{font-size: 16px; text-align: center;margin: 20px 0;}
+    .jfbg_content h4 span{color: #2569DC;}
+  .jfbg_content ul{margin-bottom:20px;}  
+.jfbg_content ul li{margin: 10px 20px;}
+.jfbg_content ul li input{height: 25px;width: 200px;line-height: 25px;border: 1px solid #DDDDDD; border-radius:3px;background: #F9FAFC; outline: none;text-indent: 3px;}

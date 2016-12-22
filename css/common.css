@@ -161,7 +161,7 @@
 		.pages a.next.forbid:hover i{background-position:-140px 0;}
 		.pages .total{border:1px solid #ddd;background-color:#fff;padding:5px 10px 4px;font-size:12px;margin-left:10px;}
 		.pages .tiaozhuan{float:right;font-size:12px;}
-		.pages .goBtn{display:inline-block;text-align:center;cursor:pointer;width:29px;padding:5px 0 1px;background:#fff;border:1px solid #ddd;}
+		.pages .goBtn{display:inline-block;text-align:center;cursor:pointer;width:29px;padding:6px 0 2px;background:#fff;border:1px solid #ddd;}
 		.pages .goBtn:hover{color:#3e83f9;}
 		.pages .shenglue{padding:3px 0 6px;}
 		.pages input{display:inline-block;width:33px;padding:8px 0 5px;outline:none;border:1px solid #ddd;border-right:none;text-align:center;}

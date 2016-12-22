@@ -471,16 +471,103 @@ $(document).ready(function(){
  	 
 })
 		
+		//确定关闭弹窗
+		$(document).on("click",".bb_sureBtn",function(){
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
+		
+		//报表选择学员弹窗
+		$(document).on("click",".bb_xyxz",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$("#select_group").css( "display","block" );
+		}); 
+		$("#select_group").find(".closePopup").on( "click",function(){
+			$("#select_group").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
+		//报表选择课程弹窗
+		$(document).on("click",".bb_kcxz",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$("#cc_listshow").css( "display","block" );
+		}); 
+		$("#cc_listshow").find(".closePopup").on( "click",function(){
+			$("#cc_listshow").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
+		//报表选择部门弹窗
+		$(document).on("click",".bb_bmxz",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$("#department").css( "display","block" );
+		}); 
+		$("#department").find(".closePopup").on( "click",function(){
+			$("#department").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
+		
+		//任务新增关联学员 选择学员群组切换
+		$(".task_select_student").on("click",function(){
+			$(".association_student").removeClass("hidden");
+			$(".groupList").addClass("hidden");
+		}); 
+		$(".task_select_group").on("click",function(){
+			$(".groupList").removeClass("hidden");
+			$(".association_student").addClass("hidden");
+		});
+		//任务新增关联资源大图列表切换   考试关联课程大图列表切换  共用
+	 	$(document).on("click",".bigImg",function(){
+	   		 $(".bigimg_show").removeClass("hidden");
+	   		 $(".listImg_show").addClass("hidden");
+ 	    });
+ 		$(document).on("click",".listImg",function(){
+	   		 $(".listImg_show").removeClass("hidden");
+	   		 $(".bigimg_show").addClass("hidden")
+ 		});		
 
-			
+		//报表积分预览弹窗
+		$(document).on("click","#yulan",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$("#integral_change").css( "display","block" );
+		}); 
+		$("#integral_change").find(".closePopup").on( "click",function(){
+			$("#integral_change").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
 		
+		//查看勋章
+		$(document).on("click","#huizhangIcon",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$("#medal").css( "display","block" );
+		}); 
+		$("#medal").find(".closePopup").on( "click",function(){
+			$("#medal").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
+		//报表积分变更弹窗
+		$(document).on("click",".jifenbg",function(){
+			$("body").css( "overflow","hidden" );
+			$("#previewPagePopup").css( "display","block" );
+			$(".bb_jfbg").css( "display","block" );
+		}); 
+		$(".bb_jfbg").find(".closePopup").on( "click",function(){
+			$(".bb_jfbg").hide();
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+		});
 		
-
-		
-		
-		
-		
-		
-		
-		
+		//报表积分变更单选框
+		$(document).on("click",".jfbg_content .radio",function(){
+		$(this).addClass("selected").parents("li").siblings("li").find(".radio").removeClass("selected");
+		$(this).children("input").attr("checked","checked").parents("li").siblings("li").find("input").removeAttr("checked");
+	})
 		

@@ -15,7 +15,7 @@
 #showCalendar li.noActive{color:#ddd;}
 #showCalendar .current-date {background: #3e83f9;/* height:36px; */line-height:36px;color:#fff;text-align:center;font-family:monospace;/* font-weight:bold; */}
 #showCalendar .week {/* background:#72B3FA; */}
-.red {color:#f00;}
+#showCalendar .red {color:#f00;}
 #showCalendar #next {float:right;color: #fff;margin:0 7px;font-family:sans-serif;} 
 #showCalendar #pre {float:left;color: #fff;margin:0 7px;font-family:sans-serif;}
 #showCalendar #preY {float:left;margin-left:5px;color: #fff;font-family:sans-serif;}

@@ -114,13 +114,12 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 
 // 面授新增编辑课程表页面S
 
-	$("#courseSheet").find("td").find(".edit").click(function(){
+	$(document).on("click","#courseSheet .edit",function(){
 		$(this).parents("tr").addClass( "editStatu" );
 	});
 
 	// 展示列表
-
-	$("#courseSheet").find("td").find("span").click(function(){
+    $(document).on("click","#courseSheet td span",function(){
 		if( !$(this).parents("tr").hasClass("editStatu") ){
 			return;
 		}else{
@@ -131,8 +130,7 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 	});
 
 	//  选择内容
-
-	$("#courseSheet").find("td").find("li").click(function(){
+	 $(document).on("click","#courseSheet td li",function(){
 		$(this).parent().siblings().text( $(this).text() );
 	});
 
@@ -141,8 +139,7 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 	});
 
 	// 删除按钮
-
-	$("#courseSheet").find("td").find(".del").click(function(){
+	$(document).on("click","#courseSheet .del",function(){
 		$(this).parents("tr").remove();
 	});
 
@@ -228,13 +225,16 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 
 
 	// 选择按钮
-
-	$("#courseSheet").find(".resources").find(".btn").click(function(){
+	$(document).on("click","#courseSheet .resources .btn",function(){
 		$("#courseSelect").show();
 		$("#previewPagePopup").show();
 		$("body").css("overflow","hidden");
 	});
-
+	$(".addClasses").find(".msxuanze").click(function(){
+		$("#courseSelect").show();
+		$("#previewPagePopup").show();
+		$("body").css("overflow","hidden");
+	});
 	// 保存
 
 	$("#courseSelect").find(".save").click(function(){
@@ -252,8 +252,7 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 	});	
 
 	// 确认图标
-
-	$("#courseSheet").find(".sure").click(function(){
+	$(document).on("click","#courseSheet .sure",function(){
 		var editDom = $("#courseSheet").find(".editStatu");
 		editDom.find(".activityName").find("span").text( editDom.find(".activityName").find("input").val() );
 		editDom.find(".name").find("span").text( editDom.find(".name").find("input").val() );
@@ -269,7 +268,7 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 		$(this).addClass("current");
 		$(".listViewType").removeClass("show");
 		$(".listViewType").eq($(this).index()-1).addClass("show");
-		$("#courseSelect").find(".selected").removeClass("selected");
+		$(".courseListNav").find(".selected").removeClass("selected");
 	});
 
 	// 关闭弹窗
@@ -373,8 +372,93 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 		},50 );
 	}
 
-	// 
-
+	// 拖拽上传
+	 $(function() {
+      //必须将jq对象转换为js对象，调用原生方法
+      var oDiv = $(".fileArea").get(0);
+      var oP = $(".fileArea");
+      //进入
+      oDiv.ondragenter = function() {
+          oP.html('');
+        }
+        //移动，需要阻止默认行为，否则直接在本页面中显示文件
+      oDiv.ondragover = function(e) {
+          e.preventDefault();
+        }
+        //离开
+      oDiv.onleave = function() {
+          oP.html('请将图片文件拖拽至此区域！');
+        }
+        //拖拽放置，也需要阻止默认行为
+      oDiv.ondrop = function(e) {
+        e.preventDefault();
+        //获取拖拽过来的对象,文件对象集合
+        var fs = e.dataTransfer.files;
+        //若为表单域中的file标签选中的文件，则使用form[表单name].files[0]来获取文件对象集合
+        //打印长度
+        console.log(fs.length);
+        //循环多文件拖拽上传
+        for (var i = 0; i < fs.length; i++) {
+          //文件类型
+          var _type = fs[i].type;
+ 
+          console.log(_type);
+          //判断文件类型
+          if (_type.indexOf('image') != -1) {
+            //文件大小控制
+            console.log(fs[i].size);
+            //读取文件对象
+            var reader = new FileReader();
+            //读为DataUrl,无返回值
+            reader.readAsDataURL(fs[i]);
+            reader.onloadstart = function(e) {
+                //开始加载
+              }
+              // 这个事件在读取进行中定时触发
+            reader.onprogress = function(e) {
+             // $("#total").html(e.total);
+              
+            }
+            //当读取成功时触发，this.result为读取的文件数据
+            reader.onload = function() {
+                //文件数据
+                // console.log(this.result);
+                //添加文件预览
+                var oImg = $("<img style='width:100%;' src='' />");
+                oImg.attr("src", this.result);
+                $(oDiv).append(oImg); //oDiv转换为js对象调用方法
+    				var num = 0;
+			    	$("#importDialog").find(".fileArea").hide();
+			    	$("#importDialog").find(".upLoadBox").show();
+   				var timer = setInterval( function(){
+					num++;
+					if( num == 100 ){
+						clearInterval(timer);
+						$("#importDialog").find(".upLoadBox").find(".bgBox").addClass("success");
+						$("#importDialog").find(".upLoadBox").find(".bg").siblings().text("上传完成");
+					}
+					$("#importDialog").find(".upLoadBox").find(".progressBar").find("div").css( "width", num + "%" );
+					$("#importDialog").find(".upLoadBox").find(".closeBox").find("span").text( num+"%" );
+				},50 );
+                
+              }
+              //无论成功与否都会触发
+            reader.onloadend = function() {
+              if (reader.error) {
+                console.log(reader.error);
+              } else {
+                //上传没有错误，ajax发送文件，上传二进制文件
+              }
+            }
+          } else {
+            alert('请上传图片文件！');
+          }
+        }
+ 
+      }
+    });
+	//拖拽上传 end
+	
 	// 关闭弹窗方法
 
 	function closeDialog( obj ){
@@ -481,3 +565,28 @@ $("#uploadPic").find(".closePopup").on( "click",function(){
 	});
 
 // 面授新增编辑课程表页面E
+
+
+
+		$(document).on( "click",".addface",function(){
+			var content = "";
+				content += '<tr class="editStatu signtwo">'; 
+				content += '<td>第<div class="date"><span> </span><ul style=""><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li></ul></div>天</td>';
+				content += '<td><div class="time"> <span></span><ul style=""><li>9:00-10:00</li><li>10:00-11:00</li><li>11:00-12:00</li><li>14:00-15:00</li><li>15:00-16:00</li><li>16:00-17:00</li></ul></div></td>';
+				content += '<td><div class="activityName"><span>课程活动名称输入－名字可以很长</span><input type="text" name=""></div></td>';
+				content += '<td><div class="name"><span>linjiayi</span><input type="text" name=""></div></td>';
+				content += '<td><div class="resources"><span class="text">战略伙伴－怎么才能理解业务把握需求让工作更顺利</span><input type="" name="" readonly="readonly"><span class="btn blue">选择</span></div></td>';
+				content += '<td><div class="opraWrap clearfix"><a class="edit l" href="javascript:void(0);"></a><a class="sure l" href="javascript:void(0);"></a><a class="del l" href="javascript:void(0);"></a></div></td>';
+				content += '</tr>';
+				if($(".editStatu").hasClass("signtwo")){
+				}else{
+				$("#courseSheet table tbody").append(content);
+				}
+		});
+
+							
+							
+							
+							
+							
+						

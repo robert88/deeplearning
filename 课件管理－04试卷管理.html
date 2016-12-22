@@ -245,11 +245,17 @@
 							</li>
 							<li>
 								<label>创建人</label>
-								<input type="text" class="text" placeholder="" />
+								<div class="cjr">
+									<input type="text" class="text" placeholder="" />
+									<i class="peopel_icon"></i>
+								</div>
 							</li>
 							<li>
 								<label>创建日期</label>
-								<input type="text" class="text" placeholder="" />
+								<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+								</div>
 							</li>
 						</ul>					
 						<div class="btnList">
@@ -655,8 +661,8 @@
 			
 		<!--=S 底部浮动栏-->
 		<div class="bottomFloatBar alignR">
-			<span class="btn">删<span class="opc">&nbsp;</span>除</span>
-			<span class="btn">下<span class="opc">&nbsp;</span>载</span>
+			<span class="btn globalDel">删<span class="opc">&nbsp;</span>除</span>
+			<a href="download.mp4" download="mp3"><span class="btn">下<span class="opc">&nbsp;</span>载</span></a>
 			<span class="btn blue J-popup" data-popup-id="#previewPagePopup" data-popup-page="./课件管理－01视频管理-更改域(弹窗).html">更换域</span>
 		</div>
 		<!--=E 底部浮动栏-->
@@ -736,6 +742,7 @@
 			padding: 4px 10px;
 			border-radius: 3px;
 			white-space: nowrap;
+			z-index: 99;
 		}
 		#editExamPagePopup .editIcon .icon {
 			background-position: 0 -51px;
@@ -747,7 +754,7 @@
 			position:relative;
 		}
 		#editExamPagePopup .iconBtn .icon {
-			background-image: url(../images/courseManage.png);
+			background-image: url(images/courseManage.png);
 			background-repeat: no-repeat;
 			padding: 1px 9px;
 			cursor: pointer;
@@ -791,7 +798,7 @@
 					<div class="fr"><span class="btn green J-popup J-close" data-popup-id="#selectObjPagePopup" data-popup-page="./课件管理－04试卷管理-选择题目(弹窗).html"">选择题目</span></div>
 				</div>
 				<div class="groupList">
-					<table class="innerTable libGroup" width="100%" border="0" cellspacing="0" cellpadding="0">
+					<table class="innerTable libGroup courseList listView" width="100%" border="0" cellspacing="0" cellpadding="0">
 						<thead>
 						<tr>
 							<th><span class="checkboxWrap"><input type="checkbox" class="checkbox"></span></th>
@@ -1095,7 +1102,7 @@
 		#selectObjPagePopup .clearfix:after{content:"";display:block;clear:both}
 		#selectObjPagePopup{display:none;position:fixed;width:100%;height:100%;z-index:6;top:0;left:0}
 		#selectObjPagePopup .header .fl span{margin-left:20px}
-		#selectObjPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(../images/closeIcon.png) no-repeat center center;cursor:pointer}
+		#selectObjPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(images/closeIcon.png) no-repeat center center;cursor:pointer}
 		#selectObjPagePopup .select_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
 
 	</style>
@@ -1202,6 +1209,573 @@
 	</div>
 	<script src="js/test.js"></script>
 
+
+
+	<!--  -->
+	<div id="previewPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>更改域设置</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="tree popupWrap">
+				<ul class="menuWrap">
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">华为大学</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学eee</span>
+								</div>
+								<span class="bg fl"></span>
+
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学eee</span>
+										</div>
+										<span class="bg fl"></span>
+
+
+										<ul class="subMenu">
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle" style="display: none;"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl" style="background-position: -62px -54px;"></span>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">产品与解决方案</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">消费者bg</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">项目管理资源池</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btnWrap">
+				<a href="javascript:void(0);" class="save fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return fr J-close">取消</a>
+			</div>
+		</div>
+	</div>
+	<script>
+        // 树形结构 S
+
+        (function(){
+            var $tree = $("#previewPagePopup").find(".tree")
+            var liDom =$tree.find("li");
+            if( liDom.find("ul").hasClass("subMenu") ){
+                var bgDom =$tree.find( ".bg" );
+                for( var i = 0;i < bgDom.length; i++ ){
+                    var last = bgDom.eq(i).parent().parent().children().length-1;
+                    // 改变样式
+                    if( bgDom.eq(i).parent().parent().hasClass("subMenu") && ( bgDom.eq(i).parent().index() == last ) ){
+                        bgDom.eq(i).css( { "backgroundPosition":"-62px -54px"  } );
+                        bgDom.eq(i).parent().css( "backgroundImage","none" );
+                    }
+                }
+            }
+
+            // 没有子菜单的隐藏三角图标
+
+            for( var i = 0; i<liDom.length;i++ ){
+                if( !( liDom.eq(i).find("ul").hasClass("subMenu")) ){
+                    liDom.eq(i).find(".triangle").css( "display","none" );
+                }
+            }
+
+            // 点击三角图标收缩展开子菜单
+
+            $tree.find(".triangle").on( "click",function(){
+
+                $(this).toggleClass( "active" );
+                if( $(this).hasClass("active") ){
+                    $(this).parent().siblings("ul").slideDown();
+                }else{
+                    $(this).parent().siblings("ul").slideUp();
+                }
+            } );
+
+            // 单选操作
+
+            $tree.find(".radio").on( "click",function(){
+                $tree.find(".radio").removeClass("active");
+                $(this).toggleClass( "active" );
+
+                // 有子菜单的情况下
+                if( $(this).parent().siblings().find("span").hasClass("radio") ){
+                    $(this).removeClass("active");
+                    if( $(this).hasClass("active") ){
+                        $(this).parent().siblings().find(".radio").addClass("active");
+                    }else{
+                        $(this).parent().siblings().find(".radio").removeClass("active");
+                    }
+                }
+            } );
+
+        })();
+
+        // 树形结构 E
+	</script>
+<style type="text/css">
+		#addObjectPagePopup .edit_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
+		#addObjectPagePopup .header{height:40px;line-height:40px;color:#fff;position:relative}
+		#addObjectPagePopup .clearfix:after{content:"";display:block;clear:both}
+		#addObjectPagePopup{display:none;position:fixed;width:100%;height:100%;z-index:6;top:0;left:0}
+		#addObjectPagePopup .header .fl span{margin-left:20px}
+		#addObjectPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(../images/closeIcon.png) no-repeat center center;cursor:pointer}
+	</style>
+<div id="addObjectPagePopup" class="pagePopup">
+	<div class="mask"></div>	
+
+	<!--=S 新增题目 弹窗-->
+	<div class="edit_test select_test" id="edit_test" style="display: block;">
+				<div class="titleBar">编辑试卷
+				<span class="closePopup"></span>
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<td class="st_leftside">
+						<div>
+							<ul>
+								<li class="select_focus">
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>	
+								</li>
+								<li>
+										<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+								<li>
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+								<li>
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+							</ul>
+							<div class="add_test">
+								添加题库
+							</div>
+						</div>
+						</td>
+						<td class="st_rightside">
+							<div class="st_content">
+									
+									
+									<div class="st_list ">
+										<div class="st_titleline ">
+										<div class="radioWrap clearfix">
+										<label>题目类型：</label>
+										<span class="multiple_choice_span radio selected"><i></i>多选题<input type="radio" name="select" id="multiple_choice_radio" value="多选题" checked="checked"></span>
+										<span class="single_choice_span radio "><i></i>单选题<input type="radio" name="select" id="single_choice_radio" value="单选题"></span>
+										<span class="tfng_choice_span radio "><i></i>判断题<input type="radio" name="select" id="tfng_choice_radio" value="判断题"></span>
+										</div>
+									</div>
+										<div class="st_padding">
+											题干
+											<div class="edit_box">
+												<div class="edit_box_bar">
+													<img src="images/notice01.jpg">
+												</div>
+												<div class="edit_box_area">
+													<textarea></textarea>
+												</div>
+											</div>
+											
+											<div class="st_answer">
+												<div class="st_answer_title">
+													正确选项&nbsp;&nbsp;&nbsp; 答案
+													<span>操作</span>
+												</div>
+												<!--多选-->
+												<ul class="multiple_choice">
+													<li>
+														<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli multiple_choice_addli"><i></i>新增选项</div>
+												</ul>
+												<!--单选-->
+												<ul class="single_choice hidden">
+													<li>
+														<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli single_choice_addli"><i></i>新增选项</div>
+												</ul>
+												<!--判断-->
+												<ul class="tfng_choice hidden">
+													<li>
+														<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli tfng_choice_addli"><i></i>新增选项</div>
+												</ul>
+												
+											</div>
+											<div class="st_answer_explain">
+												答案解释
+												<input type="text" name="" id="" value="">
+											</div>
+											
+										</div>
+										
+									</div>
+								</div>
+							<p class="st_list_btn"><span class="btn white backselecttest">返回</span><span class="btn blue select_test_ture">确定</span></p>
+						</td>
+					</tr>
+				</tbody></table>
+				
+				
+			</div>
+	<!--=E 新增题目 弹窗-->	
+	</div>
+	
 
 </body>
 </html>

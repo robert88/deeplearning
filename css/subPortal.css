@@ -6,7 +6,7 @@
 	.listView.zimenhu td img{float:none;width:auto;}
 
 /* 基本信息 */
-.baseInfo{margin:40px 0 20px;border:1px solid #ddd;border-radius:3px;background-color:#fff;padding:20px;}
+.baseInfo{margin:20px 0 20px;border:1px solid #ddd;border-radius:3px;background-color:#fff;padding:20px;}
 .baseInfo ul{}
 .baseInfo ul li{float:left;width:67%;}
 .baseInfo ul li.logo{width:32.8%;}
@@ -304,7 +304,7 @@
         cursor: pointer;
     }
     #previewPagePopup .bannerWrap{
-        padding: 20px;
+        padding: 20px 4px 20px 20px;
         background: #fff;
     }
     #previewPagePopup .bannerWrap .select{
@@ -359,7 +359,7 @@
         z-index: 1;
     }
     #previewPagePopup .bannerWrap .addCourse{
-        margin: 0px;
+        margin-right: 16px;
     }
     #previewPagePopup .courseList{
         padding-top: 20px;

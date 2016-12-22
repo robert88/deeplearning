@@ -188,6 +188,7 @@
 	border-radius: 3px;
 	padding: 10px;
 	height: 60px;
+	background: #f9fafc;
 }
 
 .area .controlList li .tagsWrap{
@@ -396,7 +397,7 @@
 	border-bottom: none;
     height: 75px;
 }
-
+.qtzs_margin{  margin-right: 20px;}
 .form .controlList li{
 	float: left;
     width: 33.33%;
@@ -586,7 +587,6 @@
     z-index: 2;
     left: 0;
     top: 32px;
-    width: 93%;
     border: 1px solid #ddd;
     border-bottom: none;
     border-radius: 3px;
@@ -682,6 +682,9 @@
     display: none;
 }
 
+.listViewType .operation{
+	width: 13%;
+}
 .listViewType.show{
     display: block;
 }
@@ -861,7 +864,16 @@
     display: block;
     width: 100%;
 }
-
+.zqglbigimg{
+	background: #f9fafc;
+}
+.courseList li .liBox .zqglbigimg img{
+	height: 100px;
+	width:100px;
+	border-radius: 50%;
+	padding: 28px 0;
+	margin: auto;
+}
 .courseList li .liBox p{
     height: 32px;
     line-height: 32px;
@@ -870,7 +882,7 @@
 }
 
 .courseList li .liBox .title{
-    margin: 12px 10px 10px;
+    margin: 4px 2px;
     white-space: nowrap;
     width: 93%;
     overflow: hidden;
@@ -1330,7 +1342,7 @@
 }
 
 #previewPagePopup .bannerWrap{
-    padding: 20px;
+   padding: 20px 8px 20px 20px;
     background: #fff;
 }
 
@@ -1434,7 +1446,7 @@
 }
 
 #previewPagePopup .btnWrap {
-    padding: 9px 8px 9px 0px;
+    padding: 9px 0px 9px 0px;
     background: #e0e4ef;
     border-bottom-right-radius:3px;
     border-bottom-left-radius:3px;
@@ -1593,8 +1605,15 @@
     padding-left: 10px;
     height: 30px;
     line-height: 30px;
+    cursor: pointer;
+    border: 1px solid #DDDDDD;
+    border-top: none;
+   
 }
 
+#addMoudle .moudleType .options li:hover{
+	background: #ebebeb;
+}
 #addMoudle .moudleName input{
     width: 100%;
     height: 30px;
@@ -1774,6 +1793,7 @@
 #noticeDialog,#noticeMoudleDialog{
     margin-top: -306px;
 }
+#noticeDialog .addCourse{margin: -5px 0 0 0 ;}
 
 #noticeDialog .content,#noticeMoudleDialog .content{
     background: #fff;

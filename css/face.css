@@ -351,12 +351,20 @@
 
 	#courseSheet table tr td .edit{
 		display: block;
-		width: 14px;
-		height: 18px;
-		background: url(../images/courseManage.png) no-repeat 0px -50px;
+		width: 20px;
+		height: 16px;
+		background: url(../images/notice02.png) no-repeat 0px 0px;
 		margin-top: 0px;
+		margin-right: 5px;
 	}
-
+	#courseSheet table tr td .remove{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background: url(../images/notice02.png) no-repeat -21px -1px;
+		margin-top: 0px;
+		margin-right: 5px;
+	}
 	#courseSheet table tr th{
 		font-size: 14px;
 		color: #333;
@@ -382,14 +390,20 @@
 	}
 
 	#courseSheet table .opra{
-		width: 48px;
+		width: 62px;
 	}
 
 	#courseSheet .courseList{
 		border: 1px solid #eeeeee;
 		border-top: 0px;
 	}
-
+	.addface{ float: right; padding: 6px 10px 3px;line-height: 150%;margin: -5px 20px 0 0;}
+	.addface i {
+	    float: left;
+	    background: url(../images/courseManage.png) no-repeat -52px -101px;
+	    padding: 7px 7px;
+	    margin: 4px 0px 0 0;
+	}
 	#courseSheet .courseList td{
 		padding: 8px 0px;
 		border-bottom: 1px solid #eeeeee;
@@ -400,6 +414,7 @@
 		display: inline-block;
 		text-indent: 0px;
 		position: relative;
+		    vertical-align: middle;
 	}
 
 	#courseSheet .courseList td div ul{
@@ -446,7 +461,7 @@
 		line-height: 30px;
 		position: relative;
 		overflow: hidden;
-		top: 4px;
+		top: 0px;
 	}
 
 	#courseSheet .courseList .editStatu .resources .text{
@@ -552,9 +567,7 @@
 		border: 0px;
 	}
 
-	#courseSheet .editStatu div{
-		line-height: 40px;
-	}
+	
 
 	#courseSheet .editStatu .date{
 		width: 30px;
@@ -1376,7 +1389,7 @@
 	display: inline-block;
     width: 12px;
     height: 12px;
-    background: url(../images/courseManage.png) no-repeat -137px -282px;
+    background: url(../images/courseManage.png) no-repeat -139px -282px;
 }
 
 .list td .type.yituijian .bg{
@@ -1499,7 +1512,7 @@
 
 
 .courseListWrap .courseList .btnList .type{
-	margin-left: 0px;
+	/*margin-left: 0px;*/
 }
 
 
@@ -1761,7 +1774,53 @@
 	margin-top: 10px;
 	position: relative;
 }
-
+.addClasses .courseList .contentWrap i{right:10px}
+.mspx{height:30px;width: 93%;line-height: 30px;border: 1px solid #DDD; background: #F9FAFC;border-radius: 3px;}
+.pxlx .middleBorder {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    width: 7px;
+    border: 1px solid #dddddd;
+}
+.msbmrs{position: relative;float: left;width: 50%;}
+.msbmrsmar input{height: 30px;width: 100%;line-height: 30px;border: 1px solid #DDDDDD;border-radius:3px;text-indent: 6px;outline: none;}
+.msbmrsmar{margin-right: 10px;}
+.mspx .checkboxWrap{margin: 10px;vertical-align: sub;}
+.pxlx li .liBox {
+    position: relative;
+    background-color: #fff;
+    margin: 0 20px 20px 0;
+}
+.pxlx li .liBox p{margin-bottom: 10px;}
+.pxlx .contentWrap {
+    height: 30px;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    margin-top: 10px;
+    position: relative;
+}
+.pxlx .contentWrap input {
+    width: 70%;
+    border: 0px;
+    height: 30px;
+    text-indent: 4px;
+    outline: none;
+    line-height: 30px;
+    border-radius: 3px;
+}
+.pxlx .courseName span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 98px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #3e83f9;
+    color: #fff;
+    border-radius: 3px;
+}
 .addClasses .courseList .contentWrap input{
 	width: 100%;
 	border: 0px;

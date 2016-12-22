@@ -237,7 +237,7 @@
 			
 				<!--=S 搜索条件 -->
 				<div class="search face">
-					<h2>搜索条件<span class="red">*</span></h2>
+					<h2>搜索条件</h2>
 					<div class="form searchForm">
 						<form>
 							<ul class="controlList clearfix">
@@ -2174,6 +2174,26 @@
 							</div>
 						</li>
 					</ul>
+					<!--=S 分页 -->
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+					<!--=E 分页 -->
 					<!--=E 课程列表 -->
 				</div>
 				<!--=E 未发布课程列表 -->
@@ -3164,6 +3184,26 @@
 							</td>
 						</tr>
 					</table>
+						<!--=S 分页 -->
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+					<!--=E 分页 -->
 				</div>
 				<!--=E 已发布课程列表 -->
 				
@@ -3446,8 +3486,29 @@
 							</td>
 						</tr>
 					</table>
+					<!--=S 分页 -->
+					<div class="pages clearfix">
+						<a href="javascript:;" class="forbid prev"><i></i></a>
+						<!--<a href="#" class="prev"><i></i></a>-->
+						<a href="#" class="current">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="javascript:;" class="shenglue">......</a>
+						<a href="#" class="next"><i></i></a>
+						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
+						<span class="total">总：1440条</span>
+						
+						<span class="tiaozhuan">
+							<span class="">跳转到：</span>
+							<input type="text"><span class="goBtn">GO</span>
+						</span>
+					</div>
+					<!--=E 分页 -->
 				</div>
 				<!--=E 未发布课程列表 -->
+					
 			</div>
 			<!-- 列表形式E -->
 		</div>
@@ -3476,7 +3537,7 @@
 	<!-- 改变域 S -->
 	<div id="changField">
 		<div class="header">
-			<span>更改域设置</span>
+			<span>本地导入</span>
 			<span class="closePopup"></span>
 		</div>
 		<div class="tree">
@@ -3799,7 +3860,7 @@
 					<input type="file" onchange="upLoadFile( this )" />
 				</a>
 			</div>
-			<div class="fileArea">
+			<div class="fileArea" >
 				<div class="dragArea">
 					<div class="dragBtn">
 						<a href="javascript:void(0);"></a>

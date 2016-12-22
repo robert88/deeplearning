@@ -255,11 +255,18 @@
 						</li>
 						<li>
 							<label>创建人</label>
-							<input type="text" class="text" placeholder="" />
+							<div class="cjr">
+								<input type="text" class="text" placeholder="" />
+								<span class="peopel_icon"></span>
+							</div>
+							
 						</li>
 						<li>
 							<label>创建时间</label>
-							<input type="text" class="text" placeholder="" />
+							<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+							</div>
 						</li>
 						<li>
 							<label>审批状态</label>
@@ -286,7 +293,7 @@
 	
 			
 			<!--=S 全部课程列表 -->
-			<div class="courseListWrap current">
+			<div class="courseListWrap current videolist">
 				<div class="selectAll selectAllCourse">
 					<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
 				</div>
@@ -296,7 +303,7 @@
 								<div class="playBtn"><img src="./images/play.png" /></div>
 								<span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span>
 								<img src="images/courseImg.jpg" />
-								<p class="title"> 交互与视觉设计入门.mp4</p>
+								<p class="title"> 交互与视觉.mp4</p>
 								<div class="btnList">
 									<div class="type yifabu">
 										<span class="bg"></span>
@@ -726,14 +733,16 @@
 			
 		<!--=S 底部浮动栏-->
 		<div class="bottomFloatBar alignR">
-			<span class="btn">删<span class="opc">&nbsp;</span>除</span>
-			<span class="btn">下<span class="opc">&nbsp;</span>载</span>
+			<span class="btn globalDel">删<span class="opc">&nbsp;</span>除</span>
+			<a href="download.mp4" download="mp3"><span class="btn">下<span class="opc">&nbsp;</span>载</span></a>
 			<span class="btn blue J-popup" data-popup-id="#previewPagePopup" data-popup-page="./课件管理－01视频管理-更改域(弹窗).html">更换域</span>
 		</div>
 		<!--=E 底部浮动栏-->
 	</div>
 	<!--=E 主体内容 -->
 </div>
+
+</div>	
 <!--=E 主体内容区 -->
 <!-- footer -->
 <div class="footer">
@@ -929,7 +938,7 @@
 						<div class="statuArea">
 							<!-- 拖拽上传视频 -->
 							<div class="addVideoForm">
-								<div class="addDagangBtn">
+								<div class="addDagangBtn videodrop">
 									<i class="icon"></i>将文件拖拽至此区域
 								</div>
 							</div>
@@ -1012,6 +1021,7 @@
 									<span class="progressWrap"><span class="progress"><i class="num"></i></span>100%</span>
 								</li>
 							</ul>
+					
 						</div>
 
 					</div>
@@ -1022,7 +1032,7 @@
 					视频名称
 				</div>
 				<div class="videoFileName">
-					<input type="text" class="text" name="" value="交互与视觉设计入门.mp4">
+					<input type="text" class="text" name="" value="">
 				</div>
 
 			</div>
@@ -1471,14 +1481,14 @@
 				<div class="videoFile">
 					<div >
 						<p><img src="./images/video.png"></p>
-						<p>交互与视觉设计入门.mp4</p>
+						<p class="video_name">交互与视觉.mp4</p>
 					</div>
 				</div>
 				<div class="videoFileTitle">
 					视频名称
 				</div>
 				<div class="videoFileName">
-					<input type="text" class="text" name="" value="交互与视觉设计入门.mp4">
+					<input type="text" class="text" name="" value="输入图片名称">
 				</div>
 			</div>
 
@@ -1489,6 +1499,98 @@
 			</div>
 		</div>
 	</div>
+<script>
+	// 拖拽上传
 
+    		
+	 $(function() {
+      //必须将jq对象转换为js对象，调用原生方法
+   	  var oDiv = $(".videodrop").get(0);
+   	  var oP = $(".videodrop");    	
+      //进入
+      oDiv.ondragenter = function() {
+          oP.html('');
+        }
+        //移动，需要阻止默认行为，否则直接在本页面中显示文件
+      oDiv.ondragover = function(e) {
+          e.preventDefault();
+        }
+        //离开
+      oDiv.onleave = function() {
+          oP.html('请将图片文件拖拽至此区域！');
+        }
+        //拖拽放置，也需要阻止默认行为
+      oDiv.ondrop = function(e) {
+        e.preventDefault();
+        //获取拖拽过来的对象,文件对象集合
+        var fs = e.dataTransfer.files;
+        //若为表单域中的file标签选中的文件，则使用form[表单name].files[0]来获取文件对象集合
+        //打印长度
+        console.log(fs.length);
+        //循环多文件拖拽上传
+        for (var i = 0; i < fs.length; i++) {
+          //文件类型
+          var _type = fs[i].type;
+  		  var fileName = fs[i].name;
+  		  console.log(fileName);
+          console.log(_type);
+          //判断文件类型
+          if (_type.indexOf('video') != -1) {
+            //文件大小控制
+            console.log(fs[i].size);
+            //读取文件对象
+            var reader = new FileReader();
+            //读为DataUrl,无返回值
+            reader.readAsDataURL(fs[i]);
+            reader.onloadstart = function(e) {
+                //开始加载
+              }
+              // 这个事件在读取进行中定时触发
+            reader.onprogress = function(e) {
+             // $("#total").html(e.total);
+              
+            }
+            //当读取成功时触发，this.result为读取的文件数据
+            reader.onload = function() {
+                //文件数据
+                // console.log(this.result);
+                //添加文件预览
+    					var num = 0;
+				    	$("#createCourse").find(".filterForm").find(".green").css( "display","none" );
+				    	$("#createCourse").find(".filterForm").find("input").addClass("dn");
+				    	$("#createCourse").find(".filterForm").find(".gray").css( "display","block" );
+						$("#uploadVideo").find(".addVideoForm").addClass("dn");
+						$("#uploadVideo").find(".willUploadVideo").find("p").text( fileName );
+						var timer = setInterval( function(){
+							num++;
+							if( num == 100 ){
+								clearInterval(timer);
+								$("#uploadVideo").find(".willUploadVideo").find(".text").find('span').eq(1).text( "转码中" );
+								transCoding( fileName );
+							}
+							$("#uploadVideo").find(".willUploadVideo").find(".uploaded").css( "width", num + "%" );
+							$("#uploadVideo").find(".willUploadVideo").find(".num ").find("span").eq(0).text( num+"%" );
+						},50 );
+						$("#uploadVideo").find(".willUploadVideo").removeClass("dn");
+                
+              }
+              //无论成功与否都会触发
+            reader.onloadend = function() {
+              if (reader.error) {
+                console.log(reader.error);
+              } else {
+                //上传没有错误，ajax发送文件，上传二进制文件
+              }
+            }
+          } else {
+            alert('请上传视频文件！');
+          }
+        }
+ 
+      }
+    });
+
+	//拖拽上传 end
+</script>
 </body>
 </html>

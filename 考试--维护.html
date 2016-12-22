@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
-	<title>考试管理--列表显示</title>
+	<title>考试管理--维护</title>
 	<link href="css/datepicker.css" rel="stylesheet" />
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/course.css" rel="stylesheet" />
@@ -229,7 +229,7 @@
 			<!-- 面包屑 -->
 			<div class="crumbs">
 				<a href="index.html">首页</a> > <a href="#">考试管理</a> > <span class="current">考试维护</span>
-				<a href="#"><span class="addCourse btn green"><i></i>新增考试</span></a>
+				<a href="考试--编辑试卷.html"><span class="addCourse btn green"><i></i>新增考试</span></a>
 			</div>
 			
 			<!--=S 搜索条件 -->
@@ -321,7 +321,7 @@
 					<tr>
 						<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
 						<th>考试名称</th>
-						<th  colspan="3">基础信息</th>
+						<th colspan="3">基础信息</th>
 						<th>组卷类型</th>
 						<th>操作</th>
 					</tr>
@@ -353,21 +353,21 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="dagang iconBtn">
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>大纲</span>
+									</span>
+									<span class="quanxian iconBtn">
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>权限</span>
+									</span>
+									<span class="yulan iconBtn">
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>预览</span>
+									</span>
 							</div>
 						</td>
 					</tr>
@@ -399,21 +399,21 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="dagang iconBtn">
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>大纲</span>
+									</span>
+									<span class="quanxian iconBtn">
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>权限</span>
+									</span>
+									<span class="yulan iconBtn">
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>预览</span>
+									</span>
 							</div>
 						</td>
 					</tr>
@@ -445,21 +445,21 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>编辑</span>
+									</span>
+									<span class="dagang iconBtn">
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>大纲</span>
+									</span>
+									<span class="quanxian iconBtn">
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>权限</span>
+									</span>
+									<span class="yulan iconBtn">
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
+										<span class="tips"><i></i>预览</span>
+									</span>
 							</div>
 						</td>
 					</tr>
@@ -510,19 +510,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -538,19 +538,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -566,19 +566,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -594,19 +594,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -622,19 +622,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -650,19 +650,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -678,19 +678,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>
@@ -706,19 +706,19 @@
 								<span class="left_title">及格：80 满分100</span>
 								<div class="r">
 									<span class="editIcon iconBtn">
-										<span class="icon"></span>
+										<a href="考试--编辑试卷.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>编辑</span>
 									</span>
 									<span class="dagang iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>大纲</span>
 									</span>
 									<span class="quanxian iconBtn">
-										<span class="icon"></span>
+										<a href="考试--权限设置.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>权限</span>
 									</span>
 									<span class="yulan iconBtn">
-										<span class="icon"></span>
+										<a href="考试--关联课程--已关联.html"><span class="icon"></span></a>
 										<span class="tips"><i></i>预览</span>
 									</span>
 								</div>

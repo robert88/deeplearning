@@ -7,7 +7,7 @@
 	<title>考试--编辑试卷</title>
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/test.css" rel="stylesheet" />
-	
+	<link href="css/datepicker.css" rel="stylesheet" />
 </head>
 <body>
 <!--=S 头部 -->
@@ -227,7 +227,7 @@
 			<!-- 面包屑 -->
 			<div class="crumbs">
 				<a href="index.html">首页</a> > <a href="#">考试管理</a> > <span class="current">考试新增</span>
-				<a href="#"><span class="back"><i></i>返回</span></a>
+				<a href="考试--维护.html"><span class="back"><i></i>返回</span></a>
 			</div>
 			<!--=S 步骤 -->
 			<div class="step">
@@ -303,7 +303,10 @@
 					</li>
 					<li>
 						<label>有限期</label><span class="red">*</span>
-						<input type="text" class="text" placeholder="">
+						<div class="dateTime">
+									<span class="dateSelect"></span>
+									<input type="text" class="text" placeholder="">
+						</div>
 					</li>
 					<li>
 						<label>语言</label><span class="red">*</span>

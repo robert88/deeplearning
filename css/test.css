@@ -76,7 +76,7 @@
 .st_content{margin:15px;background:#FFF;border:1px solid #ddd}
 .dropList .options p{border-bottom:1px solid #ddd;text-indent:10px;height:30px;line-height:30px;cursor:pointer}
 .test_list_show .dropList .options{width:93%}
-.dropList .options{display:none;position:absolute;z-index:2;left:0;top:32px;width:100px;border:1px solid #ddd;border-bottom:none;border-radius:3px;background-color:#fff}
+.dropList .options{display:none;position:absolute;z-index:2;left:0;top:32px;width:93%;border:1px solid #ddd;border-bottom:none;border-radius:3px;background-color:#fff}
 .st_titleline{padding:10px;border-bottom:1px solid #ddd}
 .st_search input{height:30px;width:260px;outline:0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;border-left:none;text-indent:5px}
 .st_search_icon{background:#3e83fa;height:32px;width:45px;position:absolute;right:0;top:0;border-bottom-right-radius:4px;border-top-right-radius:4px;cursor:pointer}
@@ -94,6 +94,8 @@
 .st_table_td03{width:5%}
 .st_table_td04{width:68%;text-align:left}
 .st_table_td05{width:10%;text-align:right}
+.st_table_td04 h6{font-size: 14px;text-align: justify;line-height: 19px;}
+.st_table_td01 .checkbox i{margin:0 0 0 10px;}
 .checkbox i{display:inline-block;background:url(../images/courseManage.png) no-repeat 0 -100px;padding:8px 8px;cursor:pointer;vertical-align:sub;margin-right:10px}
 .checkbox.selected i{background-position:-26px -100px}
 .st_table_td04 p input{margin-right:10px}
@@ -152,7 +154,7 @@
 .randomtest_th05{width:10%}
 .st_answer input{width:50%;border:none;outline:0;background:#f9fafc}
 .cc_addcontent{padding:10px;background:#FFF;border:1px solid #ddd}
-.cc_title{padding:10px 0;font-size:16px}
+
 .model_test{margin-top:20px}
 .model_test table th{text-align:left}
 .cc_addDagangBtn{width:236px;height:161px;border:2px dashed #ddd;margin:100px auto;text-align:center}
@@ -162,7 +164,6 @@
 .checkbox input,.radio input{display:none}
 .back{float:right;margin:2px 20px 0 0}
 .back i{background:url(../images/courseManage.png) no-repeat -76px -99px;padding:0 0;margin-right:10px;height:16px;width:16px;vertical-align:sub;display:inline-block}
-.closePopup{float:right;color:#fff;z-index:2;background:url(../images/closeIcon.png) no-repeat 50% 50%/40%;font-size:0;height:40px;width:32px;cursor:pointer}
 .select_focus .remove_icon_selected{background:url(../images/notice02.png) no-repeat;margin-left:9px;height:22px;width:16px;display:inline-block;background-position:-22px -23px}
 .select_focus .edit_icon_selected{background:url(../images/notice02.png) no-repeat;margin-left:3px;height:22px;width:16px;display:inline-block;background-position:-2px -23px}
 .editli{position: relative;}
@@ -253,7 +254,7 @@
 #popup .uploadWrap.big .uploadInner p{display:inline-block}
 .titleBar{height:40px;line-height:40px;padding-left:10px;font-size:14px;background:#3e83f9;color:#fff}
 .closePopup{float:right;color:#fff;z-index:2;background:url(../images/closeIcon.png) no-repeat 50% 50%/40%;font-size:0;height:40px;width:32px;cursor:pointer}
-.content_margin{margin:20px;overflow-y:scroll;overflow-X:hidden}
+.content_margin{margin:20px 0 20px 20px;overflow-y:scroll;overflow-X:hidden}
 .content .selectAll{background:#f9fafc}
 .agd_right_showdiv{overflow-y:scroll;overflow-X:hidden;height:400px}
 .st_test_table{overflow-y:scroll;overflow-X:hidden;height:412px}
@@ -324,15 +325,17 @@
 #permission_changeDomainCont .btnWrap .save{background:#3e83f9;color:#fff;border:1px solid #1967ba}
 #permission_changeDomainCont .btnWrap .return{background:#fff;border:1px solid #bfbfbf}
 #permission_changeDomainCont .btnWrap a{font-size:14px;width:80px;text-align:center;height:30px;line-height:30px;border:1px solid #bfbfbf;border-radius:3px;margin-left:0;margin-right:20px}
-.qtzs{background:#FFF;padding:15px;margin-bottom:17px}
-.qtzs h4{margin-bottom:5px}
+.qtzs{background:#FFF;padding:15px}
+.qtzs h4{margin-bottom:5px;font-weight: 100;}
+.qtzs_margin{margin-right:20px;}
 .qtzs ul li{width:50%;float:left}
-.qtzs ul li input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:93%;font-size:14px}
-.task_textarea textarea{height:120px;width:96.26%;background:#f9fafc;border:1px solid #DDD;outline:0;resize:none}
-.task_textarea{padding:20px 0}
-.add_resource,.add_student{float:right;margin-top:-8px}
-.qtzs .dateTime{position:relative}
-.qtzs .dateTime .dateSelect{position:absolute;right:47px;top:7px;background:url(../images/courseManage.png) no-repeat 0 0;padding:8px 8px}
+.qtzs ul li input{border:1px solid #ddd;outline:0;border-radius:3px;background-color:#f9fafc;height:30px;line-height:30px;text-indent:12px;width:100%;font-size:14px}
+.task_textarea textarea{height:120px;width:100%;background:#f9fafc;border:1px solid #DDD;outline:0;resize:none}
+.task_textarea{padding-top:20px}
+.add_resource,.add_student{float:right;margin-top:-42px}
+.dateTime{position:relative}
+.qtzs .dateTime .dateSelect{position:absolute;right:5px;top:7px;background:url(../images/courseManage.png) no-repeat 0 0;padding:8px 8px}
+.manageSet .dateTime .dateSelect{position:absolute;right:33px;top:7px;background:url(../images/courseManage.png) no-repeat 0 0;padding:8px 8px}
 #select_group{position:absolute;height:600px;background:#f4f5f7;width:1180px;margin-left:-590px;margin-top:-300px;left:50%;top:50%;border-radius:5px;overflow:hidden;display:none}
 #select_group .tab{border-radius:0}
 .groupList{height:438px;overflow-y:scroll;overflow-x:hidden;border-radius:0}
@@ -341,7 +344,7 @@
 .gl_resource table{width:100%;text-align:left}
 .gl_resource .pages{padding:10px}
 .gl_resource{background:#FFF;border:1px solid #ddd}
-.gl_resource table th{background:#f9fafc;padding:8px 0;text-indent:5px;border-bottom:1px solid #DDD}
+.gl_resource table th{background:#f9fafc;padding:4px 0;text-indent:5px;border-bottom:1px solid #DDD}
 .gl_resource table td{padding:8px 0;border-bottom:1px solid #DDD;text-indent:5px;font-size:13px}
 .gl_resource table tr:first-child td{text-indent:10px}
 .gl_resource .dropDown_icon{margin:0 0 0 3px;display:inline-block;border-top:6px solid #666;border-left:4px solid transparent;border-right:4px solid transparent}
@@ -355,15 +358,18 @@
 .gl_dropList ul:before{content:"";display:inline-block;border-bottom:6px solid #ebebeb;border-left:4px solid transparent;border-right:4px solid transparent;float:left;margin-top:-6px;margin-left:38px}
 .gl_student{background:#FFF;border:1px solid #ddd}
 .gl_student table{width:100%;text-align:left}
-.gl_student table th{background:#f9fafc;padding:8px 0;text-indent:5px;border-bottom:1px solid #DDD}
+.gl_student table th{background:#f9fafc;padding:4px 0;text-indent:5px;border-bottom:1px solid #DDD}
+.first_td{padding-left:10px ;}
+.first_th{padding-left: 10px;}
 .gl_student table td{padding:8px 0;border-bottom:1px solid #DDD;text-indent:5px;font-size:13px}
 .gl_student .pages{margin:10px}
 .task_search .dropList .options{width:93%}
 .test_list_show .pages{padding:0 10px 10px 10px}
 .task_maintain table{width:100%;text-align:left;background:#FFF}
-.task_maintain table th{background:#f9fafc;padding:8px 0;text-indent:5px;border-bottom:1px solid #DDD}
+.task_maintain table th{text-indent:5px;}
 .task_maintain table td{padding:8px 0;border-bottom:1px solid #DDD;text-indent:5px;font-size:13px}
 .task_maintain .listView th .checkboxWrap{background:url(../images/courseManage.png) no-repeat;background-position:0 -100px;height:16px;width:16px;cursor:pointer;padding:0;display:inline-block;vertical-align:sub}
+.task_maintain .listView .checkboxWrap{margin-left: 10px;}
 .task_maintain .listView th .checkboxWrap.selected{background-position:-26px -100px}
 .task_maintain .courseList .btnList .iconBtn{display:initial}
 .task_maintain .courseList.listView .btnList{margin-top:0}

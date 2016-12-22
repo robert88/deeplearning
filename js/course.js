@@ -326,7 +326,41 @@
 	            uploadSrc = file.value;
 	          }
 	        }
+	        // 课程图片上传按钮
 
+			var uploadSrc = "";
+
+			function previewkcImage(file)
+	        {
+	          var div = document.getElementById('previewkcImage');
+	          if (file.files && file.files[0])
+	          {
+	              div.innerHTML ='<img id=imghead>';
+	              var img = document.getElementById('imghead');
+	              var reader = new FileReader();
+	              reader.onload = function(evt){
+	              	uploadSrc = img.src = evt.target.result;
+	        		$("#previewImg").find("src").attr( "src",uploadSrc );
+	              }
+	              reader.readAsDataURL(file.files[0]);
+	          }
+	          else //兼容IE
+	          {
+	            var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+	            file.select();
+	            var src = document.selection.createRange().text;
+	            div.innerHTML = '<img id=imghead>';
+	            var img = document.getElementById('imghead');
+	            img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+	            div.innerHTML = "<div id=divhead style='width:100%;height:100%;margin-top:0px;"+sFilter+src+"\"'></div>";
+	            uploadSrc = file.value;
+	          }
+	        }
+			//
+			$(document).on("click","#addclasspicPagePopup .save,#addclasspicPagePopup .return",function(){
+				$("#addclasspicPagePopup").hide();
+			});		
+		
 	        // 图片裁切
 
 	        $("#preview").find(".top").mousedown( function(e){
@@ -1164,6 +1198,8 @@
     		uploadPicture( file,fileSuffixes,fileName );
     	}else if( mustSuffixes.hasClass("webPage") ){
     		uploadWebPage( fileSuffixes,fileName );
+    	}else if( mustSuffixes.hasClass("doc") ){
+    		uploadDoc( fileSuffixes,fileName );
     	}
     }
 
@@ -1211,6 +1247,20 @@
     	$("#createCourse").find(".filterForm").find("input").addClass("dn");
     	$("#createCourse").find(".filterForm").find(".gray").css( "display","block" );
 		$("#uploadVideo").find(".addVideoForm").addClass("dn");
+		$("#uploadVideo").find(".willUploadVideo").find("p").text( fileName );
+		
+		var timer = setInterval( function(){
+			num++;
+			if( num == 100 ){
+				clearInterval(timer);
+				$("#uploadVideo").find(".willUploadVideo").find(".text").find('span').eq(1).text( "转码中" );
+				transCoding( fileName );
+			}
+			$("#uploadVideo").find(".willUploadVideo").find(".uploaded").css( "width", num + "%" );
+			$("#uploadVideo").find(".willUploadVideo").find(".num ").find("span").eq(0).text( num+"%" );
+		},50 );
+		$("#uploadVideo").find(".willUploadVideo").removeClass("dn");
+		
 	    if (obj.files && obj.files[0])
 	    {
 	   		for(var i=0 ;i<obj.files.length;i++){
@@ -1311,19 +1361,60 @@
 
     function uploadWebPage( fileSuffixes,fileName ){
     	var num = 0;
-    	if( !(fileSuffixes == "zip" || fileSuffixes == "rar") ){
+    	if( !(fileSuffixes == "html") ){
     			alert("文件类型不对");
     			return;
     	}
-    	$("#createCourse").find(".filterForm").find(".green").css( "display","none" );
+   	$("#createCourse").find(".filterForm").find(".green").css( "display","none" );
     	$("#createCourse").find(".filterForm").find("input").addClass("dn");
     	$("#createCourse").find(".filterForm").find(".gray").css( "display","block" );
 		$("#uploadVideo").find(".addVideoForm").addClass("dn");
+		$("#uploadVideo").find(".willUploadVideo").find("p").text( fileName );
+		var timer = setInterval( function(){
+			num++;
+			if( num == 100 ){
+				clearInterval(timer);
+				$("#uploadVideo").find(".willUploadVideo").find(".text").find('span').eq(1).text( "转码中" );
+				transCoding( fileName );
+			}
+			$("#uploadVideo").find(".willUploadVideo").find(".uploaded").css( "width", num + "%" );
+			$("#uploadVideo").find(".willUploadVideo").find(".num ").find("span").eq(0).text( num+"%" );
+		},50 );
+		$("#uploadVideo").find(".willUploadVideo").removeClass("dn");
 
 
     }
 
     // 网页上传 E
+      // 文档上传 S
+
+    function uploadDoc( fileSuffixes,fileName ){
+    	var num = 0;
+    	if( !(fileSuffixes == "doc"|| fileSuffixes == "docx" || fileSuffixes == "pptx"|| fileSuffixes == "xlsx" || fileSuffixes == "ppt") ){
+    			alert("文件类型不对");
+    			return;
+    	}
+   	$("#createCourse").find(".filterForm").find(".green").css( "display","none" );
+    	$("#createCourse").find(".filterForm").find("input").addClass("dn");
+    	$("#createCourse").find(".filterForm").find(".gray").css( "display","block" );
+		$("#uploadVideo").find(".addVideoForm").addClass("dn");
+		$("#uploadVideo").find(".willUploadVideo").find("p").text( fileName );
+		var timer = setInterval( function(){
+			num++;
+			if( num == 100 ){
+				clearInterval(timer);
+				$("#uploadVideo").find(".willUploadVideo").find(".text").find('span').eq(1).text( "转码中" );
+				transCoding( fileName );
+			}
+			$("#uploadVideo").find(".willUploadVideo").find(".uploaded").css( "width", num + "%" );
+			$("#uploadVideo").find(".willUploadVideo").find(".num ").find("span").eq(0).text( num+"%" );
+		},50 );
+		$("#uploadVideo").find(".willUploadVideo").removeClass("dn");
+
+
+    }
+
+    // 文档上传 E
 
     // 转码函数 S
 
@@ -1336,6 +1427,7 @@
 					$("#uploadVideo").find(".willUploadVideo").addClass("dn");
 					$("#uploadVideo").find(".success").removeClass("dn");
 					$("#uploadVideo").find(".success").find("p").text( name );
+					$("#createCourse").find(".videoFileName input").val(name);
 					$("#createCourse").find(".filterForm").find(".green").css( "display","block" );
 			    	$("#createCourse").find(".filterForm").find("input").removeClass("dn");
 			    	$("#createCourse").find(".filterForm").find(".gray").css( "display","none" );
@@ -1676,3 +1768,113 @@
 	})();
 
 // 树形结构 E
+
+// 考试维护大图列表切换
+ 		$(document).on("click",".bigimglisttab .bigImg",function(){
+ 			 $(this).addClass("current").parent().siblings().find(".listImg").removeClass("current");
+	   		 $(".zmhbigimgshow").show();
+	   		 $(".zmhlistshow").hide();
+ 	    });
+		$(document).on("click",".bigimglisttab .listImg",function(){
+ 			 $(this).addClass("current").parent().siblings().find(".bigImg").removeClass("current");
+	   		 $(".zmhlistshow").show();
+	   		 $(".zmhbigimgshow").hide();
+		});
+		
+		//视频修改名字
+		$(document).on("click",".videolist .liBox .btnList .editIcon",function(){
+			var video_name = $(this).parents(".btnList").siblings(".title").html();
+	   		$("#editPagePopup .video_name").html(video_name);
+	   		$(".videoFileName input").val(video_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editPagePopup .save",function(){
+			var video_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editPagePopup").attr("data-index");
+	   		$(".videolist li").eq(index).find(".title").html(video_name);
+		});
+		//文档修改名字
+		$(document).on("click",".documentlist .liBox .btnList .editIcon",function(){
+			var document_name = $(this).parents(".btnList").siblings(".litopwrap").find("p").html();
+	   		$("#editPagePopup .document_name").html(document_name);
+	   		$(".videoFileName input").val(document_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editPagePopup .save",function(){
+			var document_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editPagePopup").attr("data-index");
+	   		$(".documentlist li").eq(index).find("p").html(document_name);
+		});
+		//图片专区banner修改名字
+		$(document).on("click",".imglist .liBox .btnList .editIcon",function(){
+			var img_name = $(this).parents(".r").siblings(".type").find(".text").html();
+	   		$("#editbannarPagePopup .videoFileName input").val(img_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editbannarPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editbannarPagePopup .save",function(){
+			var img_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editbannarPagePopup").attr("data-index");
+	   		$(".imglist li").eq(index).find(".text").html(img_name);
+		});
+		//图片子门户banner修改名字
+		$(document).on("click",".zmhbannerlist .liBox .btnList .editIcon",function(){
+			var img_name = $(this).parents(".r").siblings(".type").find(".text").html();
+	   		$("#editzmhbannarPagePopup .videoFileName input").val(img_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editzmhbannarPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editzmhbannarPagePopup .save",function(){
+			var img_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editzmhbannarPagePopup").attr("data-index");
+	   		$(".zmhbannerlist li").eq(index).find(".text").html(img_name);
+		});
+		//图片课程图片修改名字
+		$(document).on("click",".kctplist .liBox .btnList .editIcon",function(){
+			var img_name = $(this).parents(".r").siblings(".type").find(".text").html();
+	   		$("#editclasspicPagePopup .videoFileName input").val(img_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editclasspicPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editclasspicPagePopup .save",function(){
+			var img_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editclasspicPagePopup").attr("data-index");
+	   		$(".kctplist li").eq(index).find(".text").html(img_name);
+		});
+		//图片logo修改名字
+		$(document).on("click",".logolist .liBox .btnList .editIcon",function(){
+			var logo_name = $(this).parents(".r").siblings(".type").find(".text").html();
+	   		$("#editPicPagePopup .logo_name").html(logo_name);
+	   		$(".videoFileName input").val(logo_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editPicPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editPicPagePopup .save",function(){
+			var logo_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editPicPagePopup").attr("data-index");
+	   		$(".logolist li").eq(index).find(".text").html(logo_name);
+		});
+		//网页修改名字
+		$(document).on("click",".weblist .liBox .btnList .editIcon",function(){
+			var web_name = $(this).parents(".btnList").siblings(".litopwrap").find("p").html();
+			$("#editPagePopup .web_name").html(web_name);
+	   		$("#editPagePopup .videoFileName input").val(web_name);
+	   		var index = $(this).parents("li").index();
+	   		$("#editPagePopup").attr("data-index",index);
+		});
+		$(document).on("click","#editPagePopup .save",function(){
+			var web_name = $(this).parents(".popupBtnWrap").siblings(".popupWrap").find(".videoFileName").find("input").val();
+			var index = $("#editPagePopup").attr("data-index");
+	   		$(".weblist li").eq(index).find(".litopwrap").find("p").html(web_name);
+		});
+		
+		$(document)	.on( "click",".select_test_returnBtn,.select_test_sureBtn",function(){
+			$("body").css( "overflow","visible" );
+			$("#previewPagePopup").hide();
+			$("#addObjectPagePopup").hide();
+		});
+		
+
+	

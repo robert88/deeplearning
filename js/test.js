@@ -130,7 +130,7 @@ $(document).ready(function(){
 			$("#edit_test").css( "display","block" );
 		}); 
 		//考试 添加题目
-		$(".select_test_ture").on("click",function(){
+	/*	$(".select_test_ture").on("click",function(){
 				var	nums = $(".st_list table tr:last").find(".st_table_td03").html();
 				var numsstr=nums.substring(0,nums.length-1);
 				var numsstradd = parseInt(numsstr)+1;
@@ -154,17 +154,18 @@ $(document).ready(function(){
 					content += '</tr>';
 				$(".st_list tbody").append(content);							
 				
-		}); 
+		}); */
 		//考试 添加题目返回按钮
 		$(".st_back_btn,.backselecttest").on("click",function(){
-			$("#previewPagePopup").css( "display","block" );
+			//$("#previewPagePopup").css( "display","block" );
 			$("#select_test").css( "display","block" );
 			$("#edit_test").css( "display","none" );
 		}); 
 		$("#edit_test").find(".closePopup").on( "click",function(){
-			$("#edit_test").hide();
+			//$("#edit_test").hide();
 			$("body").css( "overflow","visible" );
 			$("#previewPagePopup").hide();
+			$("#addObjectPagePopup").hide();
 		});
 		
 		//随机组卷radio
@@ -235,6 +236,7 @@ $(document).ready(function(){
 			$("#permission_add_group").hide();
 			$("body").css( "overflow","visible" );
 			$("#previewPagePopup").hide();
+			$("#addStudentPop").hide();	
 		});
 		//权限维护按钮悬浮提示语
 		$(".permission_table .btnList .iconBtn").hover(function(){

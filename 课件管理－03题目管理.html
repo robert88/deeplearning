@@ -9,7 +9,6 @@
 	<link href="css/common.css" rel="stylesheet" />
 	<link href="css/course.css" rel="stylesheet" />
 	<link href="css/courseware.css" rel="stylesheet" />
-	<link href="css/coursewareobject.css" rel="stylesheet" />
 </head>
 <body>
 <!--=S 头部 -->
@@ -251,11 +250,17 @@
 							</li>
 							<li>
 								<label>创建人</label>
-								<input type="text" class="text" placeholder="" />
+								<div class="cjr">
+									<input type="text" class="text" placeholder="" />
+									<i class="peopel_icon"></i>
+								</div>
 							</li>
 							<li>
 								<label>创建日期</label>
-								<input type="text" class="text" placeholder="" />
+								<div class="dateTime">
+								<span class="dateSelect"></span>
+								<input type="text" class="text" placeholder="">
+								</div>
 							</li>
 							<li>
 								<label>题目类型</label>
@@ -281,14 +286,14 @@
 			<!--=E 搜索条件 -->
 					
 			<!--=S 全部课程列表 -->
-			<div class="courseListWrap current">
+			<div class="courseListWrap current tmgl">
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
 					<tr>
-						<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
-						<th>课程名称</th>
-						<th>基础信息</th>
-						<th>课程状态</th>
-						<th class="rightTh" style=""><span style="">操作</span></th>
+						<th class="testgl_th01"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
+						<th class="testgl_th02">课程名称</th>
+						<th class="testgl_th03" colspan="2">基础信息</th>
+						<th class="testgl_th04">课程状态</th>
+						<th class="rightTh testgl_th05"><span style="">操作</span></th>
 					</tr>
 					<tr>
 						<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
@@ -296,16 +301,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -318,7 +319,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -330,16 +331,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -352,7 +349,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -364,20 +361,16 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
-								<span class="type blue">
+								<span class="type blue panduan">
 								<span class="bg"></span>
 								<span class="text">判断</span>
 								</span>
@@ -386,7 +379,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -398,16 +391,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -420,7 +409,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -432,16 +421,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -454,7 +439,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -466,16 +451,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -488,7 +469,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -500,16 +481,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -522,7 +499,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -534,16 +511,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -556,7 +529,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -568,16 +541,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -590,7 +559,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -602,16 +571,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -624,7 +589,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -636,16 +601,12 @@
 							<p class="title" >如何组织小组讨论才能更高效</p>
 						</td>
 						<td>
-							<ul class="floatList col2">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-							</ul>
+							<p>创建人：lwx327814</p>
+							<p>更新人：lwx327814</p>
+						</td>
+						<td>	
+							<p>创建时间：2015.04.12</p>
+							<p>更新时间：2015.04.12</p>
 						</td>
 						<td>
 							<div class="btnList">
@@ -658,7 +619,7 @@
 						<td>
 							<div class="btnList">
 								<span class="editIcon iconBtn">
-									<span class="icon"></span>
+									<span class="icon J-popup" data-popup-id="#addObjectPagePopup" data-popup-page="./课件管理－03题目管理-新增题目(弹窗).html"></span>
 									<span class="tips"><i></i>编辑</span>
 								</span>
 							</div>
@@ -668,229 +629,13 @@
 			</div>
 			<!--=E 已发布课程列表 -->
 			
-			<!--=S 未发布课程列表 -->
-			<div class="courseListWrap">
-				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="courseList listView">
-					<tr>
-						<th><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></th>
-						<th>课程名称</th>
-						<th>基础信息</th>
-						<th>课程状态</th>
-						<th>操作</th>
-					</tr>
-					<tr>
-						<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-						<td>
-							<img src="images/courseImg2.jpg" />
-							<div class="desc">
-								<p class="title">如何组织小组讨论才能更高效</p>
-								<p class="code">201604858994822</p>
-								<p class="language">中文</p>
-							</div>
-						</td>
-						<td>
-							<ul class="floatList col3">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-								<li>
-									客户端：PC端，移动端
-								</li>
-							</ul>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="type weifabu">未发布</span>
-							</div>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-						<td>
-							<img src="images/courseImg2.jpg" />
-							<div class="desc">
-								<p class="title">如何组织小组讨论才能更高效</p>
-								<p class="code">201604858994822</p>
-								<p class="language">中文</p>
-							</div>
-						</td>
-						<td>
-							<ul class="floatList col3">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-								<li>
-									客户端：PC端，移动端
-								</li>
-							</ul>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="type weifabu">未发布</span>
-							</div>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-						<td>
-							<img src="images/courseImg2.jpg" />
-							<div class="desc">
-								<p class="title">如何组织小组讨论才能更高效</p>
-								<p class="code">201604858994822</p>
-								<p class="language">中文</p>
-							</div>
-						</td>
-						<td>
-							<ul class="floatList col3">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-								<li>
-									客户端：PC端，移动端
-								</li>
-							</ul>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="type weifabu">未发布</span>
-							</div>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="radio"><span class="checkboxWrap"><input type="checkbox" class="checkbox" /></span></td>
-						<td>
-							<img src="images/courseImg2.jpg" />
-							<div class="desc">
-								<p class="title">如何组织小组讨论才能更高效</p>
-								<p class="code">201604858994822</p>
-								<p class="language">中文</p>
-							</div>
-						</td>
-						<td>
-							<ul class="floatList col3">
-								<li>
-									创建人：lwx327814<br />
-									更新人：lwx327814
-								</li>
-								<li>
-									创建时间：2015.04.12<br />
-									更新时间：2015.04.12
-								</li>
-								<li>
-									客户端：PC端，移动端
-								</li>
-							</ul>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="type weifabu">未发布</span>
-							</div>
-						</td>
-						<td>
-							<div class="btnList">
-								<span class="editIcon iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>编辑</span>
-								</span>
-								<span class="dagang iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>大纲</span>
-								</span>
-								<span class="quanxian iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>权限</span>
-								</span>
-								<span class="yulan iconBtn">
-									<span class="icon"></span>
-									<span class="tips"><i></i>预览</span>
-								</span>
-							</div>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<!--=E 未发布课程列表 -->
+		
 		</div>
 		
 		<!--=S 底部浮动栏-->
 		<div class="bottomFloatBar alignR">
-			<span class="btn">删<span class="opc">&nbsp;</span>除</span>
-			<span class="btn">下<span class="opc">&nbsp;</span>载</span>
+			<span class="btn globalDel">删<span class="opc">&nbsp;</span>除</span>
+			<a href="download.mp4" download="mp3"><span class="btn">下<span class="opc">&nbsp;</span>载</span></a>
 			<span class="btn blue J-popup" data-popup-id="#previewPagePopup" data-popup-page="./课件管理－01视频管理-更改域(弹窗).html">更换域</span>
 		</div>
 		<!--=E 底部浮动栏-->
@@ -910,7 +655,7 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
-
+<script src="js/test.js"></script>
 <link href="css/test.css" rel="stylesheet" />
 <style type="text/css">
 	#addObjectPagePopup .edit_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
@@ -924,143 +669,163 @@
 	<div class="mask"></div>
 
 	<!--=E 新增题目 弹窗-->
-	<div class="edit_test select_test" style="display: block;">
-		<div class="titleBar">编辑试卷
-			<span class="closePopup J-close"></span>
-		</div>
-		<table border="0" cellspacing="0" cellpadding="0">
-			<tbody><tr>
-				<td class="st_leftside">
-					<div>
-						<ul>
-							<li class="select_focus"><p>华大入职礼仪八级考试</p><i class="remove_icon_selected"></i></li>
-							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
-							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
-							<li><p>华大入职礼仪八级考试</p><i class=""></i></li>
-						</ul>
-						<div class="add_test">
-							添加题库
-						</div>
-					</div>
-				</td>
-				<td class="st_rightside">
-					<div class="st_content">
-
-						<div class="st_list ">
-							<div class="st_titleline ">
-								<div class="radioWrap clearfix">
-									<label>题目类型：</label>
-									<span class="multiple_choice_span radio selected"><i></i>多选题<input type="radio" name="select" id="multiple_choice_radio" value="多选题" checked="checked"></span>
-									<span class="single_choice_span radio "><i></i>单选题<input type="radio" name="select" id="single_choice_radio" value="单选题"></span>
-									<span class="tfng_choice_span radio "><i></i>判断题<input type="radio" name="select" id="tfng_choice_radio" value="判断题"></span>
-								</div>
-								<div class="st_back_btn">
-									<i></i>返回
-								</div>
+	<div class="edit_test select_test" style="display: block;" id="edit_test">
+				<div class="titleBar">编辑试卷
+				<span class="closePopup"></span>
+				</div>
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tbody><tr>
+						<td class="st_leftside">
+						<div>
+							<ul>
+								<li class="select_focus">
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>	
+								</li>
+								<li>
+										<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+										</div>
+										<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+								<li>
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+								<li>
+									<div class="neirongk">
+											<p>华大入职礼仪八级考试华大入职礼仪八级考试</p>
+											<s class="edit_icon_selected"></s><i class="remove_icon_selected"></i>
+									</div>
+									<div class="editli hidden"><input type="text"><i class="queren_gou"></i></div>
+								</li>
+							</ul>
+							<div class="add_test">
+								添加题库
 							</div>
-							<div class="st_padding">
-								题干
-								<div class="edit_box">
-									<div class="edit_box_bar">
-										<img src="images/notice01.jpg">
-									</div>
-									<div class="edit_box_area">
-										<textarea></textarea>
-									</div>
-								</div>
-
-								<div class="st_answer">
-									<div class="st_answer_title">
-										正确选项&nbsp;&nbsp;&nbsp; 答案
-										<span>操作</span>
-									</div>
-									<!--多选-->
-									<ul class="multiple_choice">
-										<li>
-											<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<div class="st_answer_addli multiple_choice_addli"><i></i>新增选项</div>
-									</ul>
-									<!--单选-->
-									<ul class="single_choice hidden">
-										<li>
-											<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<div class="st_answer_addli single_choice_addli"><i></i>新增选项</div>
-									</ul>
-									<!--判断-->
-									<ul class="tfng_choice hidden">
-										<li>
-											<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<li>
-											<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
-											<input type="text" name="" id="" value="">
-											<s class="remove_choice"></s>
-										</li>
-										<div class="st_answer_addli tfng_choice_addli"><i></i>新增选项</div>
-									</ul>
-
-								</div>
-								<div class="st_answer_explain">
-									答案解释
-									<input type="text" name="" id="" value="">
-								</div>
-
-							</div>
-
 						</div>
-					</div>
-					<p class="st_list_btn">
-						<span id="popupCancle" style="" class="btn white J-close">返回</span>
-						<span id="popupComfirm" style="" class="btn blue J-close">确定</span>
-					</p>
-				</td>
-			</tr>
-			</tbody></table>
-
-
-	</div>
+						</td>
+						<td class="st_rightside">
+							<div class="st_content">
+									
+									
+									<div class="st_list ">
+										<div class="st_titleline ">
+										<div class="radioWrap clearfix">
+										<label>题目类型：</label>
+										<span class="multiple_choice_span radio selected"><i></i>多选题<input type="radio" name="select" id="multiple_choice_radio" value="多选题" checked="checked"></span>
+										<span class="single_choice_span radio "><i></i>单选题<input type="radio" name="select" id="single_choice_radio" value="单选题"></span>
+										<span class="tfng_choice_span radio "><i></i>判断题<input type="radio" name="select" id="tfng_choice_radio" value="判断题"></span>
+										</div>
+										
+									</div>
+										<div class="st_padding">
+											题干
+											<div class="edit_box">
+												<div class="edit_box_bar">
+													<img src="images/notice01.jpg">
+												</div>
+												<div class="edit_box_area">
+													<textarea></textarea>
+												</div>
+											</div>
+											
+											<div class="st_answer">
+												<div class="st_answer_title">
+													正确选项&nbsp;&nbsp;&nbsp; 答案
+													<span>操作</span>
+												</div>
+												<!--多选-->
+												<ul class="multiple_choice">
+													<li>
+														<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox selected"><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="checkbox "><i></i><input type="checkbox" name="" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli multiple_choice_addli"><i></i>新增选项</div>
+												</ul>
+												<!--单选-->
+												<ul class="single_choice hidden">
+													<li>
+														<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli single_choice_addli"><i></i>新增选项</div>
+												</ul>
+												<!--判断-->
+												<ul class="tfng_choice hidden">
+													<li>
+														<span class="my_radio selected"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<li>
+														<span class="my_radio"><i></i><input type="radio" name="1" id="" value=""></span>
+														<input type="text" name="" id="" value="">
+														<s class="remove_choice"></s>
+													</li>
+													<div class="st_answer_addli tfng_choice_addli"><i></i>新增选项</div>
+												</ul>
+												
+											</div>
+											<div class="st_answer_explain">
+												答案解释
+												<input type="text" name="" id="" value="">
+											</div>
+											
+										</div>
+										
+									</div>
+								</div>
+							<p class="st_list_btn"><span class="btn white select_test_returnBtn">返回</span><span class="btn blue select_test_sureBtn">确定</span></p>
+						</td>
+					</tr>
+				</tbody></table>
+				
+				
+			</div>
 	<!--=E 新增题目 弹窗-->
 
 </div>
-<script src="js/test.js"></script>
+
 <!--  -->
 <style type="text/css">
 	#importPagePopup .changField{
@@ -1076,7 +841,7 @@
 		opacity: 0;
 		filter: Alpha(opacity=0);
 		position: absolute;
-		right: 35px;
+		right: 0;
 	}
 	#importPagePopup  .addVideoForm{
 		padding-left:4px;
@@ -1200,7 +965,7 @@
 					<div class="statuArea">
 						<!-- 拖拽上传视频 -->
 						<div class="addVideoForm">
-							<div class="addDagangBtn">
+							<div class="addDagangBtn docdrop">
 								<i class="icon"></i>将文件拖拽至此区域
 							</div>
 						</div>
@@ -1298,6 +1063,497 @@
 	</div>
 
 </div>
+
+	<!--  -->
+	<div id="previewPagePopup" class="pagePopup">
+		<div class="mask"></div>
+		<div class="changField">
+			<div class="header">
+				<span>更改域设置</span>
+				<span class="closePopup J-close"></span>
+			</div>
+
+			<div class="tree popupWrap">
+				<ul class="menuWrap">
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">华为大学</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学eee</span>
+								</div>
+								<span class="bg fl"></span>
+
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学eee</span>
+										</div>
+										<span class="bg fl"></span>
+
+
+										<ul class="subMenu">
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl"></span>
+											</li>
+
+											<li>
+												<div class="desc">
+													<span class="triangle" style="display: none;"></span>
+													<span class="radio"></span>
+													<span class="text">华为大学</span>
+												</div>
+												<span class="bg fl" style="background-position: -62px -54px;"></span>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">产品与解决方案</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+								<ul class="subMenu">
+									<li>
+										<div class="desc">
+											<span class="triangle" style="display: none;"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl"></span>
+									</li>
+
+									<li>
+										<div class="desc">
+											<span class="triangle"></span>
+											<span class="radio"></span>
+											<span class="text">华为大学</span>
+										</div>
+										<span class="bg fl" style="background-position: -62px -54px;"></span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">消费者bg</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+
+					<li class="mainMenu">
+						<div class="desc">
+							<span class="triangle"></span>
+							<span class="radio"></span>
+							<span class="text">项目管理资源池</span>
+						</div>
+						<ul class="subMenu">
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl"></span>
+							</li>
+
+							<li>
+								<div class="desc">
+									<span class="triangle"></span>
+									<span class="radio"></span>
+									<span class="text">华为大学</span>
+								</div>
+								<span class="bg fl" style="background-position: -62px -54px;"></span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btnWrap">
+				<a href="javascript:void(0);" class="save fr J-close">保存</a>
+				<a href="javascript:void(0);" class="return fr J-close">取消</a>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+        // 树形结构 S
+
+        (function(){
+            var $tree = $("#previewPagePopup").find(".tree")
+            var liDom =$tree.find("li");
+            if( liDom.find("ul").hasClass("subMenu") ){
+                var bgDom =$tree.find( ".bg" );
+                for( var i = 0;i < bgDom.length; i++ ){
+                    var last = bgDom.eq(i).parent().parent().children().length-1;
+                    // 改变样式
+                    if( bgDom.eq(i).parent().parent().hasClass("subMenu") && ( bgDom.eq(i).parent().index() == last ) ){
+                        bgDom.eq(i).css( { "backgroundPosition":"-62px -54px"  } );
+                        bgDom.eq(i).parent().css( "backgroundImage","none" );
+                    }
+                }
+            }
+
+            // 没有子菜单的隐藏三角图标
+
+            for( var i = 0; i<liDom.length;i++ ){
+                if( !( liDom.eq(i).find("ul").hasClass("subMenu")) ){
+                    liDom.eq(i).find(".triangle").css( "display","none" );
+                }
+            }
+
+            // 点击三角图标收缩展开子菜单
+
+            $tree.find(".triangle").on( "click",function(){
+
+                $(this).toggleClass( "active" );
+                if( $(this).hasClass("active") ){
+                    $(this).parent().siblings("ul").slideDown();
+                }else{
+                    $(this).parent().siblings("ul").slideUp();
+                }
+            } );
+
+            // 单选操作
+
+            $tree.find(".radio").on( "click",function(){
+                $tree.find(".radio").removeClass("active");
+                $(this).toggleClass( "active" );
+
+                // 有子菜单的情况下
+                if( $(this).parent().siblings().find("span").hasClass("radio") ){
+                    $(this).removeClass("active");
+                    if( $(this).hasClass("active") ){
+                        $(this).parent().siblings().find(".radio").addClass("active");
+                    }else{
+                        $(this).parent().siblings().find(".radio").removeClass("active");
+                    }
+                }
+            } );
+
+        })();
+
+        // 树形结构 E
+	</script>
+
+<script>
+	// 拖拽上传
+	 $(function() {
+      //必须将jq对象转换为js对象，调用原生方法
+   	  var oDiv = $(".docdrop").get(0);
+   	  var oP = $(".docdrop");    	
+      //进入
+      oDiv.ondragenter = function() {
+          oP.html('');
+        }
+        //移动，需要阻止默认行为，否则直接在本页面中显示文件
+      oDiv.ondragover = function(e) {
+          e.preventDefault();
+        }
+        //离开
+      oDiv.onleave = function() {
+          oP.html('请将文件拖拽至此区域！');
+        }
+        //拖拽放置，也需要阻止默认行为
+      oDiv.ondrop = function(e) {
+        e.preventDefault();
+        //获取拖拽过来的对象,文件对象集合
+        var fs = e.dataTransfer.files;
+        //若为表单域中的file标签选中的文件，则使用form[表单name].files[0]来获取文件对象集合
+        console.log(fs.length);
+        //循环多文件拖拽上传
+        for (var i = 0; i < fs.length; i++) {
+          //文件类型
+          var _type = fs[i].type;
+  		  var fileName = fs[i].name;
+  		  console.log(fileName);
+          var fileSuffixes = fileName.split( "\." )[ fileName.split( "\." ).length-1 ];
+          //判断文件类型
+          if ( fileSuffixes == "doc"|| fileSuffixes == "docx" || fileSuffixes == "pptx"|| fileSuffixes == "xlsx" || fileSuffixes == "ppt") {
+            //文件大小控制
+            console.log(fs[i].size);
+            //读取文件对象
+            var reader = new FileReader();
+            //读为DataUrl,无返回值
+            reader.readAsDataURL(fs[i]);
+            reader.onloadstart = function(e) {
+                //开始加载
+              }
+              // 这个事件在读取进行中定时触发
+            reader.onprogress = function(e) {
+             // $("#total").html(e.total);
+              
+            }
+            //当读取成功时触发，this.result为读取的文件数据
+            reader.onload = function() {
+                //文件数据
+                // console.log(this.result);
+                //添加文件预览
+    					var num = 0;
+				    	$("#createCourse").find(".filterForm").find(".green").css( "display","none" );
+				    	$("#createCourse").find(".filterForm").find("input").addClass("dn");
+				    	$("#createCourse").find(".filterForm").find(".gray").css( "display","block" );
+						$("#uploadVideo").find(".addVideoForm").addClass("dn");
+						$("#uploadVideo").find(".willUploadVideo").find("p").text( fileName );
+						var timer = setInterval( function(){
+							num++;
+							if( num == 100 ){
+								clearInterval(timer);
+								$("#uploadVideo").find(".willUploadVideo").find(".text").find('span').eq(1).text( "转码中" );
+								transCoding( fileName );
+							}
+							$("#uploadVideo").find(".willUploadVideo").find(".uploaded").css( "width", num + "%" );
+							$("#uploadVideo").find(".willUploadVideo").find(".num ").find("span").eq(0).text( num+"%" );
+						},50 );
+						$("#uploadVideo").find(".willUploadVideo").removeClass("dn");
+                
+              }
+              //无论成功与否都会触发
+            reader.onloadend = function() {
+              if (reader.error) {
+                console.log(reader.error);
+              } else {
+                //上传没有错误，ajax发送文件，上传二进制文件
+              }
+            }
+          } else {
+            alert('请上传文档文件！');
+          }
+        }
+ 
+      }
+    });
+
+	//拖拽上传 end
+</script>
 
 </body>
 </html>

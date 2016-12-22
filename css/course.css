@@ -2,18 +2,21 @@
 /* 课程管理 */
 		.addBtn,
 		.addCourse,
-		.videoUploadBtn{float:right;padding:6px 20px 3px;line-height:150%;margin: -5px 20px 0 0;}
+		.videoUploadBtn{float:right;padding:6px 20px 3px;line-height:150%;margin: -5px 0 0 0;}
 		.videoUploadBtn{margin-top:0;}
 		.addBtn i,
 		.addCourse i,
-		.videoUploadBtn .icon{float:left;background:url(../images/courseManage.png) no-repeat -52px -101px;padding:7px 7px;margin:2px 7px 0 0;}
+		.videoUploadBtn .icon{float:left;background:url(../images/courseManage.png) no-repeat -52px -101px;padding:7px 7px;margin:4px 7px 0 0;}
 		.videoUploadBtn.gray{background-color:#b5b5b5;border-color:#959595;cursor:default;}		
 		.videoUploadBtn.gray:hover{background-color:#b5b5b5;}
+		.hidden{display: none;}
 		/* 搜索条件 */
 		.search{margin-bottom:40px;}
 		.search h2{font-size:20px;font-weight:normal;left:100%;margin:40px 0 10px;}
 		.search h2 span{margin-left:15px;}
 		.form{}
+		.peopel_icon{background: url(../images/courseManage.png) no-repeat -98px -254px; width: 16px;height: 30px;position: absolute;right: 33px;top: 7px;display: inline-block;}
+		.cjr{position: relative;}
 		.form .controlList{clear:both;overflow:hidden;border:1px solid #ddd;border-radius:3px;background-color:#fff;padding:20px 20px 0;}
 		.form.searchForm .controlList.course{border-bottom:none;height:75px;}
 		.form .controlList li{float:left;width:33.33%;margin-bottom:20px;}
@@ -72,6 +75,7 @@
 
 		.courseList .btnList .type.yifabu .bg{display: inline-block;width: 12px;height: 12px;background:url(../images/courseManage.png) no-repeat -137px -282px;}
 		.courseList .btnList .type.yituijian .bg{display: inline-block;width: 12px;height: 12px;background:url(../images/courseManage.png) no-repeat -80px -282px;}
+		.courseList .btnList .type.panduan .bg{display: inline-block;width: 12px;height: 12px;background:url(../images/courseManage.png) no-repeat -121px -282px;}
 		.courseList .btnList .type.weifabu .bg{display: inline-block;width: 12px;height: 12px;background:url(../images/courseManage.png) no-repeat -102px -282px;}
 		.courseList .btnList .iconBtn{position:relative;display:inline-block;margin-top:16px;line-height:100%;}
 		.courseList .btnList .iconBtn .tips{display:none;position:absolute;left:50%;top:26px;margin-left:-24px;background-color:#161e2b;color:#fff;padding:4px 10px;border-radius:3px;white-space:nowrap;}
@@ -135,6 +139,11 @@
 		.listView td .desc .title{font-size:16px;margin-bottom:5px;}
 		.listView td .floatList{}
 		.courseList.listView .btnList{height:auto;border:none;margin-top:-10px;}
+		.testgl_th01{width: 5%;}
+		.testgl_th02{width: 35%;}
+		.testgl_th03{width: 40%;}
+		.testgl_th04{width: 10%;}
+		.testgl_th05{width: 10%;}
 		/* 更改域 */
 		.changeDomainCont{padding:20px;background: #FFF;}
 		.changeDomainCont .title{margin-bottom:8px;}
@@ -142,7 +151,7 @@
 		.changeDomainCont .dropList .options{width:99%;}
 		.changeDomainCont .dropList .options{height:125px;overflow:auto;}
 /* 新增课程 基本资料 */
-		.back{float:right;margin:2px 20px 0 0;}
+		.back{float:right;margin:2px 0 0 0;}
 		.back i{background:url(../images/courseManage.png) no-repeat -76px -99px;padding:0px 0px;margin-right:10px;height: 16px; width: 16px;vertical-align: sub; display: inline-block;}
 		/* 步骤 */
 		.step{background:#fff;border:1px solid #ddd;border-radius:5px;margin:20px 0;height:58px;line-height:58px;font-size:18px;}
@@ -228,6 +237,8 @@
 		#uploadPic .btn{margin: 0px; padding-left: 40px;}
 		#previewImg{margin-right: 20px;height: 270px;margin-bottom: 10px;}
 		#previewImg img{width: 100%;height: 100%;}
+		#previewkcImg{margin-right: 20px;height: 270px;margin-bottom: 10px;}
+		#previewkcImg img{width: 100%;height: 100%;}
 		#uploadPic .content h2{margin: 0px 0px 6px 10px;font-size: 24px;}
 		#uploadPic .btnWrap{background: #e0e4ef;padding: 10px 0px;}
 		#uploadPic .btnWrap a{font-size: 14px;float: right;margin-right: 20px;border-radius: 3px;}
@@ -993,10 +1004,13 @@
     color: #fff;
 }
 
-.btnWrap .save, .btnWrap .return{
+ .btnWrap .return{
 	background: #e8e8e8;
 }
-
+.btnWrap .save{
+	background: #3e83f9;
+	color:#FFF
+}
 .fr{
 	float: right;
 }

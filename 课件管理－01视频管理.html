@@ -186,10 +186,14 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <!--
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
+                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
+                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
+                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
+                -->
             </ul>
         </li>
         <li>
@@ -199,8 +203,13 @@
                 <i class="arrow"><i></i></i>
             </p>
             <ul class="subList">
-                <li><a href="">二级菜单一</a></li>
-                <li><a href="#">二级菜单二</a></li>
+                <li><a href="报表--学习记录.html">学习记录</a></li>
+                <li><a href="报表--课件学习.html">课件学习</a></li>
+                <li><a href="报表--考试结果.html">考试结果</a></li>
+                <li><a href="报表--mooc学习记录.html">mooc学习记录</a></li>
+                <li><a href="报表--积分管理.html">积分管理</a></li>
+                <li><a href="报表--学习印象.html">学习印象</a></li>
+                <li><a href="报表--学习评论.html">学习评论</a></li>
             </ul>
         </li>
         <li>
@@ -741,7 +750,6 @@
 	</div>
 	<!--=E 主体内容 -->
 </div>
-
 </div>	
 <!--=E 主体内容区 -->
 <!-- footer -->
@@ -756,10 +764,8 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
-
 	<!--  -->
 	<style type="text/css">
-
 		#copyUrlPagePopup .url{
 			border: 1px solid #ddd;
 			background-color: #f9fafc;
@@ -783,21 +789,17 @@
 				<span>复制url</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class="popupWrap">
 				<div class="url">
 					<textarea>http://app.huawei.com/</textarea>
 				</div>
 			</div>
-
 			<div class="popupBtnWrap">
 				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">复制</a>
 				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
 			</div>
 		</div>
 	</div>
-
-
 	<!--  -->
 	<style type="text/css">
 		#addVideoPagePopup .changField{
@@ -826,7 +828,6 @@
 			margin-top: 0;
 		}
 		#addVideoPagePopup .filterForm {
-
 			border-bottom: 0px solid #ddd;
 		}
 		#addVideoPagePopup .uploadForm .statuArea{
@@ -866,10 +867,8 @@
 				<span>新增视频</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class=" popupWrap" id="createCourse">
 				<div class="selectCourseWare tabContent createCourseWare " style="display: block;">
-
 					<!-- 挑选课件类型 S -->
 					<div class="filterForm">
 						<span class="type">视频文件</span>
@@ -885,14 +884,11 @@
 						</div>
 						<span class="btn green r videoUploadBtn" style="display: inline-block;"><i class="icon"></i>上传文件</span>
 						<input type="file" onchange="previewFile(this)" value="图片上传按钮" multiple="" name="files[]">
-
 						<span class="btn gray r videoUploadBtn"><i class="icon"></i>上传文件</span>
 					</div>
 					<!-- 挑选课件类型 E -->
-
 					<!--=S 上传图文 -->
 					<div class="uploadForm dn" id="uploadImgText">
-
 						<!--=S 编辑器位置 -->
 						<div class="editorWrap">
 							<div class="imgWrap">
@@ -932,7 +928,6 @@
 						<p class="beizhu">* 建议图片尺寸不要超过1300*400</p>
 					</div>
 					<!--=E 上传图文 -->
-
 					<!--=S 上传视频 -->
 					<div class="uploadForm" id="uploadVideo">
 						<div class="statuArea">
@@ -960,9 +955,7 @@
 									</div>
 								</div>
 							</div>
-
 							<!-- 视频转码失败 S -->
-
 							<div class="uploadVideoFail dn">
 								<img src="images/video.png">
 								<p>dfa.mp4</p>
@@ -980,9 +973,7 @@
 									</div>
 								</div>
 							</div>
-
 							<!-- 视频转码失败 E -->
-
 							<div class="success dn">
 								<img src="images/video.png">
 								<p>dfa.mp4</p>
@@ -993,7 +984,6 @@
 									</div>
 								</div>
 							</div>
-
 							<!-- 视频上传提示 -->
 							<ul class="videoList uploadState dn">
 								<li>
@@ -1023,29 +1013,22 @@
 							</ul>
 					
 						</div>
-
 					</div>
 					<!--=E 上传视频 -->
 				</div>
-
 				<div class="videoFileTitle">
 					视频名称
 				</div>
 				<div class="videoFileName">
 					<input type="text" class="text" name="" value="">
 				</div>
-
 			</div>
-
 			<div class="popupBtnWrap">
 				<a href="javascript:void(0);" class="popupBtn blue fr J-close">确定</a>
 				<a href="javascript:void(0);" class="popupBtn fr J-close">返回</a>
 			</div>
 		</div>
 	</div>
-
-
-
 	<!--  -->
 	<div id="previewPagePopup" class="pagePopup">
 		<div class="mask"></div>
@@ -1054,7 +1037,6 @@
 				<span>更改域设置</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class="tree popupWrap">
 				<ul class="menuWrap">
 					<li class="mainMenu">
@@ -1071,7 +1053,6 @@
 									<span class="text">华为大学eee</span>
 								</div>
 								<span class="bg fl"></span>
-
 								<ul class="subMenu">
 									<li>
 										<div class="desc">
@@ -1080,8 +1061,6 @@
 											<span class="text">华为大学eee</span>
 										</div>
 										<span class="bg fl"></span>
-
-
 										<ul class="subMenu">
 											<li>
 												<div class="desc">
@@ -1091,7 +1070,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle"></span>
@@ -1100,7 +1078,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle"></span>
@@ -1109,7 +1086,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle" style="display: none;"></span>
@@ -1120,7 +1096,6 @@
 											</li>
 										</ul>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1129,7 +1104,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1138,7 +1112,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1173,7 +1146,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1182,7 +1154,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1191,7 +1162,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1204,7 +1174,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1220,7 +1189,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1229,7 +1197,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1238,7 +1205,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1255,7 +1221,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1264,7 +1229,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1273,7 +1237,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1286,7 +1249,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1302,7 +1264,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1311,7 +1272,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1320,7 +1280,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1331,7 +1290,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1347,7 +1305,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1356,7 +1313,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1365,7 +1321,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1378,7 +1333,6 @@
 					</li>
 				</ul>
 			</div>
-
 			<div class="btnWrap">
 				<a href="javascript:void(0);" class="save fr J-close">保存</a>
 				<a href="javascript:void(0);" class="return fr J-close">取消</a>
@@ -1387,7 +1341,6 @@
 	</div>
 	<script>
         // 树形结构 S
-
         (function(){
             var $tree = $("#previewPagePopup").find(".tree")
             var liDom =$tree.find("li");
@@ -1402,19 +1355,14 @@
                     }
                 }
             }
-
             // 没有子菜单的隐藏三角图标
-
             for( var i = 0; i<liDom.length;i++ ){
                 if( !( liDom.eq(i).find("ul").hasClass("subMenu")) ){
                     liDom.eq(i).find(".triangle").css( "display","none" );
                 }
             }
-
             // 点击三角图标收缩展开子菜单
-
             $tree.find(".triangle").on( "click",function(){
-
                 $(this).toggleClass( "active" );
                 if( $(this).hasClass("active") ){
                     $(this).parent().siblings("ul").slideDown();
@@ -1422,13 +1370,10 @@
                     $(this).parent().siblings("ul").slideUp();
                 }
             } );
-
             // 单选操作
-
             $tree.find(".radio").on( "click",function(){
                 $tree.find(".radio").removeClass("active");
                 $(this).toggleClass( "active" );
-
                 // 有子菜单的情况下
                 if( $(this).parent().siblings().find("span").hasClass("radio") ){
                     $(this).removeClass("active");
@@ -1439,17 +1384,11 @@
                     }
                 }
             } );
-
         })();
-
         // 树形结构 E
 	</script>
-
-
-
 	<!--  -->
 	<style type="text/css">
-
 		#editPagePopup .videoFile{
 			border: 1px solid #ddd;
 			background-color: #f9fafc;
@@ -1476,7 +1415,6 @@
 				<span>编辑</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class="popupWrap">
 				<div class="videoFile">
 					<div >
@@ -1491,7 +1429,6 @@
 					<input type="text" class="text" name="" value="输入图片名称">
 				</div>
 			</div>
-
 			<div class="popupBtnWrap">
 				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
 				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
@@ -1501,7 +1438,6 @@
 	</div>
 <script>
 	// 拖拽上传
-
     		
 	 $(function() {
       //必须将jq对象转换为js对象，调用原生方法
@@ -1589,7 +1525,6 @@
  
       }
     });
-
 	//拖拽上传 end
 </script>
 </body>

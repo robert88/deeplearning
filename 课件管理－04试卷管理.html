@@ -187,10 +187,14 @@
             <ul class="subList">
                 <li><a href="面授管理--新增基本信息.html">面授新增</a></li>
                 <li><a href="面授管理--维护.html">面授维护</a></li>
-              <!--<li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
+                <!--
+                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>
+                <li><a href="面授管理--报名管理.html" data-map="面授管理--维护.html">报名管理</a></li>
                 <li><a href="面授管理--班级管理.html" data-map="面授管理--维护.html">班级管理</a></li>
-                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--新增基本信息.html">面授新增班级</a></li>
-                <li><a href="面授管理--面授新增--编辑课程表.html" data-map="面授管理--新增基本信息.html">面授新增--编辑课程表</a></li>-->
+                <li><a href="面授管理--班级新增--基本信息.html" data-map="面授管理--维护.html">基本信息</a></li>
+                <li><a href="面授管理--班级新增--编辑课程表.html" data-map="面授管理--维护.html">编辑课程表</a></li>
+                <li><a href="面授管理--班级新增--权限管理.html" data-map="面授管理--维护.html">权限管理</a></li>
+                -->
             </ul>
         </li>
         <li>
@@ -200,8 +204,13 @@
                 <i class="arrow"><i></i></i>
             </p>
             <ul class="subList">
-                <li><a href="">二级菜单一</a></li>
-                <li><a href="#">二级菜单二</a></li>
+                <li><a href="报表--学习记录.html">学习记录</a></li>
+                <li><a href="报表--课件学习.html">课件学习</a></li>
+                <li><a href="报表--考试结果.html">考试结果</a></li>
+                <li><a href="报表--mooc学习记录.html">mooc学习记录</a></li>
+                <li><a href="报表--积分管理.html">积分管理</a></li>
+                <li><a href="报表--学习印象.html">学习印象</a></li>
+                <li><a href="报表--学习评论.html">学习评论</a></li>
             </ul>
         </li>
         <li>
@@ -682,10 +691,8 @@
 <script src="js/common/datepicker.js"></script>
 <script src="js/course.js"></script>
 <script src="js/loadPopup.js"></script>
-
 	<!--  -->
 	<style type="text/css">
-
 		#editExamPagePopup .videoFile{
 			border: 1px solid #ddd;
 			background-color: #f9fafc;
@@ -714,9 +721,7 @@
 			width: 800px;
 			margin-left: -400px;
 			background-color: #f9fafc;
-
 		}
-
 		#editExamPagePopup .floatList{
 			height: 60px;
 			border: 1px solid #ddd;
@@ -777,7 +782,6 @@
 				<span>编辑试卷</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class="popupWrap">
 				<ul class="col3 floatList">
 					<li>
@@ -1060,7 +1064,6 @@
 							</span>
 							</td>
 						</tr>
-
 						</tbody>
 					</table>
 					<!--=S 分页 -->
@@ -1076,7 +1079,6 @@
 						<a href="#" class="next"><i></i></a>
 						<!-- 没有下一页用 <a href="javascript:;" class="forbid next"><i></i></a>-->
 						<span class="total">总：1440条</span>
-
 						<span class="tiaozhuan">
 						<span class="">跳转到：</span>
 						<input type="text"><span class="goBtn">GO</span>
@@ -1084,9 +1086,7 @@
 					</div>
 					<!--=E 分页 -->
 				</div>
-
 			</div>
-
 			<div class="popupBtnWrap">
 				<a href="javascript:void(0);" class="save popupBtn blue fr J-close">保存</a>
 				<a href="javascript:void(0);" class="return popupBtn fr J-close">取消</a>
@@ -1094,8 +1094,6 @@
 			</div>
 		</div>
 	</div>
-
-
 	<link href="css/test.css" rel="stylesheet" />
 	<style type="text/css">
 		#selectObjPagePopup .header{height:40px;line-height:40px;color:#fff;position:relative}
@@ -1104,11 +1102,9 @@
 		#selectObjPagePopup .header .fl span{margin-left:20px}
 		#selectObjPagePopup .header .closePopup{margin-right:20px;float:right;width:16px;height:40px;background:url(images/closeIcon.png) no-repeat center center;cursor:pointer}
 		#selectObjPagePopup .select_test{position:absolute;width:900px;height:500px;margin-left:-450px;margin-top:-250px;left:50%;top:50%;border-radius:5px;display:none;background:#FFF}
-
 	</style>
 	<div id="selectObjPagePopup" class="pagePopup">
 		<div class="mask"></div>
-
 		<!--=S 选择题目 弹窗-->
 		<div class="select_test" style="display: block;">
 			<table border="0" cellspacing="0" cellpadding="0">
@@ -1152,7 +1148,6 @@
 									<i></i>新增题目
 								</div>
 							</div>
-
 							<div class="st_list">
 								<table border="0" cellspacing="0" cellpadding="0">
 									<tbody><tr>
@@ -1194,23 +1189,17 @@
 										</td>
 										<td class="st_table_td05"><i></i></td>
 									</tr>
-
 									</tbody></table>
 							</div>
 						</div>
 						<p class="st_list_btn"><span id="popupCancle" style="" class="btn white">返回</span><span id="popupComfirm" style="" class="btn blue">确定</span></p>
-
 					</td>
 				</tr>
 				</tbody></table>
 		</div>
 		<!--=E 选择题目 弹窗-->
-
 	</div>
 	<script src="js/test.js"></script>
-
-
-
 	<!--  -->
 	<div id="previewPagePopup" class="pagePopup">
 		<div class="mask"></div>
@@ -1219,7 +1208,6 @@
 				<span>更改域设置</span>
 				<span class="closePopup J-close"></span>
 			</div>
-
 			<div class="tree popupWrap">
 				<ul class="menuWrap">
 					<li class="mainMenu">
@@ -1236,7 +1224,6 @@
 									<span class="text">华为大学eee</span>
 								</div>
 								<span class="bg fl"></span>
-
 								<ul class="subMenu">
 									<li>
 										<div class="desc">
@@ -1245,8 +1232,6 @@
 											<span class="text">华为大学eee</span>
 										</div>
 										<span class="bg fl"></span>
-
-
 										<ul class="subMenu">
 											<li>
 												<div class="desc">
@@ -1256,7 +1241,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle"></span>
@@ -1265,7 +1249,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle"></span>
@@ -1274,7 +1257,6 @@
 												</div>
 												<span class="bg fl"></span>
 											</li>
-
 											<li>
 												<div class="desc">
 													<span class="triangle" style="display: none;"></span>
@@ -1285,7 +1267,6 @@
 											</li>
 										</ul>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1294,7 +1275,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1303,7 +1283,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1338,7 +1317,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1347,7 +1325,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1356,7 +1333,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle" style="display: none;"></span>
@@ -1369,7 +1345,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1385,7 +1360,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1394,7 +1368,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1403,7 +1376,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1420,7 +1392,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1429,7 +1400,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1438,7 +1408,6 @@
 										</div>
 										<span class="bg fl"></span>
 									</li>
-
 									<li>
 										<div class="desc">
 											<span class="triangle"></span>
@@ -1451,7 +1420,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1467,7 +1435,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1476,7 +1443,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1485,7 +1451,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1496,7 +1461,6 @@
 							</li>
 						</ul>
 					</li>
-
 					<li class="mainMenu">
 						<div class="desc">
 							<span class="triangle"></span>
@@ -1512,7 +1476,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1521,7 +1484,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1530,7 +1492,6 @@
 								</div>
 								<span class="bg fl"></span>
 							</li>
-
 							<li>
 								<div class="desc">
 									<span class="triangle"></span>
@@ -1543,7 +1504,6 @@
 					</li>
 				</ul>
 			</div>
-
 			<div class="btnWrap">
 				<a href="javascript:void(0);" class="save fr J-close">保存</a>
 				<a href="javascript:void(0);" class="return fr J-close">取消</a>
@@ -1552,7 +1512,6 @@
 	</div>
 	<script>
         // 树形结构 S
-
         (function(){
             var $tree = $("#previewPagePopup").find(".tree")
             var liDom =$tree.find("li");
@@ -1567,19 +1526,14 @@
                     }
                 }
             }
-
             // 没有子菜单的隐藏三角图标
-
             for( var i = 0; i<liDom.length;i++ ){
                 if( !( liDom.eq(i).find("ul").hasClass("subMenu")) ){
                     liDom.eq(i).find(".triangle").css( "display","none" );
                 }
             }
-
             // 点击三角图标收缩展开子菜单
-
             $tree.find(".triangle").on( "click",function(){
-
                 $(this).toggleClass( "active" );
                 if( $(this).hasClass("active") ){
                     $(this).parent().siblings("ul").slideDown();
@@ -1587,13 +1541,10 @@
                     $(this).parent().siblings("ul").slideUp();
                 }
             } );
-
             // 单选操作
-
             $tree.find(".radio").on( "click",function(){
                 $tree.find(".radio").removeClass("active");
                 $(this).toggleClass( "active" );
-
                 // 有子菜单的情况下
                 if( $(this).parent().siblings().find("span").hasClass("radio") ){
                     $(this).removeClass("active");
@@ -1604,9 +1555,7 @@
                     }
                 }
             } );
-
         })();
-
         // 树形结构 E
 	</script>
 <style type="text/css">
@@ -1619,7 +1568,6 @@
 	</style>
 <div id="addObjectPagePopup" class="pagePopup">
 	<div class="mask"></div>	
-
 	<!--=S 新增题目 弹窗-->
 	<div class="edit_test select_test" id="edit_test" style="display: block;">
 				<div class="titleBar">编辑试卷
@@ -1776,6 +1724,5 @@
 	<!--=E 新增题目 弹窗-->	
 	</div>
 	
-
 </body>
 </html>
